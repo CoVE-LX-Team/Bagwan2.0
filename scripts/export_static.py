@@ -14,6 +14,7 @@ import html
 import json
 import re
 import subprocess
+from repair_links import localize_exported_url
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://emedia.rmit.edu.au'
@@ -101,7 +102,9 @@ def asset_path(url):
 def queue_asset(value, base):
     if not value or value.startswith(('data:', '#', 'about:', 'blob:', 'javascript:')):
         return value
-    absolute = urljoin(base, html.unescape(value))
+    absolute = localize_exported_url(urljoin(base, html.unescape(value)), SITE)
+    if absolute.startswith(SITE):
+        return absolute
     p = urlsplit(absolute)
     if p.scheme not in ('http', 'https') or youtube(absolute):
         return value
@@ -155,7 +158,9 @@ def file_id(url):
 def local_link(raw, base):
     if not raw or raw.startswith(('#', 'mailto:', 'tel:', 'javascript:')):
         return raw
-    absolute = urljoin(base, html.unescape(raw))
+    absolute = localize_exported_url(urljoin(base, html.unescape(raw)), SITE)
+    if absolute.startswith(SITE):
+        return absolute
     gid = file_id(absolute)
     if gid in FILES:
         return public(FILES[gid]['local_path'])

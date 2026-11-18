@@ -986,7 +986,7 @@
               "buttons": [
                 {
                   "txt": "Log onto intranet",
-                  "uri": "https://emedia.rmit.edu.au/bagwanhealth/index.php/scorm/department-pages/interpreting-service"
+                  "uri": "/Bagwan2.0/scorm/department-pages/interpreting-office/index.html"
                 }
               ]
             }
@@ -1013,7 +1013,7 @@
               "buttons": [
                 {
                   "txt": "Log onto intranet",
-                  "uri": "https://emedia.rmit.edu.au/bagwanhealth/index.php/scorm/department-pages/interpreting-service"
+                  "uri": "/Bagwan2.0/scorm/department-pages/interpreting-office/index.html"
                 }
               ]
             }

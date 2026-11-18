@@ -6,6 +6,7 @@ import re
 from bs4 import BeautifulSoup
 from repair_accessibility import repair_accessibility_markup
 from repair_clinical import repair_clinical_markup
+from repair_links import repair_exported_links
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -65,10 +66,11 @@ def main():
             continue
         original = text = path.read_text()
         soup = BeautifulSoup(text, 'lxml')
+        links_changed = repair_exported_links(soup, soup.body.get('data-site-root', '/Bagwan2.0/') if soup.body else '/Bagwan2.0/')
         responsive_changed = repair_responsive_markup(soup)
         accessible_changed = repair_accessibility_markup(soup)
         clinical_changed = repair_clinical_markup(soup)
-        if responsive_changed or accessible_changed or clinical_changed:
+        if links_changed or responsive_changed or accessible_changed or clinical_changed:
             text = str(soup)
         for name, version in versions.items():
             text = re.sub(r'(/assets/' + re.escape(name) + r')(?:\?v=[a-f0-9]+)?(?=["\'])',

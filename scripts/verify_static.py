@@ -56,7 +56,7 @@ def inspect():
                 if not isinstance(raw, str): continue
                 parsed = urlsplit(raw)
                 youtube_frame = tag.name == 'iframe' and attr == 'src' and parsed.scheme == 'https' and parsed.hostname == 'www.youtube.com' and bool(re.fullmatch(r'/embed/[A-Za-z0-9_-]{11}', parsed.path))
-                if any(d in raw.lower() for d in ('drive.google.com', 'docs.google.com', 'emedia.rmit.edu.au/bagwanhealth')):
+                if parsed.hostname in ('drive.google.com', 'docs.google.com', 'emedia.rmit.edu.au'):
                     errors.append((str(path.relative_to(ROOT)), 'Unconverted URL: ' + raw))
                 target = local_target(raw, path)
                 if target and not target.is_file():
@@ -67,6 +67,23 @@ def inspect():
                         errors.append((str(path.relative_to(ROOT)), 'Missing section: ' + raw))
                 if attr in ('src','poster') and raw.startswith(('http:','https:','//')) and not youtube_frame:
                     errors.append((str(path.relative_to(ROOT)), 'External runtime asset: ' + raw))
+    # Tour buttons are built from JSON, so they cannot be checked in HTML alone.
+    tour_path = ROOT / 'VR/public/static_assets/hello-world.json'
+    if tour_path.is_file():
+        def inspect_tour_links(value):
+            if isinstance(value, list):
+                for item in value: inspect_tour_links(item)
+            elif isinstance(value, dict):
+                for key, item in value.items():
+                    if key == 'uri' and isinstance(item, str):
+                        if urlsplit(item).hostname in ('emedia.rmit.edu.au', 'drive.google.com', 'docs.google.com'):
+                            errors.append((str(tour_path.relative_to(ROOT)), 'Unconverted URL: ' + item))
+                        target = local_target(item, tour_path)
+                        if target and not target.is_file():
+                            errors.append((str(tour_path.relative_to(ROOT)), 'Missing ' + item))
+                    else:
+                        inspect_tour_links(item)
+        inspect_tour_links(json.loads(tour_path.read_text()))
     for path in ROOT.rglob('*.css'):
         if any(p in path.parts for p in ('.git', '.playwright-cli', 'output', 'node_modules')):
             continue

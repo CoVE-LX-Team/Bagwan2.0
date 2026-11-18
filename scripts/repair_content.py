@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup, NavigableString
 from repair_responsive import repair_responsive_markup
 from repair_accessibility import repair_accessibility_markup
 from repair_clinical import repair_clinical_markup
+from repair_links import repair_exported_links
 import html
 import json
 import re
@@ -48,6 +49,7 @@ def repair_site(root, base, files, folders):
     link = lambda path: base + quote(path, safe='/@()+,-._~#')
     def read(path): return BeautifulSoup((root / path).read_text(), 'lxml')
     def save(path, soup):
+        repair_exported_links(soup, base)
         (root / path).parent.mkdir(parents=True, exist_ok=True)
         (root / path).write_text('<!DOCTYPE html>\n' + '\n'.join(line.rstrip() for line in str(soup.html).splitlines()) + '\n')
     def fragment(markup): return BeautifulSoup('<div>' + markup + '</div>', 'lxml').div
