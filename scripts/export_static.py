@@ -412,6 +412,8 @@ def repair_dependencies():
     for path in ROOT.rglob('*.html'):
         if '.git' in path.parts: continue
         soup = BeautifulSoup(path.read_text(), 'lxml')
+        if soup.head and not soup.select_one('link[rel=icon]'):
+            soup.head.append(soup.new_tag('link', rel='icon', type='image/svg+xml', href=public('assets/favicon.svg')))
         for style in soup.select('style'):
             style.string = clean_css(node_text(style))
         for tag in list(soup.select('img[src=""]')): tag.decompose()
