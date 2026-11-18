@@ -6,6 +6,39 @@ import json
 import re
 
 
+def responsive_org_chart(soup):
+    chart = soup.select_one('ol.static-org-chart')
+    if chart is None:
+        return
+    # The source's fixed 250px cards and nowrap branches exceed the content column.
+    for style in soup.find_all('style'):
+        if 'ol.static-org-chart' in str(style.string or ''):
+            style.decompose()
+    chart['class'] = list(chart.get('class', [])) + ['responsive-org-chart']
+    chart['role'] = 'list'
+    chart['aria-label'] = 'Hospital reporting structure'
+    root = chart.find('li', recursive=False)
+    label = soup.new_tag('p', attrs={'class': 'org-reports-label'})
+    label.string = 'Reporting to the Chief Executive Officer'
+    root.select_one('#first').insert_before(label)
+    for identifier, title in [('first', 'Departments'), ('second', 'Executive leadership')]:
+        branch = root.find('ol', id=identifier)
+        branch['role'] = 'list'
+        heading_id = 'org-' + identifier + '-heading'
+        section = soup.new_tag('section', attrs={'class': 'org-chart-group', 'aria-labelledby': heading_id})
+        branch.wrap(section)
+        heading = soup.new_tag('h2', id=heading_id)
+        heading.string = title
+        section.insert(0, heading)
+    for item in root.select('#first > li'):
+        card = item.select_one('.card')
+        if card and not card.find('a'):
+            card['class'] = list(card.get('class', [])) + ['org-department-unlinked']
+    for item in root.select('#second > li'):
+        for block in item.find_all('div', recursive=False)[1:]:
+            block['class'] = list(block.get('class', [])) + ['org-team-link']
+
+
 def repair_site(root, base, files, folders):
     report = {'reviewed_on': '2026-11-18', 'fixed': [], 'unresolved': []}
     esc = html.escape
@@ -43,6 +76,32 @@ def repair_site(root, base, files, folders):
     set_content(soup, '<p>Choose a department.</p><ul class="department-index">' + ''.join('<li>' + anchor('scorm/department-pages/' + slug + '/index.html', title) + '<p>' + text + '</p></li>' for slug, title, text in departments) + '</ul>')
     save('scorm/department-pages/index.html', soup)
     report['fixed'].append('Departments index now links to all five existing department pages.')
+
+    # WordPress paragraph insertion left the dashboard's card links empty.
+    soup = read('patient-management-system/index.html')
+    dashboard = soup.select_one('.entry-content')
+    dashboard['class'] = list(dashboard.get('class', [])) + ['patient-dashboard']
+    for card in dashboard.select('.card-deck > .card'):
+        destination, heading = card.find('a', href=True), card.select_one('.card-title')
+        if destination is None or heading is None:
+            continue
+        href, title = destination['href'], heading.get_text(' ', strip=True)
+        card.clear()
+        destination = soup.new_tag('a', href=href, attrs={'class': 'card-body patient-card-link'})
+        heading = soup.new_tag('h3', attrs={'class': 'card-title'})
+        heading.string = title
+        destination.append(heading)
+        action = soup.new_tag('span', attrs={'class': 'patient-card-action'})
+        action.string = 'Open messageboard' if '/messageboard/' in href else 'View patients' if '/patient-database/' in href else 'Open form'
+        destination.append(action)
+        card.append(destination)
+    title = soup.select_one('body > .row > .container > span')
+    if title:
+        title.name = 'h1'
+        title['class'] = ['patient-system-title']
+        title.attrs.pop('style', None)
+    save('patient-management-system/index.html', soup)
+    report['fixed'].append('All seven patient-management dashboard cards have named, full-card links to their actual forms, messageboard and patient list.')
 
     aliases = {
         'scorm/report-an-incident/index.html': 'scorm/quick-link-pages/incident-reporting/index.html',
@@ -211,6 +270,7 @@ def repair_site(root, base, files, folders):
         if soup.h1: titles[path.relative_to(root).as_posix()] = soup.h1.get_text(' ', strip=True).replace('Emergency repsonse', 'Emergency response')
     for path in paths:
         relative = path.relative_to(root).as_posix();soup = read(relative)
+        responsive_org_chart(soup)
         for navigation in soup.select('#bottom_navigation'):
             navigation.decompose()
         for navigation in soup.select('#next-prev'):
@@ -297,6 +357,7 @@ def repair_site(root, base, files, folders):
         save(relative,soup)
     report['fixed'].append('Linked breadcrumbs, removed duplicate home breadcrumbs, corrected labels and added persistent patient-system navigation.')
     report['fixed'].append('Removed the Next page / Previous page footer navigation from news articles.')
+    report['fixed'].append('Hospital organisation charts reflow into readable department and executive grids at phone, tablet and desktop widths, preserving all source names, roles and links.')
     report['fixed'].append('Interpreting scenario buttons now have real section targets for every step.')
     report['fixed'].append('Wide policy and patient-form tables scroll within the page; PDF controls support printing partially completed forms and the messageboard proceeds to the local patient database.')
     report['unresolved'].append('Clinical policy accuracy, outdated legal references and review comments inside the supplied documents require a content-owner review; original document bytes are preserved.')

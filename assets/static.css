@@ -10,3 +10,42 @@ iframe.youtube-video{display:block;width:100%;height:auto!important;aspect-ratio
 .static-table-scroll{width:100%;max-width:100%;margin-bottom:24px}.static-table-scroll table{max-width:none!important;margin-left:0!important}.static-table-scroll:focus-visible{outline:3px solid #007a74;outline-offset:3px}@media print{.static-table-scroll{overflow:visible}.static-table-scroll table{width:100%!important;max-width:100%!important;table-layout:fixed}.static-table-scroll td,.static-table-scroll th{overflow-wrap:anywhere}}
 .patient-system{height:auto;min-height:100vh}.patient-system>.row{position:relative!important;margin-bottom:0!important}.patient-system .content{clear:both;margin-bottom:0}.patient-system .static-form-tools{float:none;flex:0 0 100%;width:100%}@media(max-width:991px){.patient-system>.row>.container>span{float:none!important;display:block;top:0!important;margin:20px 0!important;font-size:24px!important;line-height:1.3}.patient-system .content{padding:16px 0}.patient-system .page{padding:20px!important}.patient-system .logo{width:100%;max-width:280px;height:auto}.patient-system .static-table-scroll table{display:table!important;min-width:640px}.patient-system .static-table-scroll thead{display:table-header-group!important;position:static!important}.patient-system .static-table-scroll tbody{display:table-row-group!important}.patient-system .static-table-scroll tr{display:table-row!important}.patient-system .static-table-scroll th,.patient-system .static-table-scroll td{display:table-cell!important;position:static!important;padding:12px!important;white-space:normal}.patient-system .static-table-scroll td::before{display:none!important}.patient-system .static-table-scroll td.hiddenRow{padding:0!important}.patient-system .static-table-scroll .form-control{min-width:100px}}
 .patient-system .static-table-scroll thead tr{position:static!important;top:auto!important;left:auto!important}
+
+/* Reflow the reporting structure within the available content column. */
+.responsive-org-chart,.responsive-org-chart ol{list-style:none;padding:0;margin:0;min-width:0}
+.responsive-org-chart{margin:32px 0 48px;color:#000054;font-size:16px;line-height:1.5}
+.responsive-org-chart li{padding:0;margin:0;min-width:0}
+.responsive-org-chart>li>.staff_card{width:min(100%,352px);margin-inline:auto}
+.responsive-org-chart .org-reports-label{text-align:center;margin:20px 0 32px;font-size:16px}
+.responsive-org-chart .org-chart-group{margin-top:32px}
+.responsive-org-chart .org-chart-group h2{font-size:24px;line-height:1.3;margin:0 0 20px;padding-left:12px;border-left:4px solid #aad75f}
+.responsive-org-chart #first,.responsive-org-chart #second{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(100%,224px),1fr))}
+.responsive-org-chart #first>li,.responsive-org-chart #second>li{display:flex;flex-direction:column}
+.responsive-org-chart .staff_card{width:100%;min-width:0;border:1px solid #dde2e7;box-shadow:0 1px 3px #0001;background:#fff}
+.responsive-org-chart #second .staff_card{flex:1}
+.responsive-org-chart .staff_title{display:flex;align-items:center;justify-content:center;min-height:64px;padding:12px 16px;text-align:center;background:#000054;color:#fff;font-weight:600;overflow-wrap:anywhere}
+.responsive-org-chart .staff_info{display:flex;gap:16px;align-items:center;min-height:104px;padding:16px}
+.responsive-org-chart .staff_image{flex:0 0 64px}
+.responsive-org-chart .staff_image img{display:block;width:64px;height:64px;object-fit:cover;border-radius:50%}
+.responsive-org-chart .staff_name_container{min-width:0;text-align:left}
+.responsive-org-chart .staff_name_label{font-size:12px;color:#555}
+.responsive-org-chart .staff_name{font-size:16px;overflow-wrap:anywhere}
+.responsive-org-chart #first .card{height:100%;border:0;border-radius:0;background:#000054;color:#fff}
+.responsive-org-chart #first .card>div{display:flex;align-items:stretch;justify-content:center;min-height:88px;height:100%}
+.responsive-org-chart .first_level{display:flex;flex:1;align-items:center;justify-content:center;padding:16px;color:#fff;text-decoration:none;text-align:center;overflow-wrap:anywhere}
+.responsive-org-chart .first_level:hover,.responsive-org-chart .first_level:focus-visible{background:#aad75f;color:#000054}
+.responsive-org-chart .org-department-unlinked>div{align-items:center!important;padding:16px}
+.responsive-org-chart .org-team-link{margin-top:8px;border:1px solid #dde2e7;background:#f4f6f8;text-align:center}
+.responsive-org-chart .second_level{display:block;padding:14px 16px;color:#000054;text-decoration:none;overflow-wrap:anywhere}
+.responsive-org-chart .second_level:hover,.responsive-org-chart .second_level:focus-visible{background:#aad75f;color:#000054}
+@media(max-width:480px){.responsive-org-chart .staff_info{gap:12px;padding:14px}.responsive-org-chart .org-chart-group h2{font-size:22px}}
+
+.patient-system .patient-system-title{float:none;position:static;font-size:28px;line-height:1.3;color:#000054;margin:24px 0 16px}
+.patient-dashboard .card-deck{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,224px),1fr));gap:20px;margin:0 0 28px}
+.patient-dashboard .card{margin:0;min-width:0}
+.patient-dashboard .patient-card-link{display:flex;flex:1;flex-direction:column;gap:20px;min-height:140px;padding:24px;color:#000054;text-decoration:none}
+.patient-dashboard .patient-card-link:hover{background:#f3f7ed;color:#000054;text-decoration:none}
+.patient-dashboard .patient-card-link:focus-visible{outline-offset:-3px}
+.patient-dashboard .card-title{font-size:22px;line-height:1.35;margin:0}
+.patient-dashboard .patient-card-action{margin-top:auto;font-size:14px;text-decoration:underline}
+@media(max-width:760px){.patient-system .patient-dashboard{padding:20px!important}.patient-system .patient-system-title{font-size:24px}.patient-dashboard .patient-card-link{min-height:120px;padding:20px}}

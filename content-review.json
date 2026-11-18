@@ -2,6 +2,7 @@
   "reviewed_on": "2026-11-18",
   "fixed": [
     "Departments index now links to all five existing department pages.",
+    "All seven patient-management dashboard cards have named, full-card links to their actual forms, messageboard and patient list.",
     "Empty incident/patient-record pages and the placeholder organisation chart now lead to working pages.",
     "Replaced broken staff-list plugin shortcodes with 40 source-backed staff/role entries and department navigation.",
     "Departmental document headings now lead to the available local documents and resources.",
@@ -10,6 +11,7 @@
     "Restored all 12 original YouTube embeds, responsive players, watch-on-YouTube links and a video resource index.",
     "Linked breadcrumbs, removed duplicate home breadcrumbs, corrected labels and added persistent patient-system navigation.",
     "Removed the Next page / Previous page footer navigation from news articles.",
+    "Hospital organisation charts reflow into readable department and executive grids at phone, tablet and desktop widths, preserving all source names, roles and links.",
     "Interpreting scenario buttons now have real section targets for every step.",
     "Wide policy and patient-form tables scroll within the page; PDF controls support printing partially completed forms and the messageboard proceeds to the local patient database."
   ],
