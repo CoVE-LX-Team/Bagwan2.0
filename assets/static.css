@@ -49,3 +49,151 @@ iframe.youtube-video{display:block;width:100%;height:auto!important;aspect-ratio
 .patient-dashboard .card-title{font-size:22px;line-height:1.35;margin:0}
 .patient-dashboard .patient-card-action{margin-top:auto;font-size:14px;text-decoration:underline}
 @media(max-width:760px){.patient-system .patient-dashboard{padding:20px!important}.patient-system .patient-system-title{font-size:24px}.patient-dashboard .patient-card-link{min-height:120px;padding:20px}}
+
+/* Shared responsive shell. Keep the content usable before opening navigation. */
+body.cbp-spmenu-push{margin:0;left:0;width:100%;position:relative}
+body.cbp-spmenu-push #content{left:0;width:auto;min-width:0;margin-left:0;padding:100px 0 0}
+body.cbp-spmenu-push #content>.container{width:100%;max-width:1400px;padding-inline:24px}
+body.cbp-spmenu-push #banner{top:0;left:0;right:0;width:auto;height:80px;padding:0 24px!important;z-index:1001!important}
+#banner #ws{width:min(240px,calc(100vw - 152px));height:80px;margin:0;float:none}
+#banner #ws .vwp-logo{height:52px;margin:14px 0;background-position:left center}
+#breadcrumbs{margin-top:0!important;margin-bottom:24px!important;min-height:0;overflow-wrap:anywhere}
+#breadcrumbs ul{float:none;margin:0;padding:12px 0;line-height:1.6}
+body.cbp-spmenu-push #content h1{font-size:clamp(28px,3vw,40px);line-height:1.2;overflow-wrap:anywhere}
+body.cbp-spmenu-push #content h2{line-height:1.3;overflow-wrap:anywhere}
+#content p,#content a{overflow-wrap:anywhere}
+body.cbp-spmenu-push .footer{margin:0;padding:24px 0}
+body.cbp-spmenu-push #sidebar{left:0;right:auto;width:280px;max-width:calc(100vw - 64px);height:100vh;height:100dvh;transform:translateX(-100%);visibility:hidden;transition:transform .2s ease,visibility .2s;overflow-y:auto!important;touch-action:pan-y;overscroll-behavior:contain;z-index:1100}
+body.navigation-open #sidebar{transform:translateX(0);visibility:visible}
+#sidebar>div,#sidebar .sidebar,#sidebar #nav,#sidebar #reveal{width:100%}
+#sidebar .mCustomScrollBox{max-height:none!important;overflow:visible}
+#sidebar .mCSB_container{top:0!important;margin-right:0}
+#sidebar .mCSB_scrollTools{display:none!important}
+#sidebar #cssmenu{margin-top:32px}
+#sidebar #cssmenu ul{margin-inline:20px}
+#sidebar #cssmenu li{padding:0}
+#sidebar #cssmenu a{display:block;min-height:48px;padding:14px 4px;overflow-wrap:anywhere}
+#sidebar #cssmenu li ul{margin:0 0 8px 12px;padding:0}
+#sidebar #cssmenu li ul a{padding:12px 8px}
+#showRightPush{position:fixed!important;top:18px!important;right:16px!important;width:44px!important;height:44px!important;margin:0!important;padding:0;z-index:1200!important;transition:none!important;background:#fff;border-radius:4px}
+#showRightPush span{left:8px!important;width:28px!important;height:3px!important;background:#000054!important;transition:transform .15s!important}
+#showRightPush span:nth-child(1){top:11px!important;transform:none!important}
+#showRightPush span:nth-child(2){top:20px!important;opacity:1!important}
+#showRightPush span:nth-child(3){top:29px!important;transform:none!important}
+#showRightPush.open span:nth-child(1){top:20px!important;transform:rotate(45deg)!important}
+#showRightPush.open span:nth-child(2){opacity:0!important}
+#showRightPush.open span:nth-child(3){top:20px!important;transform:rotate(-45deg)!important}
+#showRightPush .fscreen{display:none}
+#banner #fullscreen-control{position:fixed;right:68px;top:18px;width:44px;height:44px}
+#banner a.full-screen{position:absolute;inset:0;width:44px;height:44px;border:0}
+#banner a.full-screen::before{inset:10px;width:auto;height:auto;border:2px dashed #000054;background:transparent}
+#banner a.full-screen::after{display:none}
+.navigation-backdrop{position:fixed;inset:0;border:0;background:#0007;z-index:1050;cursor:pointer}
+.navigation-backdrop[hidden]{display:none}
+.skip-to-content{position:fixed;top:8px;left:8px;z-index:1300;padding:12px 16px;background:#fff;color:#000054;transform:translateY(-160%)}
+.skip-to-content:focus{transform:none}
+body.navigation-modal{overflow:hidden}
+@media(min-width:1100px){body.navigation-open #content,body.navigation-open .footer{margin-left:280px}body.navigation-open #banner{left:280px}.navigation-backdrop{display:none}}
+@media(max-width:599px){body.cbp-spmenu-push #content>.container{padding-inline:16px}body.cbp-spmenu-push #banner{padding-inline:16px!important}body.cbp-spmenu-push #content{padding-top:96px}#content .row{margin-inline:-8px}#content .row>[class*="col-"]{padding-inline:8px}}
+
+/* Home and department cards use the available column width, not viewport units. */
+#intranet{display:grid;grid-template-columns:minmax(0,1fr);gap:36px;margin:0 0 36px!important}
+#intranet>[class*="col-"]{width:100%;max-width:none;min-width:0;padding:0!important}
+#intranet>div:first-child>.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:24px;margin:0 0 24px!important}
+#intranet [id="latestnews"]{width:100%;max-width:none;min-width:0;padding:0!important;margin:0!important}
+#intranet #latestnews>a{display:block;height:100%;text-decoration:none}
+#intranet #latestnews .card{height:100%;margin:0!important;overflow:hidden}
+#intranet #latestnews .single-news{display:flex;flex-direction:column;margin:0}
+#intranet #latestnews .single-news>div{width:100%;max-width:none;flex:none;padding:0}
+#intranet #latestnews .card .card-img-top{display:block;width:100%;height:180px;object-fit:cover}
+#intranet #latestnews .card .card-body{padding:20px}
+#intranet #latestnews .card .card-body h5{font-size:20px;line-height:1.35;padding-top:0}
+#intranet #latestnews .card .card-body p{font-size:16px;line-height:1.5;margin-bottom:0}
+#intranet #quicklinks{padding:0}
+#intranet #quicklinks>.row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0!important}
+#intranet #quicklinks .col-4{max-width:none;width:auto;padding:0;min-width:0}
+#intranet #quicklinks .card>a{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:140px;height:100%;padding:16px 10px;text-decoration:none}
+#intranet #quicklinks img{width:56px;height:56px;object-fit:contain;margin:0}
+#intranet #quicklinks p{font-size:14px;line-height:1.4;word-break:normal!important;overflow-wrap:normal!important;margin:12px 0 0;padding:0;width:100%}
+@media(min-width:1400px){#intranet{grid-template-columns:minmax(0,2fr) minmax(300px,1fr);align-items:start}}
+
+/* News cards reflow without Masonry coordinates or narrow text strips. */
+.grid:has(.quick_link){display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:28px;height:auto!important;margin:0 0 36px}
+.grid:has(.quick_link)>.grid-sizer{display:none}
+.grid:has(.quick_link)>.grid-item{position:static!important;left:auto!important;top:auto!important;transform:none!important;transition:none!important;width:100%;max-width:none;margin:0!important;padding:0;container-type:inline-size}
+.quick_link{height:100%;min-width:0}
+.quick_link_right{min-width:0;overflow-wrap:anywhere}
+.quick_link_right h3{font-size:24px;line-height:1.3}
+@media(max-width:599px){.quick_link{flex-direction:column}.quick_link_image{flex:none;min-height:180px;width:100%;background-position:center 30%}.quick_link_right{flex:none;padding:20px!important}.quick_link_right p{font-size:16px;line-height:1.5}.quick_link_right h3{font-size:23px}}
+@container(max-width:440px){.quick_link{flex-direction:column}.quick_link_image{flex:none;min-height:180px;width:100%;background-position:center 30%}.quick_link_right{flex:none;padding:20px!important}.quick_link_right p{font-size:16px;line-height:1.5}.quick_link_right h3{font-size:23px}}
+
+/* Embedded tools size to their content; wide clinical grids scroll locally. */
+iframe.static-auto-height{height:var(--frame-height,300px)!important;display:block;width:100%}
+.embed-container:has(>iframe.static-auto-height){height:auto!important;padding:0!important;overflow:visible}
+.embed-container>iframe.static-auto-height{position:static!important}
+iframe[src*="/VR/public/"]{height:clamp(420px,70svh,760px)!important;display:block}
+.static-table-scroll{overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.static-table-hint{font-size:14px;color:#444;margin:8px 0}
+.static-table-hint[hidden]{display:none}
+button.card-header{min-height:44px;font-size:16px;line-height:1.4;white-space:normal}
+.patient-system input,.patient-system select,.patient-system textarea{font-size:16px!important}
+.patient-system .form-control{max-width:100%}
+.patient-system .entry-content{padding:24px!important}
+.patient-system .card-deck{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,224px),1fr));gap:20px;margin:0 0 28px}
+.patient-system .card-deck>.card{margin:0;min-width:0}
+.patient-system .patient-card-link{display:flex;flex:1;flex-direction:column;gap:20px;min-height:140px;padding:24px;color:#000054;text-decoration:none}
+.patient-system .patient-card-link:hover{background:#f3f7ed}
+.patient-system .patient-card-link:focus-visible{outline-offset:-3px}
+.patient-system .patient-card-link .card-title{font-size:22px;line-height:1.35;margin:0}
+.patient-system .patient-card-action{margin-top:auto;font-size:14px;text-decoration:underline}
+@media(max-width:599px){.patient-system .entry-content{padding:16px!important}.patient-system>.row>.container{padding-inline:8px}.static-form-tools button{min-height:44px}.library-page header{flex-wrap:wrap;gap:12px}.library-page header img{max-width:100%;height:auto}.library-page main{padding-inline:16px}}
+@media print{body.cbp-spmenu-push #content{margin:0!important;padding:0!important}.navigation-backdrop,.skip-to-content,.static-table-hint{display:none!important}}
+
+/* Accessible controls, landmarks and keyboard focus. */
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+html body :where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:3px solid #000054!important;outline-offset:3px!important;box-shadow:0 0 0 6px #fff!important}
+:where(a,button,input,select,textarea,summary,[tabindex]):focus{scroll-margin-top:100px;scroll-margin-bottom:24px}
+#sidebar :focus{scroll-margin-top:12px;scroll-margin-bottom:12px}
+[hidden]{display:none!important}
+.footer a,.patient-system footer a{text-decoration:underline;text-underline-offset:3px}
+.a__footer{color:#000054!important}
+.static-site-notice a,#content .MsoHyperlink,#content a[href^="mailto:"]{color:#000054!important}
+#tabs [role=tab] .title{color:#343a40!important}
+#tabs [role=tab]{min-height:44px;cursor:pointer}
+#tabs .tab-content{width:100%;min-width:0}
+.patient-system footer{color:#ddd!important}
+.patient-system a:not(.btn){color:#000054}
+.patient-system footer a:not(.btn){color:#fff}
+.patient-system .nav-tabs .nav-link{font-size:16px;min-height:44px;line-height:1.5}
+.patient-system .nav-tabs .nav-link[aria-selected=true]{border-bottom:4px solid #000054;font-weight:700}
+.patient-system .nav-tabs .nav-link[aria-selected=false]{text-decoration:underline;text-underline-offset:3px}
+#cssmenu .nav-disclosure{display:block;width:100%;padding:14px 4px;min-height:48px;border:0;border-radius:0;background:transparent;color:#fff;text-align:left;font:inherit;cursor:pointer}
+#cssmenu .nav-disclosure::after{content:'▾';display:inline-block;margin-left:8px}
+#cssmenu .nav-disclosure[aria-expanded=true]::after{content:'▴'}
+#cssmenu .nav-disclosure+ul:not([hidden]){display:block!important}
+#banner :is(a,button).full-screen{position:absolute;inset:0;width:44px;height:44px;border:0;background:transparent;cursor:pointer;padding:0}
+#banner :is(a,button).full-screen::before{inset:10px;width:auto;height:auto;border:2px dashed #000054;background:transparent}
+#banner :is(a,button).full-screen::after{display:none}
+.patient-header{padding:12px 0}
+.patient-system .patient-header .patient-system-title{float:none!important;position:static!important;font-size:24px!important;line-height:1.3;margin:24px 0 0!important;color:#000054}
+.patient-system .page>h1{font-size:28px;line-height:1.3;margin:0 0 24px}
+.patient-record-id{font-size:18px;margin-bottom:20px;color:#4b535b!important}
+.patient-system .page select{display:block;width:100%;min-height:44px;border:1px solid #747c85;border-radius:3px;background:#fff;color:#172132;padding:8px;font-size:16px}
+.patient-system .page select[multiple]{min-height:120px}
+.patient-system input::placeholder,.patient-system textarea::placeholder{color:#5c6268;opacity:1}
+.multi-select-hint{font-size:14px;line-height:1.5;max-width:360px;margin-top:8px}
+.field-help{display:inline-flex;align-items:center;justify-content:center;width:32px;min-width:32px;height:32px;border:1px solid #000054;border-radius:50%;background:#fff;color:#000054;font:bold 16px/1 Arial,sans-serif;margin:4px;cursor:pointer;vertical-align:middle}
+.field-help-dialog{border:0;border-radius:4px;padding:28px;width:min(560px,calc(100% - 32px));max-height:calc(100dvh - 48px);overflow:auto;color:#172132}
+.field-help-dialog::backdrop{background:#0008}
+.field-help-dialog h2{font-size:24px}
+.field-help-dialog p{font-size:16px;line-height:1.6}
+.doctor-card-name{font-size:20px;line-height:1.35}
+.doctor-field-label{font-size:15px;font-weight:700;margin-bottom:8px}
+#showRightPush{border:0}
+.library-page h2.document-section-heading{font-size:22px;color:#000054;margin-top:36px}
+#intranet #latestnews .card .card-body :is(h3,h5){font-size:20px;line-height:1.35;padding-top:0;font-weight:700;color:#111}
+.quick_link_title :is(h2,h3){font-size:24px;line-height:1.3}
+#flipcards .card-grid .middler{height:auto;min-height:44px;bottom:12px}
+#flipcards .card-grid .middler button{min-height:44px;white-space:normal}
+@media(forced-colors:active){html body :where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:3px solid Highlight!important;box-shadow:none!important}.patient-system .nav-tabs .nav-link[aria-selected=true]{border-bottom-color:Highlight}}
+@media print{.field-help,.multi-select-hint{display:none!important}}

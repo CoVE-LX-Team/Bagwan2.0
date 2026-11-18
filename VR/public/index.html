@@ -5,21 +5,22 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Bagwan Health virtual tour</title>
 <link href="/Bagwan2.0/assets/vendor/cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css?v=a7f1d7b86f10" rel="stylesheet"/>
-<link href="tour.css" rel="stylesheet"/>
+<link href="tour.css?v=633262105b41" rel="stylesheet"/>
 <link href="/Bagwan2.0/assets/favicon.svg" rel="icon" type="image/svg+xml"/></head>
 <body>
-<div aria-label="Hospital panorama" id="panorama"></div>
+<header><h1 class="visually-hidden">Bagwan Health virtual tour</h1><p class="visually-hidden" id="tour-keyboard-help">Use the room selector to visit each room and Room information to read its learning content. In the panorama, use arrow keys to look around and plus or minus to zoom. Press Tab to leave the panorama.</p></header>
+<div aria-label="Hospital panorama" aria-describedby="tour-keyboard-help" role="main" id="panorama"></div>
 <div id="tour-status" role="status"></div>
-<section aria-label="Room information" hidden="" id="room-information">
+<dialog aria-labelledby="info-title" id="room-information">
 <button aria-label="Close room information" id="close-information">×</button>
 <h2 id="info-title"></h2><div id="info-items"></div>
-</section>
+</dialog>
 <nav aria-label="Virtual tour controls" id="tour-toolbar">
-<label for="room-select">Choose a room</label><select id="room-select"></select>
+<label for="room-select">Choose a room</label><select aria-label="Choose a room" id="room-select"></select>
 <button id="information-button">Room information</button>
 <a href="/Bagwan2.0/index.html" target="_top">Staff intranet</a>
 </nav>
 <script src="/Bagwan2.0/assets/vendor/cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
-<script src="tour.js"></script>
+<script src="tour.js?v=1b49d5d32bf3"></script>
 </body>
 </html>

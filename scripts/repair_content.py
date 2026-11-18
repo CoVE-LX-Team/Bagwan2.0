@@ -1,6 +1,9 @@
 """Repair recoverable content/navigation gaps without inventing clinical material."""
 from urllib.parse import quote, urlsplit
 from bs4 import BeautifulSoup, NavigableString
+from repair_responsive import repair_responsive_markup
+from repair_accessibility import repair_accessibility_markup
+from repair_clinical import repair_clinical_markup
 import html
 import json
 import re
@@ -271,6 +274,9 @@ def repair_site(root, base, files, folders):
     for path in paths:
         relative = path.relative_to(root).as_posix();soup = read(relative)
         responsive_org_chart(soup)
+        repair_responsive_markup(soup)
+        repair_accessibility_markup(soup)
+        repair_clinical_markup(soup)
         for navigation in soup.select('#bottom_navigation'):
             navigation.decompose()
         for navigation in soup.select('#next-prev'):

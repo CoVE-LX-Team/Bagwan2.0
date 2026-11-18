@@ -6,6 +6,15 @@
   const content = document.getElementById('info-items');
   const title = document.getElementById('info-title');
   const select = document.getElementById('room-select');
+  const informationButton = document.getElementById('information-button');
+  select.disabled = informationButton.disabled = true;
+  let informationOpener;
+  const openInformation = () => {
+    if (!panel.open) { informationOpener = document.activeElement; panel.showModal(); }
+    document.getElementById('close-information').focus();
+  };
+  const closeInformation = () => { if (panel.open) panel.close(); };
+  panel.addEventListener('close', () => (informationOpener?.isConnected ? informationOpener : document.getElementById('information-button')).focus());
   const names = id => id.replace(/([a-z])([A-Z])/g,'$1 $2');
   try {
     const data = await fetch('static_assets/hello-world.json').then(r => {if(!r.ok)throw Error('Tour content could not be loaded.');return r.json();});
@@ -19,7 +28,7 @@
     let current = first;
     const uniqueInfos = scene => [...new Map((scene.infos || []).map(info => [JSON.stringify(info.card),info])).values()];
     const showCard = info => {
-      panel.hidden = false; content.replaceChildren(); title.textContent = '';
+      content.replaceChildren(); title.textContent = '';
       for (const part of info.card || []) {
         if (part.type === 'header') title.textContent = part.txt;
         else if (part.type === 'image' && part.src && !unavailable.has(part.src.replace(/^\//,''))) {
@@ -33,7 +42,7 @@
           }
         }
       }
-      document.getElementById('close-information').focus();
+      openInformation();
     };
     const config = {};
     for (const scene of scenes) {
@@ -57,17 +66,24 @@
       const option = document.createElement('option'); option.value=scene.id;option.textContent=names(scene.id);select.append(option);
     }
     const viewer = pannellum.viewer('panorama',{default:{firstScene:first,autoLoad:true,sceneFadeDuration:200,showControls:true},scenes:config});
+    for (const [selector,label] of [['.pnlm-zoom-in','Zoom in'],['.pnlm-zoom-out','Zoom out'],['.pnlm-fullscreen-toggle-button','Toggle panorama fullscreen']]) {
+      const control = document.querySelector(selector);
+      if (!control) continue;
+      control.setAttribute('role','button'); control.tabIndex=0; control.setAttribute('aria-label',label);
+      control.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();control.click()}});
+    }
     select.value=first;
     select.addEventListener('change',()=>viewer.loadScene(select.value));
-    viewer.on('scenechange',id=>{current=id;select.value=id;panel.hidden=true;location.hash=id;status.textContent='';});
+    viewer.on('scenechange',id=>{current=id;select.value=id;closeInformation();location.hash=id;status.textContent='';});
     viewer.on('load',()=>{status.textContent='';});
     viewer.on('error',()=>{status.textContent='This panorama is unavailable in the original tour. Choose another room below.';});
-    document.getElementById('information-button').addEventListener('click',()=>{
-      const infos=uniqueInfos(byId[current]); panel.hidden=false;content.replaceChildren();title.textContent=names(current);
+    informationButton.addEventListener('click',()=>{
+      const infos=uniqueInfos(byId[current]); content.replaceChildren();title.textContent=names(current);
       if(!infos.length){const p=document.createElement('p');p.textContent='Use the arrows in the panorama or the room selector to continue through the hospital.';content.append(p);}
       for(const info of infos){const button=document.createElement('button');button.textContent=info.card?.find(x=>x.type==='header')?.txt || 'Room information';button.onclick=()=>showCard(info);content.append(button);}
+      openInformation();
     });
-    document.getElementById('close-information').addEventListener('click',()=>{panel.hidden=true;document.getElementById('information-button').focus();});
-    document.addEventListener('keydown',e=>{if(e.key==='Escape')panel.hidden=true;});
+    document.getElementById('close-information').addEventListener('click',closeInformation);
+    select.disabled = informationButton.disabled = false;
   } catch(error) { status.textContent=error.message; }
 })();

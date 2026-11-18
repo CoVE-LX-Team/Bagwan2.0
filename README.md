@@ -37,6 +37,59 @@ python3 -m http.server 4173 --bind 127.0.0.1
 
 Open `http://127.0.0.1:4173/Bagwan2.0/`.
 
+### Local responsive improvements
+
+The local responsive pass replaces the cramped tablet sidebar with a navigation drawer below 1100px, keeps headings clear of the fixed header, and reflows news, quick links and patient cards. Navigation supports keyboard focus, Escape, outside-click dismissal and native touch scrolling. Embedded resource accordions resize their frames when expanded. Other wide tables retain their columns in labelled scroll regions with a visible instruction when scrolling is required. The Abbey scale, Food and Fluids, Personal Care and Continence forms now use responsive sections instead of wide grids.
+
+These changes are local and have not been pushed or deployed. The responsive markup repairs are included in the exporter and can also be reapplied locally, without fetching the source site:
+
+```sh
+python3 scripts/repair_responsive.py
+```
+
+Browser interaction checks cover navigation, embedded accordions, dialogs, values cards, search, patient tabs, form draft saving/downloads and live resizing from 320px to 1920px. Run from the parent directory with the preview server above running:
+
+```sh
+npx --yes --package @playwright/cli playwright-cli --session bagwan open http://127.0.0.1:4173/Bagwan2.0/
+npx --yes --package @playwright/cli playwright-cli --session bagwan run-code "$(cat Bagwan2.0/scripts/check_responsive.js)"
+```
+
+Screenshots are written to the ignored `output/playwright/` directory. Layout checks use Chromium; a separate touch-emulation pass covers long navigation menus, landscape use, organisation charts and video-player dimensions. External video requests are blocked during local layout checks, so those checks do not establish YouTube playback availability.
+
+Home-page quick links follow the news on smaller screens, so frequent users may prefer the navigation drawer. Missing source materials and clinical-content review remain as listed above. Physical-device and Safari/Firefox checks remain outstanding.
+
+### Responsive clinical forms and Infection Control tables
+
+The Abbey scale uses labelled observation fields and six assessment sections, with a calculated total and an explicit incomplete status until all six areas are scored. Food and Fluids and Personal Care use repeatable entry sections; adding an entry preserves existing data and moves keyboard focus to the new date. Each entry retains the original choices and PCA role. Continence shows one recording day at a time and allows each hour to expand independently; all three days remain in drafts and printouts.
+
+Drafts autosave in local browser storage. Earlier single-entry drafts remain readable, and additional entries and multiple selections restore after reloading. Print / save PDF creates a read-only summary that includes all entries or recording days, including those currently hidden on screen. The placeholder support email and telephone have been removed from patient-system footers.
+
+All six Infection Control tables use fluid columns on larger screens and place each component above its required actions at 700px and below. Fixed Word row heights and widths have been removed. Column and row headers retain their relationships for assistive technology. Original table text, clinical field order, choices and downloaded source documents are preserved.
+
+Run the dedicated browser checks alongside the existing keyboard and responsive checks:
+
+```sh
+npx --yes --package @playwright/cli playwright-cli --session bagwan run-code "$(cat Bagwan2.0/scripts/check_clinical.js)"
+```
+
+The critical review found and fixed clipped Word table rows, draft loss when adding rows, incomplete scores appearing as a finished zero, and printouts omitting hidden days. Remaining limitations: these are browser-local training drafts; the Food and Fluids form retains its original fractional amount and time fields, without a separate fluid-volume field. Source clinical wording still needs subject-matter review. Physical-device, screen-reader and other browser-engine checks remain outstanding.
+
+### Local accessibility improvements
+
+The accessibility pass adds main landmarks and skip links, meaningful headings and control names, visible keyboard focus, stronger text contrast and named table regions. Navigation disclosures, patient and resource tabs, flip cards, message expansion, profile dialogs and virtual-tour information support keyboard operation and focus return. Tabs use arrow keys, Home and End; Escape closes the nearest open submenu or dialog before leaving its parent navigation.
+
+Clinical forms use labelled native controls. Help is available from a button rather than only on hover, and multiple selections survive draft saving and reloading. Continence entries use a day selector and hourly disclosures, with labels that identify the day, time and purpose of each field. Original patient scenarios, exercise answers and imported document files remain unchanged. The existing H5P keyboard controls are retained, with instructions and improved embedded-document semantics.
+
+Run the keyboard journeys from the parent directory with the local preview and Playwright session above running:
+
+```sh
+npx --yes --package @playwright/cli playwright-cli --session bagwan run-code "$(cat Bagwan2.0/scripts/check_accessibility.js)"
+```
+
+The review combines axe-core 4.12.1 checks using WCAG 2 A/AA, 2.1 A/AA, 2.2 AA and best-practice rules with keyboard journeys and visual inspection. Automated results and screenshots are saved under the ignored `output/playwright/` directory. Automated checks do not establish full WCAG conformance. Screen-reader testing, video captions/transcripts, the accessibility of downloaded documents, physical devices and other browser engines remain separate review work. Panorama contrast depends on the image and needs visual review; YouTube frames remain externally hosted.
+
+The keyboard patterns follow the W3C guidance for [tabs](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/), [disclosure navigation](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation/) and [form labels](https://www.w3.org/WAI/tutorials/forms/labels/). Reapply the local repairs with `python3 scripts/repair_responsive.py`; they are also included in the export workflow. No GitHub publishing is performed by these repair scripts.
+
 The export helper requires Python 3, BeautifulSoup and lxml; it reads the public source and uses an untracked temporary cache:
 
 ```sh
