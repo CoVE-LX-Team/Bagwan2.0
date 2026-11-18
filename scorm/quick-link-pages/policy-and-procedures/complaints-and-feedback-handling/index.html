@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<!-- Our Custom CSS -->
+<link href="/Bagwan2.0/wp-content/themes/118/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+<script src="/Bagwan2.0/wp-content/themes/118/js/jquery.min.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/classie.js"></script>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<meta charset="utf-8"/><meta content="IE=edge" http-equiv="X-UA-Compatible"/><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/><meta content="yes" name="mobile-web-app-capable"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="bagwanhealth - The Virtual Workplace" name="apple-mobile-web-app-title"/><title>Complaints and feedback handling – bagwanhealth</title><meta content="noindex, nofollow" name="robots"/><style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style><style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*wp_block_styles_on_demand_placeholder:6afd118a32771*/
+/*# sourceURL=wp-block-library-inline-css */
+</style><style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style><style id="wp-block-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the block styles printed at wp_footer." }
+/*# sourceURL=wp-block-styles-placeholder-inline-css */
+</style><style id="wp-global-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the global-styles printed at wp_footer." }
+/*# sourceURL=wp-global-styles-placeholder-inline-css */
+</style><link href="/Bagwan2.0/wp-content/plugins/h5p/h5p-php-library/styles/h5p-fonts.css" id="h5p-plugin-fonts-css" media="all" rel="stylesheet"/><link href="/Bagwan2.0/wp-content/plugins/h5p/h5p-php-library/styles/h5p.css" id="h5p-plugin-styles-css" media="all" rel="stylesheet"/><link href="/Bagwan2.0/wp-content/themes/118/css/vwp.css" id="understrap-styles-css" media="" rel="stylesheet" type="text/css"/><style>
+</style><style>
+.body{
+
+  margin:0;
+  font-size:16px;
+}
+.wrapper{
+  background:red;
+}
+
+.container{
+  margin: 0 auto;
+  max-width:1000px;
+  width:100%;
+  padding: 0 15px;
+  box-sizing:border-box;}
+
+.footer{
+  font-size:0.85rem;
+  padding: 20px 0;
+  line-height:1.6;
+  background:#ddefbf;
+  margin:0 auto;
+}
+
+.footer__text{
+  color:#444444;
+  font-family:helvetica;
+  padding:3px 15px;
+  display:block;
+
+}
+
+.footer__hr{
+  height:1px;
+  border:none;
+  background:#aad75f;
+
+}
+
+.a__footer{
+  color:#ee3154;
+}
+
+.a__footer:hover {
+  color:#121741;
+}
+
+p.footer__copy{
+  width:100%;
+ margin:0 auto;}
+</style><link href="/Bagwan2.0/assets/static.css" rel="stylesheet"/></head>
+<body class="cbp-spmenu-push" data-site-root="/Bagwan2.0/">
+<div class="" id="showRightPush">
+<span></span>
+<span></span>
+<span></span>
+<div class="w-100 fscreen">
+<div id="fullscreen">
+<a class="full-screen" href="#" id="fullscreen" onclick="fullscreen()" role="button"></a>
+</div>
+</div>
+</div>
+<nav class="navbar cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="sidebar">
+<div>
+<div class="sidebar"><div id="nav">
+<div class="visibility p-0" id="reveal">
+<div><a href="/Bagwan2.0/scorm/intranet/index.html">
+<img alt="home icon" height="42" src="/Bagwan2.0/wp-content/themes/118/vwp/img/home_icon.png" style="margin-top:20%;margin-left:45%;" width="42"/></a></div>
+<div class="menu-menu-test-container" id="cssmenu"><ul class="menu" id="menu-menu-test"><li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1088"><a href="/Bagwan2.0/scorm/intranet/our-community/index.html"><span>Our community</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm menu-item-has-children has-sub" id="menu-item-1089"><a href="/Bagwan2.0/scorm/department-pages/index.html"><span>Departments</span></a>
+<ul>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1092"><a href="/Bagwan2.0/scorm/department-pages/hr-services/index.html"><span>HR services</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1093"><a href="/Bagwan2.0/scorm/department-pages/lab-technologies/index.html"><span>Lab technologies</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1094"><a href="/Bagwan2.0/scorm/department-pages/nursing/index.html"><span>Nursing</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1095"><a href="/Bagwan2.0/scorm/department-pages/interpreting-office/index.html"><span>Interpreting services</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1468"><a href="/Bagwan2.0/scorm/department-pages/logisitics/index.html"><span>Logistics</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1096"><a href="/Bagwan2.0/scorm/intranet/doctors-on-call/index.html"><span>Doctors on call</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1097"><a href="/Bagwan2.0/scorm/intranet/news-feed/index.html"><span>News feed</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1120"><a href="/Bagwan2.0/scorm/intranet/staff-repository/index.html"><span>Documents</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm menu-item-has-children has-sub" id="menu-item-1273"><a href="/Bagwan2.0/scorm/virtual-hospital/index.html"><span>Virtual tour</span></a>
+<ul>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1284"><a href="/Bagwan2.0/scorm/virtual-hospital/entrance/index.html"><span>Entrance</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1274"><a href="/Bagwan2.0/scorm/virtual-hospital/laboratories/index.html"><span>Laboratories</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1275"><a href="/Bagwan2.0/scorm/virtual-hospital/main-reception/index.html"><span>Main reception</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1276"><a href="/Bagwan2.0/scorm/virtual-hospital/medication-room/index.html"><span>Medication room</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1277"><a href="/Bagwan2.0/scorm/virtual-hospital/myotherapy-clinic/index.html"><span>Myotherapy clinic</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1278"><a href="/Bagwan2.0/scorm/virtual-hospital/nurses-station/index.html"><span>Nurses’ station</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1279"><a href="/Bagwan2.0/scorm/virtual-hospital/rehabilitation-clinic/index.html"><span>Rehabilitation clinic</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1280"><a href="/Bagwan2.0/scorm/virtual-hospital/specimen-reception/index.html"><span>Specimen reception</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1281"><a href="/Bagwan2.0/scorm/virtual-hospital/ward/index.html"><span>Ward</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1282"><a href="/Bagwan2.0/scorm/virtual-hospital/xray-room/index.html"><span>Xray Room</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1471"><a href="/Bagwan2.0/scorm/virtual-hospital/logisitics/index.html"><span>Logistics</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-1385"><a href="/Bagwan2.0/patient-management-system/index.html"><span>Patient management system</span></a></li>
+</ul></div> </div>
+</div>
+</div>
+</div>
+</nav>
+<div class="cbp-spmenu-push-toleft" id="content">
+<!-- ensure iframe links are opened in a new tab in the parent uless this is a scorm page builder -->
+<script id="popper-scripts-js" src="/Bagwan2.0/wp-content/themes/118/js/popper.min.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/vwp/js/jquery.min.js"></script><script src="/Bagwan2.0/wp-content/themes/118/vwp/js/theme.min.js"></script><script src="/Bagwan2.0/wp-content/themes/118/vwp/js/main.js"></script>
+<!--
+ __      ________   _____            _               _______
+ \ \    / /  ____| |  __ \          (_)             |__   __|
+  \ \  / /| |__    | |  | | ___  ___ _  __ _ _ __      | | ___  __ _ _ __ ___
+   \ \/ / |  __|   | |  | |/ _ \/ __| |/ _` | '_ \     | |/ _ \/ _` | '_ ` _ \
+    \  /  | |____  | |__| |  __/\__ \ | (_| | | | |    | |  __/ (_| | | | | | |
+     \/   |______| |_____/ \___||___/_|\__, |_| |_|    |_|\___|\__,_|_| |_| |_|
+                                        __/ |
+                                       |___/
+This custom content was generated by the RMIT Vocational Education Design team - https://emedia.rmit.edu.au/oedvedesign/
+-->
+<div class="container-fluid" id="vwp">
+<div class="row">
+<div class="col-12" id="banner" style="z-index:1;">
+<a href="/Bagwan2.0/scorm/intranet/index.html"><div id="ws">
+<div class="vwp-logo"></div>
+</div></a>
+</div>
+<!-- breadcrumbs commented out for VWP-->
+<div class="container">
+<div class="" data-intro="This is a location-based breadcrumb trail showing which page you are viewing and where it sits in the website’s hierarchy." id="breadcrumbs" style="margin-top: 6rem; border-bottom: 1px solid #eeeeee; margin-bottom: 2rem;">
+<ul class="thin-text">
+<li class="d-lg-inline">Quick link pages</li> <li>Policy and procedures</li> <li style="color:#01A19A; font-weight: 500;">  Complaints and feedback handling</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<h1>Complaints and feedback handling</h1>
+<div class="heading-underline"></div>
+<article><h5>Policy Number</h5>
+<h5>Version Number</h5>
+<hr/>
+<h5>Scope</h5>
+<p>This policy applies to all staff (paid and volunteer), contractors and our governing body, receiving or managing complaints from the public and clients made to or about Bagwan Health regarding products, services and staff, or the complaint handling process.</p>
+<hr/>
+<h5>Policy statement</h5>
+<p>Bagwan Health respects the rights of patients and their families and encourages them to promptly bring concerns or complaints to our attention so that they can be addressed in a timely fashion. Every complaint is an opportunity to improve the quality of our service. This policy defines the standards and processes associated with complaints handling to ensure that Bagwan Health handles complaints fairly, efficiently and effectively.</p>
+<hr/>
+<p><strong> What is a Complaint?</strong></p>
+<p>A “complaint” is an expression of dissatisfaction made to or about us, our services, staff or the handling of a complaint where a response or resolution is explicitly or implicitly expected or legally required. (AS/NZ 10002:2014)</p>
+<p><strong> Commitment to Complaints Handling</strong></p>
+<p>Bagwan Health is committed to seeking and receiving feedback and complaints about our services, systems, practices, procedures, products and complaint handling. Any concerns raised will be dealt with within a reasonable time frame. (AS/NZ 10002)</p>
+<p>  <strong>Responsibilities</strong></p>
+<p>Bagwan Health staff at all levels are expected to be fair, effective and efficient when handling complaints. The responsibilities will vary depending on their level of involvement in complaint handling.</p>
+<p>The CEO of Bagwan Health is responsible for:</p>
+<ul>
+<li>Reporting to the governing body on complaint handling.</li>
+<li>Providing adequate support and direction to key staff responsible for handling complaints</li>
+<li>Regularly reviewing reports about complaint trends and issues arising from complaints</li>
+<li>Encouraging staff to be alert to complaints and assisting those responsible for handling complaints to resolve them promptly</li>
+<li>Encouraging staff to make recommendations for system improvements</li>
+<li>Supporting recommendations for service, staff and complaint handling improvements arising from the analysis of complaint data</li>
+</ul>
+<p>Bagwan Health staff whose duties include complaint handling are responsible for:</p>
+<ul>
+<li>Treating all people with respect, including people who make complaints</li>
+<li>Assisting people to make a complaint, if needed</li>
+<li>Complying with our complaints handling policy and associated procedures</li>
+<li>Providing regular feedback to management and/or the governing body on issues arising from complaints</li>
+<li>Providing suggestions to management on ways to improve our complaints handling system</li>
+<li>Implementing changes arising from individual complaints and from the analysis of complaint data as directed by management</li>
+</ul>
+<p>All Bagwan Health staff are responsible for:</p>
+<ul>
+<li>Treating all people with respect, including people who make complaints</li>
+<li>Being aware of our complaint handling policies and procedures</li>
+<li>Assisting people who wish to make complaints access our complaints process</li>
+<li>Being aware of complaints and assisting staff handling complaints to promptly resolve matters</li>
+</ul>
+<p>  <strong> Empowerment of Staff</strong></p>
+<p>Bagwan Health staff are empowered to resolve complaints promptly and to implement the complaint handling system as relevant to their role and responsibilities. Complaints handling is an important component of Bagwan Health orientation and quality training programs. As such all Bagwan Health staff must be familiar with the process.</p>
+<p><strong>Accessibility</strong></p>
+<p>Information on how and where to make complaints can be found on the Bagwan Health website. The systems used to manage complaints are easily understood and accessible to everyone, particularly people who may require assistance.</p>
+<p>Information on complaints management can also be found in:</p>
+<ul>
+<li>Patient admission information</li>
+<li>Patient booklet</li>
+<li>Signage throughout Bagwan Health</li>
+<li>Patient feedback forms</li>
+</ul>
+<p>Compliant forms are offered to patients in all areas of Bagwan Health including reception desks, waiting rooms and on the Bagwan Health website (Contact Us tab).</p>
+<p><strong> Objectivity and Fairness</strong></p>
+<p>Complaints will be addressed with integrity and in an equitable, objective and unbiased manner. The person handling a complaint will be different from any staff member whose conduct or service is being complained about. Conflicts of interest, whether actual or perceived, will be managed responsibly. In particular, internal reviews of how a complaint was managed will be conducted by a person other than the original decision maker.</p>
+<p>At all times throughout this process independent advocacy will be offered to the complainant as an option for resolution. An independent advocacy service may be chosen or an appropriate support person contacted from the details enclosed in the Bagwan Health Complaints Handling pamphlet which is given/sent on first contact.</p>
+<p>When a complainant prefers or needs another person or organisation to assist or represent them in the making and/or resolution of their complaint, Bagwan Health staff will communicate with them through their representative. Anyone may represent a person wishing to make a complaint with their consent.</p>
+<p>Complainants with special needs must be recognized and appropriate support put in place to support them with the complaint process e.g. access to an interpreter.  </p>
+<p><strong> Confidentiality</strong></p>
+<p>Bagwan Health will take all reasonable steps to ensure that people making complaints are not adversely affected because a complaint has been made by them or on their behalf.</p>
+<p>Where practical, the identity of the complainants will be protected. Personal information that identifies individuals will only be disclosed or used by Bagwan Health as permitted under the relevant privacy laws, secrecy provisions and relevant confidentiality obligations.</p>
+<p><strong>No Charge</strong></p>
+<p>There is no charging for making a complaint.</p>
+<p><strong>Types of Complaints</strong></p>
+<p>Complaints come in many forms and staff must follow the process for receiving, documenting, escalating and resolving complaints whether they are verbal or written, formal or informal. As well as complaints being made directly to our organisation, some complaints (e.g. negative comments) can be made on social media. Where possible, complaints will be resolved on first contact.</p>
+<p><strong>Verbal Complaints</strong></p>
+<p>When a verbal complaint is received by a member of staff it will be acknowledged immediately and if it is able to be resolved, all attempts will be made to do so at the time. If this is not appropriate the staff member receiving the complaint must document the complaint and escalate it to their Manager who will risk score the complaint and decide whether further action should be taken (refer to Appendix One).</p>
+<p>The Manager will pass the complaint to the Administration Assistant to ensure it is documented on the Complaints Register.</p>
+<p><strong> Written Complaints</strong></p>
+<p>When a written complaint is received, it must be promptly forwarded to the Administration Assistant or Executive Assistant, who notify the appropriate Executive/Manager to risk score the complaint and decide on an appropriate response. (Refer to Appendix One). The Administration Assistant will ensure it is documented on the Complaints Register.</p>
+<p>Complaints received by any staff member other than Reception staff must also be discussed with the appropriate Manager as soon as possible.</p>
+<p>  <strong>Staff Performance Issues</strong></p>
+<p>If a staff performance issue is implicated in either a verbal or written complaint, the complaint will be passed onto the appropriate Manager. The Manager will follow up with the staff member concerned. If necessary, the Manager will refer the complaint to the People and Capability Manager who will ensure that the appropriate performance management process is followed.</p>
+<p><strong> Complaints Involving Multiple Organisations</strong></p>
+<p>Where a complaint involves multiple organisations, Bagwan Health will work with the other organisation/s to ensure that communication with the complainant and/or their representative is clear and coordinated. Subject to privacy and confidentiality considerations, communication and information sharing between the parties will also be organised to facilitate a timely response to the complaint.</p>
+<p>Bagwan Health takes complaints not only about the actions of our staff but also the actions of our service providers. Where our services are contracted out, we expect contracted service providers to have an accessible and comprehensive complaint handling system.</p>
+<p><strong>Complaints Register</strong></p>
+<p>For tracking purposes a unique identifier/number will be assigned to every complaint recorded in the Complaints Register.</p>
+<p>The complaint file will include:</p>
+<ul>
+<li>Contact information for the person making a complaint</li>
+<li>The date the complaint was received</li>
+<li>Issues raised by the complainant and the desired outcome/s</li>
+<li>Any other relevant information</li>
+<li>Any additional support that the person making the complaint requires</li>
+</ul>
+<p><strong> Acknowledgment</strong></p>
+<p>The receipt of a complaint will be acknowledged promptly and preferably within two working days. When appropriate an explanation or apology may be offered. Consideration will also be given to the most appropriate medium (e.g. email, letter) for communicating with the person making a complaint.</p>
+<p> </p>
+<p>To manage expectations, complainants will be informed soon as possible of the following:</p>
+<ul>
+<li>The complaints process and the expected time frames for Bagwan Health</li>
+<li>Their likely involvement in the complaint handling process</li>
+<li>The progress of the complaint</li>
+<li>When expected time frames cannot be met and the reason for the delay</li>
+<li>When Bagwan Health is unable to deal with any part of their complaint and where such issues/complaints should be directed (if known or appropriate)</li>
+<li>The possible or likely outcome of their complain</li>
+</ul>
+<p>Initial Assessment of the Complaint</p>
+<p>Once the receipt of the complaint is acknowledged, Bagwan Health staff will confirm whether the issue/s raised in the complaint is/are within our control. The outcome/s sought by the complainant will also be considered and, where there is more than one issue raised, it will be determined whether each issue needs to be separately addressed.</p>
+<p>When determining how a complaint will be managed, the following will be taken into consideration:</p>
+<ul>
+<li>How serious, complicated or urgent the complaint is</li>
+<li>Whether the complaint raises concerns about people’s health and safety</li>
+<li>How the person making the complaint is being affected</li>
+<li>The risks involved if resolution of the complaint is delayed</li>
+<li>Whether a resolution requires the involvement of other organisations</li>
+</ul>
+<p>Complaints will be assessed and prioritised in accordance with the urgency and/or seriousness of the issues raised. If a matter concerns an immediate risk to safety or security then the response will be immediate and will be escalated appropriately.</p>
+<p><strong>Investigating the Complaint</strong></p>
+<p>Once the complaint has been assessed, it will be decided how the complaint will be managed. This may be done by:</p>
+<ul>
+<li>Giving the complainant an explanation</li>
+<li>Gathering information about the issue, person or area that the complaint is about</li>
+<li>Investigating the claims made in the complaint</li>
+</ul>
+<p>The complainant will continue to be kept up-to-date on the complaint progress, especially if there are any delays.  </p>
+<p><strong> Determining Outcomes and Actions </strong></p>
+<p>Once the complaint has been investigated, a decision on the outcome of the complaint and any required actions will be determined. Outcomes and determined actions must be tailored to each case and take into account any statutory requirements. The staff member dealing with the complaint will then:</p>
+<ul>
+<li>Ensure the Complaints Register has been updated</li>
+<li>Notify the Executive/Manager of actions if they are not dealing with the complaint</li>
+<li>If actions are appropriate and no further action is required, the complainant will receive a written response within ten working days, from the decision date</li>
+<li>If actions require more work, the complainant will be advised of this along with the expected timeframe</li>
+<li>This cycle will be repeated and the Complaints Register will be updated until actions are sufficient to resolve the complaint</li>
+<li>If time frames are likely to be greater than 20 days, the complainant will be informed of the progress of the complaint and the reasons for any delay by the person undertaking action</li>
+</ul>
+<p><strong> Providing Reasons for Decision</strong></p>
+<p>The staff member dealing the complaint will contact the person making the complaint and advise them:</p>
+<ul>
+<li>The outcome of the complaint and any action taken</li>
+<li>The reason/s for the decision</li>
+<li>The remedy or resolution/s that have been proposed or put in place</li>
+<li>Any options for review that may be available to the complainant, such as an internal review, external review or appeal</li>
+</ul>
+<p>Note: Staff must inform complainants of any internal or external review options available to them including any relevant Ombudsman or oversight regulatory bodies. <strong> Closing the Complaint</strong></p>
+<p>Bagwan Health will ensure that outcomes and actions are properly implemented, monitored and reported to the complaint handling Manager, Senior Management, the CEO and the Board. Bagwan Health will keep records about the complaint, including:</p>
+<ul>
+<li>How the complaint was managed</li>
+<li>The outcome/s of the complaint</li>
+<li>Any outstanding actions to be followed up</li>
+</ul>
+<p>  <strong> Continuous Improvement</strong></p>
+<p>Bagwan Health is committed to improving the way our organisation operates, including our management of the effectiveness and efficiency of our complaint handling system.</p>
+<p>Complaints are recorded in a systematic way so that information can be easily retrieved for reporting by management and the Board.</p>
+<p>Regular reports are run on:</p>
+<ul>
+<li>Number of complaints received</li>
+<li>Outcome of complaints</li>
+<li>Issues arising from complaints</li>
+<li>Identified systemic issues</li>
+<li>Number of requests received for review of our complaint handling</li>
+</ul>
+<p>Regular analysis of these reports will be undertaken to monitor trends, measure the quality of our customer service and make improvements. Both reporting and their analysis will be provided, at least annually, to the CEO, Senior Management and to the Board for review.</p>
+<p>These reports will also be used as key performance indicators.</p>
+<p><a href="/Bagwan2.0/documents/policies-and-procedures/Bagwan%20Health%20-%20Complaints%20Handling%20V1.0.docx">Click here to download policies</a></p>
+</article>
+<article class="mt-3"></article>
+</div>
+<div class="b-0 container">
+<div class="">
+<div class="" id="bottom_navigation">
+<div id="next-prev">
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- row-->
+<!-- #cde -->
+<script src="/Bagwan2.0/wp-content/themes/118/js/glossary-tooltip.js"></script><script src="/Bagwan2.0/wp-content/themes/118/js/jquery.glossarize.js"></script>
+<div class="wrapper">
+<div class="container">
+</div>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<footer class="footer">
+<div class="footer__text container">
+<p>RMIT would like to acknowledge Wurundjeri people of the Kulin Nations as the Traditional Owners of the land on which the University stands. We respectfully recognise Elders past, present and future.</p>
+<p>© Copyright 2026 <a class="a__footer" href="https://www.rmit.edu.au/">RMIT</a> - This website is for educational purpose only.</p>
+<hr class="footer__hr"/>
+</div>
+</footer>
+<script src="/Bagwan2.0/wp-content/themes/118/js/menu.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/modernizr.custom.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+   // do the opening and closing for the menu accordion
+   (function ($) {
+     $(document).ready(function () {
+       $('#cssmenu li.has-sub>a').on('click', function () {
+         $(this).removeAttr('href');
+         var element = $(this).parent('li');
+         if (element.hasClass('open')) {
+           element.removeClass('open');
+           element.find('li').removeClass('open');
+           element.find('ul').slideUp();
+         } else {
+           element.addClass('open');
+           element.children('ul').slideDown();
+           element.siblings('li').children('ul').slideUp();
+           element.siblings('li').removeClass('open');
+           element.siblings('li').find('li').removeClass('open');
+           element.siblings('li').find('ul').slideUp();
+         }
+       });
+
+       $('#cssmenu>ul>li.has-sub>a').append('<span class="holder"></span>');
+
+     });
+   })(jQuery);
+ //ensure nav loads closed
+ $('#reveal').addClass('navshow').removeClass('test2');
+ //ensure the nav is always open for the current page
+ $("li.menu-item" ).children('ul').css({ display: "none" });
+ $('li.active').closest('ul').addClass('open').css({ display: "block" })
+ </script><script>
+     $(document).ready(function(){
+         $("#cssmenu>ul>li").parent().addClass("dropdown");
+       //  $("#cssmenu>ul").addClass("dropdown-menu");
+         $("#cssmenu>ul>li.has-sub>a").addClass("dropdown-toggle");
+         $("ul.has-sub li a").removeClass("dropdown-toggle");
+         $('.navbar .dropdown-toggle').append('<b class="caret"></b>');
+     });
+ </script><script>
+   //nave menu
+   $(document).ready(function () {
+       $('#sidebarCollapse').on('click', function () {
+         $('#sidebar').toggleClass('active');
+       });
+   });
+   //fullscreen
+   //invokes browser's fullscreen mode
+   function fullscreen() {
+     var isInFullScreen = (document.fullscreenElement && document.fullscreenElement  !== null) ||
+         (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
+         (document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
+         (document.msFullscreenElement && document.msFullscreenElement !== null);
+
+     var docElm = document.documentElement;
+     if (!isInFullScreen) {
+         if (docElm.requestFullscreen) {
+             docElm.requestFullscreen();
+         } else if (docElm.mozRequestFullScreen) {
+             docElm.mozRequestFullScreen();
+         } else if (docElm.webkitRequestFullScreen) {
+             docElm.webkitRequestFullScreen();
+         } else if (docElm.msRequestFullscreen) {
+             docElm.msRequestFullscreen();
+         }
+     } else {
+         if (document.exitFullscreen) {
+             document.exitFullscreen();
+         } else if (document.webkitExitFullscreen) {
+             document.webkitExitFullscreen();
+         } else if (document.mozCancelFullScreen) {
+             document.mozCancelFullScreen();
+         } else if (document.msExitFullscreen) {
+             document.msExitFullscreen();
+         }
+     }
+ }
+</script><script defer="True" src="/Bagwan2.0/assets/static.js"></script></body></html>

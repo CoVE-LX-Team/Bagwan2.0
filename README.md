@@ -1,8 +1,43 @@
 # Bagwan2.0
 
-Source document library for the static replica of [Bagwan Health](https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/).
+Static HTML replica of the Bagwan Health learning intranet, hosted entirely by GitHub Pages.
 
-The Google Drive migration is complete. The site replica itself has not been built yet.
+**Start here: [Bagwan Health staff intranet](https://cove-lx-team.github.io/Bagwan2.0/).**
+
+The root [`index.html`](index.html) is the intranet homepage. The original route is also available at [`scorm/intranet/index.html`](scorm/intranet/index.html).
+
+## Static site
+
+- The public intranet pages, departments, news, policies, organisation charts and patient-management screens have been exported to HTML.
+- Images, styles, scripts, fonts, H5P activity data and 360° panoramas are served from this repository. YouTube videos and their player scripts are excluded.
+- Google Drive embeds are replaced with local document lists and download links. The complete migrated files remain in `documents/`.
+- The virtual tour uses the original panoramas and hotspot text with a self-hosted Pannellum viewer, room navigation and keyboard-accessible information controls.
+- Patient forms and the replacement training incident report support browser-local drafts, draft downloads and printing to PDF. GitHub Pages does not receive form submissions.
+- `.nojekyll` serves the committed HTML and assets directly; WordPress and a build server are not required.
+
+`static-export.json` records the 90 source URLs, local destinations, copied asset hashes and assets already unavailable at the source. This is a source conversion, not an editorial rewrite of the learning materials: pre-existing empty content pages and outdated document content still require a separate content review. The original counselling panorama and an evacuation-plan image are unavailable; the tour avoids requesting those missing files.
+
+The largest copied site asset is `VR/public/static_assets/360_images/dentalroom_Panorama.jpg` (5,400,055 bytes). No LFS pointers are used by the published site.
+
+## Preview and regenerate
+
+The committed site uses `/Bagwan2.0/` as its base path. From the parent of the `Bagwan2.0` checkout, run:
+
+```sh
+python3 -m http.server 4173 --bind 127.0.0.1
+```
+
+Open `http://127.0.0.1:4173/Bagwan2.0/`.
+
+The export helper requires Python 3, BeautifulSoup and lxml; it reads the public source and uses an untracked temporary cache:
+
+```sh
+python3 scripts/export_static.py --base-path /Bagwan2.0/
+python3 scripts/verify_static.py
+python3 scripts/verify_documents.py
+```
+
+The original theme, libraries and educational assets retain their existing attribution. Pannellum 2.5.6 is vendored with its upstream copyright/license notice; no third-party CDN is needed at runtime.
 
 ## Documents
 

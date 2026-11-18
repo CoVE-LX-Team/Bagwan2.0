@@ -88,7 +88,7 @@ def main():
     require(summary['largest_file_bytes'] == max(f['size_bytes'] for f in files.values()), 'Incorrect maximum size')
     require(summary['site_pages_with_drive_links'] == len(link_map['pages']), 'Incorrect source page count')
     require(summary['unique_site_drive_links'] == len({link['source_url'] for page in link_map['pages'] for link in page['links']}), 'Incorrect source URL count')
-    payload_paths = {p.relative_to(ROOT).as_posix() for base in ('documents', 'archive') for p in (ROOT / base).rglob('*') if p.is_file() and p.suffix.lower() not in ('.json', '.md')}
+    payload_paths = {p.relative_to(ROOT).as_posix() for base in ('documents', 'archive') for p in (ROOT / base).rglob('*') if p.is_file() and p.suffix.lower() not in ('.json', '.md', '.html')}
     require(payload_paths == {f['local_path'] for f in files.values()}, 'Unlisted or missing payload files')
     print(f"Verified {len(files)} file copies ({summary['unique_source_file_count']} unique Drive files + {summary['materialized_shortcut_count']} shortcut copies).")
     print(f"All sizes, SHA-256 hashes, document signatures, folder memberships and {summary['unique_site_drive_links']} source URL mappings passed.")

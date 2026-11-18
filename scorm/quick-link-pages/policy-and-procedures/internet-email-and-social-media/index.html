@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<!-- Our Custom CSS -->
+<link href="/Bagwan2.0/wp-content/themes/118/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+<script src="/Bagwan2.0/wp-content/themes/118/js/jquery.min.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/classie.js"></script>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<meta charset="utf-8"/><meta content="IE=edge" http-equiv="X-UA-Compatible"/><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/><meta content="yes" name="mobile-web-app-capable"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="bagwanhealth - The Virtual Workplace" name="apple-mobile-web-app-title"/><title>Internet, email and social media – bagwanhealth</title><meta content="noindex, nofollow" name="robots"/><style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style><style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*wp_block_styles_on_demand_placeholder:6afd118a43e46*/
+/*# sourceURL=wp-block-library-inline-css */
+</style><style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style><style id="wp-block-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the block styles printed at wp_footer." }
+/*# sourceURL=wp-block-styles-placeholder-inline-css */
+</style><style id="wp-global-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the global-styles printed at wp_footer." }
+/*# sourceURL=wp-global-styles-placeholder-inline-css */
+</style><link href="/Bagwan2.0/wp-content/plugins/h5p/h5p-php-library/styles/h5p-fonts.css" id="h5p-plugin-fonts-css" media="all" rel="stylesheet"/><link href="/Bagwan2.0/wp-content/plugins/h5p/h5p-php-library/styles/h5p.css" id="h5p-plugin-styles-css" media="all" rel="stylesheet"/><link href="/Bagwan2.0/wp-content/themes/118/css/vwp.css" id="understrap-styles-css" media="" rel="stylesheet" type="text/css"/><style>
+</style><style>
+.body{
+
+  margin:0;
+  font-size:16px;
+}
+.wrapper{
+  background:red;
+}
+
+.container{
+  margin: 0 auto;
+  max-width:1000px;
+  width:100%;
+  padding: 0 15px;
+  box-sizing:border-box;}
+
+.footer{
+  font-size:0.85rem;
+  padding: 20px 0;
+  line-height:1.6;
+  background:#ddefbf;
+  margin:0 auto;
+}
+
+.footer__text{
+  color:#444444;
+  font-family:helvetica;
+  padding:3px 15px;
+  display:block;
+
+}
+
+.footer__hr{
+  height:1px;
+  border:none;
+  background:#aad75f;
+
+}
+
+.a__footer{
+  color:#ee3154;
+}
+
+.a__footer:hover {
+  color:#121741;
+}
+
+p.footer__copy{
+  width:100%;
+ margin:0 auto;}
+</style><link href="/Bagwan2.0/assets/static.css" rel="stylesheet"/></head>
+<body class="cbp-spmenu-push" data-site-root="/Bagwan2.0/">
+<div class="" id="showRightPush">
+<span></span>
+<span></span>
+<span></span>
+<div class="w-100 fscreen">
+<div id="fullscreen">
+<a class="full-screen" href="#" id="fullscreen" onclick="fullscreen()" role="button"></a>
+</div>
+</div>
+</div>
+<nav class="navbar cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="sidebar">
+<div>
+<div class="sidebar"><div id="nav">
+<div class="visibility p-0" id="reveal">
+<div><a href="/Bagwan2.0/scorm/intranet/index.html">
+<img alt="home icon" height="42" src="/Bagwan2.0/wp-content/themes/118/vwp/img/home_icon.png" style="margin-top:20%;margin-left:45%;" width="42"/></a></div>
+<div class="menu-menu-test-container" id="cssmenu"><ul class="menu" id="menu-menu-test"><li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1088"><a href="/Bagwan2.0/scorm/intranet/our-community/index.html"><span>Our community</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm menu-item-has-children has-sub" id="menu-item-1089"><a href="/Bagwan2.0/scorm/department-pages/index.html"><span>Departments</span></a>
+<ul>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1092"><a href="/Bagwan2.0/scorm/department-pages/hr-services/index.html"><span>HR services</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1093"><a href="/Bagwan2.0/scorm/department-pages/lab-technologies/index.html"><span>Lab technologies</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1094"><a href="/Bagwan2.0/scorm/department-pages/nursing/index.html"><span>Nursing</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1095"><a href="/Bagwan2.0/scorm/department-pages/interpreting-office/index.html"><span>Interpreting services</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1468"><a href="/Bagwan2.0/scorm/department-pages/logisitics/index.html"><span>Logistics</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1096"><a href="/Bagwan2.0/scorm/intranet/doctors-on-call/index.html"><span>Doctors on call</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1097"><a href="/Bagwan2.0/scorm/intranet/news-feed/index.html"><span>News feed</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1120"><a href="/Bagwan2.0/scorm/intranet/staff-repository/index.html"><span>Documents</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm menu-item-has-children has-sub" id="menu-item-1273"><a href="/Bagwan2.0/scorm/virtual-hospital/index.html"><span>Virtual tour</span></a>
+<ul>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1284"><a href="/Bagwan2.0/scorm/virtual-hospital/entrance/index.html"><span>Entrance</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1274"><a href="/Bagwan2.0/scorm/virtual-hospital/laboratories/index.html"><span>Laboratories</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1275"><a href="/Bagwan2.0/scorm/virtual-hospital/main-reception/index.html"><span>Main reception</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1276"><a href="/Bagwan2.0/scorm/virtual-hospital/medication-room/index.html"><span>Medication room</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1277"><a href="/Bagwan2.0/scorm/virtual-hospital/myotherapy-clinic/index.html"><span>Myotherapy clinic</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1278"><a href="/Bagwan2.0/scorm/virtual-hospital/nurses-station/index.html"><span>Nurses’ station</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1279"><a href="/Bagwan2.0/scorm/virtual-hospital/rehabilitation-clinic/index.html"><span>Rehabilitation clinic</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1280"><a href="/Bagwan2.0/scorm/virtual-hospital/specimen-reception/index.html"><span>Specimen reception</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1281"><a href="/Bagwan2.0/scorm/virtual-hospital/ward/index.html"><span>Ward</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1282"><a href="/Bagwan2.0/scorm/virtual-hospital/xray-room/index.html"><span>Xray Room</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1471"><a href="/Bagwan2.0/scorm/virtual-hospital/logisitics/index.html"><span>Logistics</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-1385"><a href="/Bagwan2.0/patient-management-system/index.html"><span>Patient management system</span></a></li>
+</ul></div> </div>
+</div>
+</div>
+</div>
+</nav>
+<div class="cbp-spmenu-push-toleft" id="content">
+<!-- ensure iframe links are opened in a new tab in the parent uless this is a scorm page builder -->
+<script id="popper-scripts-js" src="/Bagwan2.0/wp-content/themes/118/js/popper.min.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/vwp/js/jquery.min.js"></script><script src="/Bagwan2.0/wp-content/themes/118/vwp/js/theme.min.js"></script><script src="/Bagwan2.0/wp-content/themes/118/vwp/js/main.js"></script>
+<!--
+ __      ________   _____            _               _______
+ \ \    / /  ____| |  __ \          (_)             |__   __|
+  \ \  / /| |__    | |  | | ___  ___ _  __ _ _ __      | | ___  __ _ _ __ ___
+   \ \/ / |  __|   | |  | |/ _ \/ __| |/ _` | '_ \     | |/ _ \/ _` | '_ ` _ \
+    \  /  | |____  | |__| |  __/\__ \ | (_| | | | |    | |  __/ (_| | | | | | |
+     \/   |______| |_____/ \___||___/_|\__, |_| |_|    |_|\___|\__,_|_| |_| |_|
+                                        __/ |
+                                       |___/
+This custom content was generated by the RMIT Vocational Education Design team - https://emedia.rmit.edu.au/oedvedesign/
+-->
+<div class="container-fluid" id="vwp">
+<div class="row">
+<div class="col-12" id="banner" style="z-index:1;">
+<a href="/Bagwan2.0/scorm/intranet/index.html"><div id="ws">
+<div class="vwp-logo"></div>
+</div></a>
+</div>
+<!-- breadcrumbs commented out for VWP-->
+<div class="container">
+<div class="" data-intro="This is a location-based breadcrumb trail showing which page you are viewing and where it sits in the website’s hierarchy." id="breadcrumbs" style="margin-top: 6rem; border-bottom: 1px solid #eeeeee; margin-bottom: 2rem;">
+<ul class="thin-text">
+<li class="d-lg-inline">Quick link pages</li> <li>Policy and procedures</li> <li style="color:#01A19A; font-weight: 500;">  Internet, email and social media</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<h1>Internet, email and social media</h1>
+<div class="heading-underline"></div>
+<article><h5>Policy Name – <strong>Internet, Email and Social Media</strong></h5>
+<h5>Policy Number</h5>
+<h5>Version Number</h5>
+<hr/>
+<h5><strong>Scope</strong></h5>
+<p>This policy applies to all Bagwan Health, staff, contractors, Allied Health professionals, Credentialed Specialists, volunteers and students.</p>
+<hr/>
+<h5><strong>Policy</strong></h5>
+<p>This policy defines the standards and processes associated with the responsible use of internet, email and social media at Bagwan Health. This policy has been developed in conjunction with the National Code of Conduct for Health Care Workers and other relevant VIC Health and Bagwan Health policies and legislation.</p>
+<hr/>
+<h5><strong>Procedure </strong></h5>
+<p><strong>Internet, Email and Social Media</strong></p>
+<p>Internet, email and social media are digital methods of communication and allow individuals and organization to communicate, find and share information, distribute resources and much more. Access to the internet at Bagwan Health is a privilege and everyone must adhere to this policy.</p>
+<p><strong>Internet and Email Usage</strong></p>
+<p>Bagwan Health staff, contractors, volunteers and students are expected to use the internet responsibly and productively. Internet access is limited to job-related activities only and personal use is not permitted. Job-related activities include research and educational tasks that can be completed using the internet that assist a person in their role.</p>
+<p>All internet data that is composed, transmitted and/or received by Bagwan Health computer systems is considered to belong to Bagwan Health and is recognized as part of its official data. It is therefore subject to disclosure for legal reasons or to other appropriate third parties.</p>
+<p>The equipment, services and technology used to access the internet are the property of Bagwan Health, and as such Bagwan Health reserves the right to monitor internet traffic and monitor and access data that is composed, sent or received through its online connections.</p>
+<p>Emails sent via the company email system should not contain content that is deemed to be offensive. This includes, though is not restricted to, the use of vulgar or harassing language/images.</p>
+<p>All sites and downloads may be monitored and/or blocked by Bagwan Health if they are deemed to be harmful and/or not productive to business.</p>
+<p><strong>Installing Software</strong></p>
+<p>The installation of new software such as internet browsers or instant messaging technology is strictly prohibited. If there is a requirement for new software to be installed, a request must be made via the I.T. portal on the intranet home page. All requests must be approved prior to installation by the relevant manager and the I.T. Manager.</p>
+<p> </p>
+<p><strong>What is Unacceptable Use of Internet and Email?</strong></p>
+<p> </p>
+<p>Unacceptable use of the internet or email includes, but is not limited to:</p>
+<p class="MsoListParagraphCxSpFirst" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Sending or posting discriminatory, harassing, or threatening messages or images on the internet or via Bagwan Health’s email service</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Using computers to perpetrate fraud, and/or software, film or music piracy</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Stealing, using, or disclosing someone else’s password without authorization</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Downloading, copying or pirating software and electronic files that are copyrighted or without authorization</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Sharing confidential material or proprietary information outside of the organization</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Hacking into unauthorized websites</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Sending or posting information that is defamatory to the company, its products/services, colleagues and/or customers</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Introducing malicious software onto the company network and/or jeopardizing the security of the organization’s electronic communications systems</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Sending or posting chain letters, solicitations, or advertisements not related to business purposes or activities</span></p>
+<p> </p>
+<p class="MsoListParagraphCxSpLast" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Passing off personal views as representing those of Bagwan Health</span></p>
+<p>If unsure about what constitutes acceptable internet usage, then consult a manager for further guidance and clarification</p>
+<p><strong><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Social Media</span></strong></p>
+<p>Social media is a popular communication method used to interact, share content and collaborate outside of traditional means of communication. The growing use of social media and networking sites is providing opportunities for Bagwan Health to communicate and share information. Social media is also a powerful engagement tool for Bagwan Health to communicate with staff, external stakeholders and the community. </p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">For the purpose of this policy, social media includes, but is not limited to:</span></p>
+<p class="MsoListParagraphCxSpFirst" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Social sites/apps e.g. Facebook or Twitter</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Business networking sites/apps e.g. LinkedIn</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Video sharing sites/apps e.g. YouTube</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Photo sharing sites/apps e.g. Instagram</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Blogs e.g. WordPress</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Forums and discussion boards e.g. Yahoo! or Google Groups</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Podcasts e.g. Simplecast</span></p>
+<p> </p>
+<p class="MsoListParagraphCxSpLast" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Any other websites that allow individual users or companies to use simple publishing tools</span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Always remember that posts and comments made on social media, either professionally or personally, could potentially be permanent.</span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><strong><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Bagwan Health’s Use of Social Media</span></strong></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Bagwan Health uses social media for the following purposes:</span></p>
+<p class="MsoListParagraphCxSpFirst" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Encourage feedback from the public</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Engage with members of the community and community groups</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Facilitate a communication channel for the public to access information about our services</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Facilitate a communication channel for health promotion</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Promote Bagwan Health events</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Facilitate a communication for public health announcements such as new programs, outbreaks</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Provide interesting and useful information for the community</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Engage a younger demographic</span></p>
+<p> </p>
+<p class="MsoListParagraphCxSpLast" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Enable information sharing for staff, contractors, volunteers, students and clinicians</span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><strong><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Inappropriate Material for Social Media</span></strong></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Social media can be a fun personal platform, but it can create problems professionally, especially when inappropriate material is shared. Inappropriate material includes, but is not limited to, any material that is:</span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;"> </span></p>
+<p class="MsoListParagraphCxSpFirst" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Misleading or deceiving, whether intended or not</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Offensive, threatening, intimidating, abusive, defamatory or that may lead to criminal or civil liability</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Discriminating against colleagues, patients/clients or the public, on the grounds of sex, pregnancy, marital status, age, race, nationality, cultural or ethnic background, religious background, disability, HIV/AIDS, sexuality</span></p>
+<p class="MsoListParagraphCxSpLast" style="margin-left: 78.55pt; text-indent: -18pt;"><span lang="EN-US" style="font-size: 12pt; font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><span lang="EN-US" style="font-size: 12pt;">Victimising, harassing, vilifying or bullying</span></p>
+<p class="MsoListParagraphCxSpLast" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><span style="font-size: 1rem; font-family: Symbol; text-indent: -24px;">·</span><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman'; text-indent: -24px;">         </span><span style="font-size: 12pt; text-indent: -18pt;">Potentially damaging to Bagwan Health or Bagwan Health’s reputation in the community</span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Information that is retained and secured by Bagwan Health, in accordance with Section 5 of the Health Records and Information Privacy Act 2002 or the Health Services Act 1997, is also inappropriate for sharing on social media. </span></p>
+<p> </p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">This includes private health information, records, photos or images, tax file numbers, employee personal details. </span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><strong><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Responsibilities</span></strong></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">All staff, contractors, volunteers and students have a responsibility to:</span></p>
+<p class="MsoListParagraphCxSpFirst" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Act in accordance with this policy and any other relevant procedures and legislation when using social media</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Report any instances of inappropriate material, comments or intellectual property being posted to their line manager or a more senior staff member</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Carry out their duties responsibly, effectively, efficiently and in accordance to the National Code of Conduct for Health Care Workers</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Ensure they only access and use social media sites outside working hours in a private capacity, unless for the purpose of carrying out their duties</span></p>
+<p class="MsoListParagraphCxSpLast" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Use Bagwan Health computers and network connections appropriately and in line with relevant policies.</span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Managers are to:</span></p>
+<p class="MsoListParagraphCxSpFirst" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Ensure that staff, contractors, volunteers and students working within their area of management understand this policy</span></p>
+<p> </p>
+<p class="MsoListParagraphCxSpLast" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Investigate any alleged breach of the National Code of Conduct for Health Care Workers by their staff</span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><strong><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Private Use of Social Media</span></strong></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Staff, contractors, volunteers and students should not expect to be able to access and use social media during working hours, unless for the purpose of carrying out their duties. The use of social for personal purposes while at work is strictly prohibited.</span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Outside of work hours, they should be reminded that anything they post to their personal accounts can be potentially seen by anyone with access to social media.</span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Staff, contractors, volunteers and students with personal social media accounts should be reminded that:</span></p>
+<p class="MsoListParagraphCxSpFirst" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Anything they post on their personal accounts can potentially be seen by anyone with access to social media</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">It is their responsibility to know who their online friends/contacts are and to use privacy settings accordingly</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Identifying or discussing their place of work in their personal comments is not allowed</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">They should not accept friend requests from former or existing patients as this can breach professional boundaries</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Making comments or remarks about patients that have been treated at Bagwan Health may breach the Code of Conduct and break patient confidentiality</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN-US" style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Inappropriate material, which may contravene any Victorian Health Policy or bring VIC Health or Bagwan Health into disrepute, should not be uploaded to personal accounts</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><span lang="EN-US" style="font-size: 12pt; text-indent: -18pt; font-family: Symbol;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><span lang="EN-US" style="font-size: 12pt; text-indent: -18pt;">They must not offer opinions or comments on behalf of Bagwan Health or imply that their comments are made as a representative of Bagwan Health, as to do so would breach the Code of Conduct.</span><span style="font-size: 12pt;"> </span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><strong><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Violation of Internet, Email and Social Media Use Policy</span></strong></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;"> </span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Violation of this policy could result in disciplinary and/or legal action leading up to and including termination of employment. Staff, contractors, volunteers and students may also be held personally liable for damages caused by any violations of this policy. </span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><strong><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Bagwan Health on Social Media</span></strong></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Bagwan Health social media pages, profiles and sites are developed to engage with the public. The content of the social media is intended for public use.</span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">Any Bagwan staff member, contractor, volunteer or student who wishes to create social media sites or accounts representing Bagwan Health or any of its facilities or services must first obtain permission from their Director, followed by the Media and Communications Manager. </span><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;"> </span></p>
+<p> </p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial;">The content on Bagwan Health social media pages, profiles and sites will be captured and archived on a regular basis in accordance with State Records Guideline – Records Management and Web 2.0.</span></p>
+<hr/>
+<p> <a href="/Bagwan2.0/documents/policies-and-procedures/Bagwan%20Health%20-Internet,%20Email%20and%20Social%20Media%20v1.0.docx">Click here to download policies</a></p>
+</article>
+<article class="mt-3"></article>
+</div>
+<div class="b-0 container">
+<div class="">
+<div class="" id="bottom_navigation">
+<div id="next-prev">
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- row-->
+<!-- #cde -->
+<script src="/Bagwan2.0/wp-content/themes/118/js/glossary-tooltip.js"></script><script src="/Bagwan2.0/wp-content/themes/118/js/jquery.glossarize.js"></script>
+<div class="wrapper">
+<div class="container">
+</div>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<footer class="footer">
+<div class="footer__text container">
+<p>RMIT would like to acknowledge Wurundjeri people of the Kulin Nations as the Traditional Owners of the land on which the University stands. We respectfully recognise Elders past, present and future.</p>
+<p>© Copyright 2026 <a class="a__footer" href="https://www.rmit.edu.au/">RMIT</a> - This website is for educational purpose only.</p>
+<hr class="footer__hr"/>
+</div>
+</footer>
+<script src="/Bagwan2.0/wp-content/themes/118/js/menu.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/modernizr.custom.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+   // do the opening and closing for the menu accordion
+   (function ($) {
+     $(document).ready(function () {
+       $('#cssmenu li.has-sub>a').on('click', function () {
+         $(this).removeAttr('href');
+         var element = $(this).parent('li');
+         if (element.hasClass('open')) {
+           element.removeClass('open');
+           element.find('li').removeClass('open');
+           element.find('ul').slideUp();
+         } else {
+           element.addClass('open');
+           element.children('ul').slideDown();
+           element.siblings('li').children('ul').slideUp();
+           element.siblings('li').removeClass('open');
+           element.siblings('li').find('li').removeClass('open');
+           element.siblings('li').find('ul').slideUp();
+         }
+       });
+
+       $('#cssmenu>ul>li.has-sub>a').append('<span class="holder"></span>');
+
+     });
+   })(jQuery);
+ //ensure nav loads closed
+ $('#reveal').addClass('navshow').removeClass('test2');
+ //ensure the nav is always open for the current page
+ $("li.menu-item" ).children('ul').css({ display: "none" });
+ $('li.active').closest('ul').addClass('open').css({ display: "block" })
+ </script><script>
+     $(document).ready(function(){
+         $("#cssmenu>ul>li").parent().addClass("dropdown");
+       //  $("#cssmenu>ul").addClass("dropdown-menu");
+         $("#cssmenu>ul>li.has-sub>a").addClass("dropdown-toggle");
+         $("ul.has-sub li a").removeClass("dropdown-toggle");
+         $('.navbar .dropdown-toggle').append('<b class="caret"></b>');
+     });
+ </script><script>
+   //nave menu
+   $(document).ready(function () {
+       $('#sidebarCollapse').on('click', function () {
+         $('#sidebar').toggleClass('active');
+       });
+   });
+   //fullscreen
+   //invokes browser's fullscreen mode
+   function fullscreen() {
+     var isInFullScreen = (document.fullscreenElement && document.fullscreenElement  !== null) ||
+         (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
+         (document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
+         (document.msFullscreenElement && document.msFullscreenElement !== null);
+
+     var docElm = document.documentElement;
+     if (!isInFullScreen) {
+         if (docElm.requestFullscreen) {
+             docElm.requestFullscreen();
+         } else if (docElm.mozRequestFullScreen) {
+             docElm.mozRequestFullScreen();
+         } else if (docElm.webkitRequestFullScreen) {
+             docElm.webkitRequestFullScreen();
+         } else if (docElm.msRequestFullscreen) {
+             docElm.msRequestFullscreen();
+         }
+     } else {
+         if (document.exitFullscreen) {
+             document.exitFullscreen();
+         } else if (document.webkitExitFullscreen) {
+             document.webkitExitFullscreen();
+         } else if (document.mozCancelFullScreen) {
+             document.mozCancelFullScreen();
+         } else if (document.msExitFullscreen) {
+             document.msExitFullscreen();
+         }
+     }
+ }
+</script><script defer="True" src="/Bagwan2.0/assets/static.js"></script></body></html>

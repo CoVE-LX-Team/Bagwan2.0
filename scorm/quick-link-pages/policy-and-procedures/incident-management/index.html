@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<!-- Our Custom CSS -->
+<link href="/Bagwan2.0/wp-content/themes/118/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+<script src="/Bagwan2.0/wp-content/themes/118/js/jquery.min.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/classie.js"></script>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<meta charset="utf-8"/><meta content="IE=edge" http-equiv="X-UA-Compatible"/><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/><meta content="yes" name="mobile-web-app-capable"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="bagwanhealth - The Virtual Workplace" name="apple-mobile-web-app-title"/><title>Incident management – bagwanhealth</title><meta content="noindex, nofollow" name="robots"/><style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style><style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*wp_block_styles_on_demand_placeholder:6afd118a3ddd9*/
+/*# sourceURL=wp-block-library-inline-css */
+</style><style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style><style id="wp-block-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the block styles printed at wp_footer." }
+/*# sourceURL=wp-block-styles-placeholder-inline-css */
+</style><style id="wp-global-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the global-styles printed at wp_footer." }
+/*# sourceURL=wp-global-styles-placeholder-inline-css */
+</style><link href="/Bagwan2.0/wp-content/plugins/h5p/h5p-php-library/styles/h5p-fonts.css" id="h5p-plugin-fonts-css" media="all" rel="stylesheet"/><link href="/Bagwan2.0/wp-content/plugins/h5p/h5p-php-library/styles/h5p.css" id="h5p-plugin-styles-css" media="all" rel="stylesheet"/><link href="/Bagwan2.0/wp-content/themes/118/css/vwp.css" id="understrap-styles-css" media="" rel="stylesheet" type="text/css"/><style>
+</style><style>
+.body{
+
+  margin:0;
+  font-size:16px;
+}
+.wrapper{
+  background:red;
+}
+
+.container{
+  margin: 0 auto;
+  max-width:1000px;
+  width:100%;
+  padding: 0 15px;
+  box-sizing:border-box;}
+
+.footer{
+  font-size:0.85rem;
+  padding: 20px 0;
+  line-height:1.6;
+  background:#ddefbf;
+  margin:0 auto;
+}
+
+.footer__text{
+  color:#444444;
+  font-family:helvetica;
+  padding:3px 15px;
+  display:block;
+
+}
+
+.footer__hr{
+  height:1px;
+  border:none;
+  background:#aad75f;
+
+}
+
+.a__footer{
+  color:#ee3154;
+}
+
+.a__footer:hover {
+  color:#121741;
+}
+
+p.footer__copy{
+  width:100%;
+ margin:0 auto;}
+</style><link href="/Bagwan2.0/assets/static.css" rel="stylesheet"/></head>
+<body class="cbp-spmenu-push" data-site-root="/Bagwan2.0/">
+<div class="" id="showRightPush">
+<span></span>
+<span></span>
+<span></span>
+<div class="w-100 fscreen">
+<div id="fullscreen">
+<a class="full-screen" href="#" id="fullscreen" onclick="fullscreen()" role="button"></a>
+</div>
+</div>
+</div>
+<nav class="navbar cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="sidebar">
+<div>
+<div class="sidebar"><div id="nav">
+<div class="visibility p-0" id="reveal">
+<div><a href="/Bagwan2.0/scorm/intranet/index.html">
+<img alt="home icon" height="42" src="/Bagwan2.0/wp-content/themes/118/vwp/img/home_icon.png" style="margin-top:20%;margin-left:45%;" width="42"/></a></div>
+<div class="menu-menu-test-container" id="cssmenu"><ul class="menu" id="menu-menu-test"><li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1088"><a href="/Bagwan2.0/scorm/intranet/our-community/index.html"><span>Our community</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm menu-item-has-children has-sub" id="menu-item-1089"><a href="/Bagwan2.0/scorm/department-pages/index.html"><span>Departments</span></a>
+<ul>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1092"><a href="/Bagwan2.0/scorm/department-pages/hr-services/index.html"><span>HR services</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1093"><a href="/Bagwan2.0/scorm/department-pages/lab-technologies/index.html"><span>Lab technologies</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1094"><a href="/Bagwan2.0/scorm/department-pages/nursing/index.html"><span>Nursing</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1095"><a href="/Bagwan2.0/scorm/department-pages/interpreting-office/index.html"><span>Interpreting services</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1468"><a href="/Bagwan2.0/scorm/department-pages/logisitics/index.html"><span>Logistics</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1096"><a href="/Bagwan2.0/scorm/intranet/doctors-on-call/index.html"><span>Doctors on call</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1097"><a href="/Bagwan2.0/scorm/intranet/news-feed/index.html"><span>News feed</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1120"><a href="/Bagwan2.0/scorm/intranet/staff-repository/index.html"><span>Documents</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm menu-item-has-children has-sub" id="menu-item-1273"><a href="/Bagwan2.0/scorm/virtual-hospital/index.html"><span>Virtual tour</span></a>
+<ul>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1284"><a href="/Bagwan2.0/scorm/virtual-hospital/entrance/index.html"><span>Entrance</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1274"><a href="/Bagwan2.0/scorm/virtual-hospital/laboratories/index.html"><span>Laboratories</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1275"><a href="/Bagwan2.0/scorm/virtual-hospital/main-reception/index.html"><span>Main reception</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1276"><a href="/Bagwan2.0/scorm/virtual-hospital/medication-room/index.html"><span>Medication room</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1277"><a href="/Bagwan2.0/scorm/virtual-hospital/myotherapy-clinic/index.html"><span>Myotherapy clinic</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1278"><a href="/Bagwan2.0/scorm/virtual-hospital/nurses-station/index.html"><span>Nurses’ station</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1279"><a href="/Bagwan2.0/scorm/virtual-hospital/rehabilitation-clinic/index.html"><span>Rehabilitation clinic</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1280"><a href="/Bagwan2.0/scorm/virtual-hospital/specimen-reception/index.html"><span>Specimen reception</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1281"><a href="/Bagwan2.0/scorm/virtual-hospital/ward/index.html"><span>Ward</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1282"><a href="/Bagwan2.0/scorm/virtual-hospital/xray-room/index.html"><span>Xray Room</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1471"><a href="/Bagwan2.0/scorm/virtual-hospital/logisitics/index.html"><span>Logistics</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-1385"><a href="/Bagwan2.0/patient-management-system/index.html"><span>Patient management system</span></a></li>
+</ul></div> </div>
+</div>
+</div>
+</div>
+</nav>
+<div class="cbp-spmenu-push-toleft" id="content">
+<!-- ensure iframe links are opened in a new tab in the parent uless this is a scorm page builder -->
+<script id="popper-scripts-js" src="/Bagwan2.0/wp-content/themes/118/js/popper.min.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/vwp/js/jquery.min.js"></script><script src="/Bagwan2.0/wp-content/themes/118/vwp/js/theme.min.js"></script><script src="/Bagwan2.0/wp-content/themes/118/vwp/js/main.js"></script>
+<!--
+ __      ________   _____            _               _______
+ \ \    / /  ____| |  __ \          (_)             |__   __|
+  \ \  / /| |__    | |  | | ___  ___ _  __ _ _ __      | | ___  __ _ _ __ ___
+   \ \/ / |  __|   | |  | |/ _ \/ __| |/ _` | '_ \     | |/ _ \/ _` | '_ ` _ \
+    \  /  | |____  | |__| |  __/\__ \ | (_| | | | |    | |  __/ (_| | | | | | |
+     \/   |______| |_____/ \___||___/_|\__, |_| |_|    |_|\___|\__,_|_| |_| |_|
+                                        __/ |
+                                       |___/
+This custom content was generated by the RMIT Vocational Education Design team - https://emedia.rmit.edu.au/oedvedesign/
+-->
+<div class="container-fluid" id="vwp">
+<div class="row">
+<div class="col-12" id="banner" style="z-index:1;">
+<a href="/Bagwan2.0/scorm/intranet/index.html"><div id="ws">
+<div class="vwp-logo"></div>
+</div></a>
+</div>
+<!-- breadcrumbs commented out for VWP-->
+<div class="container">
+<div class="" data-intro="This is a location-based breadcrumb trail showing which page you are viewing and where it sits in the website’s hierarchy." id="breadcrumbs" style="margin-top: 6rem; border-bottom: 1px solid #eeeeee; margin-bottom: 2rem;">
+<ul class="thin-text">
+<li class="d-lg-inline">Quick link pages</li> <li>Policy and procedures</li> <li style="color:#01A19A; font-weight: 500;">  Incident management</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<h1>Incident management</h1>
+<div class="heading-underline"></div>
+<article><h5>Policy Name</h5>
+<p>Incident Management</p>
+<h5>Policy Number</h5>
+<p>004</p>
+<hr/>
+<h5>Owner of Policy </h5>
+<p>Dr Christina Jones, CEO</p>
+<hr/>
+<h5>Scope</h5>
+<p>This policy has been developed to ensure that all Bagwan Health employees understand the processes to be taken in the event of a dangerous occurrence or accident. This policy allows for a standardised system for managing clinical and corporate incidents to ensure health practitioners, managers and employees can respond effectively to them.</p>
+<p>Bagwan Health recognises that the health and safety of its employees is a priority and that if accidents or incidents do occur, they should be reported. Incidents should be investigated to ensure that the possibility of recurrence or further risk is minimised.</p>
+<p>Bagwan Health understands the importance of incident reporting and investigation and has developed hazard inspection, hazard reporting and maintenance programs to minimise the workplace accidents or dangerous occurrences.</p>
+<p>The purpose of this policy is to provide direction to health services regarding the</p>
+<p>management of clinical and corporate incidents. This includes appropriate feedback to patients, families/support persons and clinicians and the sharing of lessons learned to prevent patient harm.</p>
+<p>This policy applies to all employees, volunteers, contractors and visitors under the control of Bagwan Health</p>
+<p> </p>
+<hr/>
+<h5>Term and definitions </h5>
+<h5> </h5>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Authorised person</h5>
+<p>An authorised person is the relevant Manager or the Chief Executive Officer.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Employee</h5>
+<p>An employee is a Bagwan Health employee, volunteer or student on placement with Bagwan Health.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Individual</h5>
+<p>Individual refers to Bagwan Health service users, families and friends, employees, potential employees, volunteers, students and the community.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Service user</h5>
+<p>A service user is a child or an adult (person with a disability) or aged person who uses a Bagwan Health service.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Workplace</h5>
+<p>A workplace includes working on-site or off-site, attendance at a work-related conference or function, and attendance at a client or other work-related event, including retreats and social events.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Incident</h5>
+<p>Incident refers to any event which causes or could have caused injury, illness, damage to plant, equipment, vehicles, property, material, or the environment or public alarm. It also includes losses of containment, fire, explosion, non-compliance with environmental regulatory requirements, vehicle incidents and off-site incidents.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Hazard</h5>
+<p>Hazard refers to a source or situation with a potential for harm in terms of human injury or ill health, damage to property, damage to the environment or a combination of these.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">DHHS</h5>
+<p>DHHS refers to the Department of Health and Human Services.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">CIMS</h5>
+<p>CIMS refers to Client Incident Management System.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">DINMA</h5>
+<p>DINMA refers to Disease/Injury/Near Miss/Accident Report.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">NDIS or DHIS funded services</h5>
+<p>NDIS or DHHS funded services: the DHHS CIMS (Client Incident Management System) online web-based tool (for Major and Non-Major Impact on service users only) or Bagwan Health Internal Incident Reporting tool (for Cat 1, 2 and 3 not impacting on service users and Cat 3 impacting on service users). These are online web-based questionnaires that are required to be completed promptly by an employee, volunteer or student to report that an incident has occurred.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">DET funded services</h5>
+<p>DET funded services: for Department of Education and Training (DET) funded services we will follow DHHS reporting guidelines, i.e. CIMS or Bagwan Health Internal Incident Reporting (Cat 1, 2 and 3 not impacting on service users), see above.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Department of Health (Commonwealth) / CHSP funded services</h5>
+<p>Department of Health (Commonwealth) / CHSP funded services: for DH funded services, i.e. CHSP (Commonwealth Home Support Programme), the Bagwan Health Internal Incident Reporting Tool need to be filled out for incidents impacting on service users and staff, volunteers and students. Bagwan Health will keep a record of any incidents or risks involving service delivery to service users and will only report serious incidents (category one/major) to DSS (carer.support.vic@dss.gov).</p>
+<p>All incident reports must include a complete, sequential, factual and account of the events. </p>
+<p>Incidents impacting on service users (CIMS Incident Reporting Tool).</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Major impact and Non-major impact</h5>
+<p>‘Major impact’ and ‘non-major impact’ are used to define the two DHHS incident categories. In determining the category of the incident, the focus must be on the impact (level of harm) to the service user. While the most senior staff member present is responsible for completing the initial incident report, the management of the service provider is responsible for using their professional judgement to confirm the assessment of the appropriate categorisation for the incident, based on the guidance set out in this section.</p>
+<p>The following three sections set out the definitions of these categories (2 DHHS + 1 Bagwan Health).</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Major impact</h5>
+<p>Major impact on the service user include:</p>
+<p>• The unanticipated death of a service user</p>
+<p>• Severe physical, emotional or psychological injury or suffering which is likely to cause ongoing trauma</p>
+<p>• A pattern of incidents related to one service user which, when taken together, meet the level of harm to a service user-defined above. This may be the case even if each individual incident is a non-major impact incident.</p>
+<p>In addition, certain incidents such as all deaths of service users in unexpected or unanticipated circumstances, including suicides, must be reported as major impact incidents.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Non-major impact</h5>
+<p>Non-major impact on the service user include:</p>
+<p>• Incidents that cause physical, emotional or psychological injury or suffering, without resulting in major impact as defined above</p>
+<p>• Impacts to the service user which do not require significant changes to care requirements, other than short-term interventions (for example, first aid, observation, talking interventions or short-term medical treatment)</p>
+<p>• Incidents that involve a service user but result in minimal harm</p>
+<p>• Incidents that do not otherwise meet the criteria for ‘major impact’ above.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Minor impact</h5>
+<p>Minor impact on the service user:</p>
+<p>Incidents NOT impacting on service users (Bagwan Health Internal Incident Reporting).</p>
+<p>There is now one Bagwan Health Internal Incident Reporting Tool, where staff can fill out incident reports for all incidents where service users are NOT impacted and for minor (Cat 3) to service users.</p>
+<p>If medical attention is required for staff, Bagwan Health encourages staff to complete a DINMA (Disease/Injury/Near Miss/Accident) Report.</p>
+<p> </p>
+<hr/>
+<h5>Policy </h5>
+<p>Bagwan Health commits to preventing workplace accidents and minimising dangerous occurrences and will endeavour to achieve a zero accident rate.</p>
+<p>Bagwan Health will:</p>
+<p>• Provide a mechanism for reporting accidents, incidents, work-related illness and dangerous occurrences</p>
+<p>• Investigate accidents to determine the root cause with the objective of preventing a recurrence</p>
+<p>• Obtain statistical information about the accident or incidents</p>
+<p>• Meet legislative requirements for reporting accidents and incidents.</p>
+<p>All accidents or incidents that result in an injury or work-related illness during the course of work must immediately be reported to the Regional Occupational Health and Safety Representative and First Aid Officer.</p>
+<p>Any dangerous occurrence which has the potential to result in injury or damage to property must be reported in the same manner as an accident.</p>
+<p>In the event of a dangerous occurrence or accident, Bagwan Health must ensure the relevant state authority is notified and that a full investigation is undertaken to determine the root cause.</p>
+<p>The most appropriate corrective action will be taken to ensure the incident does not recur.</p>
+<p> </p>
+<p>Bagwan Health manages incidents based on the following principles: </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Obligation to act</h5>
+<p>Key stakeholders acknowledge and understand their roles and responsibilities in the incident management.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Just culture</h5>
+<p>Incidents are reported and acknowledged without fear of blame or retribution and individuals are treated fairly in an open and honest manner.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Openness about failures</h5>
+<p>Incidents are reported and acknowledged without fear of inappropriate blame. Patients and their families/support persons are offered an apology and told what went wrong and why.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Emphasis about learning</h5>
+<p>The system is oriented towards learning from mistakes and consistently employs improvement methods for achieving this Obligation to act – the obligation to take action to remedy problems is clearly accepted and the allocation of this responsibility is unambiguous and explicit.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Accountability</h5>
+<p>The limits of individual accountability are clear, individuals understand when they may be held accountable for their actions.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Appropriate prioritisation about action</h5>
+<p>Action to address problems is prioritised and resources directed to the areas where the greatest improvements are possible.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Cooperation, collaboration and communication</h5>
+<p>Teamwork is recognised as the best defence of system failures and is explicitly encouraged and fostered within a culture of trust and mutual respect. Bagwan Health commits to preventing workplace accidents and minimising dangerous occurrences and will endeavour to achieve a zero accident rate.</p>
+<p> </p>
+<hr/>
+<h5>Procedure</h5>
+<p>When an incident occurs at Bagwan Health, a series of actions must follow. The importance of identifying these as separate steps is to ensure that all appropriate action is taken. </p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Timeline for reporting incidents</h5>
+<p><span style="font-size: 1rem;">• C</span>IMS Major must be reported to DHHs within 24 hrs and logged by employees.</p>
+<p><span style="font-size: 1rem;">• C</span>IMS Non-Major must be reported to DHHs within 30 days and logged by employees within 2 working days (or on Monday if the incident happened over the weekend).</p>
+<p><span style="font-size: 1rem;">• </span>Bagwan Health ‘serious’ (Category 1) internal incidents must be reported within one working day (or Monday if the incident happened over the weekend).</p>
+<p><span style="font-size: 1rem;">• </span>Bagwan Health less serious (Category 2 and 3) Internal incidents must be reported by staff within 1 working days (or on Monday if the incident happened over the weekend) in line with the WGE Act.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">The 5 Stages of Incident Management</h5>
+<p>There are 5 stages to effective incident management:</p>
+<p>• Stage 1 – Identification and response</p>
+<p>• Stage 2 – Reporting</p>
+<p>• Stage 3 – Incident investigation</p>
+<p>• Stage 4 – Incident review</p>
+<p>• Stage 5 – Analysis and learning.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Stage 1: Identification and response </h5>
+<p>• Identification is when an incident is disclosed to, or observed by, a service provider at any service delivery setting (for example, provider premises, outreach location or a service user’s home). This may include disclosure by a service user, family member or other professionals, to the service provider.</p>
+<p>• Response covers the immediate activities undertaken to ensure the safety and wellbeing of service users, staff and visitors, preserve evidence and notify emergency services and family or other support people.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Stage 2: Reporting</h5>
+<p>• Reporting captures specific information about the incident. As part of this stage, follow up is undertaken to ensure the information provided in an incident notification is accurate, and Bagwan Health and the department are assured that appropriate actions are being planned and/or undertaken to manage the incident.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Stage 3: Incident investigation</h5>
+<p>• An investigation is a formal process of collecting information to ascertain the facts about an incident, which may inform any subsequent criminal, civil, disciplinary or administrative sanctions.</p>
+<p>• In the context of this policy, the purpose of an incident investigation is to determine whether there has been abuse or poor quality of care of a service user by a staff member, carer or another service user.</p>
+<p>• Incident investigations may be carried out by Bagwan Health or external bodies (including the department).</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Stage 4: Incident review</h5>
+<p>• A review is an analysis of an incident to identify what happened, determine whether an incident was managed appropriately, identify likely causes of the incident, and to apply subsequent learnings to reduce the risk of future harm.</p>
+<p>• Incident reviews may be carried out by Bagwan Health or external bodies (including the department).</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Stage 5: Analysis and learning</h5>
+<p>• Analysis and learning includes monitoring and acting on trends identified through the analysis of incident information, to enhance the quality of service and supports service users.</p>
+<p>• Reporting, investigating, reviewing and analysing incidents helps Bagwan Health to review and assess the way in which an incident has been managed, to implement improvements, minimise risk and embed a continuous improvement approach. This supports better service user experience and outcomes.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Child abuse and neglect incidents </h5>
+<p>The Victorian Reportable Conduct Scheme is operational from 1 July 2017. The scheme will require the centralised reporting of allegations of child abuse against workers or volunteers in relevant organisations with a high level of responsibility for children. </p>
+<p>The scheme will be introduced in three phases from July 2017:</p>
+<p>• Phase 1: From 1 July 2017, the scheme will apply to child protection, out-of-home care services, residential services for children with a disability, certain education providers, government and non-government schools and government departments (including youth justice services).</p>
+<p>• Phase 2: From 1 January 2018 the scheme will apply to hospitals, other disability services for children, providers of overnight camps, religious bodies and the residential facilities of boarding schools.</p>
+<p>• Phase 3: From 1 January 2019, the scheme will apply to early childhood services and certain statutory bodies that have responsibility for children, such as public museums and galleries.</p>
+<p> </p>
+<p>The reportable conduct scheme will require allegations of suspected criminal conduct to be reported to Victoria Police as the first priority and will maintain the primacy of an investigation by Victoria Police of any allegations of criminal misconduct. In all circumstances, allegations of criminal conduct must be reported to Victoria Police as the first priority.</p>
+<p>For child abuse and neglect incidents, the On-Call Management or Division Manager and CEO need to be informed immediately. Bagwan Health CEO (or her delegate) must report any allegation of reportable conduct to the Commission for Children and Young People within three business days of becoming aware of the allegation. It is a criminal offence for the Bagwan Health CEO to fail to notify (within three business days) and update (within 30 calendar days) the Commission for Children and Young People (CCYP) about reportable allegations.</p>
+<p><em>Note: the reporting to the Commission for Children and Young People by Bagwan Health CEO complements/is in addition to all the current steps we are required to undertake when an allegation of child abuse (sexual, physical and psychological) or significant neglect is made.</em></p>
+<p><em>See for details as well Child Safe policy (2702) and Responding to Alleged Physical or Sexual Assault (2608).</em></p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Incident Severity Rating (ISR)</h5>
+<p>The ISR methodology provides a more consistent classification of incident severity. It also allows incident data to be mapped to a variety of other methodologies.</p>
+<p>The ISR methodology can be consistently applied across all clinical (patient) and occupational health and safety (OHS) incidents.</p>
+<p>The ISR is based on:</p>
+<p>• the actual and potential impact on those involved in the incident</p>
+<p>• the actual and potential impact on the organisation.</p>
+<p>The impact on the people involved is automatically derived from three related questions, these are:</p>
+<p>• degree of impact</p>
+<p>• level of care</p>
+<p>• treatment required.</p>
+<p> </p>
+<p>Bagwan Health will derive an ISR depending on the values selected by the end-user in each of the three lead questions.</p>
+<p> </p>
+<p>[enter table here – page 12] </p>
+<p> </p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Definition – degree of impact</h5>
+<p>Where harm includes disease, injury, suffering, disability and death:</p>
+<p>• Disease – a physiological or psychological dysfunction</p>
+<p>• Injury – damage to tissues caused by an agent or circumstance</p>
+<p>• Suffering – experiencing anything subjectively unpleasant. This may include pain, malaise nausea, vomiting, loss (any negative consequence, including financial) depression, agitation, alarm, fear or grief</p>
+<p>• Disability – any type of impairment of body structure or function, activity limitation restriction of participation in society, associated with a past or present harm.</p>
+<p> </p>
+<p>[enter table here – page 13] </p>
+<p> </p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Definition – level of care</h5>
+<p> </p>
+<p>[enter table here – page 14] </p>
+<p> </p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Definition – treatment required</h5>
+<p> </p>
+<p>[enter table here – page 15] </p>
+<h5> </h5>
+<hr/>
+<h5>Roles and responsibilities</h5>
+<p>An incident report – Online Tool or Bagwan Health’s Internal Incident Reporting Tool/s – must be completed by the employee who witnessed the incident. If there were no witnesses, it must be completed by the employee to whom the incident was reported.</p>
+<p>The policy and related procedures will be reviewed on an annual basis or more frequently, if required, to ensure continued compliance with the relevant legislation.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">The CEO</h5>
+<p>The CEO will ensure that: </p>
+<p>• The organisation has systems in place to report, investigate and monitor actions necessary to reduce the likelihood of incidents recurring</p>
+<p>• Sufficient mechanisms are in place to enable the effective reporting, recording, investigation and implementation of recommendations as a result of an incident</p>
+<p>• That staff are encouraged (and supported) to report incidents and near-miss events as a proactive preventative measure</p>
+<p>• Those recommendations derived from incident investigations are appropriately addressed and their effectiveness is evaluated</p>
+<p>• Analysis of incident data is made available to the organisation’s clinical governance committee (or equivalent) for review </p>
+<p>• The principles of open disclosure are observed when interacting with patients and their families or carers when an incident occurs, and that these principles guide the overall management of the incident</p>
+<p>• That all sentinel events and clinical incidents where the organisation has identified system or process issues directly contributed to the incident outcome; are reported to the department accordingly</p>
+<p>• The Manager (Division) or CEO to report to DHHS Major incidents within 24 hrs to DHHS.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Managers and Supervisors</h5>
+<p>Managers and supervisors will ensure that:</p>
+<p><span style="font-size: 1rem;">• </span>An online incident report  has been completed and reporting processes have been followed within required timelines and all other required reports are completed</p>
+<p><span style="font-size: 1rem;">• </span>The service user’s family are informed of incidents that involve injury or hospitalisation of their relative, according to agreed arrangements and of all allegations of physical and/or sexual assault</p>
+<p><span style="font-size: 1rem;">• </span>Ensure service users are offered medical assistance and counselling</p>
+<p><span style="font-size: 1rem;">• </span>Communication strategies have been followed to ensure all relevant employee, volunteer or students are aware of the incident and any recommendations or control measures that may prevent or reduce the risk of the incident reoccurring</p>
+<p><span style="font-size: 1rem;">• </span>Analysis of incident trends and Implementation of recommendations and or control measures is documented</p>
+<p><span style="font-size: 1rem;">• </span>Community Visitors are informed of any service user death</p>
+<p><span style="font-size: 1rem;">• </span>Reporting to the Board any Major and Non-Major incidents and incidents reported on the Bagwan Health Internal Incident Reporting Tool at the next scheduled meeting, or immediately if there are serious immediate implications for the organisation</p>
+<p><span style="font-size: 1rem;">• </span>The Manager (Division) or CEO to report to DHHS Major incidents within 24 hrs to DHHS</p>
+<p><span style="font-size: 1rem;">• </span>Investigate and assess each incident and develop control measures and risk management plans accordingly. This can be done by using the online CIMS tools in case of an incident impacting on service users (DHHS and NDIS funded services)</p>
+<p><span style="font-size: 1rem;">• </span>Analyse the events in order to add any relevant information to Occupational Violence Risk Assessments or Client Behaviour Support Plans</p>
+<p><span style="font-size: 1rem;">• </span>Ensure Incident Report findings and recommendations are recorded for Continuous Improvement towards Risk Management, OH&amp;S and Quality systems.</p>
+<p> </p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;">Employees</h5>
+<p>Employees, volunteers or students engaged in Bagwan Health will ensure that:</p>
+<p>• Whenever an incident occurs staff need to complete the relevant electronic/online incident report  </p>
+<p>• For serious incidents, the Employee, volunteer or students must inform the team leader, program manager or On-Call Management immediately and fill-out the online tool as soon as possible as Bagwan Health needs to report to DHHS within 24 hrs. For Non-Major Incidents, the timeline is two days</p>
+<p>• Inform the service user’s family of incidents that involve injury or hospitalisation of their relative, according to agreed arrangements and of all allegations of physical and/or sexual assault</p>
+<p>• Complete any other reports required such as the online DINMA report, service user case notes etc. </p>
+<p>• Employees who are unsure of the category of an incident should treat the report as being at a higher level.</p>
+<h5 style="font-family: Arial, sans-serif; color: #292b2c;"> <a href="/Bagwan2.0/documents/policies-and-procedures/Bagwan%20Health%20-%20Incident%20Management%20-%20V1.0.docx">Click here to download policies</a></h5>
+<hr/>
+<h5> </h5>
+</article>
+<article class="mt-3"></article>
+</div>
+<div class="b-0 container">
+<div class="">
+<div class="" id="bottom_navigation">
+<div id="next-prev">
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- row-->
+<!-- #cde -->
+<script src="/Bagwan2.0/wp-content/themes/118/js/glossary-tooltip.js"></script><script src="/Bagwan2.0/wp-content/themes/118/js/jquery.glossarize.js"></script>
+<div class="wrapper">
+<div class="container">
+</div>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<footer class="footer">
+<div class="footer__text container">
+<p>RMIT would like to acknowledge Wurundjeri people of the Kulin Nations as the Traditional Owners of the land on which the University stands. We respectfully recognise Elders past, present and future.</p>
+<p>© Copyright 2026 <a class="a__footer" href="https://www.rmit.edu.au/">RMIT</a> - This website is for educational purpose only.</p>
+<hr class="footer__hr"/>
+</div>
+</footer>
+<script src="/Bagwan2.0/wp-content/themes/118/js/menu.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/modernizr.custom.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+   // do the opening and closing for the menu accordion
+   (function ($) {
+     $(document).ready(function () {
+       $('#cssmenu li.has-sub>a').on('click', function () {
+         $(this).removeAttr('href');
+         var element = $(this).parent('li');
+         if (element.hasClass('open')) {
+           element.removeClass('open');
+           element.find('li').removeClass('open');
+           element.find('ul').slideUp();
+         } else {
+           element.addClass('open');
+           element.children('ul').slideDown();
+           element.siblings('li').children('ul').slideUp();
+           element.siblings('li').removeClass('open');
+           element.siblings('li').find('li').removeClass('open');
+           element.siblings('li').find('ul').slideUp();
+         }
+       });
+
+       $('#cssmenu>ul>li.has-sub>a').append('<span class="holder"></span>');
+
+     });
+   })(jQuery);
+ //ensure nav loads closed
+ $('#reveal').addClass('navshow').removeClass('test2');
+ //ensure the nav is always open for the current page
+ $("li.menu-item" ).children('ul').css({ display: "none" });
+ $('li.active').closest('ul').addClass('open').css({ display: "block" })
+ </script><script>
+     $(document).ready(function(){
+         $("#cssmenu>ul>li").parent().addClass("dropdown");
+       //  $("#cssmenu>ul").addClass("dropdown-menu");
+         $("#cssmenu>ul>li.has-sub>a").addClass("dropdown-toggle");
+         $("ul.has-sub li a").removeClass("dropdown-toggle");
+         $('.navbar .dropdown-toggle').append('<b class="caret"></b>');
+     });
+ </script><script>
+   //nave menu
+   $(document).ready(function () {
+       $('#sidebarCollapse').on('click', function () {
+         $('#sidebar').toggleClass('active');
+       });
+   });
+   //fullscreen
+   //invokes browser's fullscreen mode
+   function fullscreen() {
+     var isInFullScreen = (document.fullscreenElement && document.fullscreenElement  !== null) ||
+         (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
+         (document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
+         (document.msFullscreenElement && document.msFullscreenElement !== null);
+
+     var docElm = document.documentElement;
+     if (!isInFullScreen) {
+         if (docElm.requestFullscreen) {
+             docElm.requestFullscreen();
+         } else if (docElm.mozRequestFullScreen) {
+             docElm.mozRequestFullScreen();
+         } else if (docElm.webkitRequestFullScreen) {
+             docElm.webkitRequestFullScreen();
+         } else if (docElm.msRequestFullscreen) {
+             docElm.msRequestFullscreen();
+         }
+     } else {
+         if (document.exitFullscreen) {
+             document.exitFullscreen();
+         } else if (document.webkitExitFullscreen) {
+             document.webkitExitFullscreen();
+         } else if (document.mozCancelFullScreen) {
+             document.mozCancelFullScreen();
+         } else if (document.msExitFullscreen) {
+             document.msExitFullscreen();
+         }
+     }
+ }
+</script><script defer="True" src="/Bagwan2.0/assets/static.js"></script></body></html>

@@ -1,0 +1,1519 @@
+{
+  "name": "Bagwan Health",
+  "defaults": {
+    "infos": {
+      "icon": "icons/white-circle.png",
+      "iconWidth": 0.6,
+      "iconHeight": 0.6,
+      "iconDuration": 10
+    }
+  },
+  "firstSceneId": "Kitchen",
+  "scenes": [
+    {
+      "id": "Entrance",
+      "photopanos": [
+        {
+          "src": "/360_images/Entrance_Panorama.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "Corridor",
+          "txt": "Corridor",
+          "rotateY": "80",
+          "rotateX": "0"
+        },
+        {
+          "to": "MainReception",
+          "txt": "Main Reception",
+          "rotateY": "-50",
+          "rotateX": "0"
+        },
+        {
+          "to": "InterpretingReception",
+          "txt": "Interpreting Reception",
+          "rotateY": "-80",
+          "rotateX": "0"
+        },
+        {
+          "to": "Corridor",
+          "txt": "Corridor",
+          "rotateY": "80",
+          "rotateX": "0"
+        },
+        {
+          "to": "Corridor",
+          "txt": "Corridor",
+          "rotateY": "80",
+          "rotateX": "0"
+        }
+      ],
+      "infos": [
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/Welcome_to_Bagwan.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Welcome to Bagwan Health"
+            },
+            {
+              "type": "content",
+              "txt": "Bagwan Health is home to a major referral centre for people in the community.\n\nIts state of the art clinical services building has been designed to deliver improved healthcare facilities for the community, now and in the future.\n\nBagwan Health facilities include:\n\n• women and children's services\n• allied health services, including myotherapy, rehabilitation clinic and counselling\n• intensive care unit\n• inpatient and day beds for cardiology, cancer and renal patients\n• ATSI liaison services\n• interpreting language services.\n"
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "0"
+        }
+      ]
+    },
+    {
+      "id": "Corridor",
+      "photopanos": [
+        {
+          "src": "/360_images/Corridor_Panorama_01.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "MainReception",
+          "txt": "Main Reception",
+          "rotateY": "105",
+          "rotateX": "2"
+        },
+        {
+          "to": "NurseStation",
+          "txt": "Nurse Station",
+          "rotateY": "94",
+          "rotateX": "0"
+        },
+        {
+          "to": "Laboratory",
+          "txt": "Laboratory",
+          "rotateY": "85",
+          "rotateX": "0"
+        },
+        {
+          "to": "Myotherapy",
+          "txt": "Myotherapy",
+          "rotateY": "0",
+          "rotateX": "0"
+        },
+        {
+          "to": "RehabilitationClinic",
+          "txt": "Rehabilitation Clinic",
+          "rotateY": "-6",
+          "rotateX": "-4"
+        },
+        {
+          "to": "XrayRoom",
+          "txt": "Xray Room",
+          "rotateY": "-16",
+          "rotateX": "-10"
+        },
+        {
+          "to": "CounsellingRoom",
+          "txt": "Counselling Room",
+          "rotateY": "-160",
+          "rotateX": "-2"
+        },
+        {
+          "to": "DentalRoom",
+          "txt": "DentalRoom",
+          "rotateY": 45,
+          "rotateX": "100"
+        }
+      ],
+      "infos": []
+    },
+    {
+      "id": "NurseStation",
+      "photopanos": [
+        {
+          "src": "/360_images/NursesStation_Panorama2.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "CleanStoreroom",
+          "txt": "Clean Storeroom",
+          "rotateY": "136",
+          "rotateX": "0"
+        },
+        {
+          "to": "DirtyStoreroom",
+          "txt": "Dirty Storeroom",
+          "rotateY": "157",
+          "rotateX": "0"
+        },
+        {
+          "to": "Bathroom",
+          "txt": "Bathroom",
+          "rotateY": "-150",
+          "rotateX": "0"
+        },
+        {
+          "to": "NurseWard",
+          "txt": "Nurse Ward",
+          "rotateY": "50",
+          "rotateX": "0"
+        },
+        {
+          "to": "Corridor",
+          "txt": "Corridor",
+          "rotateY": "-55",
+          "rotateX": "0"
+        }
+      ],
+      "infos": [
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/nurses_station.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Ward Clerk"
+            },
+            {
+              "type": "content",
+              "txt": "Most hospital wards have a ward clerk who sits behind the nurses' station and is responsible for day-to-day administration for the ward. The ward clerk records and processes information required for the admission and discharge of hospital patients, answers the phone and takes enquiries."
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "90"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/intranet.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Intranet"
+            },
+            {
+              "type": "content",
+              "txt": "The hospital intranet helps staff locate and view information relating to their roles and responsibilities.\nNursing records and reports are updated and stored on the hospital’s secured network. These might include:\n-Care plans\n-Progress notes\n-Nutrition (Food and fluid) chart\n-Vital signs observation chart\n-Pressure area care assessment\n-Medication chart\n-Specialists’ records\n-Pathology lab requests\n-Admissions, discharge and transfer forms."
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "log on to intranet",
+                  "uri": "/Bagwan2.0/scorm/department-pages/nursing/index.html"
+                }
+              ]
+            }
+          ],
+          "rotateX": "4",
+          "rotateY": "64"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/intranet.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Intranet"
+            },
+            {
+              "type": "content",
+              "txt": "The hospital intranet helps staff locate and view information relating to their roles and responsibilities.\nNursing records and reports are updated and stored on the hospital’s secured network. These might include:\n-Care plans\n-Progress notes\n-Nutrition (Food and fluid) chart\n-Vital signs observation chart\n-Pressure area care assessment\n-Medication chart\n-Specialists’ records\n-Pathology lab requests\n-Admissions, discharge and transfer forms."
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "log on to intranet",
+                  "uri": "/Bagwan2.0/scorm/department-pages/nursing/index.html"
+                }
+              ]
+            }
+          ],
+          "rotateX": "4",
+          "rotateY": "64"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/intranet.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Intranet"
+            },
+            {
+              "type": "content",
+              "txt": "The hospital intranet helps staff locate and view information relating to their roles and responsibilities.\nNursing records and reports are updated and stored on the hospital’s secured network. These might include:\n-Care plans\n-Progress notes\n-Nutrition (Food and fluid) chart\n-Vital signs observation chart\n-Pressure area care assessment\n-Medication chart\n-Specialists’ records\n-Pathology lab requests\n-Admissions, discharge and transfer forms."
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "log on to intranet",
+                  "uri": "/Bagwan2.0/scorm/department-pages/nursing/index.html"
+                }
+              ]
+            }
+          ],
+          "rotateX": "4",
+          "rotateY": "64"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/nurses_station.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Nurse Unit Manager"
+            },
+            {
+              "type": "content",
+              "txt": "Most hospital wards have a ward clerk who sits behind the nurses' station and is responsible for day-to-day administration for the ward. The ward clerk records and processes information required for the admission and discharge of hospital patients, answers the phone and takes enquiries."
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "-90"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/nurses_station.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Nurse Unit Manager"
+            },
+            {
+              "type": "content",
+              "txt": "Most hospital wards have a ward clerk who sits behind the nurses' station and is responsible for day-to-day administration for the ward. The ward clerk records and processes information required for the admission and discharge of hospital patients, answers the phone and takes enquiries."
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "-90"
+        }
+      ]
+    },
+    {
+      "id": "NurseWard",
+      "photopanos": [
+        {
+          "src": "/360_images/NurseWard01_Panorama.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "NurseStation",
+          "txt": "Nurse Station",
+          "rotateY": "30",
+          "rotateX": "0"
+        },
+        {
+          "to": "MedicationRoom",
+          "txt": "Medication Room",
+          "rotateY": "135",
+          "rotateX": "0"
+        },
+        {
+          "to": "HandwashingStation",
+          "txt": "Hand washing Station",
+          "rotateY": "-160",
+          "rotateX": "0"
+        }
+      ],
+      "infos": []
+    },
+    {
+      "id": "MedicationRoom",
+      "photopanos": [
+        {
+          "src": "/360_images/MedicationRoom_Panorama.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "NurseWard",
+          "txt": "Nurse Ward",
+          "rotateY": "162",
+          "rotateX": "0"
+        }
+      ],
+      "infos": [
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/medication_cupboard.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Medication room"
+            },
+            {
+              "type": "content",
+              "txt": "Drugs and medications are stored in locked cupboards in the locked medication room. In most hospitals, access to the medication room is controlled by the Nursing Unit Manager."
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "360"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/medication_cupboard.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Medication room"
+            },
+            {
+              "type": "content",
+              "txt": "Drugs and medications are stored in locked cupboards in the locked medication room. In most hospitals, access to the medication room is controlled by the Nursing Unit Manager."
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "360"
+        }
+      ]
+    },
+    {
+      "id": "HandwashingStation",
+      "photopanos": [
+        {
+          "src": "/360_images/HandWashingStation_Panorama.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "NurseWard",
+          "txt": "Nurse Ward",
+          "rotateY": "222",
+          "rotateX": "0"
+        }
+      ],
+      "infos": [
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/handwashing.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Hand washing "
+            },
+            {
+              "type": "content",
+              "txt": "Hand washing stations are located throughout the ward. Hand hygiene is key to the prevention of infections and the transmission of antimicrobial resistance."
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "View the World Health Organisation Hand rub and hand wash procedure poster",
+                  "uri": "https://www.who.int/gpsc/5may/resources/posters/en/"
+                }
+              ]
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "0"
+        }
+      ]
+    },
+    {
+      "id": "DirtyStoreroom",
+      "photopanos": [
+        {
+          "src": "/360_images/DirtyStoreRoom_Panorama.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "NurseStation",
+          "txt": "Nurse Station",
+          "rotateY": "130",
+          "rotateX": "0"
+        }
+      ],
+      "infos": [
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/dirty_laundry.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Dirty store room"
+            },
+            {
+              "type": "content",
+              "txt": "Dirty storerooms are placed in several locations on the ward. The storeroom is likely to contain used and soiled bed linen, patient gowns and towels."
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "-10",
+          "rotateY": "270"
+        }
+      ]
+    },
+    {
+      "id": "CleanStoreroom",
+      "photopanos": [
+        {
+          "src": "/360_images/CleanStoreRoom02_Panorama.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "NurseStation",
+          "txt": "Nurse Station",
+          "rotateY": "270",
+          "rotateX": "0"
+        }
+      ],
+      "infos": [
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/clean_laundry.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Clean store room"
+            },
+            {
+              "type": "content",
+              "txt": "Clean storerooms are placed in several locations on the ward. The storeroom is likely to contain clean bed linen, patient gowns, towels, paper hand towels and toilet tissue."
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "320"
+        }
+      ]
+    },
+    {
+      "id": "Laboratory",
+      "photopanos": [
+        {
+          "src": "/360_images/Laboratory_Panorama.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "SpecimenReception",
+          "txt": "SpecimenReception",
+          "rotateY": "170",
+          "rotateX": "0"
+        }
+      ],
+      "infos": [
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/evacuation_plan.png"
+            },
+            {
+              "type": "header",
+              "txt": "Emergency plan"
+            },
+            {
+              "type": "content",
+              "txt": "There are many different types of emergency situations, including fire or explosion, dangerous chemical release, medical emergency, natural disaster, bomb threats, violence or robbery. \n       \nBoth employees, patients, and individuals visiting the workplace need to be instructed on emergency procedures and accounted for in the case of an actual evacuation. \n"
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "-160"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/intranet.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Intranet"
+            },
+            {
+              "type": "content",
+              "txt": "Log onto Bagwan Health's Interpreting services intranet home page"
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "Go to laboratory intranet home page",
+                  "uri": "/Bagwan2.0/scorm/department-pages/lab-technologies/index.html"
+                }
+              ]
+            }
+          ],
+          "rotateX": "-12",
+          "rotateY": "-150"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/Pathology_computer.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Welcome to the laboratory"
+            },
+            {
+              "type": "content",
+              "txt": "Specimen reception is responsible for the initial stage of sample processing and laboratory. Samples are received from a variety of sources, including JPS, wards and outpatients in the hospital.\n\nSome samples may be urgent, which needs to be identified and prioritised to get those urgent requests to the relevant disciplines immediately.\n\nSamples types that can be received are blood, urine, sputum, swabs and faeces.\n\nThe disciplines that we have here are biochemistry, haematology, blood transfusion and microbiology."
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "0"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/Pathology_test.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Handling and processing specimens"
+            },
+            {
+              "type": "content",
+              "txt": "Lab requisition\nMust be filled out correctly\nReview to ensure all information is correct\nVerify test, time and date of collection\nPatient information\nDoctor information\nTest request\n\n\nHandling of specimens\nAvoid unnecessary shaking and agitation to sample\nAvoid spillage\nStopper place facing upwards\nInvert immediately\nSecure lids\nWear gloves\n"
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "-9",
+          "rotateY": "45"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/HazardousWaste.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Handling and disposal of waste materials"
+            },
+            {
+              "type": "content",
+              "txt": "Proper hazardous waste management can prevent the risk of spreading infectious diseases as well as prevent the risk of needlestick injuries.\n\nClick the link below to test your knowledge on handling and disposal of waste materials in the laboratory. "
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "Test your knowledge on hazardous waste management",
+                  "uri": "/Bagwan2.0/scorm/department-pages/lab-technologies/waste-management/index.html"
+                }
+              ]
+            }
+          ],
+          "rotateX": "-30",
+          "rotateY": "95"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/handwashing.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Hand washing procedure"
+            },
+            {
+              "type": "content",
+              "txt": "Hand hygiene is key to the prevention of infections and the transmission of antimicrobial resistance. The World Health Organisation has provided this guideline on health hygiene in health care. "
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "Download the WHO orgnanisation hand hygiene guide",
+                  "uri": "http://whqlibdoc.who.int/publications/2009/9789241597906_eng.pdf?ua=1"
+                }
+              ]
+            }
+          ],
+          "rotateX": "-5",
+          "rotateY": "130"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/EmergencyShower.png"
+            },
+            {
+              "type": "header",
+              "txt": "Emergency shower procedure"
+            },
+            {
+              "type": "content",
+              "txt": "An emergency eyewash and safety shower should be available in every laboratory that uses chemicals and hazardous substances. Emergency showers can also be used effectively in extinguishing clothing fires or for flushing contaminants off clothing."
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "-5",
+          "rotateY": "145"
+        }
+      ]
+    },
+    {
+      "id": "Myotherapy",
+      "photopanos": [
+        {
+          "src": "/360_images/AlliedHealth_Myotherapy_Panorama.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "Corridor",
+          "txt": "Corridor",
+          "rotateY": "75",
+          "rotateX": "0"
+        }
+      ],
+      "infos": [
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/intranet.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Intranet"
+            },
+            {
+              "type": "content",
+              "txt": "Log on to Bagwan Health's staff intranet"
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "log on to intranet",
+                  "uri": "/Bagwan2.0/scorm/intranet/index.html"
+                }
+              ]
+            }
+          ],
+          "rotateX": "-6",
+          "rotateY": "207"
+        }
+      ]
+    },
+    {
+      "id": "RehabilitationClinic",
+      "photopanos": [
+        {
+          "src": "/360_images/AlliedHealth_Rehabilitation_Panorama_01.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "Corridor",
+          "txt": "Corridor",
+          "rotateY": "-105",
+          "rotateX": "0"
+        }
+      ],
+      "infos": [
+        {
+          "card": [
+            {
+              "type": "header",
+              "txt": "Log onto the intranet"
+            },
+            {
+              "type": "content",
+              "txt": ""
+            },
+            {
+              "type": "image",
+              "src": ""
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "Log onto the intranet",
+                  "uri": "/Bagwan2.0/scorm/intranet/index.html"
+                }
+              ]
+            }
+          ],
+          "rotateX": "-7",
+          "rotateY": "50"
+        },
+        {
+          "card": [
+            {
+              "type": "header",
+              "txt": "Log onto the intranet"
+            },
+            {
+              "type": "content",
+              "txt": ""
+            },
+            {
+              "type": "image",
+              "src": ""
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "Log onto the intranet",
+                  "uri": "/Bagwan2.0/scorm/intranet/index.html"
+                }
+              ]
+            }
+          ],
+          "rotateX": "-7",
+          "rotateY": "50"
+        }
+      ]
+    },
+    {
+      "id": "XrayRoom",
+      "photopanos": [
+        {
+          "src": "/360_images/AlliedHealth_XrayRoomPanorama.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "Corridor",
+          "txt": "Corridor",
+          "rotateY": "-80",
+          "rotateX": "0"
+        }
+      ],
+      "infos": []
+    },
+    {
+      "id": "CounsellingRoom",
+      "photopanos": [
+        {
+          "src": "/360_images/AlliedHealth_CounsellingRoomPanorama_01.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "Corridor",
+          "txt": "Corridor",
+          "rotateY": "120",
+          "rotateX": "0"
+        }
+      ],
+      "infos": [
+        {
+          "card": [
+            {
+              "type": "header",
+              "txt": "Log onto the intranet"
+            },
+            {
+              "type": "content",
+              "txt": ""
+            },
+            {
+              "type": "image",
+              "src": ""
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "Intranet",
+                  "uri": "/Bagwan2.0/scorm/intranet/index.html"
+                }
+              ]
+            }
+          ],
+          "rotateX": "-9",
+          "rotateY": "50"
+        },
+        {
+          "card": [
+            {
+              "type": "header",
+              "txt": "Log onto the intranet"
+            },
+            {
+              "type": "content",
+              "txt": ""
+            },
+            {
+              "type": "image",
+              "src": ""
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "Intranet",
+                  "uri": "/Bagwan2.0/scorm/intranet/index.html"
+                }
+              ]
+            }
+          ],
+          "rotateX": "-9",
+          "rotateY": "50"
+        }
+      ]
+    },
+    {
+      "id": "InterpretingReception",
+      "photopanos": [
+        {
+          "src": "/360_images/InterpretingReception_Panorama.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "MainReception",
+          "txt": "Main Reception",
+          "rotateY": "75",
+          "rotateX": "0"
+        },
+        {
+          "to": "Corridor",
+          "txt": "Corridor",
+          "rotateY": "135",
+          "rotateX": "0"
+        }
+      ],
+      "infos": [
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/interpreting.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Interpreting reception"
+            },
+            {
+              "type": "content",
+              "txt": "Communication is essential in any health care situation. Patients who do not speak English as their first language or who are Deaf have the right to free, confidential and professional interpreters when using health care services.\n\nThe responsibility to book an interpreter lies with the health practitioner who is seeing the patient.\n\nInterpreters act in confidentiality and will not share information with anyone. You may also choose to have a male or female interpreter."
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "Log onto intranet",
+                  "uri": "https://emedia.rmit.edu.au/bagwanhealth/index.php/scorm/department-pages/interpreting-service"
+                }
+              ]
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "0"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/interpreting.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Interpreting reception"
+            },
+            {
+              "type": "content",
+              "txt": "Communication is essential in any health care situation. Patients who do not speak English as their first language or who are Deaf have the right to free, confidential and professional interpreters when using health care services.\n\nThe responsibility to book an interpreter lies with the health practitioner who is seeing the patient.\n\nInterpreters act in confidentiality and will not share information with anyone. You may also choose to have a male or female interpreter."
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "Log onto intranet",
+                  "uri": "https://emedia.rmit.edu.au/bagwanhealth/index.php/scorm/department-pages/interpreting-service"
+                }
+              ]
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "0"
+        }
+      ]
+    },
+    {
+      "id": "Bathroom",
+      "photopanos": [
+        {
+          "src": "/360_images/DisabilityBath_Panorama.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "NurseStation",
+          "txt": "Nurse Station",
+          "rotateY": "-135",
+          "rotateX": "0"
+        }
+      ],
+      "infos": []
+    },
+    {
+      "id": "MainReception",
+      "photopanos": [
+        {
+          "src": "/360_images/MainReception_Panorama_01.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "InterpretingReception",
+          "txt": "Interpreting Reception",
+          "rotateY": "-45",
+          "rotateX": "0"
+        },
+        {
+          "to": "Corridor",
+          "txt": "Corridor",
+          "rotateY": "-153",
+          "rotateX": "0"
+        }
+      ],
+      "infos": [
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/reception_01.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Reception"
+            },
+            {
+              "type": "content",
+              "txt": "The medical reception is crucial to the function of a hospital. A medical receptionist coordinates a range of important tasks for doctors, nurses, staff and patients which include scheduling appointments, answering patient enquiries and handling patient emergencies. "
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "0"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/evacuation_plan.png"
+            },
+            {
+              "type": "header",
+              "txt": "Emergency procedures"
+            },
+            {
+              "type": "content",
+              "txt": "There are many different types of emergency situations, including fire or explosion, dangerous chemical release, medical emergency, natural disaster, bomb threats, violence and robbery. \n       \nEmployees, patients and individuals visiting the workplace need to be instructed on emergency procedures and accounted for in the case of an actual evacuation. \n"
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "External link to worksafe.vic.gov.au",
+                  "uri": "https://www.worksafe.vic.gov.au/use-automated-external-defibrillator-aed-workplace"
+                }
+              ]
+            }
+          ],
+          "rotateX": "148",
+          "rotateY": "7"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/Evacuation plan.png"
+            },
+            {
+              "type": "header",
+              "txt": "Emergency procedures"
+            },
+            {
+              "type": "content",
+              "txt": "There are many different types of emergency situations, including fire or explosion, dangerous chemical release, medical emergency, natural disaster, bomb threats, violence and robbery. \n       \nEmployees, patients and individuals visiting the workplace need to be instructed on emergency procedures and accounted for in the case of an actual evacuation. \n"
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "External link to worksafe.vic.gov.au",
+                  "uri": "https://www.worksafe.vic.gov.au/use-automated-external-defibrillator-aed-workplace"
+                }
+              ]
+            }
+          ],
+          "rotateX": "148",
+          "rotateY": "7"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/AED-1.jpg"
+            },
+            {
+              "type": "header",
+              "txt": " Use of an Automated External Defibrillator (AED) in the workplace"
+            },
+            {
+              "type": "content",
+              "txt": "An automated external defibrillator (AED) is a portable electronic device that automatically diagnoses the potentially life threatening cardiac arrhythmias of ventricular fibrillation and ventricular tachycardia in a patient and is able to treat them through defibrillation. \n\nAn AED can be a risk control in addition to other risk control measures, such as having an appointed first aid officer.\nMore information about the use of an AED in the workplace can be found on the WorkSafe Victoria website."
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "External link to worksafe.vic.gov.au",
+                  "uri": "https://www.worksafe.vic.gov.au/use-automated-external-defibrillator-aed-workplace"
+                }
+              ]
+            }
+          ],
+          "rotateX": "3",
+          "rotateY": "127"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/AED-1.jpg"
+            },
+            {
+              "type": "header",
+              "txt": " Use of an Automated External Defibrillator (AED) in the workplace"
+            },
+            {
+              "type": "content",
+              "txt": "An automated external defibrillator (AED) is a portable electronic device that automatically diagnoses the potentially life threatening cardiac arrhythmias of ventricular fibrillation and ventricular tachycardia in a patient and is able to treat them through defibrillation. \n\nAn AED can be a risk control in addition to other risk control measures, such as having an appointed first aid officer.\nMore information about the use of an AED in the workplace can be found on the WorkSafe Victoria website."
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "External link to worksafe.vic.gov.au",
+                  "uri": "https://www.worksafe.vic.gov.au/use-automated-external-defibrillator-aed-workplace"
+                }
+              ]
+            }
+          ],
+          "rotateX": "3",
+          "rotateY": "127"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/Evacuation plan.png"
+            },
+            {
+              "type": "header",
+              "txt": "Emergency procedures "
+            },
+            {
+              "type": "content",
+              "txt": "There are many different types of emergency situations, including fire or explosion, dangerous chemical release, medical emergency, natural disaster, bomb threats, violence and robbery. \n       \nEmployees, patients and individuals visiting the workplace need to be instructed on emergency procedures and accounted for in the case of an actual evacuation."
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "External link to worksafe.vic.gov.au",
+                  "uri": "https://www.worksafe.vic.gov.au/use-automated-external-defibrillator-aed-workplace"
+                }
+              ]
+            }
+          ],
+          "rotateX": "2",
+          "rotateY": "27"
+        }
+      ]
+    },
+    {
+      "id": "SpecimenReception",
+      "photopanos": [
+        {
+          "src": "/360_images/SpecimenReception.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "Corridor",
+          "txt": "Corridor",
+          "rotateY": "190",
+          "rotateX": "0"
+        },
+        {
+          "to": "Laboratory",
+          "txt": "Laboratory",
+          "rotateY": "80",
+          "rotateX": "2"
+        }
+      ],
+      "infos": [
+        {
+          "card": [
+            {
+              "type": "header",
+              "txt": "Welcome to pathology"
+            },
+            {
+              "type": "content",
+              "txt": "Our pathology services support patient care at Bagwan Health, by providing pathology testing focused on patient safety, clinical efficacy and quality reporting.\n\nPathology provides diagnostic, clinical and research services that focus on supporting both acute care and community health services.\n"
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "0"
+        },
+        {
+          "card": [
+            {
+              "type": "header",
+              "txt": "Specimen Reception"
+            },
+            {
+              "type": "content",
+              "txt": "Specimen reception is responsible for checking the details and samples.\nChecking that the correct sample has been received and that it meets all the essential criteria to be processed.\n\nAny preparation that is required for the samples is done; and the sample details are entered into the database by manual processes where we type all the details of the patient, the tests, and the sample dates.\n\nThen samples are distributed to the relevant disciplines.\n"
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "-45"
+        },
+        {
+          "card": [
+            {
+              "type": "header",
+              "txt": "Specimen Reception responsibilities"
+            },
+            {
+              "type": "content",
+              "txt": "Specimen reception is responsible for the initial stage of sample processing and laboratory. Samples are received from a variety of sources, including JPS, wards and outpatients in the hospital.\n\nSome samples may be urgent, which needs to be identified and prioritised to get those urgent requests to the relevant disciplines immediately.\n\nSamples types that can be received are blood, urine, sputum, swabs, and faeces. \n\nThe disciplines that we have here are biochemistry, haematology, blood transfusion, and microbiology.\n"
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "-70"
+        },
+        {
+          "card": [
+            {
+              "type": "header",
+              "txt": "Laboratory"
+            },
+            {
+              "type": "content",
+              "txt": "Seventy per cent of medical decisions rely on pathology tests. \n\nThe laboratory is a vital part of health care and often goes unnoticed, as the work is generally behind the scenes from patients.\n\nThe lab team can range extensively to include members who are pathologists, clinical lab scientists, medical lab technicians, phlebotomists and processers. \n\nAll who work together to determine either the absence, presence or the extent of disease found in patient samples.\n\nOnce samples are processed and tested, the results are provided to the nurses and doctors to help determine the diagnosis for the patient.\n"
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "90"
+        },
+        {
+          "card": [
+            {
+              "type": "header",
+              "txt": "Laboratory"
+            },
+            {
+              "type": "content",
+              "txt": "Seventy per cent of medical decisions rely on pathology tests. \n\nThe laboratory is a vital part of health care and often goes unnoticed, as the work is generally behind the scenes from patients.\n\nThe lab team can range extensively to include members who are pathologists, clinical lab scientists, medical lab technicians, phlebotomists and processers. \n\nAll who work together to determine either the absence, presence or the extent of disease found in patient samples.\n\nOnce samples are processed and tested, the results are provided to the nurses and doctors to help determine the diagnosis for the patient.\n"
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "90"
+        },
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/PPE-sign.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Before you enter"
+            },
+            {
+              "type": "content",
+              "txt": "Personal protective equipment (PPE) must be worn before entering this laboratory.\n\nCheck that you are wearing the correct personal protective equipment."
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "Enter activity",
+                  "uri": "/Bagwan2.0/scorm/intranet/index.html"
+                }
+              ]
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "30"
+        },
+        {
+          "card": [
+            {
+              "type": "header",
+              "txt": "Specimen reception"
+            },
+            {
+              "type": "content",
+              "txt": "Specimen reception is responsible for the initial stage of sample processing and laboratory. Samples are received from a variety of sources, including JPS, wards and outpatients in the hospital.\n\nSome samples may be urgent, which needs to be identified and prioritised to get those urgent requests to the relevant disciplines immediately.\n\nSamples types that can be received are blood, urine, sputum, swabs and faeces.\n\nThe disciplines that we have here are biochemistry, haematology, blood transfusion and microbiology.\n"
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "0"
+        },
+        {
+          "card": [
+            {
+              "type": "header",
+              "txt": "Handling and processing specimens"
+            },
+            {
+              "type": "content",
+              "txt": "Lab requisition\nMust be filled out correctly\nReview to ensure all information is correct\nVerify test, time and date of collection\nPatient information\nDoctor information\nTest request\n\n\nHandling of specimens\nAvoid unnecessary shaking and agitation to sample\nAvoid spillage\nStopper place facing upwards\nInvert immediately\nSecure lids\nWear gloves\n"
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "45"
+        },
+        {
+          "card": [
+            {
+              "type": "header",
+              "txt": "Handling and processing specimens"
+            },
+            {
+              "type": "content",
+              "txt": "Lab requisition\nMust be filled out correctly\nReview to ensure all information is correct\nVerify test, time and date of collection\nPatient information\nDoctor information\nTest request\n\n\nHandling of specimens\nAvoid unnecessary shaking and agitation to sample\nAvoid spillage\nStopper place facing upwards\nInvert immediately\nSecure lids\nWear gloves\n"
+            },
+            {
+              "type": "row",
+              "buttons": []
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "45"
+        }
+      ]
+    },
+    {
+      "id": "Test",
+      "photopanos": [
+        {
+          "src": "/360_images/shutterstock_dr office.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [],
+      "infos": []
+    },
+    {
+      "id": "",
+      "photopanos": [
+        {
+          "src": "/360_images/shutterstock_dr office.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [],
+      "infos": []
+    },
+    {
+      "id": "NursingRoom",
+      "photopanos": [
+        {
+          "src": "/360_images/AlliedHealth_XrayRoomPanorama.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "HandwashingStation",
+          "txt": "HandwashingStation",
+          "rotateY": 45
+        }
+      ],
+      "infos": []
+    },
+    {
+      "id": "DentalRoom",
+      "photopanos": [
+        {
+          "src": "/360_images/dentalroom_Panorama.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [
+        {
+          "to": "Corridor",
+          "txt": "Corridor",
+          "rotateY": "17",
+          "rotateX": "-2"
+        }
+      ],
+      "infos": [
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "/hotspot_images/handwashing.jpg"
+            },
+            {
+              "type": "header",
+              "txt": "Save Lives: Clean Your Hands"
+            },
+            {
+              "type": "content",
+              "txt": "Select the link to download posters on Your 5 Moments for Hand Hygiene, How to Handrub and How to Handwash to display at your health-care facility."
+            },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "Link to World Healthy Organisation ",
+                  "uri": "https://www.who.int/gpsc/5may/resources/posters/en/"
+                }
+              ]
+            }
+          ],
+          "rotateX": "0",
+          "rotateY": "0"
+        }
+      ]
+    },
+    {
+      "id": "Logistics",
+      "photopanos": [
+        {
+          "src": "/360_images/Logistics_Panorama.jpg",
+          "rotateY": 150
+        }
+      ],
+      "navs": [],
+      "infos": []
+    }
+  ]
+}

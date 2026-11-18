@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<!-- Our Custom CSS -->
+<link href="/Bagwan2.0/wp-content/themes/118/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+<script src="/Bagwan2.0/wp-content/themes/118/js/jquery.min.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/classie.js"></script>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<meta charset="utf-8"/><meta content="IE=edge" http-equiv="X-UA-Compatible"/><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/><meta content="yes" name="mobile-web-app-capable"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="bagwanhealth - The Virtual Workplace" name="apple-mobile-web-app-title"/><title>Interpreting interactive professional development activity – bagwanhealth</title><meta content="noindex, nofollow" name="robots"/><style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style><style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*wp_block_styles_on_demand_placeholder:6afd1189d4a15*/
+/*# sourceURL=wp-block-library-inline-css */
+</style><style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style><style id="wp-block-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the block styles printed at wp_footer." }
+/*# sourceURL=wp-block-styles-placeholder-inline-css */
+</style><style id="wp-global-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the global-styles printed at wp_footer." }
+/*# sourceURL=wp-global-styles-placeholder-inline-css */
+</style><link href="/Bagwan2.0/wp-content/plugins/h5p/h5p-php-library/styles/h5p-fonts.css" id="h5p-plugin-fonts-css" media="all" rel="stylesheet"/><link href="/Bagwan2.0/wp-content/plugins/h5p/h5p-php-library/styles/h5p.css" id="h5p-plugin-styles-css" media="all" rel="stylesheet"/><link href="/Bagwan2.0/wp-content/themes/118/css/vwp.css" id="understrap-styles-css" media="" rel="stylesheet" type="text/css"/><style>
+</style><style>
+.body{
+
+  margin:0;
+  font-size:16px;
+}
+.wrapper{
+  background:red;
+}
+
+.container{
+  margin: 0 auto;
+  max-width:1000px;
+  width:100%;
+  padding: 0 15px;
+  box-sizing:border-box;}
+
+.footer{
+  font-size:0.85rem;
+  padding: 20px 0;
+  line-height:1.6;
+  background:#ddefbf;
+  margin:0 auto;
+}
+
+.footer__text{
+  color:#444444;
+  font-family:helvetica;
+  padding:3px 15px;
+  display:block;
+
+}
+
+.footer__hr{
+  height:1px;
+  border:none;
+  background:#aad75f;
+
+}
+
+.a__footer{
+  color:#ee3154;
+}
+
+.a__footer:hover {
+  color:#121741;
+}
+
+p.footer__copy{
+  width:100%;
+ margin:0 auto;}
+</style><link href="/Bagwan2.0/assets/static.css" rel="stylesheet"/></head>
+<body class="cbp-spmenu-push" data-site-root="/Bagwan2.0/">
+<div class="" id="showRightPush">
+<span></span>
+<span></span>
+<span></span>
+<div class="w-100 fscreen">
+<div id="fullscreen">
+<a class="full-screen" href="#" id="fullscreen" onclick="fullscreen()" role="button"></a>
+</div>
+</div>
+</div>
+<nav class="navbar cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="sidebar">
+<div>
+<div class="sidebar"><div id="nav">
+<div class="visibility p-0" id="reveal">
+<div><a href="/Bagwan2.0/scorm/intranet/index.html">
+<img alt="home icon" height="42" src="/Bagwan2.0/wp-content/themes/118/vwp/img/home_icon.png" style="margin-top:20%;margin-left:45%;" width="42"/></a></div>
+<div class="menu-menu-test-container" id="cssmenu"><ul class="menu" id="menu-menu-test"><li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1088"><a href="/Bagwan2.0/scorm/intranet/our-community/index.html"><span>Our community</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm current-scorm-ancestor menu-item-has-children has-sub" id="menu-item-1089"><a href="/Bagwan2.0/scorm/department-pages/index.html"><span>Departments</span></a>
+<ul>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1092"><a href="/Bagwan2.0/scorm/department-pages/hr-services/index.html"><span>HR services</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1093"><a href="/Bagwan2.0/scorm/department-pages/lab-technologies/index.html"><span>Lab technologies</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1094"><a href="/Bagwan2.0/scorm/department-pages/nursing/index.html"><span>Nursing</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm current-scorm-ancestor" id="menu-item-1095"><a href="/Bagwan2.0/scorm/department-pages/interpreting-office/index.html"><span>Interpreting services</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1468"><a href="/Bagwan2.0/scorm/department-pages/logisitics/index.html"><span>Logistics</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1096"><a href="/Bagwan2.0/scorm/intranet/doctors-on-call/index.html"><span>Doctors on call</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1097"><a href="/Bagwan2.0/scorm/intranet/news-feed/index.html"><span>News feed</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1120"><a href="/Bagwan2.0/scorm/intranet/staff-repository/index.html"><span>Documents</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm menu-item-has-children has-sub" id="menu-item-1273"><a href="/Bagwan2.0/scorm/virtual-hospital/index.html"><span>Virtual tour</span></a>
+<ul>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1284"><a href="/Bagwan2.0/scorm/virtual-hospital/entrance/index.html"><span>Entrance</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1274"><a href="/Bagwan2.0/scorm/virtual-hospital/laboratories/index.html"><span>Laboratories</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1275"><a href="/Bagwan2.0/scorm/virtual-hospital/main-reception/index.html"><span>Main reception</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1276"><a href="/Bagwan2.0/scorm/virtual-hospital/medication-room/index.html"><span>Medication room</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1277"><a href="/Bagwan2.0/scorm/virtual-hospital/myotherapy-clinic/index.html"><span>Myotherapy clinic</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1278"><a href="/Bagwan2.0/scorm/virtual-hospital/nurses-station/index.html"><span>Nurses’ station</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1279"><a href="/Bagwan2.0/scorm/virtual-hospital/rehabilitation-clinic/index.html"><span>Rehabilitation clinic</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1280"><a href="/Bagwan2.0/scorm/virtual-hospital/specimen-reception/index.html"><span>Specimen reception</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1281"><a href="/Bagwan2.0/scorm/virtual-hospital/ward/index.html"><span>Ward</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1282"><a href="/Bagwan2.0/scorm/virtual-hospital/xray-room/index.html"><span>Xray Room</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1471"><a href="/Bagwan2.0/scorm/virtual-hospital/logisitics/index.html"><span>Logistics</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-1385"><a href="/Bagwan2.0/patient-management-system/index.html"><span>Patient management system</span></a></li>
+</ul></div> </div>
+</div>
+</div>
+</div>
+</nav>
+<div class="cbp-spmenu-push-toleft" id="content">
+<!-- ensure iframe links are opened in a new tab in the parent uless this is a scorm page builder -->
+<script id="popper-scripts-js" src="/Bagwan2.0/wp-content/themes/118/js/popper.min.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/vwp/js/jquery.min.js"></script><script src="/Bagwan2.0/wp-content/themes/118/vwp/js/theme.min.js"></script><script src="/Bagwan2.0/wp-content/themes/118/vwp/js/main.js"></script>
+<!--
+ __      ________   _____            _               _______
+ \ \    / /  ____| |  __ \          (_)             |__   __|
+  \ \  / /| |__    | |  | | ___  ___ _  __ _ _ __      | | ___  __ _ _ __ ___
+   \ \/ / |  __|   | |  | |/ _ \/ __| |/ _` | '_ \     | |/ _ \/ _` | '_ ` _ \
+    \  /  | |____  | |__| |  __/\__ \ | (_| | | | |    | |  __/ (_| | | | | | |
+     \/   |______| |_____/ \___||___/_|\__, |_| |_|    |_|\___|\__,_|_| |_| |_|
+                                        __/ |
+                                       |___/
+This custom content was generated by the RMIT Vocational Education Design team - https://emedia.rmit.edu.au/oedvedesign/
+-->
+<div class="container-fluid" id="vwp">
+<div class="row">
+<div class="col-12" id="banner" style="z-index:1;">
+<a href="/Bagwan2.0/scorm/intranet/index.html"><div id="ws">
+<div class="vwp-logo"></div>
+</div></a>
+</div>
+<!-- breadcrumbs commented out for VWP-->
+<div class="container">
+<div class="" data-intro="This is a location-based breadcrumb trail showing which page you are viewing and where it sits in the website’s hierarchy." id="breadcrumbs" style="margin-top: 6rem; border-bottom: 1px solid #eeeeee; margin-bottom: 2rem;">
+<ul class="thin-text">
+<li class="d-lg-inline">Departments</li> <li>Interpreting services</li> <li style="color:#01A19A; font-weight: 500;">  Interpreting interactive professional development activity</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<h1>Interpreting interactive professional development activity</h1>
+<div class="heading-underline"></div>
+<article><p class="MsoNormal">In conjunction with some of the interpreting team, Bagwan Health have scripted, filmed and created an excellent short professional development activity. All staff are welcome to complete this to work through some crucial decision points that interpreters face.</p>
+<p class="MsoNormal">The following professional development activity is an excellent introduction to when interpreters face crucial ethical and professional decision points and how they can best deal with these.</p>
+</article>
+<div class="instruction mr-1"><i class="fa fa-info-circle mr-1 fa-lg"></i>
+	  Select ‘Start scenario’ to begin the professional development activity. By the end of this module you will be able to clearly identify several key decision points when interpreting for clients in a health context.	</div>
+<section><!-- acf.php -->
+<div id="BranchingScenario">
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
+<div class="collapse parent" id="collapse1">
+<div class="card">
+<div class="card-body">
+<h3 class="h4">Branching scenario</h3><p class="card-text"></p><h3><strong>Objective</strong></h3>
+<p>Simulated scenarios for the user to practice knowledge and skills. Scenarios relate to best practice, ethics, and code of conduct related to accredited interpreter. The activity will have question and decision points along the way using film/videos of scenarios and decision outcomes.</p>
+<h3><strong>Context for scenarios</strong></h3>
+<p>Consultation with specialist doctor – Cardiologist to discuss medical results. Dialogue to revolve around medical results for Patient. Doctor diagnoses high-cholesterol based on latest blood test, and advises Patient how to manage high blood pressure better.</p>
+<h3><strong>Characters in scenario include</strong>:</h3>
+<table style="width: 100%;">
+<thead>
+<tr>
+<th>Interpreter</th>
+<th>Cardiologist</th>
+<th>Mrs Trang (patient)</th>
+<th>Parker (grandson)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" class="alignnone size-medium wp-image-839" decoding="async" fetchpriority="high" height="287" src="/Bagwan2.0/wp-content/uploads/2019/12/Interpreter-e1576560298389-300x300.png" width="289"/></td>
+<td><img alt="" class="alignnone size-medium wp-image-837" decoding="async" height="289" sizes="(max-width: 289px) 100vw, 289px" src="/Bagwan2.0/wp-content/uploads/2019/12/DrStone-e1576561741561-300x300.png" srcset="/Bagwan2.0/wp-content/uploads/2019/12/DrStone-e1576561741561-300x300.png 300w, /Bagwan2.0/wp-content/uploads/2019/12/DrStone-e1576561741561-150x150.png 150w, /Bagwan2.0/wp-content/uploads/2019/12/DrStone-e1576561741561-768x768.png 768w, /Bagwan2.0/wp-content/uploads/2019/12/DrStone-e1576561741561.png 1011w" width="289"/></td>
+<td><img alt="" class="alignnone size-medium wp-image-838" decoding="async" height="290" sizes="(max-width: 300px) 100vw, 300px" src="/Bagwan2.0/wp-content/uploads/2019/12/MrsTrang-e1576561627862-300x290.png" srcset="/Bagwan2.0/wp-content/uploads/2019/12/MrsTrang-e1576561627862-300x290.png 300w, /Bagwan2.0/wp-content/uploads/2019/12/MrsTrang-e1576561627862.png 545w" width="300"/></td>
+<td><img alt="" class="alignnone size-medium wp-image-836" decoding="async" height="288" loading="lazy" sizes="auto, (max-width: 288px) 100vw, 288px" src="/Bagwan2.0/wp-content/uploads/2019/12/Parker-e1576561821692-300x300.png" srcset="/Bagwan2.0/wp-content/uploads/2019/12/Parker-e1576561821692-300x300.png 300w, /Bagwan2.0/wp-content/uploads/2019/12/Parker-e1576561821692-150x150.png 150w, /Bagwan2.0/wp-content/uploads/2019/12/Parker-e1576561821692-768x768.png 768w, /Bagwan2.0/wp-content/uploads/2019/12/Parker-e1576561821692.png 980w" width="288"/></td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p> </p>
+<!-- Card 1-->
+<!-- get button data -->
+<p></p><ul class="button-list pl-0 pt-1">
+<li class="button"><a "="" aria-controls="collapse2 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse2" data-toggle="collapse" href="#2">
+            Next        </a></li>
+</ul>
+<!-- end get button data -->
+</div><!--card-body-->
+</div><!--card-->
+<div class="progress mt-2 mr-1 ml-1">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="5.8823529411765" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 5.8823529411765%" title="You're 5.8823529411765% through this scenario"></div>
+</div>
+</div><!--collapse-->
+</div><!--parent-->
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
+<div class="collapse parent" id="collapse2">
+<div class="card">
+<div class="card-body">
+<h3 class="h4"></h3><p class="card-text"></p><h3>Introduction </h3>
+<p>This activity promotes best practice on how to establish a interpreter-client relationship. </p>
+<p>You will assume the role of a an interpreter. You’re assigned to interpret a medical consultation between doctor and patient.</p>
+<p>Based on code of conduct related dilemmas, you will face decision points on how to proceed along the way.</p>
+<p>Please note: The scenarios presented are a fictional account to represent ethical issues. Any resemblance to actual persons is unintentional.</p>
+<p> </p>
+<!-- Card 2-->
+<!-- get button data -->
+<p></p><ul class="button-list pl-0 pt-1">
+<li class="button"><a "="" aria-controls="collapse3 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse3" data-toggle="collapse" href="#3">
+            Next        </a></li>
+</ul>
+<!-- end get button data -->
+</div><!--card-body-->
+</div><!--card-->
+<div class="progress mt-2 mr-1 ml-1">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="11.764705882353" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 11.764705882353%" title="You're 11.764705882353% through this scenario"></div>
+</div>
+</div><!--collapse-->
+</div><!--parent-->
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
+<div class="collapse parent" id="collapse3">
+<div class="card">
+<div class="card-body">
+<h3 class="h4"></h3><p class="card-text"></p><h3>How it works</h3>
+<ul>
+<li>Watch interactions between client, community doctor, and certified interpreter.</li>
+<li>After each interaction, you are to select the most appropriate response. Possible response outcomes can be either : A good approach or not the best approach</li>
+<li>You can redo and repeat this activity many times to practice and to improve your responses.</li>
+<li>This activity has sound, so please adjust your volume as needed.</li>
+</ul>
+<p>This activity uses high resolution videos for each scenario. For best results, please use high-speed Internet connectivity.</p>
+<!-- Card 3-->
+<!-- get button data -->
+<p></p><ul class="button-list pl-0 pt-1">
+<li class="button"><a "="" aria-controls="collapse4 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse4" data-toggle="collapse" href="#4">
+            Next        </a></li>
+</ul>
+<!-- end get button data -->
+</div><!--card-body-->
+</div><!--card-->
+<div class="progress mt-2 mr-1 ml-1">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="17.647058823529" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 17.647058823529%" title="You're 17.647058823529% through this scenario"></div>
+</div>
+</div><!--collapse-->
+</div><!--parent-->
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
+<div class="collapse parent" id="collapse4">
+<div class="card">
+<div class="card-body">
+<h3 class="h4">Video scenario– Start – Competence</h3><p class="card-text"></p><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"></div>
+<p class="Body"> </p>
+<p>Patient with family member have already registered at reception and have arrived at Cardiologist consultation appointment at opened room entrance door.</p>
+<p>Family member advises Cardiologist that they don’t require an interpreter for the consultation as they believe they are able to interpret instead (despite already been agreed to, arranged, and booked).</p>
+<!-- Card 4-->
+<!-- get button data -->
+<p></p><ul class="button-list pl-0 pt-1">
+<li class="button"><a "="" aria-controls="collapse5 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse5" data-toggle="collapse" href="#5">
+            Next        </a></li>
+</ul>
+<!-- end get button data -->
+</div><!--card-body-->
+</div><!--card-->
+<div class="progress mt-2 mr-1 ml-1">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="23.529411764706" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 23.529411764706%" title="You're 23.529411764706% through this scenario"></div>
+</div>
+</div><!--collapse-->
+</div><!--parent-->
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
+<div class="collapse parent" id="collapse5">
+<div class="card">
+<div class="card-body">
+<h3 class="h4"></h3><p class="card-text"></p><p><span style="font-size: 12.0pt; font-family: 'Arial','sans-serif'; mso-fareast-font-family: 'MS Mincho'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">How do you proceed? </span></p>
+<!-- Card 5-->
+<!-- get button data -->
+<p></p><ul class="button-list pl-0 pt-1">
+<li class="button"><a "="" aria-controls="collapse6 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse6" data-toggle="collapse" href="#6">
+            A. Client requires an accredited interpretor. Wait for accredited interpretor to join.        </a></li>
+<li class="button"><a "="" aria-controls="collapse7 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse7" data-toggle="collapse" href="#7">
+            B. Family member can interpret for Patient during consultation.        </a></li>
+<li class="button"><a "="" aria-controls="collapse4 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse4" data-toggle="collapse" href="#4">
+            C. Replay previous video        </a></li>
+</ul>
+<!-- end get button data -->
+</div><!--card-body-->
+</div><!--card-->
+<div class="progress mt-2 mr-1 ml-1">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="29.411764705882" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 29.411764705882%" title="You're 29.411764705882% through this scenario"></div>
+</div>
+</div><!--collapse-->
+</div><!--parent-->
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
+<div class="collapse parent" id="collapse6">
+<div class="card">
+<div class="card-body">
+<h3 class="h4">Video outcome A</h3><p class="card-text"></p><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"></div>
+<p><span style="font-size: 1rem;">An interpretor’s role is to help improve communication, and clinical outcomes, providing satisfaction with care in patients with limited English proficiency.</span></p>
+<p> </p>
+<!-- Card 6-->
+<!-- get button data -->
+<p></p><ul class="button-list pl-0 pt-1">
+<li class="button"><a "="" aria-controls="collapse8 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse8" data-toggle="collapse" href="#8">
+            Next        </a></li>
+</ul>
+<!-- end get button data -->
+</div><!--card-body-->
+</div><!--card-->
+<div class="progress mt-2 mr-1 ml-1">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="35.294117647059" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 35.294117647059%" title="You're 35.294117647059% through this scenario"></div>
+</div>
+</div><!--collapse-->
+</div><!--parent-->
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
+<div class="collapse parent" id="collapse7">
+<div class="card">
+<div class="card-body">
+<h3 class="h4">Video outcomes B</h3><p class="card-text"></p><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"></div>
+<p class="Body"> </p>
+<p class="Body">Not the best result</p>
+<p class="Body">If family members, friends or staff who are not trained as accredited interpreters try to interpret, risks are that errors in understanding and communication are more likely to occur. This can pose grave risks to the patient as well as liability to the healthcare provider or institution.</p>
+<!-- Card 7-->
+<!-- get button data -->
+<p></p><ul class="button-list pl-0 pt-1">
+<li class="button"><a "="" aria-controls="collapse4 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse4" data-toggle="collapse" href="#4">
+            Try again        </a></li>
+</ul>
+<!-- end get button data -->
+</div><!--card-body-->
+</div><!--card-->
+<div class="progress mt-2 mr-1 ml-1">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="41.176470588235" class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 41.176470588235%" title="You're 41.176470588235% through this scenario"></div>
+</div>
+</div><!--collapse-->
+</div><!--parent-->
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
+<div class="collapse parent" id="collapse8">
+<div class="card">
+<div class="card-body">
+<h3 class="h4"></h3><p class="card-text"></p><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"></div>
+<p class="Body">Accredited interpretor arrives at consultation room for appointment, and is met by the Cardiologist at the entrance. <span style="mso-bidi-font-style: normal;">Caridologist is waiting impatiently for interpretor to arrive.</span></p>
+<!-- Card 8-->
+<!-- get button data -->
+<p></p><ul class="button-list pl-0 pt-1">
+<li class="button"><a "="" aria-controls="collapse9 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse9" data-toggle="collapse" href="#9">
+            Next        </a></li>
+</ul>
+<!-- end get button data -->
+</div><!--card-body-->
+</div><!--card-->
+<div class="progress mt-2 mr-1 ml-1">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="47.058823529412" class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 47.058823529412%" title="You're 47.058823529412% through this scenario"></div>
+</div>
+</div><!--collapse-->
+</div><!--parent-->
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
+<div class="collapse parent" id="collapse9">
+<div class="card">
+<div class="card-body">
+<h3 class="h4"></h3><p class="card-text"></p><p><span style="font-size: 12.0pt; font-family: 'Arial','sans-serif'; mso-fareast-font-family: 'MS Mincho'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">How do you proceed?</span></p>
+<!-- Card 9-->
+<!-- get button data -->
+<p></p><ul class="button-list pl-0 pt-1">
+<li class="button"><a "="" aria-controls="collapse10 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse10" data-toggle="collapse" href="#10">
+            A. Debrief with Cardiologist prior to entering the room to obtain additional context and background information to booking request.        </a></li>
+<li class="button"><a "="" aria-controls="collapse11 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse11" data-toggle="collapse" href="#11">
+            B. Basic content is already provided on booking request form. Enter room to immediately begin consultation        </a></li>
+<li class="button"><a "="" aria-controls="collapse8 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse8" data-toggle="collapse" href="#8">
+            C. Replay previous video        </a></li>
+</ul>
+<!-- end get button data -->
+</div><!--card-body-->
+</div><!--card-->
+<div class="progress mt-2 mr-1 ml-1">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="52.941176470588" class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 52.941176470588%" title="You're 52.941176470588% through this scenario"></div>
+</div>
+</div><!--collapse-->
+</div><!--parent-->
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
+<div class="collapse parent" id="collapse10">
+<div class="card">
+<div class="card-body">
+<h3 class="h4"></h3><p class="card-text"></p><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"></div>
+<p>Good feedback for best practice to support optimal interpretation outcomes during the session: Source content description.</p>
+<!-- Card 10-->
+<!-- get button data -->
+<p></p><ul class="button-list pl-0 pt-1">
+<li class="button"><a "="" aria-controls="collapse12 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse12" data-toggle="collapse" href="#12">
+            Next        </a></li>
+</ul>
+<!-- end get button data -->
+</div><!--card-body-->
+</div><!--card-->
+<div class="progress mt-2 mr-1 ml-1">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="58.823529411765" class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 58.823529411765%" title="You're 58.823529411765% through this scenario"></div>
+</div>
+</div><!--collapse-->
+</div><!--parent-->
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
+<div class="collapse parent" id="collapse11">
+<div class="card">
+<div class="card-body">
+<h3 class="h4"></h3><p class="card-text"></p><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"></div>
+<p>Bad feedback: Source content description</p>
+<p> </p>
+<!-- Card 11-->
+<!-- get button data -->
+<p></p><ul class="button-list pl-0 pt-1">
+<li class="button"><a "="" aria-controls="collapse8 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse8" data-toggle="collapse" href="#8">
+            Try again        </a></li>
+</ul>
+<!-- end get button data -->
+</div><!--card-body-->
+</div><!--card-->
+<div class="progress mt-2 mr-1 ml-1">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="64.705882352941" class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 64.705882352941%" title="You're 64.705882352941% through this scenario"></div>
+</div>
+</div><!--collapse-->
+</div><!--parent-->
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
+<div class="collapse parent" id="collapse12">
+<div class="card">
+<div class="card-body">
+<h3 class="h4"></h3><p class="card-text"></p><p class="Body"><span style="font-size: 11pt;">Consider incorporating a break for long sessions.  </span></p>
+<p class="paragraph" style="margin: 0cm; margin-bottom: .0001pt; line-height: 115%; vertical-align: baseline;"><span style="font-size: 11.0pt; line-height: 115%; font-family: 'Arial','sans-serif'; mso-fareast-font-family: 'MS Mincho';">As with all interpreting, it is important to be patient and allow time for communication due to the delay between a message being spoken or signed and the interpretation.</span></p>
+<!-- Card 12-->
+<!-- get button data -->
+<p></p><ul class="button-list pl-0 pt-1">
+<li class="button"><a "="" aria-controls="collapse13 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse13" data-toggle="collapse" href="#13">
+            Next        </a></li>
+</ul>
+<!-- end get button data -->
+</div><!--card-body-->
+</div><!--card-->
+<div class="progress mt-2 mr-1 ml-1">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="70.588235294118" class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70.588235294118%" title="You're 70.588235294118% through this scenario"></div>
+</div>
+</div><!--collapse-->
+</div><!--parent-->
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
+<div class="collapse parent" id="collapse13">
+<div class="card">
+<div class="card-body">
+<h3 class="h4"></h3><p class="card-text"></p><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"></div>
+<p class="Body"> <span style="font-size: 11.0pt; line-height: 115%; font-family: 'Arial','sans-serif'; mso-fareast-font-family: 'MS Mincho';">Dialogue turns to advice from Cardiologist on how to manage high blood pressure better otherwise Patient health will suffer further will need to arrange follow up consultation to track progress and health improvement.</span></p>
+<p class="paragraph" style="line-height: 115%; vertical-align: baseline;"><span style="font-size: 11.0pt; line-height: 115%; font-family: 'Arial','sans-serif'; mso-fareast-font-family: 'MS Mincho';">Family member does not wish to have information shared with Patient about any health scare, and wishes to have the health management information filtered to sound ‘not as serious’ as not to upset the Patient with the result details.</span></p>
+<!-- Card 13-->
+<!-- get button data -->
+<p></p><ul class="button-list pl-0 pt-1">
+<li class="button"><a "="" aria-controls="collapse14 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse14" data-toggle="collapse" href="#14">
+            Next        </a></li>
+</ul>
+<!-- end get button data -->
+</div><!--card-body-->
+</div><!--card-->
+<div class="progress mt-2 mr-1 ml-1">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="76.470588235294" class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 76.470588235294%" title="You're 76.470588235294% through this scenario"></div>
+</div>
+</div><!--collapse-->
+</div><!--parent-->
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
+<div class="collapse parent" id="collapse14">
+<div class="card">
+<div class="card-body">
+<h3 class="h4"></h3><p class="card-text"></p><p class="Body">How do you proceed?</p>
+<!-- Card 14-->
+<!-- get button data -->
+<p></p><ul class="button-list pl-0 pt-1">
+<li class="button"><a "="" aria-controls="collapse15 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse15" data-toggle="collapse" href="#15">
+            Option A – will be ‘good’  ideal outcome        </a></li>
+<li class="button"><a "="" aria-controls="collapse16 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse16" data-toggle="collapse" href="#16">
+            Option B – will be ‘bad’ not a great outcome        </a></li>
+<li class="button"><a "="" aria-controls="collapse13 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse13" data-toggle="collapse" href="#13">
+            Replay video        </a></li>
+</ul>
+<!-- end get button data -->
+</div><!--card-body-->
+</div><!--card-->
+<div class="progress mt-2 mr-1 ml-1">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="82.352941176471" class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 82.352941176471%" title="You're 82.352941176471% through this scenario"></div>
+</div>
+</div><!--collapse-->
+</div><!--parent-->
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
+<div class="collapse parent" id="collapse15">
+<div class="card">
+<div class="card-body">
+<h3 class="h4"></h3><p class="card-text"></p><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"></div>
+<!-- Card 15-->
+<!-- get button data -->
+<p></p><ul class="button-list pl-0 pt-1">
+<li class="button"><a "="" aria-controls="collapse17 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse17" data-toggle="collapse" href="#17">
+            Next        </a></li>
+</ul>
+<!-- end get button data -->
+</div><!--card-body-->
+</div><!--card-->
+<div class="progress mt-2 mr-1 ml-1">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="88.235294117647" class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 88.235294117647%" title="You're 88.235294117647% through this scenario"></div>
+</div>
+</div><!--collapse-->
+</div><!--parent-->
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
+<div class="collapse parent" id="collapse16">
+<div class="card">
+<div class="card-body">
+<h3 class="h4"></h3><p class="card-text"></p><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"></div>
+<!-- Card 16-->
+<!-- get button data -->
+<p></p><ul class="button-list pl-0 pt-1">
+<li class="button"><a "="" aria-controls="collapse13 " aria-expanded="false" class="border mb-2 btn btn-default" data-parent="#BranchingScenario" data-target="#collapse13" data-toggle="collapse" href="#13">
+            Try again        </a></li>
+</ul>
+<!-- end get button data -->
+</div><!--card-body-->
+</div><!--card-->
+<div class="progress mt-2 mr-1 ml-1">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="94.117647058824" class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 94.117647058824%" title="You're 94.117647058824% through this scenario"></div>
+</div>
+</div><!--collapse-->
+</div><!--parent-->
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
+<div class="collapse parent" id="collapse17">
+<div class="card">
+<div class="card-body">
+<h3 class="h4"></h3><p class="card-text"></p><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"></div>
+<p class="Body"> </p>
+<p><span style="font-size: 12.0pt; font-family: 'Arial','sans-serif'; mso-fareast-font-family: 'MS Mincho'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">Thank you and farewell between all the parties.</span></p>
+<!-- Card 17-->
+<!-- get button data -->
+<p></p><ul class="button-list pl-0 pt-1">
+</ul>
+<!-- end get button data -->
+</div><!--card-body-->
+</div><!--card-->
+<div class="progress mt-2 mr-1 ml-1">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%" title="You're 100% through this scenario"></div>
+</div>
+</div><!--collapse-->
+</div><!--parent-->
+</div><!--BranchingScenario-->
+<!-- end acf.php -->
+</section>
+<article class="mt-3"></article>
+</div>
+<div class="b-0 container">
+<div class="">
+<div class="" id="bottom_navigation">
+<div id="next-prev">
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- row-->
+<!-- #cde -->
+<script src="/Bagwan2.0/wp-content/themes/118/js/glossary-tooltip.js"></script><script src="/Bagwan2.0/wp-content/themes/118/js/jquery.glossarize.js"></script>
+<div class="wrapper">
+<div class="container">
+</div>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<footer class="footer">
+<div class="footer__text container">
+<p>RMIT would like to acknowledge Wurundjeri people of the Kulin Nations as the Traditional Owners of the land on which the University stands. We respectfully recognise Elders past, present and future.</p>
+<p>© Copyright 2026 <a class="a__footer" href="https://www.rmit.edu.au/">RMIT</a> - This website is for educational purpose only.</p>
+<hr class="footer__hr"/>
+</div>
+</footer>
+<script src="/Bagwan2.0/wp-content/themes/118/js/menu.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/modernizr.custom.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+// Make first card show on loadding, rest hidden by default
+$('.collapse:first').addClass('show');
+</script><script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+</script><script>
+   // do the opening and closing for the menu accordion
+   (function ($) {
+     $(document).ready(function () {
+       $('#cssmenu li.has-sub>a').on('click', function () {
+         $(this).removeAttr('href');
+         var element = $(this).parent('li');
+         if (element.hasClass('open')) {
+           element.removeClass('open');
+           element.find('li').removeClass('open');
+           element.find('ul').slideUp();
+         } else {
+           element.addClass('open');
+           element.children('ul').slideDown();
+           element.siblings('li').children('ul').slideUp();
+           element.siblings('li').removeClass('open');
+           element.siblings('li').find('li').removeClass('open');
+           element.siblings('li').find('ul').slideUp();
+         }
+       });
+
+       $('#cssmenu>ul>li.has-sub>a').append('<span class="holder"></span>');
+
+     });
+   })(jQuery);
+ //ensure nav loads closed
+ $('#reveal').addClass('navshow').removeClass('test2');
+ //ensure the nav is always open for the current page
+ $("li.menu-item" ).children('ul').css({ display: "none" });
+ $('li.active').closest('ul').addClass('open').css({ display: "block" })
+ </script><script>
+     $(document).ready(function(){
+         $("#cssmenu>ul>li").parent().addClass("dropdown");
+       //  $("#cssmenu>ul").addClass("dropdown-menu");
+         $("#cssmenu>ul>li.has-sub>a").addClass("dropdown-toggle");
+         $("ul.has-sub li a").removeClass("dropdown-toggle");
+         $('.navbar .dropdown-toggle').append('<b class="caret"></b>');
+     });
+ </script><script>
+   //nave menu
+   $(document).ready(function () {
+       $('#sidebarCollapse').on('click', function () {
+         $('#sidebar').toggleClass('active');
+       });
+   });
+   //fullscreen
+   //invokes browser's fullscreen mode
+   function fullscreen() {
+     var isInFullScreen = (document.fullscreenElement && document.fullscreenElement  !== null) ||
+         (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
+         (document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
+         (document.msFullscreenElement && document.msFullscreenElement !== null);
+
+     var docElm = document.documentElement;
+     if (!isInFullScreen) {
+         if (docElm.requestFullscreen) {
+             docElm.requestFullscreen();
+         } else if (docElm.mozRequestFullScreen) {
+             docElm.mozRequestFullScreen();
+         } else if (docElm.webkitRequestFullScreen) {
+             docElm.webkitRequestFullScreen();
+         } else if (docElm.msRequestFullscreen) {
+             docElm.msRequestFullscreen();
+         }
+     } else {
+         if (document.exitFullscreen) {
+             document.exitFullscreen();
+         } else if (document.webkitExitFullscreen) {
+             document.webkitExitFullscreen();
+         } else if (document.mozCancelFullScreen) {
+             document.mozCancelFullScreen();
+         } else if (document.msExitFullscreen) {
+             document.msExitFullscreen();
+         }
+     }
+ }
+</script><script defer="True" src="/Bagwan2.0/assets/static.js"></script></body></html>

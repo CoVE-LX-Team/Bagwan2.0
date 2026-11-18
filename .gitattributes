@@ -4,7 +4,21 @@
 *.pdf binary
 *.png binary
 *.ai binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.h5p binary
 
 *.json text eol=lf
 *.md text eol=lf
 *.py text eol=lf
+*.html text eol=lf
+
+# Imported upstream assets stay byte-for-byte and do not need generated text diffs.
+wp-content/** binary
+assets/vendor/** binary

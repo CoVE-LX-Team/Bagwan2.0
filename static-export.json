@@ -1,0 +1,2617 @@
+{
+  "source": "https://emedia.rmit.edu.au/bagwanhealth/",
+  "base_path": "/Bagwan2.0/",
+  "exported_on": "2026-11-18",
+  "pages": [
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/",
+      "path": "VR/public/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/aboriginal-and-torres-strait-islander-liaison-office/",
+      "path": "aboriginal-and-torres-strait-islander-liaison-office/index.html",
+      "source_status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/patient-management-system",
+      "path": "patient-management-system/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/patient-management-system/",
+      "path": "patient-management-system/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/patient-management-system/abbeyscale/",
+      "path": "patient-management-system/abbeyscale/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/patient-management-system/continence/",
+      "path": "patient-management-system/continence/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/patient-management-system/foodrecord/",
+      "path": "patient-management-system/foodrecord/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/patient-management-system/messageboard/",
+      "path": "patient-management-system/messageboard/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/patient-management-system/patient-database/",
+      "path": "patient-management-system/patient-database/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/patient-management-system/patient-database/jane-doe/",
+      "path": "patient-management-system/patient-database/jane-doe/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/patient-management-system/patient-database/yusef-duke/",
+      "path": "patient-management-system/patient-database/yusef-duke/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/patient-management-system/personalcare/",
+      "path": "patient-management-system/personalcare/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/patient-management-system/personalcare/patientrecord",
+      "path": "patient-management-system/personalcare/patientrecord/index.html",
+      "source_status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/resources-and-tools/interpreting-services/",
+      "path": "resources-and-tools/interpreting-services/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/resources-and-tools/lab-technologies/",
+      "path": "resources-and-tools/lab-technologies/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/resources-and-tools/logisitics/",
+      "path": "resources-and-tools/logisitics/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/resources-and-tools/nursing/",
+      "path": "resources-and-tools/nursing/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/department-pages/",
+      "path": "scorm/department-pages/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/department-pages/hr-services/",
+      "path": "scorm/department-pages/hr-services/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/department-pages/interpreting-office/",
+      "path": "scorm/department-pages/interpreting-office/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/department-pages/interpreting-office/new-interpreting-pd/",
+      "path": "scorm/department-pages/interpreting-office/new-interpreting-pd/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/department-pages/lab-technologies/",
+      "path": "scorm/department-pages/lab-technologies/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/department-pages/lab-technologies/ppe-safety-activity/",
+      "path": "scorm/department-pages/lab-technologies/ppe-safety-activity/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/department-pages/lab-technologies/waste-management/",
+      "path": "scorm/department-pages/lab-technologies/waste-management/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/department-pages/logisitics/",
+      "path": "scorm/department-pages/logisitics/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/department-pages/nursing/",
+      "path": "scorm/department-pages/nursing/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/",
+      "path": "scorm/intranet/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/doctors-on-call/",
+      "path": "scorm/intranet/doctors-on-call/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/news-feed/",
+      "path": "scorm/intranet/news-feed/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/news-feed/bagwan-health-has-a-new-look-and-staff-intranet/",
+      "path": "scorm/intranet/news-feed/bagwan-health-has-a-new-look-and-staff-intranet/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/news-feed/free-cultural-awareness-training/",
+      "path": "scorm/intranet/news-feed/free-cultural-awareness-training/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/news-feed/influenza-outbreak/",
+      "path": "scorm/intranet/news-feed/influenza-outbreak/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/news-feed/interpreting-at-bagwan-health/",
+      "path": "scorm/intranet/news-feed/interpreting-at-bagwan-health/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/news-feed/new-interpreting-personal-development-available/",
+      "path": "scorm/intranet/news-feed/new-interpreting-personal-development-available/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/news-feed/new-look-people-culture/",
+      "path": "scorm/intranet/news-feed/new-look-people-culture/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/news-feed/update-from-the-ceo/",
+      "path": "scorm/intranet/news-feed/update-from-the-ceo/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/our-community/",
+      "path": "scorm/intranet/our-community/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/resources/",
+      "path": "scorm/intranet/resources/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/staff-directory-2/",
+      "path": "scorm/intranet/staff-directory-2/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/staff-repository/",
+      "path": "scorm/intranet/staff-repository/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/static-org-chart-test/",
+      "path": "scorm/intranet/static-org-chart-test/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/static-org-chart-test/interpreting-department-organisation-chart/",
+      "path": "scorm/intranet/static-org-chart-test/interpreting-department-organisation-chart/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/static-org-chart-test/lab-technology-department-organisation-chart/",
+      "path": "scorm/intranet/static-org-chart-test/lab-technology-department-organisation-chart/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/org-chart-updated/emergency-organisation-chart/",
+      "path": "scorm/org-chart-updated/emergency-organisation-chart/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/9-2/",
+      "path": "scorm/quick-link-pages/9-2/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/forms/",
+      "path": "scorm/quick-link-pages/forms/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/human-resources/",
+      "path": "scorm/quick-link-pages/human-resources/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/incident-reporting/",
+      "path": "scorm/quick-link-pages/incident-reporting/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/patient-records/",
+      "path": "scorm/quick-link-pages/patient-records/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/booking-an-interpreter/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/booking-an-interpreter/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/bullying-and-harrassment/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/bullying-and-harrassment/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/code-of-conduct/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/code-of-conduct/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/complaints-and-feedback-handling/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/complaints-and-feedback-handling/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/emergency-repsonse/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/emergency-repsonse/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/equal-opportunity-and-anti-discrimination/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/equal-opportunity-and-anti-discrimination/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/freedom-of-information/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/freedom-of-information/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/incident-management/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/incident-management/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/infection-control/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/infection-control/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/internet-email-and-social-media/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/internet-email-and-social-media/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/interpretinglanguage-services-rights-and-responsibilities/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/interpretinglanguage-services-rights-and-responsibilities/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/mandatory-reporting/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/mandatory-reporting/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/medication-safety/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/medication-safety/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/nursing-and-clinical-handover/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/nursing-and-clinical-handover/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/ohswhs/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/ohswhs/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/privacy/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/privacy/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/specimen-collection/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/specimen-collection/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/training-and-development/",
+      "path": "scorm/quick-link-pages/policy-and-procedures/training-and-development/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/report-an-incident/",
+      "path": "scorm/report-an-incident/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/static-org-chart-test/",
+      "path": "scorm/static-org-chart-test/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/static-org-chart-test/administration-organisation-chart/",
+      "path": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/static-org-chart-test/finance-organisation-chart/",
+      "path": "scorm/static-org-chart-test/finance-organisation-chart/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/static-org-chart-test/interpreting-department-organisation-chart/",
+      "path": "scorm/static-org-chart-test/interpreting-department-organisation-chart/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/static-org-chart-test/it-services-organisation-chart/",
+      "path": "scorm/static-org-chart-test/it-services-organisation-chart/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/static-org-chart-test/lab-technology-department-organisation-chart/",
+      "path": "scorm/static-org-chart-test/lab-technology-department-organisation-chart/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/",
+      "path": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/static-org-chart-test/nursing-department-organisation-chart/cardiac-department/",
+      "path": "scorm/static-org-chart-test/nursing-department-organisation-chart/cardiac-department/index.html",
+      "source_status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/static-org-chart-test/people-and-culture-hr-organisation-chart/",
+      "path": "scorm/static-org-chart-test/people-and-culture-hr-organisation-chart/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/virtual-hospital/",
+      "path": "scorm/virtual-hospital/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/virtual-hospital/entrance/",
+      "path": "scorm/virtual-hospital/entrance/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/virtual-hospital/laboratories/",
+      "path": "scorm/virtual-hospital/laboratories/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/virtual-hospital/logisitics/",
+      "path": "scorm/virtual-hospital/logisitics/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/virtual-hospital/main-reception/",
+      "path": "scorm/virtual-hospital/main-reception/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/virtual-hospital/medication-room/",
+      "path": "scorm/virtual-hospital/medication-room/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/virtual-hospital/myotherapy-clinic/",
+      "path": "scorm/virtual-hospital/myotherapy-clinic/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/virtual-hospital/nurses-station/",
+      "path": "scorm/virtual-hospital/nurses-station/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/virtual-hospital/rehabilitation-clinic/",
+      "path": "scorm/virtual-hospital/rehabilitation-clinic/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/virtual-hospital/specimen-reception/",
+      "path": "scorm/virtual-hospital/specimen-reception/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/virtual-hospital/ward/",
+      "path": "scorm/virtual-hospital/ward/index.html",
+      "source_status": 200
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/virtual-hospital/xray-room/",
+      "path": "scorm/virtual-hospital/xray-room/index.html",
+      "source_status": 200
+    }
+  ],
+  "assets": [
+    {
+      "source_url": "https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css",
+      "path": "assets/vendor/cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css",
+      "done": true,
+      "size_bytes": 9677,
+      "sha256": "c3a1b60055e08c0ed584fc738bd39aaf0688786957f4c6ec525a40b2e5e228e3"
+    },
+    {
+      "source_url": "https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js",
+      "path": "assets/vendor/cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js",
+      "done": true,
+      "size_bytes": 56249,
+      "sha256": "a28b2f7b339fd0a602c6769df1dca6ad43af73bc8c6a5be67209715289c12a9a"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/AlliedHealth_Myotherapy_Panorama.jpg",
+      "path": "VR/public/static_assets/360_images/AlliedHealth_Myotherapy_Panorama.jpg",
+      "done": true,
+      "size_bytes": 3377896,
+      "sha256": "32950a4270ae63c36e3397914f166958cb1871be697771846730869e4efedc11"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/AlliedHealth_Rehabilitation_Panorama_01.jpg",
+      "path": "VR/public/static_assets/360_images/AlliedHealth_Rehabilitation_Panorama_01.jpg",
+      "done": true,
+      "size_bytes": 3870154,
+      "sha256": "ca081ab17454fb5c7b5465d03680d25e1a3dda9e56786e946843ce2dfe98d818"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/AlliedHealth_XrayRoomPanorama.jpg",
+      "path": "VR/public/static_assets/360_images/AlliedHealth_XrayRoomPanorama.jpg",
+      "done": true,
+      "size_bytes": 2827473,
+      "sha256": "8a8442b7634a90005a233d5f3f6cf5602dfbb382bc8429183b12db5178b71479"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/CleanStoreRoom02_Panorama.jpg",
+      "path": "VR/public/static_assets/360_images/CleanStoreRoom02_Panorama.jpg",
+      "done": true,
+      "size_bytes": 2938298,
+      "sha256": "7561a0316e8db9ab94378f0c7f6685b519ac7097983f46cb72724b9f4c24db71"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/Corridor_Panorama_01.jpg",
+      "path": "VR/public/static_assets/360_images/Corridor_Panorama_01.jpg",
+      "done": true,
+      "size_bytes": 3278533,
+      "sha256": "9ff0d4112d13e54d54c6c69e1999e65be7b0559d8093e5683aa742fdade9a14a"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/DirtyStoreRoom_Panorama.jpg",
+      "path": "VR/public/static_assets/360_images/DirtyStoreRoom_Panorama.jpg",
+      "done": true,
+      "size_bytes": 2968993,
+      "sha256": "27e45eafe0816419ebfe1e2992f0e13784acd1158b1955d0676b0588eeedc130"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/DisabilityBath_Panorama.jpg",
+      "path": "VR/public/static_assets/360_images/DisabilityBath_Panorama.jpg",
+      "done": true,
+      "size_bytes": 2636778,
+      "sha256": "e366a1282f155a90f344276a86ac1ec2b0092dfb73596b133f5da9e6d7d76b30"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/Entrance_Panorama.jpg",
+      "path": "VR/public/static_assets/360_images/Entrance_Panorama.jpg",
+      "done": true,
+      "size_bytes": 3923487,
+      "sha256": "9cf98b7911b862c5ff4ac78cae571acf4ff4adbf9c9a19ae4a18a25555e1da0a"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/HandWashingStation_Panorama.jpg",
+      "path": "VR/public/static_assets/360_images/HandWashingStation_Panorama.jpg",
+      "done": true,
+      "size_bytes": 3565618,
+      "sha256": "b6dd04d6fd6cdb3c8992f5f48117cd3ccc4ab9df60dff0ee364420a96924496e"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/InterpretingReception_Panorama.jpg",
+      "path": "VR/public/static_assets/360_images/InterpretingReception_Panorama.jpg",
+      "done": true,
+      "size_bytes": 3626581,
+      "sha256": "24aa545f1f9145ccaaf7430e55d201a28557cbab201aaeed0d97d5fe24e5535c"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/Laboratory_Panorama.jpg",
+      "path": "VR/public/static_assets/360_images/Laboratory_Panorama.jpg",
+      "done": true,
+      "size_bytes": 3975987,
+      "sha256": "a759f3f50397d952b336df71178b81904f3ccb11c0bb2c21f3325cd1654d8733"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/Logistics_Panorama.jpg",
+      "path": "VR/public/static_assets/360_images/Logistics_Panorama.jpg",
+      "done": true,
+      "size_bytes": 4218528,
+      "sha256": "240f09bfafe3059629b4939dcd7172a790f76f3690ad271167dbb475dc4a3931"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/MainReception_Panorama_01.jpg",
+      "path": "VR/public/static_assets/360_images/MainReception_Panorama_01.jpg",
+      "done": true,
+      "size_bytes": 3793367,
+      "sha256": "df08b040110edac7ae8713c5492f3f651bb6f0c8df07b4256b2f92ae2c3bb26b"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/MedicationRoom_Panorama.jpg",
+      "path": "VR/public/static_assets/360_images/MedicationRoom_Panorama.jpg",
+      "done": true,
+      "size_bytes": 4089750,
+      "sha256": "4e9b9a4b107b5d35b0648d4c3fce7ba1fd0e8c8b79bef7494d186491173524ba"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/NurseWard01_Panorama.jpg",
+      "path": "VR/public/static_assets/360_images/NurseWard01_Panorama.jpg",
+      "done": true,
+      "size_bytes": 4083969,
+      "sha256": "e282cdd04943e215f8aaa5d768c80170fdbf396c00a81c22e584ad9e5f3bb193"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/NursesStation_Panorama2.jpg",
+      "path": "VR/public/static_assets/360_images/NursesStation_Panorama2.jpg",
+      "done": true,
+      "size_bytes": 3520838,
+      "sha256": "d2f2eb74e40698fa2815b3e4c3e2c78803a9273b32ad8e371b5c3fad71b1a9b1"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/SpecimenReception.jpg",
+      "path": "VR/public/static_assets/360_images/SpecimenReception.jpg",
+      "done": true,
+      "size_bytes": 3694863,
+      "sha256": "50332e0a24d0e28dff37bd93b44299e51175fcd2244ebe03f7b161f52b51af42"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/dentalroom_Panorama.jpg",
+      "path": "VR/public/static_assets/360_images/dentalroom_Panorama.jpg",
+      "done": true,
+      "size_bytes": 5400055,
+      "sha256": "10cd385a411f24a9c98cbfbd986702ea1db047f0635007ae346877cf2a678d3d"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hotspot_images/AED-1.jpg",
+      "path": "VR/public/static_assets/hotspot_images/AED-1.jpg",
+      "done": true,
+      "size_bytes": 86393,
+      "sha256": "5cf68723dad4acaca148a0e07b9806971cb63511c352d32661b43c335958fe0d"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hotspot_images/EmergencyShower.png",
+      "path": "VR/public/static_assets/hotspot_images/EmergencyShower.png",
+      "done": true,
+      "size_bytes": 11553,
+      "sha256": "c7d3c1ea02b67ed292a2593c7474609f74604454dc26dca7e5c785e205a9be04"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hotspot_images/HazardousWaste.jpg",
+      "path": "VR/public/static_assets/hotspot_images/HazardousWaste.jpg",
+      "done": true,
+      "size_bytes": 182017,
+      "sha256": "7da3e7e0a0806af28c114c28d75bd5b82578416dac46b54850c036ce02903dba"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hotspot_images/PPE-sign.jpg",
+      "path": "VR/public/static_assets/hotspot_images/PPE-sign.jpg",
+      "done": true,
+      "size_bytes": 222670,
+      "sha256": "81a504826ae98fd7976b30e58012aab0f65c3ac5faef7f6fb9139ca35aa12751"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hotspot_images/Pathology_computer.jpg",
+      "path": "VR/public/static_assets/hotspot_images/Pathology_computer.jpg",
+      "done": true,
+      "size_bytes": 239376,
+      "sha256": "5313c1f5f09add51c12bdda1923104eb15062f6e7b4685806b76f386838b2987"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hotspot_images/Pathology_test.jpg",
+      "path": "VR/public/static_assets/hotspot_images/Pathology_test.jpg",
+      "done": true,
+      "size_bytes": 175099,
+      "sha256": "72f8c04190f87f242a2b37891b6a4bca6dee8d4aa5ccf1a25c63083eb826b34c"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hotspot_images/Welcome_to_Bagwan.jpg",
+      "path": "VR/public/static_assets/hotspot_images/Welcome_to_Bagwan.jpg",
+      "done": true,
+      "size_bytes": 1450817,
+      "sha256": "72c055875584f61ecf24f4f8f86a38c30ec460d7d4d19dc6e542a7c1ee797d7f"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hotspot_images/clean_laundry.jpg",
+      "path": "VR/public/static_assets/hotspot_images/clean_laundry.jpg",
+      "done": true,
+      "size_bytes": 2748847,
+      "sha256": "ef70713b762b442a51d7173e931f9b415bc17002b4bcb4f1ed13cb34d96a4dee"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hotspot_images/dirty_laundry.jpg",
+      "path": "VR/public/static_assets/hotspot_images/dirty_laundry.jpg",
+      "done": true,
+      "size_bytes": 1569723,
+      "sha256": "4268549d2deb66030e7b9b79a02ea9b345718e26eb1d5e083d47dbb5a3cc8156"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hotspot_images/evacuation_plan.png",
+      "path": "VR/public/static_assets/hotspot_images/evacuation_plan.png",
+      "done": true,
+      "size_bytes": 59961,
+      "sha256": "c4f9f74d6626a9000e37a4aab859a6722b2682cca59098ae571096712eed8356"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hotspot_images/handwashing.jpg",
+      "path": "VR/public/static_assets/hotspot_images/handwashing.jpg",
+      "done": true,
+      "size_bytes": 1442953,
+      "sha256": "db2215dd513aca2cbde204b07dd8a999b300a207c303e58acf3974cd1019b8ee"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hotspot_images/interpreting.jpg",
+      "path": "VR/public/static_assets/hotspot_images/interpreting.jpg",
+      "done": true,
+      "size_bytes": 1547006,
+      "sha256": "fb6fc14dc8b384aa5759cdfccaa66e793d6e5185c7c3bc2be923061cb3a12e76"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hotspot_images/intranet.jpg",
+      "path": "VR/public/static_assets/hotspot_images/intranet.jpg",
+      "done": true,
+      "size_bytes": 972427,
+      "sha256": "f2e8fddb6c14facda9887483e1ba7ab5c9999b561da44810e7da3827d6e0a2c2"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hotspot_images/medication_cupboard.jpg",
+      "path": "VR/public/static_assets/hotspot_images/medication_cupboard.jpg",
+      "done": true,
+      "size_bytes": 2726066,
+      "sha256": "552a23f3c6f9638f6d04a97f5fb3c4e7c49437dba6ba053b194a6bbaf02b6ffc"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hotspot_images/nurses_station.jpg",
+      "path": "VR/public/static_assets/hotspot_images/nurses_station.jpg",
+      "done": true,
+      "size_bytes": 1169568,
+      "sha256": "590908c5bc4214d9a4affb158871b2b85328bee6d01965d257b2bd946df65c2b"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hotspot_images/reception_01.jpg",
+      "path": "VR/public/static_assets/hotspot_images/reception_01.jpg",
+      "done": true,
+      "size_bytes": 193028,
+      "sha256": "c703ee4c49c643bc37307ec46f30816355e3e6ee44520ca4fdcb06149892b772"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/icons/white-circle.png",
+      "path": "VR/public/static_assets/icons/white-circle.png",
+      "done": true,
+      "size_bytes": 2819,
+      "sha256": "8b184f3ebc755ddd66011f590072babd56adec0abd0bbd15123905c75b92ab90"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/fonts/h5p-core-30.woff2",
+      "path": "wp-content/plugins/h5p/h5p-php-library/fonts/h5p-core-30.woff2",
+      "done": true,
+      "size_bytes": 15080,
+      "sha256": "fc0fc677374df9e2db0932dd7fcc144544cbbae6ceb59f5e4efbe57852c017cd"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/fonts/h5p-hub-publish.woff2",
+      "path": "wp-content/plugins/h5p/h5p-php-library/fonts/h5p-hub-publish.woff2",
+      "done": true,
+      "size_bytes": 1384,
+      "sha256": "c3f3e969c906dd2fbe7de0f9486af321213f1429363e15b5e94a2bc729a563df"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/fonts/h5p-theme.woff2",
+      "path": "wp-content/plugins/h5p/h5p-php-library/fonts/h5p-theme.woff2",
+      "done": true,
+      "size_bytes": 10244,
+      "sha256": "9591c8c4c6e8a3a90f54affb3fc1970cf5e96b82c09cbe5d087a035e95d42ffc"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/fonts/inter/Inter-ExtraBold.woff2",
+      "path": "wp-content/plugins/h5p/h5p-php-library/fonts/inter/Inter-ExtraBold.woff2",
+      "done": true,
+      "size_bytes": 114856,
+      "sha256": "6f75025856f8db1b2186e9cb89be9de9894932c8b7b20f4df5e65916ff714e34"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/fonts/inter/Inter-ExtraBoldItalic.woff2",
+      "path": "wp-content/plugins/h5p/h5p-php-library/fonts/inter/Inter-ExtraBoldItalic.woff2",
+      "done": true,
+      "size_bytes": 121516,
+      "sha256": "53bb20ba292e2ac28a0777bf0f56f31b98be432a3cc04359e2eb608c758349c7"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/fonts/inter/inter-v18-cyrillic_cyrillic-ext_greek_greek-ext_latin_latin-ext_vietnamese-600.woff2",
+      "path": "wp-content/plugins/h5p/h5p-php-library/fonts/inter/inter-v18-cyrillic_cyrillic-ext_greek_greek-ext_latin_latin-ext_vietnamese-600.woff2",
+      "done": true,
+      "size_bytes": 112048,
+      "sha256": "46aee58cf273df3edbb19e44db66de5a87106fe641f57e08573e62688757a003"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/fonts/inter/inter-v18-cyrillic_cyrillic-ext_greek_greek-ext_latin_latin-ext_vietnamese-600italic.woff2",
+      "path": "wp-content/plugins/h5p/h5p-php-library/fonts/inter/inter-v18-cyrillic_cyrillic-ext_greek_greek-ext_latin_latin-ext_vietnamese-600italic.woff2",
+      "done": true,
+      "size_bytes": 118096,
+      "sha256": "eba31e1daf2d622f67958635e53162048f1356c15655c503b98d6ecdb6afd553"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/fonts/inter/inter-v18-cyrillic_cyrillic-ext_greek_greek-ext_latin_latin-ext_vietnamese-italic.woff2",
+      "path": "wp-content/plugins/h5p/h5p-php-library/fonts/inter/inter-v18-cyrillic_cyrillic-ext_greek_greek-ext_latin_latin-ext_vietnamese-italic.woff2",
+      "done": true,
+      "size_bytes": 114132,
+      "sha256": "09d554ab27e1b02ce25d6f5faf71e2e07e77c28beb4019dbcfcd43ec7558d3df"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/fonts/inter/inter-v18-cyrillic_cyrillic-ext_greek_greek-ext_latin_latin-ext_vietnamese-regular.woff2",
+      "path": "wp-content/plugins/h5p/h5p-php-library/fonts/inter/inter-v18-cyrillic_cyrillic-ext_greek_greek-ext_latin_latin-ext_vietnamese-regular.woff2",
+      "done": true,
+      "size_bytes": 108656,
+      "sha256": "21ab4e91a62b1c86daf7bda3818f8cf0721f91cd664a9d135923c1ed6b694e90"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/fonts/open-sans/open-sans-v40-cyrillic_cyrillic-ext_greek_greek-ext_hebrew_latin_latin-ext_math_symbols_vietnamese-600.woff2",
+      "path": "wp-content/plugins/h5p/h5p-php-library/fonts/open-sans/open-sans-v40-cyrillic_cyrillic-ext_greek_greek-ext_hebrew_latin_latin-ext_math_symbols_vietnamese-600.woff2",
+      "done": true,
+      "size_bytes": 56200,
+      "sha256": "32028782d9f727a340735d527ab309e35a1329627bd0f4513e7ed4e451a88359"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/fonts/open-sans/open-sans-v40-cyrillic_cyrillic-ext_greek_greek-ext_hebrew_latin_latin-ext_math_symbols_vietnamese-600italic.woff2",
+      "path": "wp-content/plugins/h5p/h5p-php-library/fonts/open-sans/open-sans-v40-cyrillic_cyrillic-ext_greek_greek-ext_hebrew_latin_latin-ext_math_symbols_vietnamese-600italic.woff2",
+      "done": true,
+      "size_bytes": 59372,
+      "sha256": "94e8ca0e6eee74ff87df4271ff3a804414f0b44d5377f4eccd48d68f17cef36c"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/fonts/open-sans/open-sans-v40-cyrillic_cyrillic-ext_greek_greek-ext_hebrew_latin_latin-ext_math_symbols_vietnamese-700.woff2",
+      "path": "wp-content/plugins/h5p/h5p-php-library/fonts/open-sans/open-sans-v40-cyrillic_cyrillic-ext_greek_greek-ext_hebrew_latin_latin-ext_math_symbols_vietnamese-700.woff2",
+      "done": true,
+      "size_bytes": 54424,
+      "sha256": "73eaa9830823855f156cd4e0b27e7096f7e623ba026bb5366640fb0540cdd081"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/fonts/open-sans/open-sans-v40-cyrillic_cyrillic-ext_greek_greek-ext_hebrew_latin_latin-ext_math_symbols_vietnamese-700italic.woff2",
+      "path": "wp-content/plugins/h5p/h5p-php-library/fonts/open-sans/open-sans-v40-cyrillic_cyrillic-ext_greek_greek-ext_hebrew_latin_latin-ext_math_symbols_vietnamese-700italic.woff2",
+      "done": true,
+      "size_bytes": 56748,
+      "sha256": "ab6514c3f0ca678239df01466c3aa34e38f006e3cda016a408cfff09cc71c507"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/fonts/open-sans/open-sans-v40-cyrillic_cyrillic-ext_greek_greek-ext_hebrew_latin_latin-ext_math_symbols_vietnamese-italic.woff2",
+      "path": "wp-content/plugins/h5p/h5p-php-library/fonts/open-sans/open-sans-v40-cyrillic_cyrillic-ext_greek_greek-ext_hebrew_latin_latin-ext_math_symbols_vietnamese-italic.woff2",
+      "done": true,
+      "size_bytes": 59328,
+      "sha256": "e4dc9aa04d9819fc4345ac9544831278f3ffd8ff4af8401199a8c8d7412cc353"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/fonts/open-sans/open-sans-v40-cyrillic_cyrillic-ext_greek_greek-ext_hebrew_latin_latin-ext_math_symbols_vietnamese-regular.woff2",
+      "path": "wp-content/plugins/h5p/h5p-php-library/fonts/open-sans/open-sans-v40-cyrillic_cyrillic-ext_greek_greek-ext_hebrew_latin_latin-ext_math_symbols_vietnamese-regular.woff2",
+      "done": true,
+      "size_bytes": 56272,
+      "sha256": "616b98706b02b2744e0f51dfbe070c56bfc6e73e0963b0200e9908f856a6e3de"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/images/throbber.gif?ver=1.2.1",
+      "path": "wp-content/plugins/h5p/h5p-php-library/images/throbber.gif",
+      "done": true,
+      "size_bytes": 1638,
+      "sha256": "e7c6655c9a42e87273aad9eb790113db737ce5f11a1c076c2278584f52a473bd"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/js/h5p-action-bar.js?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/js/h5p-action-bar.js",
+      "done": true,
+      "size_bytes": 2940,
+      "sha256": "e85a738e912ff010113098a0456b8a6d9063f57bbd8445557db802a4de6caacb"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/js/h5p-confirmation-dialog.js?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/js/h5p-confirmation-dialog.js",
+      "done": true,
+      "size_bytes": 13317,
+      "sha256": "d2161c7ad33dd0565b7e9cc4a83cce080291e39f2a8495164bcfcc8db1464964"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/js/h5p-content-type.js?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/js/h5p-content-type.js",
+      "done": true,
+      "size_bytes": 1289,
+      "sha256": "c0d60b00691a0b436a83051724a38455a17b08ce4811e2bb1e9d5ea7eb8dd91d"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/js/h5p-event-dispatcher.js?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/js/h5p-event-dispatcher.js",
+      "done": true,
+      "size_bytes": 6442,
+      "sha256": "8d79c33382bd60e70c44e68b86c7e59d7437daa0bc1612667b255459d7b9359b"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/js/h5p-tooltip.js?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/js/h5p-tooltip.js",
+      "done": true,
+      "size_bytes": 12431,
+      "sha256": "e81ec03bc0fef05fde4cf5c261210dc66c9bc1ea2f3244033e248659a217b154"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/js/h5p-x-api-event.js?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/js/h5p-x-api-event.js",
+      "done": true,
+      "size_bytes": 8760,
+      "sha256": "13a582a8cf4f91f4eb33a0a6c70b58828ed2f0cb4c2392568fb692e17e623347"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/js/h5p-x-api.js?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/js/h5p-x-api.js",
+      "done": true,
+      "size_bytes": 3728,
+      "sha256": "e13526de247d549395d0cdfcd61da02fa5234b7d9394113737bc8ebf39f04af6"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/js/h5p.js",
+      "path": "wp-content/plugins/h5p/h5p-php-library/js/h5p.js",
+      "done": true,
+      "size_bytes": 89747,
+      "sha256": "2948bc1eb53e8ef0484bfa2e311a35f646d3e6c611321c5ed540f438bc2707ad"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/js/h5p.js?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/js/h5p.js",
+      "done": true,
+      "size_bytes": 89747,
+      "sha256": "2948bc1eb53e8ef0484bfa2e311a35f646d3e6c611321c5ed540f438bc2707ad"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/js/jquery.js?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/js/jquery.js",
+      "done": true,
+      "size_bytes": 90198,
+      "sha256": "249b0b7542a571fc5acad79d517486f364c57fa50d61bf7942bd5ebc227c289a"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/js/request-queue.js?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/js/request-queue.js",
+      "done": true,
+      "size_bytes": 11683,
+      "sha256": "6e6c73ae318aa59347152e6c65af87ee6c960c34067e822e8bc99c15b3cb3bd8"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/styles/h5p-confirmation-dialog.css?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/styles/h5p-confirmation-dialog.css",
+      "done": true,
+      "size_bytes": 8166,
+      "sha256": "19f7263facc8d1099e31f368b9e3a7c8326d2278251567ff4fdb543669ba361a"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/styles/h5p-core-button.css?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/styles/h5p-core-button.css",
+      "done": true,
+      "size_bytes": 1897,
+      "sha256": "f4357a4ae0588957bd6989a6e2087698db24a89828a89346e218e45e3962c7b2"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/styles/h5p-fonts.css?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/styles/h5p-fonts.css",
+      "done": true,
+      "size_bytes": 4079,
+      "sha256": "c9640b621fb80a977f71502007846ebccf7e06c412dafd1674a33353ef1da644"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/styles/h5p-table.css?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/styles/h5p-table.css",
+      "done": true,
+      "size_bytes": 1058,
+      "sha256": "00c9abd67ad79caf77c0232716e727cb64009e38d2d5ffb703a2c32e029e4446"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/styles/h5p-theme-variables.css?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/styles/h5p-theme-variables.css",
+      "done": true,
+      "size_bytes": 6458,
+      "sha256": "200bc68aa809b659c4ff1bbf830ed1b6dbd6165339323d1561e11089093a8fc4"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/styles/h5p-theme.css?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/styles/h5p-theme.css",
+      "done": true,
+      "size_bytes": 5894,
+      "sha256": "e5eeb61df60ba5fa39ffa928ff327f65f3b4b3c7e582640dbecd9038479d916f"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/styles/h5p-tooltip.css?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/styles/h5p-tooltip.css",
+      "done": true,
+      "size_bytes": 782,
+      "sha256": "a27e0e48b36aa5679e5417a69a84b8f8adf9f8603edd35968e341691f7c3c4bd"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/plugins/h5p/h5p-php-library/styles/h5p.css?ver=1.17.10",
+      "path": "wp-content/plugins/h5p/h5p-php-library/styles/h5p.css",
+      "done": true,
+      "size_bytes": 15684,
+      "sha256": "fd7049734a200d91716916aaba869471a8fb608340050f1ac1de10510b187361"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/css/all.css",
+      "path": "wp-content/themes/118/aged_care_forms/css/all.css",
+      "done": true,
+      "size_bytes": 40390,
+      "sha256": "b4dfbf8ac62a6c93386790e35b4a3ee1df18c8ed24b0f359fd65e959cbc6f845"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/css/bootstrap.min.css",
+      "path": "wp-content/themes/118/aged_care_forms/css/bootstrap.min.css",
+      "done": true,
+      "size_bytes": 155715,
+      "sha256": "9979057c8b7a66a64fa5d7544d5d0ad162e55c69fb5a2452f3ecfbf01e15b7de"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/css/main.css",
+      "path": "wp-content/themes/118/aged_care_forms/css/main.css",
+      "done": true,
+      "size_bytes": 5528,
+      "sha256": "66da24ebba640be49abb8b64f01df95e78f15626240258d8e631a48d8546aecb"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/css/sumoselect.min.css",
+      "path": "wp-content/themes/118/aged_care_forms/css/sumoselect.min.css",
+      "done": true,
+      "size_bytes": 6884,
+      "sha256": "c9ce04a911d3414cbf3da041c11628d42a8941760a0af80c2996d3155087520e"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/img/agecare.jpg",
+      "path": "wp-content/themes/118/aged_care_forms/img/agecare.jpg",
+      "done": true,
+      "size_bytes": 99572,
+      "sha256": "7f7d6dd54cce948d96534cb1fc1edacbd56c58ffa44816e715198285ea147acb"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/abbeyscale.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/abbeyscale.js",
+      "done": true,
+      "size_bytes": 6211,
+      "sha256": "8351369423b67a670a17c06e55b0c5a093727c6e6b2155d4a715641b2f615506"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/bootstrap.min.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/bootstrap.min.js",
+      "done": true,
+      "size_bytes": 37049,
+      "sha256": "beae6f5e15e658c736bcb709ffb4b1e7aad9704410250ddf2d7fd280ff144290"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/continence.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/continence.js",
+      "done": true,
+      "size_bytes": 3320,
+      "sha256": "0975872da6280c82318680551979e031bc0a227c910817be4130f3633b5ef6b8"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/easing.min.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/easing.min.js",
+      "done": true,
+      "size_bytes": 2303,
+      "sha256": "901eb80cc3f8c274fe6711bd023884258839610c9274082a4881f71e2206b4fb"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/hoverIntent.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/hoverIntent.js",
+      "done": true,
+      "size_bytes": 7078,
+      "sha256": "61168602288a63df2b3f98292b8dbea4e021ec0fd683444e49e4d95766a8a0e5"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/jquery-ui.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/jquery-ui.js",
+      "done": true,
+      "size_bytes": 520714,
+      "sha256": "4f455eb2ddf2094ee969f470f6bfac7adb4c057e8990a374e9da819e943c777d"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/jquery.ajaxchimp.min.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/jquery.ajaxchimp.min.js",
+      "done": true,
+      "size_bytes": 4820,
+      "sha256": "3c7c17459ec57867f6812625f1b95e2f878363ca728b92a5968d2fc8e60d9712"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/jquery.magnific-popup.min.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/jquery.magnific-popup.min.js",
+      "done": true,
+      "size_bytes": 20216,
+      "sha256": "3fddc6d28aba3c13d64cfd4847c333ff48c71d4a5a58bd1a0494ca6ae8ac1bb4"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/jquery.nice-select.min.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/jquery.nice-select.min.js",
+      "done": true,
+      "size_bytes": 2942,
+      "sha256": "66bdef0724e5306421bcc7e0910e41b5645228119ad9096ca4a6099e48d94e6a"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/jquery.sumoselect.min.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/jquery.sumoselect.min.js",
+      "done": true,
+      "size_bytes": 11780,
+      "sha256": "ab3290fa762379839c1f6b170f99505c84aef28f7f67918e2bfa21246b99c541"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/jspdf.min.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/jspdf.min.js",
+      "done": true,
+      "size_bytes": 447929,
+      "sha256": "037a4ace0f5b6525a763075e8d6e6e09cafe8da898e82ce8026a1938eafadec9"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/jspdf.plugin.autotable.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/jspdf.plugin.autotable.js",
+      "done": true,
+      "size_bytes": 78691,
+      "sha256": "2a1331809fdcddcde850e98dc19028f2c7a5c20e6a4c0a4f9eb80f67a0f5cce1"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/mail-script.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/mail-script.js",
+      "done": true,
+      "size_bytes": 1230,
+      "sha256": "01f639fd4c4119503e72e2bf2eb9c8a5984f7c83c7683c82dd0350ee9f63b3fd"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/messageboard.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/messageboard.js",
+      "done": true,
+      "size_bytes": 1082,
+      "sha256": "3c096812a870b0e4ac569afc0506fd30534c8cb816a063d5e1347dc23555afd8"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/owl.carousel.min.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/owl.carousel.min.js",
+      "done": true,
+      "size_bytes": 40402,
+      "sha256": "e04e2b4e27ae9881b1e161954cc00ba16c8c3a0ce73a179824756353efd6c481"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/personalcare.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/personalcare.js",
+      "done": true,
+      "size_bytes": 5697,
+      "sha256": "fe144b35624723c54c291208b9bd21bc2e97492788b4d89a60ac94b1cee4ca1f"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/popper.min.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/popper.min.js",
+      "done": true,
+      "size_bytes": 19148,
+      "sha256": "b4d00640b93ccce21719f7146a3aa2393456c28f5439d12454d839412e0c69f3"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/save_localstorage.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/save_localstorage.js",
+      "done": true,
+      "size_bytes": 3233,
+      "sha256": "89151dc22c9d5c30f30d3094764a16a9b59c2b818cfc4b15cc5324dbf7da3814"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/script.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/script.js",
+      "done": true,
+      "size_bytes": 3018,
+      "sha256": "1b3205d0dc560d9413617b6b3472ed67eaf15ea09c0c6be040ff0a6af5dbdbd7"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/superfish.min.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/superfish.min.js",
+      "done": true,
+      "size_bytes": 4474,
+      "sha256": "f31f14f173559d1bc035ffcec66bdcd19b6685f42a2853bf7eaabd1e4bd9aba0"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/vendor/bootstrap.min.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/vendor/bootstrap.min.js",
+      "done": true,
+      "size_bytes": 48902,
+      "sha256": "65f97dab23e8383e4f9e5b07722014f704b9cb5dc820086014ec715c55e75e33"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/js/vendor/jquery-2.2.4.min.js",
+      "path": "wp-content/themes/118/aged_care_forms/js/vendor/jquery-2.2.4.min.js",
+      "done": true,
+      "size_bytes": 85577,
+      "sha256": "fdce77a6d0053f32d231518a84a71bcab5c86045ed52369da00b89d4284aef46"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/webfonts/fa-brands-400.woff2",
+      "path": "wp-content/themes/118/aged_care_forms/webfonts/fa-brands-400.woff2",
+      "done": true,
+      "size_bytes": 64144,
+      "sha256": "4d0130d314f1669c9ea5a911d401d6250f96386a52b0c38f7b3fb43cdcd10589"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/webfonts/fa-regular-400.woff2",
+      "path": "wp-content/themes/118/aged_care_forms/webfonts/fa-regular-400.woff2",
+      "done": true,
+      "size_bytes": 13656,
+      "sha256": "d1df78245f6f242b4c5543b426a88ad571d1fa412a97e53d53002051bba05dcf"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/webfonts/fa-solid-900.ttf",
+      "path": "wp-content/themes/118/aged_care_forms/webfonts/fa-solid-900.ttf",
+      "done": true,
+      "size_bytes": 168176,
+      "sha256": "52f6d77a005727f4b92051119e76e9956b7ee71bf2c22385819afb1a86d28aa4"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/webfonts/fa-solid-900.woff",
+      "path": "wp-content/themes/118/aged_care_forms/webfonts/fa-solid-900.woff",
+      "done": true,
+      "size_bytes": 80484,
+      "sha256": "48745629a252fb4e8d2750527c0d49341c2c17d5fe5bc6a37ec82b062ae84c9c"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/webfonts/fa-solid-900.woff2",
+      "path": "wp-content/themes/118/aged_care_forms/webfonts/fa-solid-900.woff2",
+      "done": true,
+      "size_bytes": 62472,
+      "sha256": "5c7df99df232586111917083a85aa31b82ee29e48ca2990e13fae0c0663a923f"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/css/jquery.mCustomScrollbar.min.css",
+      "path": "wp-content/themes/118/css/jquery.mCustomScrollbar.min.css",
+      "done": true,
+      "size_bytes": 42827,
+      "sha256": "4a7b6ef8b8d2988c08b1ce52c7fbfae3a4f2203378dd5d35f062743e135d5e77"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/css/vwp.css",
+      "path": "wp-content/themes/118/css/vwp.css",
+      "done": true,
+      "size_bytes": 491643,
+      "sha256": "d51b99359dee9eca636a62d5f948cde813e3ed4fa5c59036128c8b2bba6869a2"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/fonts/fontawesome-webfont.eot",
+      "path": "wp-content/themes/118/fonts/fontawesome-webfont.eot",
+      "done": true,
+      "size_bytes": 165742,
+      "sha256": "7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/fonts/fontawesome-webfont.eot?v=4.7.0",
+      "path": "wp-content/themes/118/fonts/fontawesome-webfont.eot",
+      "done": true,
+      "size_bytes": 165742,
+      "sha256": "7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/fonts/fontawesome-webfont.svg?v=4.7.0",
+      "path": "wp-content/themes/118/fonts/fontawesome-webfont.svg",
+      "done": true,
+      "size_bytes": 444379,
+      "sha256": "ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/fonts/fontawesome-webfont.ttf?v=4.7.0",
+      "path": "wp-content/themes/118/fonts/fontawesome-webfont.ttf",
+      "done": true,
+      "size_bytes": 165548,
+      "sha256": "aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/fonts/fontawesome-webfont.woff2?v=4.7.0",
+      "path": "wp-content/themes/118/fonts/fontawesome-webfont.woff2",
+      "done": true,
+      "size_bytes": 77160,
+      "sha256": "2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/fonts/fontawesome-webfont.woff?v=4.7.0",
+      "path": "wp-content/themes/118/fonts/fontawesome-webfont.woff",
+      "done": true,
+      "size_bytes": 98024,
+      "sha256": "ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/js/cards.js",
+      "path": "wp-content/themes/118/js/cards.js",
+      "done": true,
+      "size_bytes": 26071,
+      "sha256": "bfeb4964481d6b13caeb3faea83394c26884a091659d5776c3fcfea1fc9d7621"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/js/classie.js",
+      "path": "wp-content/themes/118/js/classie.js",
+      "done": true,
+      "size_bytes": 1725,
+      "sha256": "0afba7d24433ee673fb0b2716854747aee7163815620c5cafc0bf3af154a03bb"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/js/glossary-tooltip.js",
+      "path": "wp-content/themes/118/js/glossary-tooltip.js",
+      "done": true,
+      "size_bytes": 2933,
+      "sha256": "3f525ccc36cb4a95c74430cde69015f0239af7bf97488b631a88a116499eabe5"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/js/imagesloaded.pkgd.min.js",
+      "path": "wp-content/themes/118/js/imagesloaded.pkgd.min.js",
+      "done": true,
+      "size_bytes": 5602,
+      "sha256": "fc0788b902f4a65e59531b2ec49e699a745da16746365500733e919b556c9f9c"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/js/jquery.flip.min.js",
+      "path": "wp-content/themes/118/js/jquery.flip.min.js",
+      "done": true,
+      "size_bytes": 5131,
+      "sha256": "e46a37ab42acf1645ae6abe0b5541f74eaa9fe47f421a396a443d3aee6606898"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/js/jquery.glossarize.js",
+      "path": "wp-content/themes/118/js/jquery.glossarize.js",
+      "done": true,
+      "size_bytes": 8461,
+      "sha256": "de9ce45d91d87607d41aea13620af87c3c3488d28e16c490bf9223cacd970136"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/js/jquery.mCustomScrollbar.concat.min.js",
+      "path": "wp-content/themes/118/js/jquery.mCustomScrollbar.concat.min.js",
+      "done": true,
+      "size_bytes": 45485,
+      "sha256": "7b3e027ef991832fab4ae3864cb4c90a0651af35ea79b98ad11d187fe022a754"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/js/jquery.min.js",
+      "path": "wp-content/themes/118/js/jquery.min.js",
+      "done": true,
+      "size_bytes": 86663,
+      "sha256": "75b707d8761e2bfbd25fbd661f290a4f7fd11c48e1bf53a36dc6bd8a0034fa35"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/js/masonry.js",
+      "path": "wp-content/themes/118/js/masonry.js",
+      "done": true,
+      "size_bytes": 352,
+      "sha256": "b748c5f9d4b23f765c08fb40bb4863edf2919115d2b2ae1d9a00f23bddd15ce1"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/js/masonry.pkgd.js",
+      "path": "wp-content/themes/118/js/masonry.pkgd.js",
+      "done": true,
+      "size_bytes": 65818,
+      "sha256": "06c36233ed9c77dfcf5a5112d6cda835b32dacb1ab78b48463eede7918c7aff7"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/js/menu.js",
+      "path": "wp-content/themes/118/js/menu.js",
+      "done": true,
+      "size_bytes": 936,
+      "sha256": "d6fba94fd20d991b77077f124003df173676025803c2c187f79838a09557ff0a"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/js/modernizr.custom.js",
+      "path": "wp-content/themes/118/js/modernizr.custom.js",
+      "done": true,
+      "size_bytes": 7674,
+      "sha256": "b2601e25211bae963247614c445991fed01141489db69f6aadbd3fd87af234b4"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/js/popper.min.js?ver=1",
+      "path": "wp-content/themes/118/js/popper.min.js",
+      "done": true,
+      "size_bytes": 20501,
+      "sha256": "15d3202e7f9074571f5d8b353be0612d8b684d6f1c82a58dc91f48665e810914"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/vwp/img/home_icon.png",
+      "path": "wp-content/themes/118/vwp/img/home_icon.png",
+      "done": true,
+      "size_bytes": 853,
+      "sha256": "e3ecf992ad2859baf472002510d79402c6c69a7e4f106c7bca0016f59da7047f"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/vwp/img/splash-bagwan.png",
+      "path": "wp-content/themes/118/vwp/img/splash-bagwan.png",
+      "done": true,
+      "size_bytes": 34458,
+      "sha256": "a096642f8c33c17101be56c3349931b676dfdbaefda341870b7f308996500859"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/vwp/img/theme/bagwan_logo.png",
+      "path": "wp-content/themes/118/vwp/img/theme/bagwan_logo.png",
+      "done": true,
+      "size_bytes": 11300,
+      "sha256": "ec34b3f4631934e604b111ffa67109b8d44cafbb9d8f96f01f179da1a3a6b309"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/vwp/js/jquery.min.js",
+      "path": "wp-content/themes/118/vwp/js/jquery.min.js",
+      "done": true,
+      "size_bytes": 86663,
+      "sha256": "75b707d8761e2bfbd25fbd661f290a4f7fd11c48e1bf53a36dc6bd8a0034fa35"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/vwp/js/main.js",
+      "path": "wp-content/themes/118/vwp/js/main.js",
+      "done": true,
+      "size_bytes": 3928,
+      "sha256": "fd5535e933f1f60a3600f1d40077155e4554ba76aa19bdd1e1855c2c2f3f6f52"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/vwp/js/theme.min.js",
+      "path": "wp-content/themes/118/vwp/js/theme.min.js",
+      "done": true,
+      "size_bytes": 48716,
+      "sha256": "7a90603a2c3b8e2f7f3a0f74e7bb81b8872832de3b86ed525c6c407e29f7adee"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/whm/img/theme/whm_logo.png",
+      "path": "wp-content/themes/118/whm/img/theme/whm_logo.png",
+      "done": true,
+      "size_bytes": 25313,
+      "sha256": "15cca0e2a102436d2c2b44ccb491aacc6f7e3f1c69d0a23616c72fc7c4a0ecb1"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/Capture03.png",
+      "path": "wp-content/uploads/2019/11/Capture03.png",
+      "done": true,
+      "size_bytes": 76987,
+      "sha256": "bca741a954f14c17dbc7eef46072c53c059489cebe91e655578141e33845ca09"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/Doctor_02@2x.png",
+      "path": "wp-content/uploads/2019/11/Doctor_02@2x.png",
+      "done": true,
+      "size_bytes": 107686,
+      "sha256": "702d1d8c8427cb47048699b43806060ee2b651c25bd2a8886a64c1ed888b01c0"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/Doctor_03@2x.png",
+      "path": "wp-content/uploads/2019/11/Doctor_03@2x.png",
+      "done": true,
+      "size_bytes": 132845,
+      "sha256": "f0e1df7aa83f8e4221bcd7ea9b2f5e9d9a893f7a703ff92c7728b707d6565981"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/Doctor_04@2x.png",
+      "path": "wp-content/uploads/2019/11/Doctor_04@2x.png",
+      "done": true,
+      "size_bytes": 131747,
+      "sha256": "c8bd66df9432cc7ff44e57b6bddd1bc287d828997e92c703dcdf3845fa58793b"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/Doctor_05@2x.png",
+      "path": "wp-content/uploads/2019/11/Doctor_05@2x.png",
+      "done": true,
+      "size_bytes": 129776,
+      "sha256": "f04b59aa68bc3d199fd65b48a181d11a5f4cfc5b84871f6513b77a6cc28f184b"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/Forms.png",
+      "path": "wp-content/uploads/2019/11/Forms.png",
+      "done": true,
+      "size_bytes": 504,
+      "sha256": "bb111b0d61b3270a8fe7f1a9c5d83de42037409f61b430f623c78269cd1b3fca"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/Human-resource.png",
+      "path": "wp-content/uploads/2019/11/Human-resource.png",
+      "done": true,
+      "size_bytes": 1048,
+      "sha256": "f871b6c8836814c6d87a3a816629aab303ed58841a7bef9ffcadbafc88539a5b"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/Incident-reporting.png",
+      "path": "wp-content/uploads/2019/11/Incident-reporting.png",
+      "done": true,
+      "size_bytes": 656,
+      "sha256": "ace289830331be053de203d659d0bd438b2c5a98ab4c97b0b6c64af611cd5f7d"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/Mask-Group-7.png",
+      "path": "wp-content/uploads/2019/11/Mask-Group-7.png",
+      "done": true,
+      "size_bytes": 139810,
+      "sha256": "50b3b5378034ea7c16814ae5af14ee28d5e44dd9ba26e45544db29a0677f07be"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/Mask-Group-8.png",
+      "path": "wp-content/uploads/2019/11/Mask-Group-8.png",
+      "done": true,
+      "size_bytes": 158394,
+      "sha256": "e46e2dab7b6878a9f55cf1f76d5049c4bd1e0f127352147dd4aedf923c57ec01"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/Mask-Group-9-e1576625841561.png",
+      "path": "wp-content/uploads/2019/11/Mask-Group-9-e1576625841561.png",
+      "done": true,
+      "size_bytes": 86331,
+      "sha256": "9aa42d166159af12f0673f7bdec4e2bf8082cc9a4cf485d4917fc30b7167e35c"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/Org-chart.png",
+      "path": "wp-content/uploads/2019/11/Org-chart.png",
+      "done": true,
+      "size_bytes": 513,
+      "sha256": "a14c3f583f5bd19a6d3fd7160b0b2cc16690b44cf07c5efb145674e767ec35a4"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/Pathology-.png",
+      "path": "wp-content/uploads/2019/11/Pathology-.png",
+      "done": true,
+      "size_bytes": 392,
+      "sha256": "05b75cd71c2abf79314143ad294ca76f72fcd9a71ebdd7a0d36202ef379e3212"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/Policy-and-procedure.png",
+      "path": "wp-content/uploads/2019/11/Policy-and-procedure.png",
+      "done": true,
+      "size_bytes": 657,
+      "sha256": "e70570c3ad13fa87373b2cc9c6af628f5027d3ce8fe3cfcfcd79c80a0498d7dc"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/patient-records.png",
+      "path": "wp-content/uploads/2019/11/patient-records.png",
+      "done": true,
+      "size_bytes": 756,
+      "sha256": "9ec338dade2ae269eecc6c1c922baf5f06a9b46dbc59eb0f1d7df3899d70ecd3"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/shutterstock_1245841444-e1578955895203.jpg",
+      "path": "wp-content/uploads/2019/11/shutterstock_1245841444-e1578955895203.jpg",
+      "done": true,
+      "size_bytes": 204037,
+      "sha256": "3f03262e15c8b6aa8ece3c51b7d9c6ed160e190cb24ce6edffb7516daa525231"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/shutterstock_141252754.jpg",
+      "path": "wp-content/uploads/2019/11/shutterstock_141252754.jpg",
+      "done": true,
+      "size_bytes": 103056,
+      "sha256": "d3a66d9132ca447273e6b831418ab62336a81aaf9bf4c4d7b94b29053daeb161"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/shutterstock_421744501-e1578957689673.jpg",
+      "path": "wp-content/uploads/2019/11/shutterstock_421744501-e1578957689673.jpg",
+      "done": true,
+      "size_bytes": 185208,
+      "sha256": "b65bce483fb02b375d36057b2095dee04482938db43147875f394723cc84b174"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/shutterstock_453771295-e1576625791591.jpg",
+      "path": "wp-content/uploads/2019/11/shutterstock_453771295-e1576625791591.jpg",
+      "done": true,
+      "size_bytes": 218235,
+      "sha256": "528c8d1fcfd2cfd1d74e64a32d6efd8129f9819e073037584bafd13722782e76"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/staff-directory.png",
+      "path": "wp-content/uploads/2019/11/staff-directory.png",
+      "done": true,
+      "size_bytes": 1236,
+      "sha256": "e8d1dfe8e8a159d15fb72eaa59de880b72ffa1d1b44600bc4f114240148a0d34"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/11/staff-repo.png",
+      "path": "wp-content/uploads/2019/11/staff-repo.png",
+      "done": true,
+      "size_bytes": 929,
+      "sha256": "a11d04aa07b8223cfa3d4c59a5302be8375eeb39b6b109fb9e4cfcace28d89b5"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Ayla-Hood-1024x1024.jpg",
+      "path": "wp-content/uploads/2019/12/Ayla-Hood-1024x1024.jpg",
+      "done": true,
+      "size_bytes": 81463,
+      "sha256": "6834d8070cfa87502f86ce51b040f6d47eb7d4433cb4ee2d7eef7e253a617116"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Ayla-Hood-150x150.jpg",
+      "path": "wp-content/uploads/2019/12/Ayla-Hood-150x150.jpg",
+      "done": true,
+      "size_bytes": 12410,
+      "sha256": "1e76b93b78e8023b86f4c2dcfe177bdf21806867eb0f8a26c7b63cb8d3f7b2a6"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Ayla-Hood-300x300.jpg",
+      "path": "wp-content/uploads/2019/12/Ayla-Hood-300x300.jpg",
+      "done": true,
+      "size_bytes": 19538,
+      "sha256": "3718db4a0721a01b7b7587b2de6ce7eb90f1a7f19579b306e506f7231903f344"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Ayla-Hood-768x768.jpg",
+      "path": "wp-content/uploads/2019/12/Ayla-Hood-768x768.jpg",
+      "done": true,
+      "size_bytes": 55111,
+      "sha256": "ade37e381a2af678823492b4e7f7bcfc47a1463ff7f5aecd1358e9d4f3071f00"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Ayla-Hood.jpg",
+      "path": "wp-content/uploads/2019/12/Ayla-Hood.jpg",
+      "done": true,
+      "size_bytes": 127975,
+      "sha256": "16070a6d4d55e8d0a00cc74d39e6ca939ebd5735eca39fc9e3588b85e0301c3a"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Bagwan-brand-book_v02.pdf",
+      "path": "wp-content/uploads/2019/12/Bagwan-brand-book_v02.pdf",
+      "done": true,
+      "size_bytes": 556478,
+      "sha256": "b39c0dd7e53337da0d22b30547996a38777ca8d14fe20aa9e18bf7b695bdf02b"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Charlie-Vasconcelos-1024x1024.jpg",
+      "path": "wp-content/uploads/2019/12/Charlie-Vasconcelos-1024x1024.jpg",
+      "done": true,
+      "size_bytes": 130761,
+      "sha256": "fa257ebad4b66b8930cc1d3ddf6beb12144c6f4827047f4351afbf16502491a8"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Charlie-Vasconcelos-150x150.jpg",
+      "path": "wp-content/uploads/2019/12/Charlie-Vasconcelos-150x150.jpg",
+      "done": true,
+      "size_bytes": 13976,
+      "sha256": "89d3968861efc91afe9e6e534585768bca11b4c768d903936693769d1a8b22cd"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Charlie-Vasconcelos-300x300.jpg",
+      "path": "wp-content/uploads/2019/12/Charlie-Vasconcelos-300x300.jpg",
+      "done": true,
+      "size_bytes": 23952,
+      "sha256": "a487ff6332ac970c5b3b0c83d41a799f775a1754172e5c0a14a24e78ddabe263"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Charlie-Vasconcelos-768x768.jpg",
+      "path": "wp-content/uploads/2019/12/Charlie-Vasconcelos-768x768.jpg",
+      "done": true,
+      "size_bytes": 82116,
+      "sha256": "0b9f8321bbe2edf574731483d683509e9fd582ca9a32098b8e6c365f3a788a10"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Charlie-Vasconcelos.jpg",
+      "path": "wp-content/uploads/2019/12/Charlie-Vasconcelos.jpg",
+      "done": true,
+      "size_bytes": 189655,
+      "sha256": "cf39e1f9c53560c2830e1a3c2f91c73fbe5d4f61bf4fd0fa3be03434ff5da873"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Christina-Jones-1024x1024.jpg",
+      "path": "wp-content/uploads/2019/12/Christina-Jones-1024x1024.jpg",
+      "done": true,
+      "size_bytes": 134548,
+      "sha256": "8fa0cdcad89ca677c98244de7120d11db6a0f2e7452473d10a7c215d2fe07f28"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Christina-Jones-150x150.jpg",
+      "path": "wp-content/uploads/2019/12/Christina-Jones-150x150.jpg",
+      "done": true,
+      "size_bytes": 21119,
+      "sha256": "86f88df7cb41874390288f3e3f788c19f370e3d75dfc2933d6017277ec863c03"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Christina-Jones-300x300.jpg",
+      "path": "wp-content/uploads/2019/12/Christina-Jones-300x300.jpg",
+      "done": true,
+      "size_bytes": 32169,
+      "sha256": "7bdbf9cf03e0c4552b8587d055def4864012289281f4192baeba70af863a5d5c"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Christina-Jones-768x768.jpg",
+      "path": "wp-content/uploads/2019/12/Christina-Jones-768x768.jpg",
+      "done": true,
+      "size_bytes": 90324,
+      "sha256": "ebf1d618afc97035ab308e4b58a3e6b9946381aa95f045936dfde71bbefd0075"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Christina-Jones.jpg",
+      "path": "wp-content/uploads/2019/12/Christina-Jones.jpg",
+      "done": true,
+      "size_bytes": 191633,
+      "sha256": "c0e153b6c2d93dcffa0178817f18276461d0fc7f14d62641e0726dd8c898cb5b"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/DrStone-e1576561741561-150x150.png",
+      "path": "wp-content/uploads/2019/12/DrStone-e1576561741561-150x150.png",
+      "done": true,
+      "size_bytes": 34044,
+      "sha256": "8c9e142bed1dd28300e01074686afe56303d1471311f2c03738543e1797d15d8"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/DrStone-e1576561741561-300x300.png",
+      "path": "wp-content/uploads/2019/12/DrStone-e1576561741561-300x300.png",
+      "done": true,
+      "size_bytes": 106656,
+      "sha256": "57065ab4b36f257422abcf6e3199187ef3efadf58d94ad9370ed50ada59b9b77"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/DrStone-e1576561741561-768x768.png",
+      "path": "wp-content/uploads/2019/12/DrStone-e1576561741561-768x768.png",
+      "done": true,
+      "size_bytes": 146436,
+      "sha256": "f1a6165df6ae1bc24a7d731b0105215921f9ac84c35dfb82ac6a8eb744dfe365"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/DrStone-e1576561741561.png",
+      "path": "wp-content/uploads/2019/12/DrStone-e1576561741561.png",
+      "done": true,
+      "size_bytes": 251999,
+      "sha256": "11f3f9dcd3f1fada0a9b0e826d62f53cde95a1db7d1c9b5831522b8f37426de7"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/GeorgeDunn-150x150.png",
+      "path": "wp-content/uploads/2019/12/GeorgeDunn-150x150.png",
+      "done": true,
+      "size_bytes": 35411,
+      "sha256": "1a694fc16b00cd3e129cb961c6b413efdab4184acf5fb03f4269060e072d4542"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/GeorgeDunn-300x300.png",
+      "path": "wp-content/uploads/2019/12/GeorgeDunn-300x300.png",
+      "done": true,
+      "size_bytes": 113997,
+      "sha256": "169b1a0652677f25b4b520bdc36ce8aa193f0e690490f31688a4b475689a5b3e"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/GeorgeDunn.png",
+      "path": "wp-content/uploads/2019/12/GeorgeDunn.png",
+      "done": true,
+      "size_bytes": 270930,
+      "sha256": "6a324d9d01e7e69aa35e86d1c3be0771256c9e3259f53f98be2e3df3db63adef"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Icons_-01.png",
+      "path": "wp-content/uploads/2019/12/Icons_-01.png",
+      "done": true,
+      "size_bytes": 3361,
+      "sha256": "010d998eee636d5d7f4e10b0665d8bab9dfa3a86c5e97ff37f57ff80f99885f5"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Icons_-02.png",
+      "path": "wp-content/uploads/2019/12/Icons_-02.png",
+      "done": true,
+      "size_bytes": 3092,
+      "sha256": "0fd133168ac882f1fff2dec00b612c4d515e644315593c8d6c67703289f323df"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Interpreter-e1576560298389-300x300.png",
+      "path": "wp-content/uploads/2019/12/Interpreter-e1576560298389-300x300.png",
+      "done": true,
+      "size_bytes": 103836,
+      "sha256": "403ef7effaf55bf5e9261565755b16a6336d100e9443871f62910c6031f15ea0"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Interpreter-e1576560298389.png",
+      "path": "wp-content/uploads/2019/12/Interpreter-e1576560298389.png",
+      "done": true,
+      "size_bytes": 72902,
+      "sha256": "18c4842f0d6ee972020928c6a4168b28e081f904c3eb97809d7b645f14e6d0cc"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Interpreting-Interactive-1024x455.png",
+      "path": "wp-content/uploads/2019/12/Interpreting-Interactive-1024x455.png",
+      "done": true,
+      "size_bytes": 177684,
+      "sha256": "90cd670be2f6ec2bb02b70ce8179282464c1b62c3c7fed932d03aac9ce1daa56"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Interpreting-Interactive-300x133.png",
+      "path": "wp-content/uploads/2019/12/Interpreting-Interactive-300x133.png",
+      "done": true,
+      "size_bytes": 69076,
+      "sha256": "fbbee16a27faff4640c2955cd058cab949d1a1f3926db8a3bda8f462a3f3f230"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Interpreting-Interactive-768x341.png",
+      "path": "wp-content/uploads/2019/12/Interpreting-Interactive-768x341.png",
+      "done": true,
+      "size_bytes": 106517,
+      "sha256": "96660d2b56a771dead7fe17c483f00f8382c6e36008f9ffa9fd86296dc2467a0"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Interpreting-Interactive.png",
+      "path": "wp-content/uploads/2019/12/Interpreting-Interactive.png",
+      "done": true,
+      "size_bytes": 377583,
+      "sha256": "6ca85f22af10eb532e572cfcc37c39291e24a886fc22a04daaa8778c97dfb9eb"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/MrsTrang-e1576561627862-300x290.png",
+      "path": "wp-content/uploads/2019/12/MrsTrang-e1576561627862-300x290.png",
+      "done": true,
+      "size_bytes": 100124,
+      "sha256": "71e60b7dedc7b45ab2489a72fa1ab95599ec74d967454804d25633c742e002b2"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/MrsTrang-e1576561627862.png",
+      "path": "wp-content/uploads/2019/12/MrsTrang-e1576561627862.png",
+      "done": true,
+      "size_bytes": 72106,
+      "sha256": "05bc38f2beb392158bf3c91fe3fbfaa2dd29869fdc8bc46bf052865dc0da0828"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Pania-Hamuera-1024x1024.jpg",
+      "path": "wp-content/uploads/2019/12/Pania-Hamuera-1024x1024.jpg",
+      "done": true,
+      "size_bytes": 137884,
+      "sha256": "ebb453ba122057aa45406f6b9fcf89086b4a10eba9615bc4a293562b279b35d5"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Pania-Hamuera-150x150.jpg",
+      "path": "wp-content/uploads/2019/12/Pania-Hamuera-150x150.jpg",
+      "done": true,
+      "size_bytes": 14121,
+      "sha256": "0535e982647ed2eb4ca3918219cf56356bd183f3e9063009525596a34370ba48"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Pania-Hamuera-300x300.jpg",
+      "path": "wp-content/uploads/2019/12/Pania-Hamuera-300x300.jpg",
+      "done": true,
+      "size_bytes": 23806,
+      "sha256": "e53363062fe766a0e12cf3009ecb6641a0574cdc35aa455536a1d57cf4291f41"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Pania-Hamuera-768x768.jpg",
+      "path": "wp-content/uploads/2019/12/Pania-Hamuera-768x768.jpg",
+      "done": true,
+      "size_bytes": 83285,
+      "sha256": "83fa837917a921b157adab446aff48fb1548647cba1671255895b4634e1f3667"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Pania-Hamuera.jpg",
+      "path": "wp-content/uploads/2019/12/Pania-Hamuera.jpg",
+      "done": true,
+      "size_bytes": 208959,
+      "sha256": "245f174c223c238e1fbf8f75371bfd214d9946b4b8661a9abd6accb72bf476ff"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Parker-e1576561821692-150x150.png",
+      "path": "wp-content/uploads/2019/12/Parker-e1576561821692-150x150.png",
+      "done": true,
+      "size_bytes": 29588,
+      "sha256": "2be545173ddcf6475adf996a20707db552f89f51c54eedae285fb819f3d96434"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Parker-e1576561821692-300x300.png",
+      "path": "wp-content/uploads/2019/12/Parker-e1576561821692-300x300.png",
+      "done": true,
+      "size_bytes": 86175,
+      "sha256": "4c0d07ca3d00f1880222512309416de1874393a5f85f3e439f26e5470f78593e"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Parker-e1576561821692-768x768.png",
+      "path": "wp-content/uploads/2019/12/Parker-e1576561821692-768x768.png",
+      "done": true,
+      "size_bytes": 348183,
+      "sha256": "ce29f2cfe0ed08be7a302e32398f64eb24bb51d47169f1b8a6ad002aa8fdc9ae"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Parker-e1576561821692.png",
+      "path": "wp-content/uploads/2019/12/Parker-e1576561821692.png",
+      "done": true,
+      "size_bytes": 178909,
+      "sha256": "3993a46ac784d71925543c280b78a0a7ea6c6a1d8d6871b8247202d0831ed2c9"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/Tools.png",
+      "path": "wp-content/uploads/2019/12/Tools.png",
+      "done": true,
+      "size_bytes": 1048,
+      "sha256": "f5cae5fdebd932a60f4390c25f8d628e325943b1d2901066fb4c31613f4bfcc6"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/creative-brain.png",
+      "path": "wp-content/uploads/2019/12/creative-brain.png",
+      "done": true,
+      "size_bytes": 74789,
+      "sha256": "195b103033527170bba32c7c8f477210c5cfe155edb8acbf1726605806965444"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/culturalDiversity-e1578957603198.jpg",
+      "path": "wp-content/uploads/2019/12/culturalDiversity-e1578957603198.jpg",
+      "done": true,
+      "size_bytes": 171718,
+      "sha256": "5acd7eec535f192c7a26dec70407b1fc80cda08e8eb0bb3e383b909300285898"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/happy-admin-staff.jpg",
+      "path": "wp-content/uploads/2019/12/happy-admin-staff.jpg",
+      "done": true,
+      "size_bytes": 183467,
+      "sha256": "fb8a58c0ba9f0db648b715ff99658691f30af32baa0d7e345c3fc6fb0033f2fd"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/happy-hospital-staff-e1576132854389-300x122.jpg",
+      "path": "wp-content/uploads/2019/12/happy-hospital-staff-e1576132854389-300x122.jpg",
+      "done": true,
+      "size_bytes": 27062,
+      "sha256": "8f6d46187a8d246b79b7941e9ab0011738cc48a2e527a64d304998765674866f"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/happy-hospital-staff-e1576132854389-768x313.jpg",
+      "path": "wp-content/uploads/2019/12/happy-hospital-staff-e1576132854389-768x313.jpg",
+      "done": true,
+      "size_bytes": 75024,
+      "sha256": "6e0c338da0db2075d9993f5fd16d3bffe32e33a7f2fe3c539304d734c19a5c37"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/happy-hospital-staff-e1576132854389.jpg",
+      "path": "wp-content/uploads/2019/12/happy-hospital-staff-e1576132854389.jpg",
+      "done": true,
+      "size_bytes": 120236,
+      "sha256": "0562cf860cc049df53d0f9e9cf797f8f171e323b1080d9c2dbc82b9718278dcb"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/happy-hospital-staff.jpg",
+      "path": "wp-content/uploads/2019/12/happy-hospital-staff.jpg",
+      "done": true,
+      "size_bytes": 89318,
+      "sha256": "05d62786f6955712b5d9fdfdc4a360cdd7d9668975f511ec0bb471bd8ed893dd"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/languages-e1578957636494.png",
+      "path": "wp-content/uploads/2019/12/languages-e1578957636494.png",
+      "done": true,
+      "size_bytes": 217967,
+      "sha256": "0091f2e3941e7d71e3a31fbd6777a45c12f31e15e0531d3f9622cb585ea9f1a5"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_1010065423-e1578957532458.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_1010065423-e1578957532458.jpg",
+      "done": true,
+      "size_bytes": 166115,
+      "sha256": "4d0744adb38ad2146049d814ef083dc673e6e88c461a51402fe24ded4c0c0c9f"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_1010647510.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_1010647510.jpg",
+      "done": true,
+      "size_bytes": 256509,
+      "sha256": "69c97e1950c9541b57818b24bf5b7de7da1219912196b6f1f81fd62106c98768"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_102139462.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_102139462.jpg",
+      "done": true,
+      "size_bytes": 250806,
+      "sha256": "3a54becda51b08a2bb1d8d17350e9516e4c63f80f2cdfbcc8382ea45d16f3d39"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_1104093659.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_1104093659.jpg",
+      "done": true,
+      "size_bytes": 223427,
+      "sha256": "e50df6352ac4c8b3fc1e39bb3ff938594491ce5f189dc4439b324441263ea170"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_1191865255.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_1191865255.jpg",
+      "done": true,
+      "size_bytes": 195872,
+      "sha256": "85c3b4fc3b6d3355aa1099dac51e0375601cd0bc29a5102c672e667740919052"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_127216007.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_127216007.jpg",
+      "done": true,
+      "size_bytes": 230237,
+      "sha256": "588ed2eaaf03b792a2cdd2416e7c5076d095e3c66f26ce1e7515d609fcf1a964"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_1451773346.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_1451773346.jpg",
+      "done": true,
+      "size_bytes": 177471,
+      "sha256": "1a334363e7b5944f538403d5787ce0a089333c3e3af7df62b7fce93073dac9cd"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_1468343240.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_1468343240.jpg",
+      "done": true,
+      "size_bytes": 163197,
+      "sha256": "8316cde62e6d16033431a8ff639e63b8198de91fa95de141c1ba63834c36ac1c"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_1506010979.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_1506010979.jpg",
+      "done": true,
+      "size_bytes": 180221,
+      "sha256": "7196daf73d6f1414957fcd04665b631885217cd970a982b608b8caeae6ffc538"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_15060109791.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_15060109791.jpg",
+      "done": true,
+      "size_bytes": 99729,
+      "sha256": "20f0e410d4ed91a68de2c4461487bea102b5bc593cb140a3ad6a768d8d7a0703"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_1560589997.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_1560589997.jpg",
+      "done": true,
+      "size_bytes": 182997,
+      "sha256": "9378de40954a6c39389d65d6aeef272ed13052d752f7da1a5cc4ce10f33ec78d"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_1569973414.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_1569973414.jpg",
+      "done": true,
+      "size_bytes": 120392,
+      "sha256": "8286c9a11c933f9a989e544484960dad0ac27ac7fb0a118873a6e0eb989b3bfd"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_193462049.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_193462049.jpg",
+      "done": true,
+      "size_bytes": 305699,
+      "sha256": "375b66d29e07324e484dfbb482d6f6764b98086ad0ee9cad8c4e614dec9756e4"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_334359674.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_334359674.jpg",
+      "done": true,
+      "size_bytes": 163895,
+      "sha256": "316630c51c9428c93e7eddf79000160afca213a8828d18a3cf282e58a242e2b3"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_367853870.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_367853870.jpg",
+      "done": true,
+      "size_bytes": 227308,
+      "sha256": "7bfd3fbcd5aca409bb240c83c0e9059b6f036011195417cfc4b2dc37557231fc"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_370335194.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_370335194.jpg",
+      "done": true,
+      "size_bytes": 283440,
+      "sha256": "45bf6af5060754807f07fb56eba71d1a8fe6f1e97facf97b615f1a8522ae7bb4"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_378854845.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_378854845.jpg",
+      "done": true,
+      "size_bytes": 258476,
+      "sha256": "6d4cb91b2488d51a7e3f8be39fe8f302b1cfbf1d42d27b084e7889c1e8897aae"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_383115955-1024x1024.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_383115955-1024x1024.jpg",
+      "done": true,
+      "size_bytes": 140399,
+      "sha256": "40e6b9e2186c66afe8c7a50018f12d7a24d5b3d3d3ac20d166de55b72e9585a4"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_383115955-150x150.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_383115955-150x150.jpg",
+      "done": true,
+      "size_bytes": 14978,
+      "sha256": "f6e56baab78fd1f516ef2d0182f640109a503e672cf690695edeee8ae51ba5b1"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_383115955-300x300.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_383115955-300x300.jpg",
+      "done": true,
+      "size_bytes": 25741,
+      "sha256": "4a4d78029e2f4c2568fed832363398086133bc840ce35f388b22b1bd281c3546"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_383115955-768x768.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_383115955-768x768.jpg",
+      "done": true,
+      "size_bytes": 87945,
+      "sha256": "9b31bfeb5ed902fc57e2d0de8066a43276e5b0d17f9375be328dcd7812b41bd5"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_383115955.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_383115955.jpg",
+      "done": true,
+      "size_bytes": 187790,
+      "sha256": "9f37d7dd82fcd7adb8f0b518024114685fd3bd446753ce95885c818f773ffeb5"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_437079151.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_437079151.jpg",
+      "done": true,
+      "size_bytes": 192697,
+      "sha256": "2e9a3ff787696f6f06c7d1c0dd61110243be6c690f0079c9d1e4da33644cf58e"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_445837729-e1576508933659.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_445837729-e1576508933659.jpg",
+      "done": true,
+      "size_bytes": 72047,
+      "sha256": "b7597ae4cd4ae012f8c19288e1d4ac08e6f2c197a0f6ad047520116ba6e8f1a3"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_502443262.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_502443262.jpg",
+      "done": true,
+      "size_bytes": 312841,
+      "sha256": "c86d56d13727f194a5603f5d7804179b89d46304163854203b183260782eaf99"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_510397450-e1576508952731.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_510397450-e1576508952731.jpg",
+      "done": true,
+      "size_bytes": 55368,
+      "sha256": "25a5b911cde2566ce38646fc91983e5d0b8a0c7783b385e8b7a9a2cd3a8b7730"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_530446444-e1578957553518.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_530446444-e1578957553518.jpg",
+      "done": true,
+      "size_bytes": 181376,
+      "sha256": "6bf843fe2ca29ea69310c4b75251862d92ca76c2d2f684d49e638864f7f6ca88"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_552965956.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_552965956.jpg",
+      "done": true,
+      "size_bytes": 204192,
+      "sha256": "65bca6dc57c705b912289ead9c113adb5a2efcc0ecc903d87180c9b016340abe"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_563813287.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_563813287.jpg",
+      "done": true,
+      "size_bytes": 157460,
+      "sha256": "543c7746ec0cad2e28cf5edbe0fc213a98c7751c69ae06617db7e2ed7f5e97e3"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_591575675.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_591575675.jpg",
+      "done": true,
+      "size_bytes": 235202,
+      "sha256": "059b0e95963f616c1a7ffc18a308cbee4bd4e84cf19481cc12aa867fdf36617b"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_749845054.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_749845054.jpg",
+      "done": true,
+      "size_bytes": 201859,
+      "sha256": "9614e16a2f3194eb5f57fd49c7647474848abd988f432bc50beca7ab8c3e66a6"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_766425403.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_766425403.jpg",
+      "done": true,
+      "size_bytes": 165964,
+      "sha256": "15dcc0b12e0c04ee2c7dd85eb7238506b5b8bf06552f1fe69b29eddb1d565d02"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_778317646.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_778317646.jpg",
+      "done": true,
+      "size_bytes": 373971,
+      "sha256": "2ce20d6971f2fd3e6c1c833f8e4554a5a321a84511b688d3c465366386d96150"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2019/12/shutterstock_785571763.jpg",
+      "path": "wp-content/uploads/2019/12/shutterstock_785571763.jpg",
+      "done": true,
+      "size_bytes": 670808,
+      "sha256": "da2585ab2a7f27bbfb5b6857def9012dbe27e756bf687851eef0d398ddac9f14"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/2020/08/VR-icon@2x.png",
+      "path": "wp-content/uploads/2020/08/VR-icon@2x.png",
+      "done": true,
+      "size_bytes": 4071,
+      "sha256": "22544a7795745711c80381bb38a716221b9a4a7cacb8a289c8b7c713235a1b49"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/cachedassets/17df0bd02c7c3d87c08c54a41cbef1c3b05bc10c.css",
+      "path": "wp-content/uploads/h5p/cachedassets/17df0bd02c7c3d87c08c54a41cbef1c3b05bc10c.css",
+      "done": true,
+      "size_bytes": 28913,
+      "sha256": "64d4d8cac6b3ccc6e32ed6c9e3ebe8d6ec48e8a0d3bb631b9e4c96d6ce9f10a0"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/cachedassets/17df0bd02c7c3d87c08c54a41cbef1c3b05bc10c.js",
+      "path": "wp-content/uploads/h5p/cachedassets/17df0bd02c7c3d87c08c54a41cbef1c3b05bc10c.js",
+      "done": true,
+      "size_bytes": 6104,
+      "sha256": "3020911488e67157827bd14b238a29b1e4308a5273f624f600feb6c6e0e5a3ff"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/cachedassets/c392ccc598bd26bed23c32d085bb4f66c139b193.css",
+      "path": "wp-content/uploads/h5p/cachedassets/c392ccc598bd26bed23c32d085bb4f66c139b193.css",
+      "done": true,
+      "size_bytes": 100458,
+      "sha256": "a9a1af741ad4ab4209ccf1553dcde535124a82363e0f0664f9761fd41d678d93"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/cachedassets/c392ccc598bd26bed23c32d085bb4f66c139b193.js",
+      "path": "wp-content/uploads/h5p/cachedassets/c392ccc598bd26bed23c32d085bb4f66c139b193.js",
+      "done": true,
+      "size_bytes": 619930,
+      "sha256": "b6ef5d9babb5ff278eb09a5914c10f179fd5f5040ceced7a21511ffd1706264d"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/4/images/background-5df0696453c63.png",
+      "path": "wp-content/uploads/h5p/content/4/images/background-5df0696453c63.png",
+      "done": true,
+      "size_bytes": 40106,
+      "sha256": "f0af6a3e4821f423ead5dc03ac647e5dc5bb580260e823be64fc3b65492b1578"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/4/images/file-5df0592134175.png",
+      "path": "wp-content/uploads/h5p/content/4/images/file-5df0592134175.png",
+      "done": true,
+      "size_bytes": 7132,
+      "sha256": "f2d43388522baacfb7824ea59a737f3de23c9fa9240cc21548e53b936a05030d"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/4/images/file-5df05a1579fa3.png",
+      "path": "wp-content/uploads/h5p/content/4/images/file-5df05a1579fa3.png",
+      "done": true,
+      "size_bytes": 10754,
+      "sha256": "3ca6e43f3562baa9953210a7d2a58942a0f72a042a64ed15458bbc40d9889ffd"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/4/images/file-5df0618f9223b.png",
+      "path": "wp-content/uploads/h5p/content/4/images/file-5df0618f9223b.png",
+      "done": true,
+      "size_bytes": 3254,
+      "sha256": "75c2a7740c760d898e70c0d147c3168f0a7c24faff4b476477408086490fc9df"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/4/images/file-5df061f3c1fc7.png",
+      "path": "wp-content/uploads/h5p/content/4/images/file-5df061f3c1fc7.png",
+      "done": true,
+      "size_bytes": 5071,
+      "sha256": "d8552546411c86a7a492863db1b3707b8d9ac5760037e54fd248c9577264f5d4"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/5/images/background-5df07f196f892.png",
+      "path": "wp-content/uploads/h5p/content/5/images/background-5df07f196f892.png",
+      "done": true,
+      "size_bytes": 9432,
+      "sha256": "a0d84a94078966febbfcfdca644b8f8baf9f44c7a2b467def1c1a990a101f97a"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/5/images/file-5df0817e25ee7.png",
+      "path": "wp-content/uploads/h5p/content/5/images/file-5df0817e25ee7.png",
+      "done": true,
+      "size_bytes": 2204,
+      "sha256": "57c089aebc2c91d1fc3e7bbe59fb23844d11e53a39f6944357fbc230b0f5efd1"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/5/images/file-5df081d3c29aa.png",
+      "path": "wp-content/uploads/h5p/content/5/images/file-5df081d3c29aa.png",
+      "done": true,
+      "size_bytes": 2023,
+      "sha256": "dfacccf6ae5621f669849857f6a3698f1dcc3e6fee9ae78d7f005212e3167b24"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/5/images/file-5df0820996126.png",
+      "path": "wp-content/uploads/h5p/content/5/images/file-5df0820996126.png",
+      "done": true,
+      "size_bytes": 3062,
+      "sha256": "fd676b67de3fd15d1ef3510282b2c99ac921688c4f15b8954f42430d78a8fe95"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/5/images/file-5df0823379160.png",
+      "path": "wp-content/uploads/h5p/content/5/images/file-5df0823379160.png",
+      "done": true,
+      "size_bytes": 2762,
+      "sha256": "da3769e5a06a8419fbf3882926dd92d46e9b15ef3ae04bea2473a9bcca599fbe"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/5/images/file-5df082551dd6a.png",
+      "path": "wp-content/uploads/h5p/content/5/images/file-5df082551dd6a.png",
+      "done": true,
+      "size_bytes": 2319,
+      "sha256": "73a88d025a0b36f3697ca212a364c611adcbd97c2ea43ab1b532fd32956badd1"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/5/images/file-5df0827374ae6.png",
+      "path": "wp-content/uploads/h5p/content/5/images/file-5df0827374ae6.png",
+      "done": true,
+      "size_bytes": 1967,
+      "sha256": "4940d6302a5bab0d710beffdb2a534db89d98c9e6ed508527e4100d737056abd"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/5/images/file-5df0829831757.png",
+      "path": "wp-content/uploads/h5p/content/5/images/file-5df0829831757.png",
+      "done": true,
+      "size_bytes": 2681,
+      "sha256": "069466b310a8afc319d4821e7f64f6c3bc8d3b2f71fc8e9ebae0ec9a4ad1f8f6"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/5/images/file-5df082cdbc5f3.png",
+      "path": "wp-content/uploads/h5p/content/5/images/file-5df082cdbc5f3.png",
+      "done": true,
+      "size_bytes": 2181,
+      "sha256": "bd20c375ef094e79f327bda730ea3c5b102d1caa90a64f291a57ba55a4ea5f5b"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/5/images/file-5df083131213d.png",
+      "path": "wp-content/uploads/h5p/content/5/images/file-5df083131213d.png",
+      "done": true,
+      "size_bytes": 3577,
+      "sha256": "61f0829ee7bcfdd85bbf2fed4a1cf05aa28f2dabd43ac4775b4e55fc49e1a221"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/5/images/file-5df0833c2bd37.png",
+      "path": "wp-content/uploads/h5p/content/5/images/file-5df0833c2bd37.png",
+      "done": true,
+      "size_bytes": 1089,
+      "sha256": "f24220cca4da5710dd7ee9e53be995c482011dffc56580131a17ba72c664fdcd"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/5/images/file-5df0835a687fd.png",
+      "path": "wp-content/uploads/h5p/content/5/images/file-5df0835a687fd.png",
+      "done": true,
+      "size_bytes": 4183,
+      "sha256": "82b489b17852203db6af80ff495033fae4b2d9a6994892d4bb9d1622f5d8183b"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/5/images/file-5df0838560bae.png",
+      "path": "wp-content/uploads/h5p/content/5/images/file-5df0838560bae.png",
+      "done": true,
+      "size_bytes": 1511,
+      "sha256": "41aeb3462d1ec845cb7ade3d1bda428c82520b41c111823b2e63cf08d080429d"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/content/5/images/file-5df083b35fbe9.png",
+      "path": "wp-content/uploads/h5p/content/5/images/file-5df083b35fbe9.png",
+      "done": true,
+      "size_bytes": 1953,
+      "sha256": "f77f8e598c07f5133e694d0731926b852ff4ced6922ac0e53878eabcaa6d3130"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/exports/bagwan-interpreter-naati-practice-activity-1.h5p",
+      "path": "wp-content/uploads/h5p/exports/bagwan-interpreter-naati-practice-activity-1.h5p",
+      "done": true,
+      "size_bytes": 679894,
+      "sha256": "122195be278c144dbe624d3d251b9b7cb33ca5fed3fd478b4ce4899fd8690b10"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/exports/virtual-hospital-laboratory-ppe-activity-5.h5p",
+      "path": "wp-content/uploads/h5p/exports/virtual-hospital-laboratory-ppe-activity-5.h5p",
+      "done": true,
+      "size_bytes": 1045761,
+      "sha256": "063b200a05a712fccd30222550fec84a287b8a731b6ea677e3bdd04b63617721"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/exports/waste-management-2-4.h5p",
+      "path": "wp-content/uploads/h5p/exports/waste-management-2-4.h5p",
+      "done": true,
+      "size_bytes": 1066080,
+      "sha256": "bbe28fb71e34d2bfec0cb5d65b4bca453e00e0f66216372b7775d963af03bd20"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/FontAwesome-4.5/fontawesome-webfont.eot",
+      "path": "wp-content/uploads/h5p/libraries/FontAwesome-4.5/fontawesome-webfont.eot",
+      "done": true,
+      "size_bytes": 70807,
+      "sha256": "e219ece8f4d3e4ac455ef31cd3a7c7b5057ea68a109937fc26b03c6e99ee9322"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/FontAwesome-4.5/fontawesome-webfont.eot?v=4.5.0",
+      "path": "wp-content/uploads/h5p/libraries/FontAwesome-4.5/fontawesome-webfont.eot",
+      "done": true,
+      "size_bytes": 70807,
+      "sha256": "e219ece8f4d3e4ac455ef31cd3a7c7b5057ea68a109937fc26b03c6e99ee9322"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/FontAwesome-4.5/fontawesome-webfont.svg?v=4.5.0",
+      "path": "wp-content/uploads/h5p/libraries/FontAwesome-4.5/fontawesome-webfont.svg",
+      "done": true,
+      "size_bytes": 365616,
+      "sha256": "d67041fe5d50eef9ef671643968f7ce6b130eaaaaa2ce4d496b18d0a33aeb87b"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/FontAwesome-4.5/fontawesome-webfont.ttf?v=4.5.0",
+      "path": "wp-content/uploads/h5p/libraries/FontAwesome-4.5/fontawesome-webfont.ttf",
+      "done": true,
+      "size_bytes": 142072,
+      "sha256": "7b5a4320fba0d4c8f79327645b4b9cc875a2ec617a557e849b813918eb733499"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/FontAwesome-4.5/fontawesome-webfont.woff2?v=4.5.0",
+      "path": "wp-content/uploads/h5p/libraries/FontAwesome-4.5/fontawesome-webfont.woff2",
+      "done": true,
+      "size_bytes": 66624,
+      "sha256": "ff82aeed6b9bb6701696c84d1b223d2e682eb78c89117a438ce6cfea8c498995"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/FontAwesome-4.5/fontawesome-webfont.woff?v=4.5.0",
+      "path": "wp-content/uploads/h5p/libraries/FontAwesome-4.5/fontawesome-webfont.woff",
+      "done": true,
+      "size_bytes": 83588,
+      "sha256": "c812ddc9e475d3e65d68a6b3b589ce598a2a5babb7afc55477d59215c4a38a40"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/H5P.FontIcons-1.0/fonts/h5p.eot?105",
+      "path": "wp-content/uploads/h5p/libraries/H5P.FontIcons-1.0/fonts/h5p.eot",
+      "done": true,
+      "size_bytes": 16800,
+      "sha256": "5a6829fb5b3cd88218fa35fda3b95870e252d50ac69590b43e90024f343097a3"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/H5P.FontIcons-1.0/fonts/h5p.svg?105",
+      "path": "wp-content/uploads/h5p/libraries/H5P.FontIcons-1.0/fonts/h5p.svg",
+      "done": true,
+      "size_bytes": 63288,
+      "sha256": "b07c53877ab7f9d4559c5337b31ad65334298c02165182628c80e17b38641fab"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/H5P.FontIcons-1.0/fonts/h5p.ttf?105",
+      "path": "wp-content/uploads/h5p/libraries/H5P.FontIcons-1.0/fonts/h5p.ttf",
+      "done": true,
+      "size_bytes": 16652,
+      "sha256": "6379c5539fd5604ef5bb96a3df6f77b8adab6d4ae567fc30bce6cb67c421b984"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/H5P.FontIcons-1.0/fonts/h5p.woff?105",
+      "path": "wp-content/uploads/h5p/libraries/H5P.FontIcons-1.0/fonts/h5p.woff",
+      "done": true,
+      "size_bytes": 16728,
+      "sha256": "cc16da4a68c416f4ba29493c484c20632ca47570be505ca163dfff2f0a8ef19d"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/H5P.Image-1.1/placeholder.svg",
+      "path": "wp-content/uploads/h5p/libraries/H5P.Image-1.1/placeholder.svg",
+      "done": true,
+      "size_bytes": 1284,
+      "sha256": "76180b6286f30a4629d916cc77e4fc2be35e69b63f85d6aa16101d02ad174269"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/H5P.Question-1.4/images/minus-one.svg",
+      "path": "wp-content/uploads/h5p/libraries/H5P.Question-1.4/images/minus-one.svg",
+      "done": true,
+      "size_bytes": 1217,
+      "sha256": "961429eafa48e254160396a9de390a82f4fc62d746d563d33b7a80f68fc4e441"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/H5P.Question-1.4/images/plus-one.svg",
+      "path": "wp-content/uploads/h5p/libraries/H5P.Question-1.4/images/plus-one.svg",
+      "done": true,
+      "size_bytes": 1352,
+      "sha256": "9a9c7c131585eff1d72a43596e9c17ca288419a7c2ff380788d52bb4891cb290"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/animated-overlay.gif",
+      "path": "wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/animated-overlay.gif",
+      "done": true,
+      "size_bytes": 1738,
+      "sha256": "c7bcc76fb23c0430b36ec448eb79f8bc34129dae95da10f3c14ed0eacdf2f1b9"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-bg_flat_0_aaaaaa_40x100.png",
+      "path": "wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-bg_flat_0_aaaaaa_40x100.png",
+      "done": true,
+      "size_bytes": 180,
+      "sha256": "9a8492a580bf85d3e98ae8861fbd45567e5a1f83eeafcf9574da0399d5f602ab"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-bg_flat_75_ffffff_40x100.png",
+      "path": "wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-bg_flat_75_ffffff_40x100.png",
+      "done": true,
+      "size_bytes": 178,
+      "sha256": "39ab7ccd9f4e82579da78a9241265df288d8eb65dbbd7cf48aed2d0129887df5"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-bg_glass_55_fbf9ee_1x400.png",
+      "path": "wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-bg_glass_55_fbf9ee_1x400.png",
+      "done": true,
+      "size_bytes": 120,
+      "sha256": "691597e8a40a891ea94d3589976ecfc33e6145c49422443b00ac2b5a0022964c"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-bg_glass_65_ffffff_1x400.png",
+      "path": "wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-bg_glass_65_ffffff_1x400.png",
+      "done": true,
+      "size_bytes": 105,
+      "sha256": "f0e6cd91b837d5c5644d026e5ffeccd907953317cd5c0f689901733afda260b2"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-bg_glass_75_dadada_1x400.png",
+      "path": "wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-bg_glass_75_dadada_1x400.png",
+      "done": true,
+      "size_bytes": 111,
+      "sha256": "c108f5cbf2dd9ec07a26530695ddd95e1664597ce6c056ae44c162cc2e28cec4"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-bg_glass_75_e6e6e6_1x400.png",
+      "path": "wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-bg_glass_75_e6e6e6_1x400.png",
+      "done": true,
+      "size_bytes": 110,
+      "sha256": "ddf5dd4e0ef2b185e8bb0af7b6e90ebe74a84384cb4700658e76e754c8bfe550"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-bg_glass_95_fef1ec_1x400.png",
+      "path": "wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-bg_glass_95_fef1ec_1x400.png",
+      "done": true,
+      "size_bytes": 119,
+      "sha256": "f6f1c1bedf1a0f37cfef81d12f5f012869d1ee7c984775a569827a1784d34f5c"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-bg_highlight-soft_75_cccccc_1x100.png",
+      "path": "wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-bg_highlight-soft_75_cccccc_1x100.png",
+      "done": true,
+      "size_bytes": 101,
+      "sha256": "54270656df079c4da5182629a080fc633b6f84b87985eb016d25a560e2c38d4a"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-icons_222222_256x240.png",
+      "path": "wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-icons_222222_256x240.png",
+      "done": true,
+      "size_bytes": 4369,
+      "sha256": "57adb0d65f4e91dacfee975d9574422bee7486c8a182d60133728c672f2cdbbc"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-icons_2e83ff_256x240.png",
+      "path": "wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-icons_2e83ff_256x240.png",
+      "done": true,
+      "size_bytes": 4369,
+      "sha256": "20f8c6667afc48aa433ee9eb6d8a0584bdbd6b4a4a9091ff1e6b3adb31e63bd9"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-icons_454545_256x240.png",
+      "path": "wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-icons_454545_256x240.png",
+      "done": true,
+      "size_bytes": 4369,
+      "sha256": "07460e843c3e59aaadbb34231e699e856a2980753c7a47b66447da5d9f93fb7f"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-icons_888888_256x240.png",
+      "path": "wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-icons_888888_256x240.png",
+      "done": true,
+      "size_bytes": 4369,
+      "sha256": "ea2e29625de3463465e93b002b065f5833e05b97f7a052b1c141e754d62e1a8b"
+    },
+    {
+      "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-icons_cd0a0a_256x240.png",
+      "path": "wp-content/uploads/h5p/libraries/jQuery.ui-1.10/images/ui-icons_cd0a0a_256x240.png",
+      "done": true,
+      "size_bytes": 4369,
+      "sha256": "1e32c6dbf5d3fd342f27a78aa881550d6412aa207f48468724a6a15402b6041b"
+    }
+  ],
+  "unavailable_source_assets": [
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/css/h5p.css?ver=120086834/n",
+      "path": "wp-content/themes/118/css/h5p.css",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/css/h5p.css?ver=819792638/n",
+      "path": "wp-content/themes/118/css/h5p.css",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/css/h5p.css?ver=992239406/n",
+      "path": "wp-content/themes/118/css/h5p.css",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/fonts/Lato/Lato-Regular.ttf",
+      "path": "scorm/quick-link-pages/policy-and-procedures/fonts/Lato/Lato-Regular.ttf",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/fonts/Lato/Lato-Bold.ttf",
+      "path": "scorm/quick-link-pages/policy-and-procedures/fonts/Lato/Lato-Bold.ttf",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/AlliedHealth_CounsellingRoomPanorama_01.jpg",
+      "path": "VR/public/static_assets/360_images/AlliedHealth_CounsellingRoomPanorama_01.jpg",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hotspot_images/Evacuation%20plan.png",
+      "path": "VR/public/static_assets/hotspot_images/Evacuation plan.png",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/360_images/shutterstock_dr%20office.jpg",
+      "path": "VR/public/static_assets/360_images/shutterstock_dr office.jpg",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/css/mCSB_buttons.png",
+      "path": "wp-content/themes/118/css/mCSB_buttons.png",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/whm/img/theme/svg/fullscreen.svg",
+      "path": "wp-content/themes/118/whm/img/theme/svg/fullscreen.svg",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/whm/img/theme/svg/hamburger.svg",
+      "path": "wp-content/themes/118/whm/img/theme/svg/hamburger.svg",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/css/img/tear.png",
+      "path": "wp-content/themes/118/css/img/tear.png",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/webfonts/fa-brands-400.eot",
+      "path": "wp-content/themes/118/aged_care_forms/webfonts/fa-brands-400.eot",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/webfonts/fa-brands-400.woff",
+      "path": "wp-content/themes/118/aged_care_forms/webfonts/fa-brands-400.woff",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/webfonts/fa-brands-400.ttf",
+      "path": "wp-content/themes/118/aged_care_forms/webfonts/fa-brands-400.ttf",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/webfonts/fa-brands-400.svg",
+      "path": "wp-content/themes/118/aged_care_forms/webfonts/fa-brands-400.svg",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/webfonts/fa-regular-400.eot",
+      "path": "wp-content/themes/118/aged_care_forms/webfonts/fa-regular-400.eot",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/webfonts/fa-regular-400.woff",
+      "path": "wp-content/themes/118/aged_care_forms/webfonts/fa-regular-400.woff",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/webfonts/fa-regular-400.ttf",
+      "path": "wp-content/themes/118/aged_care_forms/webfonts/fa-regular-400.ttf",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/webfonts/fa-regular-400.svg",
+      "path": "wp-content/themes/118/aged_care_forms/webfonts/fa-regular-400.svg",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/webfonts/fa-solid-900.eot",
+      "path": "wp-content/themes/118/aged_care_forms/webfonts/fa-solid-900.eot",
+      "status": 404
+    },
+    {
+      "url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/webfonts/fa-solid-900.svg",
+      "path": "wp-content/themes/118/aged_care_forms/webfonts/fa-solid-900.svg",
+      "status": 404
+    }
+  ],
+  "tour_scenes": 22,
+  "youtube_videos_included": false
+}

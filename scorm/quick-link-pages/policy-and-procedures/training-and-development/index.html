@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<!-- Our Custom CSS -->
+<link href="/Bagwan2.0/wp-content/themes/118/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+<script src="/Bagwan2.0/wp-content/themes/118/js/jquery.min.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/classie.js"></script>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<meta charset="utf-8"/><meta content="IE=edge" http-equiv="X-UA-Compatible"/><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/><meta content="yes" name="mobile-web-app-capable"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="bagwanhealth - The Virtual Workplace" name="apple-mobile-web-app-title"/><title>Training and development – bagwanhealth</title><meta content="noindex, nofollow" name="robots"/><style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style><style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*wp_block_styles_on_demand_placeholder:6afd118a6a257*/
+/*# sourceURL=wp-block-library-inline-css */
+</style><style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style><style id="wp-block-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the block styles printed at wp_footer." }
+/*# sourceURL=wp-block-styles-placeholder-inline-css */
+</style><style id="wp-global-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the global-styles printed at wp_footer." }
+/*# sourceURL=wp-global-styles-placeholder-inline-css */
+</style><link href="/Bagwan2.0/wp-content/plugins/h5p/h5p-php-library/styles/h5p-fonts.css" id="h5p-plugin-fonts-css" media="all" rel="stylesheet"/><link href="/Bagwan2.0/wp-content/plugins/h5p/h5p-php-library/styles/h5p.css" id="h5p-plugin-styles-css" media="all" rel="stylesheet"/><link href="/Bagwan2.0/wp-content/themes/118/css/vwp.css" id="understrap-styles-css" media="" rel="stylesheet" type="text/css"/><style>
+</style><style>
+.body{
+
+  margin:0;
+  font-size:16px;
+}
+.wrapper{
+  background:red;
+}
+
+.container{
+  margin: 0 auto;
+  max-width:1000px;
+  width:100%;
+  padding: 0 15px;
+  box-sizing:border-box;}
+
+.footer{
+  font-size:0.85rem;
+  padding: 20px 0;
+  line-height:1.6;
+  background:#ddefbf;
+  margin:0 auto;
+}
+
+.footer__text{
+  color:#444444;
+  font-family:helvetica;
+  padding:3px 15px;
+  display:block;
+
+}
+
+.footer__hr{
+  height:1px;
+  border:none;
+  background:#aad75f;
+
+}
+
+.a__footer{
+  color:#ee3154;
+}
+
+.a__footer:hover {
+  color:#121741;
+}
+
+p.footer__copy{
+  width:100%;
+ margin:0 auto;}
+</style><link href="/Bagwan2.0/assets/static.css" rel="stylesheet"/></head>
+<body class="cbp-spmenu-push" data-site-root="/Bagwan2.0/">
+<div class="" id="showRightPush">
+<span></span>
+<span></span>
+<span></span>
+<div class="w-100 fscreen">
+<div id="fullscreen">
+<a class="full-screen" href="#" id="fullscreen" onclick="fullscreen()" role="button"></a>
+</div>
+</div>
+</div>
+<nav class="navbar cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="sidebar">
+<div>
+<div class="sidebar"><div id="nav">
+<div class="visibility p-0" id="reveal">
+<div><a href="/Bagwan2.0/scorm/intranet/index.html">
+<img alt="home icon" height="42" src="/Bagwan2.0/wp-content/themes/118/vwp/img/home_icon.png" style="margin-top:20%;margin-left:45%;" width="42"/></a></div>
+<div class="menu-menu-test-container" id="cssmenu"><ul class="menu" id="menu-menu-test"><li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1088"><a href="/Bagwan2.0/scorm/intranet/our-community/index.html"><span>Our community</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm menu-item-has-children has-sub" id="menu-item-1089"><a href="/Bagwan2.0/scorm/department-pages/index.html"><span>Departments</span></a>
+<ul>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1092"><a href="/Bagwan2.0/scorm/department-pages/hr-services/index.html"><span>HR services</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1093"><a href="/Bagwan2.0/scorm/department-pages/lab-technologies/index.html"><span>Lab technologies</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1094"><a href="/Bagwan2.0/scorm/department-pages/nursing/index.html"><span>Nursing</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1095"><a href="/Bagwan2.0/scorm/department-pages/interpreting-office/index.html"><span>Interpreting services</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1468"><a href="/Bagwan2.0/scorm/department-pages/logisitics/index.html"><span>Logistics</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1096"><a href="/Bagwan2.0/scorm/intranet/doctors-on-call/index.html"><span>Doctors on call</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1097"><a href="/Bagwan2.0/scorm/intranet/news-feed/index.html"><span>News feed</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1120"><a href="/Bagwan2.0/scorm/intranet/staff-repository/index.html"><span>Documents</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm menu-item-has-children has-sub" id="menu-item-1273"><a href="/Bagwan2.0/scorm/virtual-hospital/index.html"><span>Virtual tour</span></a>
+<ul>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1284"><a href="/Bagwan2.0/scorm/virtual-hospital/entrance/index.html"><span>Entrance</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1274"><a href="/Bagwan2.0/scorm/virtual-hospital/laboratories/index.html"><span>Laboratories</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1275"><a href="/Bagwan2.0/scorm/virtual-hospital/main-reception/index.html"><span>Main reception</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1276"><a href="/Bagwan2.0/scorm/virtual-hospital/medication-room/index.html"><span>Medication room</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1277"><a href="/Bagwan2.0/scorm/virtual-hospital/myotherapy-clinic/index.html"><span>Myotherapy clinic</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1278"><a href="/Bagwan2.0/scorm/virtual-hospital/nurses-station/index.html"><span>Nurses’ station</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1279"><a href="/Bagwan2.0/scorm/virtual-hospital/rehabilitation-clinic/index.html"><span>Rehabilitation clinic</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1280"><a href="/Bagwan2.0/scorm/virtual-hospital/specimen-reception/index.html"><span>Specimen reception</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1281"><a href="/Bagwan2.0/scorm/virtual-hospital/ward/index.html"><span>Ward</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1282"><a href="/Bagwan2.0/scorm/virtual-hospital/xray-room/index.html"><span>Xray Room</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1471"><a href="/Bagwan2.0/scorm/virtual-hospital/logisitics/index.html"><span>Logistics</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-1385"><a href="/Bagwan2.0/patient-management-system/index.html"><span>Patient management system</span></a></li>
+</ul></div> </div>
+</div>
+</div>
+</div>
+</nav>
+<div class="cbp-spmenu-push-toleft" id="content">
+<!-- ensure iframe links are opened in a new tab in the parent uless this is a scorm page builder -->
+<script id="popper-scripts-js" src="/Bagwan2.0/wp-content/themes/118/js/popper.min.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/vwp/js/jquery.min.js"></script><script src="/Bagwan2.0/wp-content/themes/118/vwp/js/theme.min.js"></script><script src="/Bagwan2.0/wp-content/themes/118/vwp/js/main.js"></script>
+<!--
+ __      ________   _____            _               _______
+ \ \    / /  ____| |  __ \          (_)             |__   __|
+  \ \  / /| |__    | |  | | ___  ___ _  __ _ _ __      | | ___  __ _ _ __ ___
+   \ \/ / |  __|   | |  | |/ _ \/ __| |/ _` | '_ \     | |/ _ \/ _` | '_ ` _ \
+    \  /  | |____  | |__| |  __/\__ \ | (_| | | | |    | |  __/ (_| | | | | | |
+     \/   |______| |_____/ \___||___/_|\__, |_| |_|    |_|\___|\__,_|_| |_| |_|
+                                        __/ |
+                                       |___/
+This custom content was generated by the RMIT Vocational Education Design team - https://emedia.rmit.edu.au/oedvedesign/
+-->
+<div class="container-fluid" id="vwp">
+<div class="row">
+<div class="col-12" id="banner" style="z-index:1;">
+<a href="/Bagwan2.0/scorm/intranet/index.html"><div id="ws">
+<div class="vwp-logo"></div>
+</div></a>
+</div>
+<!-- breadcrumbs commented out for VWP-->
+<div class="container">
+<div class="" data-intro="This is a location-based breadcrumb trail showing which page you are viewing and where it sits in the website’s hierarchy." id="breadcrumbs" style="margin-top: 6rem; border-bottom: 1px solid #eeeeee; margin-bottom: 2rem;">
+<ul class="thin-text">
+<li class="d-lg-inline">Quick link pages</li> <li>Policy and procedures</li> <li style="color:#01A19A; font-weight: 500;">  Training and development</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<h1>Training and development</h1>
+<div class="heading-underline"></div>
+<article><h5>Policy Name Training and Development</h5>
+<h5> </h5>
+<hr/>
+<h5>Owner of Policy –  George Dunn Executive Director of People and Culture</h5>
+<hr/>
+<hr/>
+<h5>Scope</h5>
+<p>This policy applies to employees working for Bagwan Health who are:</p>
+<ul>
+<li>Current employees</li>
+<li>New permanent, temporary or casual</li>
+<li>Existing employees appointed, promoted or transferred to another work location</li>
+<li>Existing employees resuming duty after leave of more than 12 months.</li>
+</ul>
+<p>This policy also applies to contractors, consultants, students and volunteers where there is a legislative requirement for specific training. This training requirement is to be included in contract arrangements, and the training must occur. This policy does not apply to Victorian Ambulance Service employees.  </p>
+<hr/>
+<h5>Policy</h5>
+<p>The purpose of this policy is to facilitate the training and development of staff as part of their employment and to provide administrative guidelines to facilitate fairness and equity in the application of these guidelines. Every effort has been made to balance the needs of staff for professional development, the needs of the organisation for properly qualified staff, and the need to staff the Bagwan Health’s services. This policy defines the standards and processes associated with training and development at Bagwan Health and has been developed by the Bagwan Health Office in consultation with the Training and Development Committee and the Executive of each site/service.</p>
+<hr/>
+<h5>Procedure</h5>
+<p><strong>Orientation, Induction and Mandatory Training </strong></p>
+<p>Within three months of commencing employment at Bagwan Health, unless stated otherwise, every employee is required to undertake the following training:</p>
+<ul>
+<li>Bagwan Health orientation training</li>
+<li>Local orientation training</li>
+<li>Local induction training</li>
+<li>Mandatory training</li>
+</ul>
+<p><strong>Orientation and Induction Training </strong></p>
+<p>Orientation and Induction training programs occur in the first few days of a new employee joining Bagwan Health. As such they are often confused for the same training, but it is easy to differentiate between the two. Orientation training is used to welcome employees to the organisation and to provide information about the organisation’s mission, strategic objectives, corporate initiatives and specific information including structure and scope of operations. Orientation training contains both workplace and organisational elements. Induction training is used to familiarise employees with their work unit and to provide information about local work practices, standards, safe work procedures, administrative procedures and training in relevant systems. It may also include some mandatory training. Some topics may be included in both orientation and induction, as they require both a local and a broader application. Existing employees who are transferred, seconded or promoted into another division are to be included in the local orientation (and/or refresher program) and local induction.</p>
+<p><strong>Mandatory Training </strong></p>
+<p>Mandatory training is compulsory for all employees regardless of their role or location, and is mandated by relevant:</p>
+<ul>
+<li>Commonwealth or state legislation</li>
+<li>Administrative policy</li>
+<li>Code of practice or regulation linked to legislation</li>
+<li>Directives</li>
+<li>Bagwan Health HR policies</li>
+<li>Service Level Agreements</li>
+</ul>
+<p><strong>Mandatory Training for Specific Groups </strong></p>
+<p>Training can be deemed compulsory for a specific group of employees, but not be required for all employees within Bagwan Health. This type of training may be mandatory due to location, occupation, speciality, work unit, or based upon risk assessment processes. If there is occupation based mandatory training that must be completed prior to taking on specific duties (e.g. nursing and medication administration), the employee cannot perform those duties until their training is completed and they are deemed competent. All completed mandatory training must be recorded and signed off on a checklist for reporting and monitoring purposes.</p>
+<p><strong>Mandatory Training for Temporary or Casual Employees </strong></p>
+<p>Temporary and casual employees engaged for less than three months are to complete mandatory training. However, the required learning topics of the Bagwan Health and local orientation may be modified to reflect the role and length of employment of the temporary/casual employee.</p>
+<p><strong>Professional Development</strong></p>
+<p>Bagwan Health acknowledges that professional development is integral to personal job satisfaction, workplace productivity, reward, and recognition, and is critical to the achievement of the organisation’s mission to continuously improve the quality of its programs and services. Professional development programs include on-the-job training, career development and transition programs, internal or external courses, support for undertaking research or project work, support for participation in internal or external governance processes, attendance at conferences or seminars, and networking, coaching and mentoring programs. Bagwan Health is committed to providing employees with:</p>
+<ul>
+<li>The opportunity to plan and develop skills, knowledge and attributes that complement organisational and work unit goals</li>
+<li>The opportunity to participate in career development activities that extend and enhance their capabilities and capacity for advancement within the organisation</li>
+<li>Equity of access to professional development opportunities</li>
+</ul>
+<p>Great professional development is:</p>
+<ul>
+<li>Targeted</li>
+<li>Available as needed</li>
+<li>Available to all staff</li>
+<li>Evaluated</li>
+<li>Accessible</li>
+<li>Preferably in-house</li>
+<li>Includes on-the-job and ongoing supervision</li>
+</ul>
+<p><strong>Strategies for Professional Development </strong></p>
+<p>The strategies used to implement professional development at Bagwan Health include:</p>
+<ol>
+<li>Annual performance review to set staff training and development objectives</li>
+<li>Regular quality in-service education programs, where professionals are trained and discuss their work with others in their peer group</li>
+<li>Organised formal professional clinical supervision and teaching programs</li>
+<li>Organisational priorities for staff development</li>
+<li>Guidelines on staff attendance at external training</li>
+<li>Annual update of organisational staff development priority lists</li>
+<li>Annual allocation of staff development budget</li>
+<li>Quarterly review of staff development expenditure</li>
+<li>Annual report on all staff development activities undertaken in previous year</li>
+<li>A centralised training database to provide quarterly staff reports on attendance</li>
+<li>Time allocation guidelines to quality-research-evaluation program development</li>
+</ol>
+<p><strong>Position-specific Professional Development </strong></p>
+<p>Where management decides that it is necessary for a staff member to acquire a particular skill, to learn specific material, or to acquire specific qualifications in order for them to carry out the duties attached to their current role, Bagwan Health is responsible for all costs incurred in acquiring that skill, learning or qualification, and the staff member shall, where necessary, be given permission to attend any such course within working hours. It is expected that such requirements would have been taken into account in the writing of a role description and were included in the criteria for selection. Thus it would rarely be the case that continuing employees would be required to acquire new qualifications.</p>
+<p><strong>Non-position-specific Professional Development </strong></p>
+<p>There may be instances where an employee wishes to pursue further education or training but management has not required them to acquire a particular skill, to learn specific material, or to gain specific qualifications to carry out duties attached to their current role. In these cases, Bagwan Health (at the discretion of management and taking into account workplace efficiency), may assist such training by allowing the employee to:</p>
+<ul>
+<li>Rearrange current working hours</li>
+<li>Use Bagwan Health equipment and services</li>
+<li>Use annual leave or unpaid leave arrangements</li>
+<li>Grant up to two days study leave to attend examinations.</li>
+</ul>
+<p>A reimbursement of training fees or provision of paid study leave may also be negotiated as part of the contract of employment between the employee and Bagwan Health.</p>
+<p><strong>Budgeting </strong></p>
+<p>It is the responsibility of the Bagwan Health Board to authorise an appropriate annual expenditure budget to facilitate appropriate professional development opportunities for employees. It shall be the responsibility of management to ensure that employees are offered and granted appropriate professional development opportunities, taking into account the needs of the individual as well as the organisation.</p>
+<p><strong>Proposals for Professional Development </strong></p>
+<p>As part of their performance review, employees will be encouraged to take an active role in their own ongoing professional and career development. Any proposal by an employee for a change in their existing conditions of employment (hours of work, taking of leave, use of equipment, etc.) to facilitate their professional development shall be considered by the management as subject to:</p>
+<p>Bagwan Health policy to encourage such development</p>
+<p>The training priorities of Bagwan Health Satisfactory assurances from that person’s manager that business can still be carried on satisfactorily Equity in the provision of such facilitation between employees Any such agreement shall be fully documented in that person’s personnel file.</p>
+<p><strong>Bagwan Health Training Packages </strong></p>
+<p>Management are encouraged to use existing Bagwan Health online and face-to-face training packages to ensure consistency of information delivered to employees, especially in regards to compliance related training. These packages have been developed to comply with legislation, policies and directives.</p>
+<p><strong>Training Delivery and Modulation </strong></p>
+<p>Employee needs must be taken into consideration when selecting training delivery methods. Bagwan Health training may use any of the following:</p>
+<ul>
+<li>Face-to-face delivery</li>
+<li>Online delivery</li>
+<li>CD/DVD information</li>
+<li>Video presentation</li>
+<li>One-on-one in-service information sharing</li>
+<li>Accessible electronic delivery e.g. closed caption, assistive technology</li>
+</ul>
+<p>. The location and time of training must be considered to ensure that all employees are able to attend e.g. shift workers, part-time employees, employees with special learning needs, physical impairments and/or disabilities.</p>
+<p><strong>Reporting, Monitoring and Compliance </strong></p>
+<p>Management is responsible for managing compliance of mandatory training of employees under their supervision. Management must also ensure that employee details are registered in the appropriate learning management system for reporting, monitoring and compliance.</p>
+<p> </p>
+<p><a href="/Bagwan2.0/documents/policies-and-procedures/Bagwan%20Health%20-%20Training%20and%20Development%20V1.0.docx" rel="noopener">Click here to download policies</a></p>
+<p> </p>
+</article>
+<article class="mt-3"></article>
+</div>
+<div class="b-0 container">
+<div class="">
+<div class="" id="bottom_navigation">
+<div id="next-prev">
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- row-->
+<!-- #cde -->
+<script src="/Bagwan2.0/wp-content/themes/118/js/glossary-tooltip.js"></script><script src="/Bagwan2.0/wp-content/themes/118/js/jquery.glossarize.js"></script>
+<div class="wrapper">
+<div class="container">
+</div>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<footer class="footer">
+<div class="footer__text container">
+<p>RMIT would like to acknowledge Wurundjeri people of the Kulin Nations as the Traditional Owners of the land on which the University stands. We respectfully recognise Elders past, present and future.</p>
+<p>© Copyright 2026 <a class="a__footer" href="https://www.rmit.edu.au/">RMIT</a> - This website is for educational purpose only.</p>
+<hr class="footer__hr"/>
+</div>
+</footer>
+<script src="/Bagwan2.0/wp-content/themes/118/js/menu.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/modernizr.custom.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+   // do the opening and closing for the menu accordion
+   (function ($) {
+     $(document).ready(function () {
+       $('#cssmenu li.has-sub>a').on('click', function () {
+         $(this).removeAttr('href');
+         var element = $(this).parent('li');
+         if (element.hasClass('open')) {
+           element.removeClass('open');
+           element.find('li').removeClass('open');
+           element.find('ul').slideUp();
+         } else {
+           element.addClass('open');
+           element.children('ul').slideDown();
+           element.siblings('li').children('ul').slideUp();
+           element.siblings('li').removeClass('open');
+           element.siblings('li').find('li').removeClass('open');
+           element.siblings('li').find('ul').slideUp();
+         }
+       });
+
+       $('#cssmenu>ul>li.has-sub>a').append('<span class="holder"></span>');
+
+     });
+   })(jQuery);
+ //ensure nav loads closed
+ $('#reveal').addClass('navshow').removeClass('test2');
+ //ensure the nav is always open for the current page
+ $("li.menu-item" ).children('ul').css({ display: "none" });
+ $('li.active').closest('ul').addClass('open').css({ display: "block" })
+ </script><script>
+     $(document).ready(function(){
+         $("#cssmenu>ul>li").parent().addClass("dropdown");
+       //  $("#cssmenu>ul").addClass("dropdown-menu");
+         $("#cssmenu>ul>li.has-sub>a").addClass("dropdown-toggle");
+         $("ul.has-sub li a").removeClass("dropdown-toggle");
+         $('.navbar .dropdown-toggle').append('<b class="caret"></b>');
+     });
+ </script><script>
+   //nave menu
+   $(document).ready(function () {
+       $('#sidebarCollapse').on('click', function () {
+         $('#sidebar').toggleClass('active');
+       });
+   });
+   //fullscreen
+   //invokes browser's fullscreen mode
+   function fullscreen() {
+     var isInFullScreen = (document.fullscreenElement && document.fullscreenElement  !== null) ||
+         (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
+         (document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
+         (document.msFullscreenElement && document.msFullscreenElement !== null);
+
+     var docElm = document.documentElement;
+     if (!isInFullScreen) {
+         if (docElm.requestFullscreen) {
+             docElm.requestFullscreen();
+         } else if (docElm.mozRequestFullScreen) {
+             docElm.mozRequestFullScreen();
+         } else if (docElm.webkitRequestFullScreen) {
+             docElm.webkitRequestFullScreen();
+         } else if (docElm.msRequestFullscreen) {
+             docElm.msRequestFullscreen();
+         }
+     } else {
+         if (document.exitFullscreen) {
+             document.exitFullscreen();
+         } else if (document.webkitExitFullscreen) {
+             document.webkitExitFullscreen();
+         } else if (document.mozCancelFullScreen) {
+             document.mozCancelFullScreen();
+         } else if (document.msExitFullscreen) {
+             document.msExitFullscreen();
+         }
+     }
+ }
+</script><script defer="True" src="/Bagwan2.0/assets/static.js"></script></body></html>

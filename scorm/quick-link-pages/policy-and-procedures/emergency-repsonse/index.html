@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<!-- Our Custom CSS -->
+<link href="/Bagwan2.0/wp-content/themes/118/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+<script src="/Bagwan2.0/wp-content/themes/118/js/jquery.min.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/classie.js"></script>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<meta charset="utf-8"/><meta content="IE=edge" http-equiv="X-UA-Compatible"/><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/><meta content="yes" name="mobile-web-app-capable"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="bagwanhealth - The Virtual Workplace" name="apple-mobile-web-app-title"/><title>Emergency repsonse – bagwanhealth</title><meta content="noindex, nofollow" name="robots"/><style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style><style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*wp_block_styles_on_demand_placeholder:6afd118a3abaa*/
+/*# sourceURL=wp-block-library-inline-css */
+</style><style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style><style id="wp-block-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the block styles printed at wp_footer." }
+/*# sourceURL=wp-block-styles-placeholder-inline-css */
+</style><style id="wp-global-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the global-styles printed at wp_footer." }
+/*# sourceURL=wp-global-styles-placeholder-inline-css */
+</style><link href="/Bagwan2.0/wp-content/plugins/h5p/h5p-php-library/styles/h5p-fonts.css" id="h5p-plugin-fonts-css" media="all" rel="stylesheet"/><link href="/Bagwan2.0/wp-content/plugins/h5p/h5p-php-library/styles/h5p.css" id="h5p-plugin-styles-css" media="all" rel="stylesheet"/><link href="/Bagwan2.0/wp-content/themes/118/css/vwp.css" id="understrap-styles-css" media="" rel="stylesheet" type="text/css"/><style>
+</style><style>
+.body{
+
+  margin:0;
+  font-size:16px;
+}
+.wrapper{
+  background:red;
+}
+
+.container{
+  margin: 0 auto;
+  max-width:1000px;
+  width:100%;
+  padding: 0 15px;
+  box-sizing:border-box;}
+
+.footer{
+  font-size:0.85rem;
+  padding: 20px 0;
+  line-height:1.6;
+  background:#ddefbf;
+  margin:0 auto;
+}
+
+.footer__text{
+  color:#444444;
+  font-family:helvetica;
+  padding:3px 15px;
+  display:block;
+
+}
+
+.footer__hr{
+  height:1px;
+  border:none;
+  background:#aad75f;
+
+}
+
+.a__footer{
+  color:#ee3154;
+}
+
+.a__footer:hover {
+  color:#121741;
+}
+
+p.footer__copy{
+  width:100%;
+ margin:0 auto;}
+</style><link href="/Bagwan2.0/assets/static.css" rel="stylesheet"/></head>
+<body class="cbp-spmenu-push" data-site-root="/Bagwan2.0/">
+<div class="" id="showRightPush">
+<span></span>
+<span></span>
+<span></span>
+<div class="w-100 fscreen">
+<div id="fullscreen">
+<a class="full-screen" href="#" id="fullscreen" onclick="fullscreen()" role="button"></a>
+</div>
+</div>
+</div>
+<nav class="navbar cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="sidebar">
+<div>
+<div class="sidebar"><div id="nav">
+<div class="visibility p-0" id="reveal">
+<div><a href="/Bagwan2.0/scorm/intranet/index.html">
+<img alt="home icon" height="42" src="/Bagwan2.0/wp-content/themes/118/vwp/img/home_icon.png" style="margin-top:20%;margin-left:45%;" width="42"/></a></div>
+<div class="menu-menu-test-container" id="cssmenu"><ul class="menu" id="menu-menu-test"><li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1088"><a href="/Bagwan2.0/scorm/intranet/our-community/index.html"><span>Our community</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm menu-item-has-children has-sub" id="menu-item-1089"><a href="/Bagwan2.0/scorm/department-pages/index.html"><span>Departments</span></a>
+<ul>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1092"><a href="/Bagwan2.0/scorm/department-pages/hr-services/index.html"><span>HR services</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1093"><a href="/Bagwan2.0/scorm/department-pages/lab-technologies/index.html"><span>Lab technologies</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1094"><a href="/Bagwan2.0/scorm/department-pages/nursing/index.html"><span>Nursing</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1095"><a href="/Bagwan2.0/scorm/department-pages/interpreting-office/index.html"><span>Interpreting services</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1468"><a href="/Bagwan2.0/scorm/department-pages/logisitics/index.html"><span>Logistics</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1096"><a href="/Bagwan2.0/scorm/intranet/doctors-on-call/index.html"><span>Doctors on call</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1097"><a href="/Bagwan2.0/scorm/intranet/news-feed/index.html"><span>News feed</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1120"><a href="/Bagwan2.0/scorm/intranet/staff-repository/index.html"><span>Documents</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm menu-item-has-children has-sub" id="menu-item-1273"><a href="/Bagwan2.0/scorm/virtual-hospital/index.html"><span>Virtual tour</span></a>
+<ul>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1284"><a href="/Bagwan2.0/scorm/virtual-hospital/entrance/index.html"><span>Entrance</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1274"><a href="/Bagwan2.0/scorm/virtual-hospital/laboratories/index.html"><span>Laboratories</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1275"><a href="/Bagwan2.0/scorm/virtual-hospital/main-reception/index.html"><span>Main reception</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1276"><a href="/Bagwan2.0/scorm/virtual-hospital/medication-room/index.html"><span>Medication room</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1277"><a href="/Bagwan2.0/scorm/virtual-hospital/myotherapy-clinic/index.html"><span>Myotherapy clinic</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1278"><a href="/Bagwan2.0/scorm/virtual-hospital/nurses-station/index.html"><span>Nurses’ station</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1279"><a href="/Bagwan2.0/scorm/virtual-hospital/rehabilitation-clinic/index.html"><span>Rehabilitation clinic</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1280"><a href="/Bagwan2.0/scorm/virtual-hospital/specimen-reception/index.html"><span>Specimen reception</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1281"><a href="/Bagwan2.0/scorm/virtual-hospital/ward/index.html"><span>Ward</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1282"><a href="/Bagwan2.0/scorm/virtual-hospital/xray-room/index.html"><span>Xray Room</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-scorm" id="menu-item-1471"><a href="/Bagwan2.0/scorm/virtual-hospital/logisitics/index.html"><span>Logistics</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-1385"><a href="/Bagwan2.0/patient-management-system/index.html"><span>Patient management system</span></a></li>
+</ul></div> </div>
+</div>
+</div>
+</div>
+</nav>
+<div class="cbp-spmenu-push-toleft" id="content">
+<!-- ensure iframe links are opened in a new tab in the parent uless this is a scorm page builder -->
+<script id="popper-scripts-js" src="/Bagwan2.0/wp-content/themes/118/js/popper.min.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/vwp/js/jquery.min.js"></script><script src="/Bagwan2.0/wp-content/themes/118/vwp/js/theme.min.js"></script><script src="/Bagwan2.0/wp-content/themes/118/vwp/js/main.js"></script>
+<!--
+ __      ________   _____            _               _______
+ \ \    / /  ____| |  __ \          (_)             |__   __|
+  \ \  / /| |__    | |  | | ___  ___ _  __ _ _ __      | | ___  __ _ _ __ ___
+   \ \/ / |  __|   | |  | |/ _ \/ __| |/ _` | '_ \     | |/ _ \/ _` | '_ ` _ \
+    \  /  | |____  | |__| |  __/\__ \ | (_| | | | |    | |  __/ (_| | | | | | |
+     \/   |______| |_____/ \___||___/_|\__, |_| |_|    |_|\___|\__,_|_| |_| |_|
+                                        __/ |
+                                       |___/
+This custom content was generated by the RMIT Vocational Education Design team - https://emedia.rmit.edu.au/oedvedesign/
+-->
+<div class="container-fluid" id="vwp">
+<div class="row">
+<div class="col-12" id="banner" style="z-index:1;">
+<a href="/Bagwan2.0/scorm/intranet/index.html"><div id="ws">
+<div class="vwp-logo"></div>
+</div></a>
+</div>
+<!-- breadcrumbs commented out for VWP-->
+<div class="container">
+<div class="" data-intro="This is a location-based breadcrumb trail showing which page you are viewing and where it sits in the website’s hierarchy." id="breadcrumbs" style="margin-top: 6rem; border-bottom: 1px solid #eeeeee; margin-bottom: 2rem;">
+<ul class="thin-text">
+<li class="d-lg-inline">Quick link pages</li> <li>Policy and procedures</li> <li style="color:#01A19A; font-weight: 500;">  Emergency repsonse</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<h1>Emergency repsonse</h1>
+<div class="heading-underline"></div>
+<article><h5>Policy Name – <strong>Emergency Response</strong></h5>
+<h5> </h5>
+<hr/>
+<h5><strong>Scope</strong></h5>
+<h5 style="padding-left: 60px;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial;">This policy applies to all staff and contractors employed by Bagwan Health, Allied Health professionals, Credentialed Specialists, students, volunteers, patients and visitors.</span></h5>
+<hr/>
+<h5><strong>Policy</strong></h5>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial;">Bagwan Health is committed to the provision of high quality services to patients and their families and to minimising risks to patients and their families, staff, contractors, volunteers, students, and members of the community. This commitment encompasses both proactive Risk Management and Incident Reporting and subsequent analysis to inform continuous service improvement.</span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial;">In line with incident reporting guidelines, Bagwan Health is also required to complete, keep on file and provide copies of incident reports to funding bodies or other authorities, such as the DHHS, the Commission of Children and Young People, and AHPRA.</span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial;">This policy provides Bagwan Health staff, contractors, volunteers and students with information to assist them with reporting incidents in a correct and timely manner, and to define the processes for analysing and utilising incident reporting for service improvement.</span></p>
+<hr/>
+<h5><strong>Procedure </strong></h5>
+<table border=".5" style="height: 113px; width: 82.5738%; border-collapse: collapse; border-color: #f2f2f2;">
+<tbody>
+<tr style="height: 33px;">
+<th style="padding: 2% 2% 1% 1%; height: 33px; text-align: left; background: #f2f2f2; width: 14.8921%;">
+<h3><span style="color: #333333;"><strong>Code</strong></span></h3>
+</th>
+<th style="padding: 2% 2% 1% 1%; height: 33px; text-align: left; background: #f2f2f2; width: 14.0158%;">
+<h3><span style="color: #333333;"><strong>Action to be taken</strong></span></h3>
+</th>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px; padding: 1%; width: 14.8921%; background-color: #e74c3c;"><strong>Code Red — smoke or fire alert</strong></td>
+<td style="height: 20px; padding: 1%; width: 14.0158%;">R — remove those in danger<br/> A — activate alarm and call 555<br/> C — confine; shut fire containment doors if these have not automatically closed<br/> E — evacuate/extinguish
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Stand by for instruction from the area warden (yellow hat or vest), door warden (red hat or vest), emergency officer (white hat or vest) or fire brigade.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li>Do not leave the area unless a Code Orange is called, or the Respond Red is announced as ‘all clear’</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px; padding: 1%; width: 14.8921%; background-color: #e67e22;"><strong>Code Orange —evacuation</strong></td>
+<td style="height: 20px; padding: 1%; width: 14.0158%;">
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Prepare for evacuation as directed by the area warden (yellow hat or vest), door warden (red hat or vest), emergency officer (white hat or vest) or fire brigade.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Advise area warden of your patient’s needs and status as requested.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Assist to evacuate and treat patients as instructed. Ambulant patients are evacuated first, followed by patients using wheelchairs, then bed bound patients. Do not block the emergency exits</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Evacuation will take place horizontally in the first instance. This includes evacuating to the next compartment behind the fire doors, or neighboring wards. Vertical evacuation to other levels of the building occurs next if required, followed by evacuating externally</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px; padding: 1%; width: 14.8921%; background-color: #8e44ad; color: #ffffff;"><strong>Code Purple — bomb threat</strong></td>
+<td style="height: 20px; padding: 1%; width: 14.0158%;">
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>If you become aware of a bomb threat by phone, take note of as many details as you can regarding location, timing and nature of the bomb. Keep the caller on the line while alerting another staff member to call 555 and state “Respond Purple” and the location. Do not hang up the phone even if the caller has ended the call. Report to the nearest senior staff member.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>If you find a suspicious device or threatening letter, do not touch it and report it to the nearest senior staff member. Move all patients, staff and visitors as far away as possible</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Stand by for instructions from the area warden (yellow hat or vest), door warden (red hat or vest), emergency officer (white hat or vest) or fire brigade/police.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Do not leave the area unless advised to, or the code is announced ‘all clear Respond Purple’.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li>Switch off mobile phones</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px; padding: 1%; width: 14.8921%; color: #ffffff; background-color: #000000;"><strong>Code Black — serious aggression/weapon</strong></td>
+<td style="height: 20px; padding: 1%; width: 14.0158%;">
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>If you are subjected to or become aware of a Code Black incident ensure your own safety by moving away from the violent person. Always ensure that you maintain a path of escape.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>If safe to do so, dial the emergency number and state “Respond Black” followed by your location</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Victoria Police will be called to attend by switchboard staff when a Respond Black is called</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>To avoid panic amongst staff, a Code Black is never announced, it will be sent to staff pagers</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Take no action that will increase the threat.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>All doors are to be closed and locked. No staff member, patient or visitor will be allowed in or out of locked doors, and the building will assume “lockdown”. This means that any MET calls or Code Blue calls may not be attended to by any staff from external areas.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Staff, patients and visitors are to move away from windows and close any window blinds</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Stand by for instructions from the area warden (yellow hat or vest), door warden (red hat or vest), emergency officer (white hat or vest) or member of the police</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>When the threat has been appropriately managed, an ‘all clear’ Respond Black”will be sent to all staff pagers</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li>Staff involved in the Code Black will attend a mandatory debriefing</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px; padding: 1%; width: 14.8921%; background-color: #f2f2f2;"><strong>Code Grey — threatening behaviour</strong></td>
+<td style="height: 20px; padding: 1%; width: 14.0158%;">
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>If you are subjected to or become aware of a Code Grey incident ensure your own safety by moving away from the violent patient. Always ensure that you maintain a path of escape.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Dial the emergency number and state “Respond Grey” followed by your exact location.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>A senior clinician will take charge of the response.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Continue listening and talking to the patient to defuse the situation.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Take instructions from the senior clinician in charge of the Code Grey response. Security staff will attend and take instruction from the Nurse in Charge of the ward</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Do not leave the area unless advised to or the code is declared ‘all clear’.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li>Assist staff to manage patients as guided and directed by clinical staff of the area.</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px; padding: 1%; width: 14.8921%; background-color: #3498db;"><strong>Code Blue — medical emergency</strong></td>
+<td style="height: 20px; padding: 1%; width: 14.0158%;">
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>If you become aware of a medical emergency dial the emergency number and state “Respond Blue” followed by your location, the patient bed number and treating medical team. Alternatively, pressing the red ‘Emergency’ button in the patient rooms will sound an alarm throughout the ward, and automatically alert switchboard to announce the location of the Respond Blue</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>A senior clinician will take charge of the Code Blue emergency response team.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Take instructions from the senior clinician in charge of the Code Blue response.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Determine the patients resuscitation status, and if for resuscitation, commence CPR and await staff from the Coronary Cary Unit and Intensive Care Unit to arrive and assist with patient resuscitation. All available nursing and medical staff on the ward should attend and leave if not required</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Assist staff to manage patient as guided and directed by clinical staff of the area.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li>Staff involved in the Code Blue will be offered a debriefing following the event</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px; padding: 1%; width: 14.8921%; background: #f1c40f;">Code Yellow — internal emergency</td>
+<td style="height: 20px; padding: 1%; width: 14.0158%;">
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>If you discover an internal emergency (e.g. flood, noxious fumes), call the emergency number and state “Respond Yellow” followed by the exact location and nature of the emergency.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li>Stand by for instructions from the area warden (yellow hat or vest), door warden (red hat or vest), emergency officer (white hat or vest) or fire brigade/police.</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px; padding: 1%; width: 14.8921%; background: #964B00;">Code Brown — external emergency</td>
+<td style="height: 20px; padding: 1%; width: 14.0158%;">
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>If you become aware of an external emergency that will impact the facility call the emergency number and state “Respond Brown” followed by the nature of the emergency.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Stand by for instructions from the area warden (yellow hat or vest), door warden (red hat or vest), emergency officer (white hat or vest) or fire brigade/police.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li>Staff in the Emergency Department in conjunction with the Site Manager will contact additional staff to come into the hospital to manage the extra patient load that is expected from an external emergency</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Incident Response and Reporting Principles</strong></p>
+<p>The following principles apply to all incidents at Bagwan Health.</p>
+<p style="padding-left: 60px;"><strong>1. People first</strong></p>
+<p style="padding-left: 60px;">Respond to the incident and with the people involved first. Your priority is to ensure the risk and impact to people (including yourself) is minimised as quickly as possible. Notify your supervisor as soon as practical or if you need to clarify anything. Always ask for help if required.</p>
+<p style="padding-left: 60px;"><strong>2. Report all incidents</strong></p>
+<p style="padding-left: 60px;">Complete the reports required including a complete, sequential, factual and clearly written account of the events. If in doubt about if an incident should be reported, report it.</p>
+<p style="padding-left: 60px;"><strong>3. Submit reports to the right place</strong></p>
+<p style="padding-left: 60px;">Submit all reports to the appropriate location.</p>
+<p><strong>Procedures for Responding any Incident Involving a Patient </strong></p>
+<p>Once you are aware of an incident that impacts a patient (in progress or afterwards), they must immediately:</p>
+<p style="padding-left: 30px;">1. Protect the patient from further harm. Failure to respond and protect the patient from further harm following an incident is a breach of duty of care and can lead to disciplinary action.</p>
+<p style="padding-left: 30px;">2. Administer first aid a patient that has been seriously injured and warrants urgent medical review, call a MET (Medical Emergency Team) call via the emergency number 555.</p>
+<table border=".5" style="height: 133px; width: 92.8997%; border-collapse: collapse; border-color: #f2f2f2;">
+<tbody>
+<tr style="height: 33px;">
+<th style="padding: 2% 2% 1% 1%; height: 33px; text-align: left; background: #f2f2f2; width: 14.0158%;">
+<h3><strong><span style="color: #333333; background-color: #f2f2f2;">When to call Victoria Police immediately</span></strong></h3>
+</th>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px; padding: 1%; width: 14.0158%;">
+<p>The Victoria Police Service must be called by dialling 000 if:</p>
+<ul>
+<li>The incident is serious or life-threatening and</li>
+<li>There is a threat of danger to people or property</li>
+<li>It is a serious crime (e.g. physical or sexual assault)</li>
+</ul>
+<p>It is a situation that requires Victoria Police Service assistance</p></td>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px; padding: 1%; width: 14.0158%; background-color: #f2f2f2;">
+<h3><span style="color: #333333;"><strong>For all other cases</strong></span></h3>
+</td>
+</tr>
+<tr>
+<td style="padding: 1%; width: 14.0158%; background-color: #ffffff;">Contact the team leader or manager to authorise calling the Victoria Police Service.</td>
+</tr>
+</tbody>
+</table>
+<p style="padding-left: 60px;"> </p>
+<p style="padding-left: 60px;">3. For suspected, observed, or alleged abuse and neglect of patient incidents, follow the response requirements detailed in the Mandatory Reporting policy.</p>
+<p style="padding-left: 60px;">4. Protect any evidence. If necessary, secure the scene of the incident for internal and/or external investigation.</p>
+<p style="padding-left: 60px;">5. Contact the team leader or manager. For serious incidents, contact must be made within the first 30 minutes. </p>
+<p style="padding-left: 60px;">6. Complete a Bagwan Health – Incident Report or enter incident details in the digital Bagwan Health Incident Reporting Information System. This reporting must be done within two hours of the incident by the staff            member who first identified the incident.</p>
+<p>The Bagwan Health – Incident Report must be completed, scanned, and emailed to your direct supervisor and the Bagwan Health Administration Department (admin@bgh.gov.au). Upon receiving the report, the Administration Department must enter the details from the report into the IRIS by the end of the next business day. Your direct supervisor may follow up with up as well.</p>
+<p> </p>
+<p> </p>
+<p><strong>Additional Steps for Serious Incidents Involving a Patient</strong></p>
+<p> </p>
+<p>For serious incidents, you must:</p>
+<p> </p>
+<p>7. Contact the team leader or manager. Once the patient has been protected from further harm, necessary first aid administered, and if required, emergency services contacted, the staff member who was first aware of the serious incident must make a verbal report to the team leader or manager within the initial 30mins.</p>
+<p>8. It is important that the report is done in person or over the phone, with the team leader or manager providing verbal confirmation that they have been informed. </p>
+<p>9. DO NOT leave written or verbal messages. Only staff who are unable to communicate verbally (i.e., are Deaf or have a hearing impairment) can send a text message. Enough information must be provided in the text message so that the incident is fully understood. The team leader or manager must follow-up with an in-person meeting as soon as possible to ensure the requirements of this procedure are properly carried out.</p>
+<p>10. If the staff member reporting the incident is unable to contact and speak with the team leader or manager, they must phone the service manager. If the service manager cannot be reached, then they must contact the General Manager.</p>
+<p>11. Carry out follow-up actions as directed by the team leader or manager. This can include contacting the patient’s emergency contact to inform them of the incident.</p>
+<p> </p>
+<p> </p>
+<p><strong>Responsibilities</strong></p>
+<p> </p>
+<p>Every incident must be reported. An incident report (Bagwan Health – Incident Report) must be completed by the staff member who witnessed the incident. If there were no witnesses, it must be completed by the staff member who was first on scene after the incident occurred, or the staff member whom the incident was reported to. There are specific responsibilities depending on your role within Bagwan Health.</p>
+<p> </p>
+<p><strong>General Responsibilities</strong></p>
+<p> </p>
+<p>All staff, contractors, volunteers and students are required to: </p>
+<p> </p>
+<p style="padding-left: 30px;">• Have read this policy and procedures</p>
+<p style="padding-left: 30px;">• Whenever an incident occurs staff need to apply the Incident Response &amp; Reporting Principles and follow the Procedure for Responding to any Incident Involving a Patient </p>
+<p style="padding-left: 30px;">• After the immediate emergency has passed, complete the relevant electronic/online incident report(s) – see the section Reporting Incidents at Bagwan Health of this document for reports that must be actioned.</p>
+<p style="padding-left: 30px;">• Consult with the relevant team leader or manager available regarding next steps and any information they require.</p>
+<p style="padding-left: 30px;">• Inform the patient’s family of incidents that involve injury or hospitalisation of their relative, according to agreed arrangements and of all allegations of physical and/or sexual assault.</p>
+<p style="padding-left: 30px;">• Complete any other reports required such as the DINMA report, patient progress or case notes, etc.</p>
+<p> </p>
+<table border=".5" style="height: 133px; width: 92.8997%; border-collapse: collapse; border-color: #f2f2f2;">
+<tbody>
+<tr style="height: 33px;">
+<th style="padding: 2% 2% 1% 1%; height: 33px; text-align: left; background: #f2f2f2; width: 14.0158%;">
+<h3><span style="color: #333333;"><strong>Incident categorisation rule</strong></span></h3>
+</th>
+</tr>
+<tr style="height: 20px;">
+<td style="height: 20px; padding: 1%; width: 14.0158%;">
+<p>Staff, contractors, Allied Health professionals, Credentialed Specialists and students who are unsure of the category of an incident, should treat the report as being at the higher level or check with their supervisor as soon as possible.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><strong style="mso-bidi-font-weight: normal;"><span style="font-size: 12.0pt; mso-ansi-language: EN-AU; mso-fareast-language: EN-AU;"><br/>Team Leader and Manager Responsibilities</span></strong></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt;">Team Leaders and Managers are responsible for ensuring that:</span></p>
+<p class="MsoListParagraphCxSpFirst" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: #1000; mso-fareast-language: #1000; mso-bidi-language: #1000;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt;">An online incident report has been completed.</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: #1000; mso-fareast-language: #1000; mso-bidi-language: #1000;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt;">Reporting processes have been followed within required timelines.</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: #1000; mso-fareast-language: #1000; mso-bidi-language: #1000;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt;">All other required reports – as per this policy and or regulatory requirements – are completed and forwarded to the appropriate government or regulatory body.</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: #1000; mso-fareast-language: #1000; mso-bidi-language: #1000;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt;">The patient’s family is informed of incidents that involve injury or hospitalisation of their relative, according to agreed arrangements and of all allegations of physical and/or sexual assault.</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: #1000; mso-fareast-language: #1000; mso-bidi-language: #1000;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt;">Ensure patients are offered medical assistance and counselling as required.</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: #1000; mso-fareast-language: #1000; mso-bidi-language: #1000;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt;">Communication strategies have been followed to ensure all relevant hospital staff, contractors, volunteers and students are aware of the incident and any recommendations or control measures that may prevent or reduce the risk of the incident reoccurring.</span></p>
+<p class="MsoListParagraphCxSpLast" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: #1000; mso-fareast-language: #1000; mso-bidi-language: #1000;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt;">Analysis of incident trends and implementation of recommendations and or control measures is documented.</span><span style="font-size: 12.0pt; font-family: 'Times New Roman',serif; mso-ansi-language: #1000; mso-fareast-language: #1000; mso-bidi-language: #1000;"> </span></p>
+<p class="MsoListParagraphCxSpFirst" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: #1000; mso-fareast-language: #1000; mso-bidi-language: #1000;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt;">Reporting to the Board any CIMS Major and Non-Major incidents and incidents reported on the Bagwan Health Incident Reporting Tool at the next scheduled meeting or immediately if there are serious immediate implications for the organisation</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: #1000; mso-fareast-language: #1000; mso-bidi-language: #1000;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt;">The Manager (Division) or CEO to report to DHHS Major incidents (DHHS and NDIS funded services) within 24 hrs. to DHHS </span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: #1000; mso-fareast-language: #1000; mso-bidi-language: #1000;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt;">Investigate and assess each incident and develop control measures and risk management plans accordingly. This can be done by using the online CIMS tools in case of an incident impacting on patients (DHHS and NDIS funded services).</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: #1000; mso-fareast-language: #1000; mso-bidi-language: #1000;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt;">Analyse the events to add any relevant information to Occupational Violence Risk Assessments or Client Behaviour Support Plans</span></p>
+<p> </p>
+<p class="MsoListParagraphCxSpLast" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: #1000; mso-fareast-language: #1000; mso-bidi-language: #1000;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt;">Ensure Incident Report findings and recommendations are recorded for Continuous Improvement towards Risk Management, OH&amp;S and Quality systems.</span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><strong style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-size: 12.0pt; color: black;">Bagwan Health CEO Responsibilities</span></strong></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt; color: black;">The Bagwan Health Chief Executive Officer (CEO) is accountable for all incidents at or related to Bagwan Health and is responsible for ensuring:</span></p>
+<p class="MsoListParagraphCxSpFirst" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: black; mso-ansi-language: #1000; mso-fareast-language: #1000; mso-bidi-language: #1000;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; color: black;">Continuous improvement strategies are development and implemented</span></p>
+<p> </p>
+<p class="MsoListParagraphCxSpLast" style="margin-left: 78.55pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span style="font-size: 12.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; mso-ansi-language: #1000; mso-fareast-language: #1000; mso-bidi-language: #1000;">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: 'Times New Roman';">         </span></span><!--[endif]--><span lang="EN-US" style="font-size: 12.0pt; color: black;">Internal and external reporting requirements are met, in line with relevant legislated requirements.</span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><strong style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-size: 12.0pt;">Procedure for Reporting Incidents at Bagwan Health </span></strong></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt;">Any incident that occurs as a part of Bagwan Health activities must be reported after the immediate risk has been dealt with. This includes incidents that occur within Bagwan Health run premises as well as official outings organised and/or coordinated by Bagwan Health staff.</span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt;">All incident reports – both internal to Bagwan Health and external reports to government or regulatory bodies – must include a complete, sequential, factual and account of the events.</span></p>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt;">The following table outlines the reporting that must be completed for any and every incident that occurs during any Bagwan Health activities. All Bagwan Health – Incident reports must be submitted as per the procedures in this document.</span></p>
+<table border=".5" style="height: 395px; width: 1543px; border-collapse: collapse; border-color: #f2f2f2;">
+<tbody>
+<tr>
+<th style="padding: 2% 2% 1% 1%; text-align: left; background: #f2f2f2; width: 2.27154%;">
+<h3><span style="color: #333333;"><strong>Incident type and/or patient location</strong></span></h3>
+</th>
+<th style="padding: 2% 2% 1% 1%; text-align: left; background: #f2f2f2; width: 2.27154%;">
+<h3><span style="color: #333333;"><strong>Relevant forms</strong></span></h3>
+</th>
+<th style="padding: 2% 2% 1% 1%; text-align: left; background: #f2f2f2; width: 3.5707%;">
+<h3><span style="color: #333333;"><strong>Person(s) responsible</strong></span></h3>
+</th>
+<th style="padding: 2% 2% 1% 1%; text-align: left; background: #f2f2f2; width: 4.55069%;">
+<h3><span style="color: #333333;"><strong>Relevant section in policy and procedure</strong></span></h3>
+</th>
+</tr>
+<tr style="height: 20px;">
+<td style="padding: 1%; width: 2.27154%;">
+<p>Incidents that occur as part of Bagwan Health activities</p>
+</td>
+<td style="padding: 1%; width: 2.27154%;">
+<p>Bagwan Health – Incident report</p>
+</td>
+<td style="padding: 1%; width: 3.5707%;">
+<p>Any staff, contractor, volunteer or student that is involved in and/or witnesses the incident occur or attends soon after the incident.</p>
+</td>
+<td style="padding: 1%; width: 4.55069%;">
+<p>Reporting incidents at Bagwan Health</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNormal" style="margin-left: 42.55pt;"><span lang="EN-US" style="font-size: 12.0pt;">The following reporting may also be applied, depending on the circumstances of the incident.</span></p>
+<table border=".5" style="height: 731px; width: 1541px; border-collapse: collapse; border-color: #f2f2f2;">
+<tbody>
+<tr style="height: 161px;">
+<th style="padding: 2% 2% 1% 1%; text-align: left; background: #f2f2f2; width: 2.27154%; height: 161px;">
+<h3><span style="color: #333333;"><strong>Incident type and/or patient location</strong></span></h3>
+</th>
+<th style="padding: 2% 2% 1% 1%; text-align: left; background: #f2f2f2; width: 2.27154%; height: 161px;">
+<h3><span style="color: #333333;"><strong>Relevant forms</strong></span></h3>
+</th>
+<th style="padding: 2% 2% 1% 1%; text-align: left; background: #f2f2f2; width: 3.5707%; height: 161px;">
+<h3><span style="color: #333333;"><strong>Person(s) responsible</strong></span></h3>
+</th>
+<th style="padding: 2% 2% 1% 1%; text-align: left; background: #f2f2f2; width: 4.55069%; height: 161px;">
+<h3><span style="color: #333333;"><strong>Relevant section in policy and procedure</strong></span></h3>
+</th>
+</tr>
+<tr style="height: 220px;">
+<td style="width: 2.27154%; height: 220px;" width="142">
+<p>Missing patients</p>
+</td>
+<td style="padding: 1%; width: 2.27154%; height: 220px;">
+<p>DHS – Missing persons checklist</p>
+</td>
+<td style="padding: 1%; width: 3.5707%; height: 220px;">
+<p>Any staff, contractor, volunteer or student that is involved in and/or witnesses the incident occur or attends soon after the incident.</p>
+</td>
+<td style="padding: 1%; width: 4.55069%; height: 220px;">
+<p>Procedure for responding to any incident involving a patient</p>
+</td>
+</tr>
+<tr style="height: 94px;">
+<td style="padding: 1%; width: 2.27154%; height: 94px;">
+<p>Child abuse and neglect incidents</p>
+</td>
+<td style="padding: 1%; width: 2.27154%; height: 94px;">
+<p>Report to the Commission for Children</p>
+</td>
+<td style="padding: 1%; width: 3.5707%; height: 94px;">
+<p>Bagwan Health CEO</p>
+</td>
+<td style="padding: 1%; width: 4.55069%; height: 94px;">
+<p>Reporting child abuse and neglect incidents</p>
+</td>
+</tr>
+<tr style="height: 53px;">
+<td style="padding: 1%; width: 2.27154%; height: 53px;">
+<p>Incidents that seriously impact staff, contractor, volunteer or student</p>
+</td>
+<td style="padding: 1%; width: 2.27154%; height: 53px;">
+<p>Worksafe VIC – Incident notification form</p>
+</td>
+<td style="padding: 1%; width: 3.5707%; height: 53px;">
+<p>Any staff, contractor, volunteer or student that is involved in and/or witnesses the incident occur or attends soon after the incident.</p>
+</td>
+<td style="padding: 1%; width: 4.55069%; height: 53px;">
+<p>Refer to Occupational Health and Safety policy</p>
+</td>
+</tr>
+<tr style="height: 53px;">
+<td style="padding: 1%; width: 2.27154%; height: 53px;">
+<p>Suspected crimes</p>
+</td>
+<td style="padding: 1%; width: 2.27154%; height: 53px;">
+<p>Verbal report maybe required</p>
+</td>
+<td style="padding: 1%; width: 3.5707%; height: 53px;">
+<p>Any staff, contractor, volunteer or student that is involved in and/or witnesses the incident occur or attends soon after the incident.</p>
+</td>
+<td style="padding: 1%; width: 4.55069%; height: 53px;">
+<p>Procedure for responding to any incident involving a patient</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Reporting Child Abuse and Neglect Incidents</strong></p>
+<p>The Victorian Reportable Conduct Scheme requires the centralised reporting of allegations of child abuse (sexual, physical and psychological) from workers or volunteers in relevant organisations with a high level of responsibility for children. From 1 January 2018 the scheme was applied to hospitals, other disability services for children, providers of overnight camps, religious bodies and the residential facilities of boarding schools.</p>
+<p>The Victorian Reportable Conduct Scheme requires allegations of suspected criminal conduct to be reported to Victoria Police as the first priority and will maintain the primacy of an investigation by Victoria Police of any allegations of criminal misconduct.</p>
+<p>For child abuse and neglect incidents the On-Call Management or Division Manager and CEO need to be informed immediately. Bagwan Health CEO (or her delegate) must report any allegation of reportable conduct to the Commission for Children and Young People within three business days of becoming aware of the allegation. It is a criminal offence for Bagwan Health CEO to fail to notify (within 3 business days) and update (within 30 calendar days) the Commission for Children and Young People (CCYP) about reportable allegations.</p>
+<p>Bagwan Health CEO Responsibilities</p>
+<p>The Bagwan Health CEO needs to be informed immediately of any child abuse or neglect incidents. The CEO (or a delegate) must report any allegation of reportable conduct to the Commission for Children and Young People (CCYP) within 3 business days of becoming aware of the allegation. It is a criminal offence for Bagwan Health CEO to fail to notify (within 3 business days) and update (within 30 calendar days) the CCYP about reportable allegations.</p>
+<p>The reporting to the CCYP by the Bagwan Health CEO is in addition to all the current steps that are required to be undertaken when an allegation of child abuse (sexual, physical and psychological) or significant neglect is made.</p>
+<p>Emergency Response Procedures</p>
+<p>Bagwan Health is committed to ensuring a safe environment and appropriate emergency preparedness for our visiting doctors. To help us achieve this you are required to: </p>
+<p style="padding-left: 30px;">• Take responsibility for working safely by complying with safety procedures and not harming others by your actions or omissions</p>
+<p style="padding-left: 30px;">• Wear personal protective equipment (PPE) where required</p>
+<p style="padding-left: 30px;">• Use safety equipment provided </p>
+<p style="padding-left: 30px;">• Raise any safety concerns you may have</p>
+<p style="padding-left: 30px;">• In an emergency follow instructions from the person in charge. </p>
+<p>In the event of an internal emergency the person in charge has legal authority to direct all parties. Initially the person in charge will be the area warden who will be identified by a yellow hat or vest. Once the emergency officer arrives on the scene they will support the area warden. The emergency officer is identified by a white hat or vest.</p>
+<p>Everybody on the site, no matter how senior, is legally required to follow the directions of the area warden or emergency officer — therefore, the primary role of the specialist in an internal emergency is to follow the instructions of those in charge.</p>
+<p><strong>Evacuation</strong></p>
+<p>If you are requested to assist in the evacuation of patients, please note that the order of evacuation is as follows:</p>
+<p style="padding-left: 30px;">• Ambulant patients and visitors first</p>
+<p style="padding-left: 30px;">• Semi-ambulant next</p>
+<p style="padding-left: 30px;">• Non-ambulant last.</p>
+<p>When directed to evacuate an area, you should do so immediately. If gathering personal items, do so promptly and do not endanger yourself in doing this. </p>
+<p>Lifts should not be used during a Code Red incident unless approved by the fire brigade. </p>
+<p>If evacuation is required, a Code Orange will be called. In normal circumstances, the area warden will coordinate this.</p>
+<p>The Role of the Specialist during an Internal Emergency in the Operating Theatres</p>
+<p>The role of the specialist in theatres is potentially more complex than on the wards. Primarily the specialist’s responsibility during an internal emergency in theatre is to ready the patient for evacuation as quickly and safely as possible.</p>
+<p>The specialist is still expected to take direction from the area warden or emergency officer, however this direction will require critical medical input in determining when and how to safely move patients. </p>
+<p><strong>Evacuation Diagrams</strong></p>
+<p>Each area has wall-mounted evacuation diagrams indicating the location of key fire safety features including:</p>
+<p style="padding-left: 30px;">• Break glass alarms</p>
+<p style="padding-left: 30px;">• Hose reels</p>
+<p style="padding-left: 30px;">• Fire extinguishers</p>
+<p style="padding-left: 30px;">• Exit points</p>
+<p style="padding-left: 30px;">• WIPs — warden intercommunication phone</p>
+<p style="padding-left: 30px;">• Assembly areas.</p>
+<p>You should note the location and information contained on these diagrams when working in an area.</p>
+<p>The internal Emergency number extension is 555. This extension is used for notifying emergencies and will be given priority by switchboard staff/person answering the call.</p>
+<p><a href="/Bagwan2.0/documents/policies-and-procedures/Bagwan%20Health%20-Emergency%20Response%20V1.0.docx">Click here to download policies</a></p>
+<p> </p>
+</article>
+<article class="mt-3"></article>
+</div>
+<div class="b-0 container">
+<div class="">
+<div class="" id="bottom_navigation">
+<div id="next-prev">
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- row-->
+<!-- #cde -->
+<script src="/Bagwan2.0/wp-content/themes/118/js/glossary-tooltip.js"></script><script src="/Bagwan2.0/wp-content/themes/118/js/jquery.glossarize.js"></script>
+<div class="wrapper">
+<div class="container">
+</div>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<footer class="footer">
+<div class="footer__text container">
+<p>RMIT would like to acknowledge Wurundjeri people of the Kulin Nations as the Traditional Owners of the land on which the University stands. We respectfully recognise Elders past, present and future.</p>
+<p>© Copyright 2026 <a class="a__footer" href="https://www.rmit.edu.au/">RMIT</a> - This website is for educational purpose only.</p>
+<hr class="footer__hr"/>
+</div>
+</footer>
+<script src="/Bagwan2.0/wp-content/themes/118/js/menu.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/modernizr.custom.js"></script>
+<script src="/Bagwan2.0/wp-content/themes/118/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+   // do the opening and closing for the menu accordion
+   (function ($) {
+     $(document).ready(function () {
+       $('#cssmenu li.has-sub>a').on('click', function () {
+         $(this).removeAttr('href');
+         var element = $(this).parent('li');
+         if (element.hasClass('open')) {
+           element.removeClass('open');
+           element.find('li').removeClass('open');
+           element.find('ul').slideUp();
+         } else {
+           element.addClass('open');
+           element.children('ul').slideDown();
+           element.siblings('li').children('ul').slideUp();
+           element.siblings('li').removeClass('open');
+           element.siblings('li').find('li').removeClass('open');
+           element.siblings('li').find('ul').slideUp();
+         }
+       });
+
+       $('#cssmenu>ul>li.has-sub>a').append('<span class="holder"></span>');
+
+     });
+   })(jQuery);
+ //ensure nav loads closed
+ $('#reveal').addClass('navshow').removeClass('test2');
+ //ensure the nav is always open for the current page
+ $("li.menu-item" ).children('ul').css({ display: "none" });
+ $('li.active').closest('ul').addClass('open').css({ display: "block" })
+ </script><script>
+     $(document).ready(function(){
+         $("#cssmenu>ul>li").parent().addClass("dropdown");
+       //  $("#cssmenu>ul").addClass("dropdown-menu");
+         $("#cssmenu>ul>li.has-sub>a").addClass("dropdown-toggle");
+         $("ul.has-sub li a").removeClass("dropdown-toggle");
+         $('.navbar .dropdown-toggle').append('<b class="caret"></b>');
+     });
+ </script><script>
+   //nave menu
+   $(document).ready(function () {
+       $('#sidebarCollapse').on('click', function () {
+         $('#sidebar').toggleClass('active');
+       });
+   });
+   //fullscreen
+   //invokes browser's fullscreen mode
+   function fullscreen() {
+     var isInFullScreen = (document.fullscreenElement && document.fullscreenElement  !== null) ||
+         (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
+         (document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
+         (document.msFullscreenElement && document.msFullscreenElement !== null);
+
+     var docElm = document.documentElement;
+     if (!isInFullScreen) {
+         if (docElm.requestFullscreen) {
+             docElm.requestFullscreen();
+         } else if (docElm.mozRequestFullScreen) {
+             docElm.mozRequestFullScreen();
+         } else if (docElm.webkitRequestFullScreen) {
+             docElm.webkitRequestFullScreen();
+         } else if (docElm.msRequestFullscreen) {
+             docElm.msRequestFullscreen();
+         }
+     } else {
+         if (document.exitFullscreen) {
+             document.exitFullscreen();
+         } else if (document.webkitExitFullscreen) {
+             document.webkitExitFullscreen();
+         } else if (document.mozCancelFullScreen) {
+             document.mozCancelFullScreen();
+         } else if (document.msExitFullscreen) {
+             document.msExitFullscreen();
+         }
+     }
+ }
+</script><script defer="True" src="/Bagwan2.0/assets/static.js"></script></body></html>
