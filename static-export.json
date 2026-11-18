@@ -2613,5 +2613,6 @@
     }
   ],
   "tour_scenes": 22,
-  "youtube_videos_included": false
+  "youtube_embeds_included": true,
+  "youtube_video_files_included": false
 }

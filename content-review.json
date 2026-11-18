@@ -1,0 +1,24 @@
+{
+  "reviewed_on": "2026-11-18",
+  "fixed": [
+    "Departments index now links to all five existing department pages.",
+    "Empty incident/patient-record pages and the placeholder organisation chart now lead to working pages.",
+    "Replaced broken staff-list plugin shortcodes with 40 source-backed staff/role entries and department navigation.",
+    "Departmental document headings now lead to the available local documents and resources.",
+    "All four doctor profile buttons now open accessible dialogs containing the supplied contact information.",
+    "Community policy/training buttons now link to actual local pages; extra H1 headings were corrected.",
+    "Restored all 12 original YouTube embeds, responsive players, watch-on-YouTube links and a video resource index.",
+    "Linked breadcrumbs, removed duplicate home breadcrumbs, corrected labels and added persistent patient-system navigation.",
+    "Interpreting scenario buttons now have real section targets for every step.",
+    "Wide policy and patient-form tables scroll within the page; PDF controls support printing partially completed forms and the messageboard proceeds to the local patient database."
+  ],
+  "unresolved": [
+    "The original nursing and standalone ATSI staff lists were not provided; no staff or contact details were invented.",
+    "Medication safety: no source policy text or document was supplied.",
+    "Nursing and clinical handover: no source policy text or document was supplied.",
+    "HR and ATSI galleries contain only broken source plugin IDs; their intended playlist/video URLs are still needed.",
+    "Clinical policy accuracy, outdated legal references and review comments inside the supplied documents require a content-owner review; original document bytes are preserved."
+  ],
+  "staff_entries": 40,
+  "youtube_embeds": 12
+}

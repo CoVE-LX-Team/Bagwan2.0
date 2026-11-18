@@ -9,13 +9,17 @@ The root [`index.html`](index.html) is the intranet homepage. The original route
 ## Static site
 
 - The public intranet pages, departments, news, policies, organisation charts and patient-management screens have been exported to HTML.
-- Images, styles, scripts, fonts, H5P activity data and 360° panoramas are served from this repository. YouTube videos and their player scripts are excluded.
+- Images, styles, scripts, fonts, H5P activity data and 360° panoramas are served from this repository. The 12 original YouTube embeds are preserved; YouTube hosts playback and video files. [Browse the videos](videos/index.html).
 - Google Drive embeds are replaced with local document lists and download links. The complete migrated files remain in `documents/`.
 - The virtual tour uses the original panoramas and hotspot text with a self-hosted Pannellum viewer, room navigation and keyboard-accessible information controls.
 - Patient forms and the replacement training incident report support browser-local drafts, draft downloads and printing to PDF. GitHub Pages does not receive form submissions.
 - `.nojekyll` serves the committed HTML and assets directly; WordPress and a build server are not required.
 
-`static-export.json` records the 90 source URLs, local destinations, copied asset hashes and assets already unavailable at the source. This is a source conversion, not an editorial rewrite of the learning materials: pre-existing empty content pages and outdated document content still require a separate content review. The original counselling panorama and an evacuation-plan image are unavailable; the tour avoids requesting those missing files.
+`static-export.json` records the 90 source URLs, local destinations, copied asset hashes and assets already unavailable at the source. `content-review.json` records repaired content/navigation gaps and unresolved source omissions. The original counselling panorama and an evacuation-plan image are unavailable; the tour avoids requesting those missing files.
+
+The review repairs the Departments index, staff directory using published organisation-chart names and roles, doctor profile dialogs, document headings, breadcrumbs, community links, interpreting scenario targets and patient-system navigation. Wide policy/form tables scroll within the page, and patient-system headers and draft controls fit phone screens. Patient-form PDF controls now use browser printing, including partially completed forms. Clinical document files and the original review documents remain unchanged.
+
+Remaining content gaps require source material: the HR/ATSI video galleries supplied only broken plugin IDs; nursing and ATSI staff lists were absent; medication-safety and nursing-handover policy pages contained no documents. Those pages identify the gap and link to available resources. Clinical accuracy and outdated references in original materials need content-owner review.
 
 The largest copied site asset is `VR/public/static_assets/360_images/dentalroom_Panorama.jpg` (5,400,055 bytes). No LFS pointers are used by the published site.
 

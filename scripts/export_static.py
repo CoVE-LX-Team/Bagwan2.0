@@ -265,7 +265,12 @@ def rewrite_page(url, page):
     for tag in list(soup.select('iframe')):
         src = tag.get('src', '')
         if youtube(src):
-            tag.decompose()
+            tag['title'] = tag.get('title') or 'Bagwan Health video'
+            tag['loading'] = 'lazy'
+            tag['allow'] = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+            tag['allowfullscreen'] = ''
+            tag['class'] = list(tag.get('class', [])) + ['youtube-video']
+            tag['src'] = urlunsplit(('https', 'www.youtube.com', urlsplit(src).path, 'rel=0', ''))
         elif file_id(src) in FOLDERS:
             replacement = BeautifulSoup('<section class="local-documents">' + document_list(file_id(src)) + '</section>', 'lxml').section
             tag.replace_with(replacement)
@@ -274,9 +279,6 @@ def rewrite_page(url, page):
             if tag.get('width') == '1000':
                 tag['width'] = '100%'
     for tag in list(soup.select('a[href]')):
-        if youtube(tag.get('href', '')):
-            tag.decompose()
-            continue
         tag['href'] = local_link(tag['href'], url)
         if tag['href'].startswith(SITE):
             tag.attrs.pop('target', None)
@@ -431,6 +433,9 @@ def repair_dependencies():
                     link['href'] = urlsplit(href).path + '?v=' + version
         for style in soup.select('style'):
             style.string = clean_css(node_text(style))
+        for script in soup.select('script[src]'):
+            if urlsplit(script['src']).path == public('assets/static.js'):
+                script['src'] = public('assets/static.js') + '?v=' + hashlib.sha256((ROOT / 'assets/static.js').read_bytes()).hexdigest()[:12]
         for tag in list(soup.select('img[src=""]')): tag.decompose()
         for script in soup.select('script'):
             if 'window.H5PIntegration = ' in node_text(script):
@@ -483,10 +488,13 @@ def main():
     scene_count = tour()
     download_assets()
     repair_dependencies()
+    from repair_content import repair_site
+    content_review = repair_site(ROOT, SITE, FILES, FOLDERS)
+    (ROOT / 'content-review.json').write_text(json.dumps(content_review, indent=2, ensure_ascii=False) + '\n')
     (ROOT / 'VR/public/static_assets/unavailable.json').write_text(json.dumps([unquote(urlsplit(f['url']).path.split('/VR/public/static_assets/', 1)[1]) for f in FAILURES if '/VR/public/static_assets/' in f['url']]))
     (ROOT / 'index.html').write_bytes((ROOT / 'scorm/intranet/index.html').read_bytes())
     (ROOT / '.nojekyll').touch()
-    report = {'source': SOURCE, 'base_path': SITE, 'exported_on': '2026-11-18', 'pages': [{'url': u, 'path': p['path'], 'source_status': p['status']} for u, p in sorted(PAGES.items())], 'assets': [{'source_url': u, **a} for u, a in sorted(ASSETS.items()) if a.get('size_bytes')], 'unavailable_source_assets': FAILURES, 'tour_scenes': scene_count, 'youtube_videos_included': False}
+    report = {'source': SOURCE, 'base_path': SITE, 'exported_on': '2026-11-18', 'pages': [{'url': u, 'path': p['path'], 'source_status': p['status']} for u, p in sorted(PAGES.items())], 'assets': [{'source_url': u, **a} for u, a in sorted(ASSETS.items()) if a.get('size_bytes')], 'unavailable_source_assets': FAILURES, 'tour_scenes': scene_count, 'youtube_embeds_included': True, 'youtube_video_files_included': False}
     (ROOT / 'static-export.json').write_text(json.dumps(report, indent=2) + '\n')
     print('Exported', len(PAGES), 'pages,', len(report['assets']), 'assets and', scene_count, 'tour scenes.', flush=True)
 
