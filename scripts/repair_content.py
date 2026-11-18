@@ -194,7 +194,7 @@ def repair_site(root, base, files, folders):
     video_cards = ''.join('<li><h2>' + esc(v['title']) + '</h2><iframe class="youtube-video" loading="lazy" title="' + esc(v['title']) + '" src="https://www.youtube.com/embed/' + v['youtube_id'] + '?rel=0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe><p>' + anchor(v['source_page'], 'Open the original learning page') + '</p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=' + v['youtube_id'] + '">Watch on YouTube</a></li>' for v in videos)
     create('videos/index.html', 'Video resources', '<p>Bagwan Health videos. Playback is provided by YouTube.</p><ul class="video-library">' + video_cards + '</ul>')
     report['fixed'].append(f'Restored all {len(videos)} original YouTube embeds, responsive players, watch-on-YouTube links and a video resource index.')
-    report['unresolved'].append('HR and ATSI galleries contain only broken source plugin IDs; their intended playlist/video URLs are still needed.')
+    report['unresolved'].append('HR and ATSI galleries are skipped for now: public live/development pages, the public WordPress API and Wayback lookups did not recover their intended video URLs.')
     for relative in ['scorm/department-pages/hr-services/index.html', 'scorm/intranet/resources/index.html']:
         soup = read(relative)
         headings = [x for x in soup.find_all(['h2','h3','h4']) if 'video' in x.get_text().lower()]
@@ -211,6 +211,10 @@ def repair_site(root, base, files, folders):
         if soup.h1: titles[path.relative_to(root).as_posix()] = soup.h1.get_text(' ', strip=True).replace('Emergency repsonse', 'Emergency response')
     for path in paths:
         relative = path.relative_to(root).as_posix();soup = read(relative)
+        for navigation in soup.select('#bottom_navigation'):
+            navigation.decompose()
+        for navigation in soup.select('#next-prev'):
+            navigation.decompose()
         page_titles = soup.find_all('title')
         if len(page_titles) > 1:
             page_titles[0].string = page_titles[-1].get_text()
@@ -292,6 +296,7 @@ def repair_site(root, base, files, folders):
             soup.body.insert(0,back)
         save(relative,soup)
     report['fixed'].append('Linked breadcrumbs, removed duplicate home breadcrumbs, corrected labels and added persistent patient-system navigation.')
+    report['fixed'].append('Removed the Next page / Previous page footer navigation from news articles.')
     report['fixed'].append('Interpreting scenario buttons now have real section targets for every step.')
     report['fixed'].append('Wide policy and patient-form tables scroll within the page; PDF controls support printing partially completed forms and the messageboard proceeds to the local patient database.')
     report['unresolved'].append('Clinical policy accuracy, outdated legal references and review comments inside the supplied documents require a content-owner review; original document bytes are preserved.')

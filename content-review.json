@@ -9,6 +9,7 @@
     "Community policy/training buttons now link to actual local pages; extra H1 headings were corrected.",
     "Restored all 12 original YouTube embeds, responsive players, watch-on-YouTube links and a video resource index.",
     "Linked breadcrumbs, removed duplicate home breadcrumbs, corrected labels and added persistent patient-system navigation.",
+    "Removed the Next page / Previous page footer navigation from news articles.",
     "Interpreting scenario buttons now have real section targets for every step.",
     "Wide policy and patient-form tables scroll within the page; PDF controls support printing partially completed forms and the messageboard proceeds to the local patient database."
   ],
@@ -16,7 +17,7 @@
     "The original nursing and standalone ATSI staff lists were not provided; no staff or contact details were invented.",
     "Medication safety: no source policy text or document was supplied.",
     "Nursing and clinical handover: no source policy text or document was supplied.",
-    "HR and ATSI galleries contain only broken source plugin IDs; their intended playlist/video URLs are still needed.",
+    "HR and ATSI galleries are skipped for now: public live/development pages, the public WordPress API and Wayback lookups did not recover their intended video URLs.",
     "Clinical policy accuracy, outdated legal references and review comments inside the supplied documents require a content-owner review; original document bytes are preserved."
   ],
   "staff_entries": 40,

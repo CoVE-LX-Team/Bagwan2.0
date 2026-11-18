@@ -19,7 +19,9 @@ The root [`index.html`](index.html) is the intranet homepage. The original route
 
 The review repairs the Departments index, staff directory using published organisation-chart names and roles, doctor profile dialogs, document headings, breadcrumbs, community links, interpreting scenario targets and patient-system navigation. Wide policy/form tables scroll within the page, and patient-system headers and draft controls fit phone screens. Patient-form PDF controls now use browser printing, including partially completed forms. Clinical document files and the original review documents remain unchanged.
 
-Remaining content gaps require source material: the HR/ATSI video galleries supplied only broken plugin IDs; nursing and ATSI staff lists were absent; medication-safety and nursing-handover policy pages contained no documents. Those pages identify the gap and link to available resources. Clinical accuracy and outdated references in original materials need content-owner review.
+The Next page / Previous page footer navigation has been removed from news articles. Interpreting scenario controls remain available within the activity.
+
+Remaining content gaps require source material: the HR/ATSI video galleries supplied only broken plugin IDs and are skipped for now after public-site/API/archive recovery checks found no URLs; nursing and ATSI staff lists were absent; medication-safety and nursing-handover policy pages contained no documents. Those pages identify the gap and link to available resources. Clinical accuracy and outdated references in original materials need content-owner review.
 
 The largest copied site asset is `VR/public/static_assets/360_images/dentalroom_Panorama.jpg` (5,400,055 bytes). No LFS pointers are used by the published site.
 
