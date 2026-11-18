@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "pages": [
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/staff-repository/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/embeddedfolderview?id=16EyTFnpoY4X5js6NqwcypJbFAn6Q6hco#list",
+          "target_id": "16EyTFnpoY4X5js6NqwcypJbFAn6Q6hco",
+          "target_type": "folder",
+          "local_path": "documents/finance/",
+          "local_href": null
+        },
+        {
+          "source_url": "https://drive.google.com/embeddedfolderview?id=1BQdUCDP5WFwHvbMc82yybAtJsjRtNV8L#list",
+          "target_id": "1BQdUCDP5WFwHvbMc82yybAtJsjRtNV8L",
+          "target_type": "folder",
+          "local_path": "documents/marketing-and-communications/",
+          "local_href": null
+        },
+        {
+          "source_url": "https://drive.google.com/embeddedfolderview?id=1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm#list",
+          "target_id": "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm",
+          "target_type": "folder",
+          "local_path": "documents/human-resources/",
+          "local_href": null
+        },
+        {
+          "source_url": "https://drive.google.com/embeddedfolderview?id=1Wic2sz9z9jNv3WRw-1YKEWoNQKVE38Vp#list",
+          "target_id": "1Wic2sz9z9jNv3WRw-1YKEWoNQKVE38Vp",
+          "target_type": "folder",
+          "local_path": "documents/administration/",
+          "local_href": null
+        },
+        {
+          "source_url": "https://drive.google.com/embeddedfolderview?id=1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D#list",
+          "target_id": "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D",
+          "target_type": "folder",
+          "local_path": "documents/policies-and-procedures/",
+          "local_href": null
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/resources-and-tools/interpreting-services/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/open?id=1mOCSmMUS4KAruBZiuZ1Bvf9Ko0ZOyE-i",
+          "target_id": "1mOCSmMUS4KAruBZiuZ1Bvf9Ko0ZOyE-i",
+          "target_type": "file",
+          "local_path": "documents/departmental/interpreting-services/Bagwan Health Interpreter booking request form.docx",
+          "local_href": "documents/departmental/interpreting-services/Bagwan%20Health%20Interpreter%20booking%20request%20form.docx"
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/resources-and-tools/lab-technologies/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/embeddedfolderview?id=1Y80CJdcwtupHmBaDb4x-lB0POf6qOn4r#list",
+          "target_id": "1Y80CJdcwtupHmBaDb4x-lB0POf6qOn4r",
+          "target_type": "folder",
+          "local_path": "documents/departmental/laboratory-technologies/",
+          "local_href": null
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/resources-and-tools/logisitics/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/embeddedfolderview?id=1W4BXnRCYg4T2PgGh7lpfTQwhGqLl018M#list",
+          "target_id": "1W4BXnRCYg4T2PgGh7lpfTQwhGqLl018M",
+          "target_type": "folder",
+          "local_path": "documents/departmental/logistics/",
+          "local_href": null
+        },
+        {
+          "source_url": "https://drive.google.com/embeddedfolderview?id=1Wic2sz9z9jNv3WRw-1YKEWoNQKVE38Vp#list",
+          "target_id": "1Wic2sz9z9jNv3WRw-1YKEWoNQKVE38Vp",
+          "target_type": "folder",
+          "local_path": "documents/administration/",
+          "local_href": null
+        },
+        {
+          "source_url": "https://drive.google.com/embeddedfolderview?id=1uju1GiX2WzW6pPByX0YV0qGwjHQsF1uB#list",
+          "target_id": "1uju1GiX2WzW6pPByX0YV0qGwjHQsF1uB",
+          "target_type": "folder",
+          "local_path": "documents/policies-and-procedures/logistics/",
+          "local_href": null
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/resources-and-tools/nursing/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/open?id=1S-Zk07WBLKwabG23R6akULmqQfgAFeJA",
+          "target_id": "1S-Zk07WBLKwabG23R6akULmqQfgAFeJA",
+          "target_type": "file",
+          "local_path": "documents/departmental/nursing/Care plan.docx",
+          "local_href": "documents/departmental/nursing/Care%20plan.docx"
+        },
+        {
+          "source_url": "https://drive.google.com/open?id=1c38q_QyWYF18J0EFWWjOwZVG6aXtvx_fbzUfDCYVCPQ",
+          "target_id": "1c38q_QyWYF18J0EFWWjOwZVG6aXtvx_fbzUfDCYVCPQ",
+          "target_type": "file",
+          "local_path": "documents/departmental/laboratory-technologies/Pathology request form (Google Doc export).docx",
+          "local_href": "documents/departmental/laboratory-technologies/Pathology%20request%20form%20%28Google%20Doc%20export%29.docx"
+        },
+        {
+          "source_url": "https://drive.google.com/open?id=1iAIoCLhmJ8mlbsg23DTHi72Pax2s-bML",
+          "target_id": "1iAIoCLhmJ8mlbsg23DTHi72Pax2s-bML",
+          "target_type": "file",
+          "local_path": "documents/human-resources/Accident_form.doc",
+          "local_href": "documents/human-resources/Accident_form.doc"
+        },
+        {
+          "source_url": "https://drive.google.com/open?id=1lIvVVI0oYVuw-Qhxh4GE6pkWCKavU2hm",
+          "target_id": "1lIvVVI0oYVuw-Qhxh4GE6pkWCKavU2hm",
+          "target_type": "file",
+          "local_path": "documents/human-resources/ohs/Bagwan Health - OHS - FORM-B-Risk-assessment.docx",
+          "local_href": "documents/human-resources/ohs/Bagwan%20Health%20-%20OHS%20-%20FORM-B-Risk-assessment.docx"
+        },
+        {
+          "source_url": "https://drive.google.com/open?id=1tCxxfbZ52-d0C2nvB4QpjIxj31XxpMDw",
+          "target_id": "1tCxxfbZ52-d0C2nvB4QpjIxj31XxpMDw",
+          "target_type": "file",
+          "local_path": "documents/human-resources/ohs/Bagwan Health - OHS - FORM-A-Initial Hazard Inspection.docx",
+          "local_href": "documents/human-resources/ohs/Bagwan%20Health%20-%20OHS%20-%20FORM-A-Initial%20Hazard%20Inspection.docx"
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/bullying-and-harrassment/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/open?id=1g0mEWrRGm5CfbmYOM9RDLc8WbU0HtHEP",
+          "target_id": "1g0mEWrRGm5CfbmYOM9RDLc8WbU0HtHEP",
+          "target_type": "file",
+          "local_path": "documents/policies-and-procedures/Bagwan Health - Bullying and Harassment, V1.0.docx",
+          "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Bullying%20and%20Harassment%2C%20V1.0.docx"
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/code-of-conduct/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/open?id=1ux8lBY29rWYDIFNzE2tSc5UxpWo5Q_o0",
+          "target_id": "1ux8lBY29rWYDIFNzE2tSc5UxpWo5Q_o0",
+          "target_type": "file",
+          "local_path": "documents/policies-and-procedures/Bagwan Health - Code of conduct - V1.0.docx",
+          "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Code%20of%20conduct%20-%20V1.0.docx"
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/complaints-and-feedback-handling/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/open?id=1QCT6-t0wHOg7Wck3lysXjb3t4B1OYiwo",
+          "target_id": "1QCT6-t0wHOg7Wck3lysXjb3t4B1OYiwo",
+          "target_type": "file",
+          "local_path": "documents/policies-and-procedures/Bagwan Health - Complaints Handling V1.0.docx",
+          "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Complaints%20Handling%20V1.0.docx"
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/emergency-repsonse/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/open?id=1fROtIkO5CMaQ3kX6CL7wwhu5g3DVBkGm",
+          "target_id": "1fROtIkO5CMaQ3kX6CL7wwhu5g3DVBkGm",
+          "target_type": "file",
+          "local_path": "documents/policies-and-procedures/Bagwan Health -Emergency Response V1.0.docx",
+          "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-Emergency%20Response%20V1.0.docx"
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/equal-opportunity-and-anti-discrimination/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/open?id=1VLntiAlUbcv9VMbnk97MjewLT749LaIl",
+          "target_id": "1VLntiAlUbcv9VMbnk97MjewLT749LaIl",
+          "target_type": "file",
+          "local_path": "documents/policies-and-procedures/Bagwan Health - Equal Opportunity - V1.0.docx",
+          "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Equal%20Opportunity%20-%20V1.0.docx"
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/freedom-of-information/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/open?id=1aJhEm61s51clBQQDafekCmOcmhir4Wdc",
+          "target_id": "1aJhEm61s51clBQQDafekCmOcmhir4Wdc",
+          "target_type": "file",
+          "local_path": "documents/policies-and-procedures/Bagwan Health - Freedom of Information V1.0.docx",
+          "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Freedom%20of%20Information%20V1.0.docx"
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/incident-management/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/open?id=1ifJiPxoeKQsqMSdahcxp5TX-oUpVB2z6",
+          "target_id": "1ifJiPxoeKQsqMSdahcxp5TX-oUpVB2z6",
+          "target_type": "file",
+          "local_path": "documents/policies-and-procedures/Bagwan Health - Incident Management - V1.0.docx",
+          "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Incident%20Management%20-%20V1.0.docx"
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/infection-control/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/open?id=1u61yG-3rgLQdcyPZGxC7Px9Jb5hNO0qW",
+          "target_id": "1u61yG-3rgLQdcyPZGxC7Px9Jb5hNO0qW",
+          "target_type": "file",
+          "local_path": "documents/policies-and-procedures/Bagwan Health - Infection Control V1.0.docx",
+          "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Infection%20Control%20V1.0.docx"
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/internet-email-and-social-media/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/open?id=1aCdD0aKgTwSoYuwU6zvnWZ1hMMD1IDEH",
+          "target_id": "1aCdD0aKgTwSoYuwU6zvnWZ1hMMD1IDEH",
+          "target_type": "file",
+          "local_path": "documents/policies-and-procedures/Bagwan Health -Internet, Email and Social Media v1.0.docx",
+          "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-Internet%2C%20Email%20and%20Social%20Media%20v1.0.docx"
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/interpretinglanguage-services-rights-and-responsibilities/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/open?id=15HdFdAeWd77qP56olRSBXp64d4G0ZV51",
+          "target_id": "15HdFdAeWd77qP56olRSBXp64d4G0ZV51",
+          "target_type": "file",
+          "local_path": "documents/policies-and-procedures/Bagwan Health - Emergency Incident Response, Management & Reporting, V1.0.docx",
+          "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Emergency%20Incident%20Response%2C%20Management%20%26%20Reporting%2C%20V1.0.docx"
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/mandatory-reporting/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/open?id=1pj4tUbhl67liuXbqAo5RLqVALKQPTcks",
+          "target_id": "1pj4tUbhl67liuXbqAo5RLqVALKQPTcks",
+          "target_type": "file",
+          "local_path": "documents/policies-and-procedures/Bagwan Health - Mandatory Reporting V1.0.docx",
+          "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Mandatory%20Reporting%20V1.0.docx"
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/ohswhs/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/open?id=1ErUAiMNpA3L56mQ5H-z4Dcyy43hE--mN",
+          "target_id": "1ErUAiMNpA3L56mQ5H-z4Dcyy43hE--mN",
+          "target_type": "file",
+          "local_path": "documents/policies-and-procedures/Bagwan Health - OHS V1.0.docx",
+          "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20OHS%20V1.0.docx"
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/privacy/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/open?id=1baXD00vXLd6-NUeLO5agKWpU5PIE6JL-",
+          "target_id": "1baXD00vXLd6-NUeLO5agKWpU5PIE6JL-",
+          "target_type": "file",
+          "local_path": "documents/policies-and-procedures/Bagwan Health - Privacy - v1.0.docx",
+          "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Privacy%20-%20v1.0.docx"
+        }
+      ]
+    },
+    {
+      "source_page_url": "https://emedia.rmit.edu.au/bagwanhealth/scorm/quick-link-pages/policy-and-procedures/training-and-development/",
+      "links": [
+        {
+          "source_url": "https://drive.google.com/open?id=11Kwm7o7KYF_GwIBq9YakTt53Angw-kRL",
+          "target_id": "11Kwm7o7KYF_GwIBq9YakTt53Angw-kRL",
+          "target_type": "file",
+          "local_path": "documents/policies-and-procedures/Bagwan Health - Training and Development V1.0.docx",
+          "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Training%20and%20Development%20V1.0.docx"
+        }
+      ]
+    }
+  ]
+}

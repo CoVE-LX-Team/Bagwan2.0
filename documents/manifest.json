@@ -1,0 +1,1890 @@
+{
+  "schema_version": 1,
+  "imported_on": "2026-11-18",
+  "source_site": "https://emedia.rmit.edu.au/bagwanhealth/scorm/intranet/",
+  "summary": {
+    "source_drive_folder_count": 11,
+    "unique_source_file_count": 76,
+    "materialized_shortcut_count": 3,
+    "native_google_doc_export_count": 2,
+    "archived_office_lock_file_count": 1,
+    "repository_file_copy_count": 79,
+    "total_payload_bytes": 18438433,
+    "largest_file_bytes": 3062208,
+    "site_pages_crawled": 91,
+    "site_pages_with_drive_links": 19,
+    "unique_site_drive_links": 28
+  },
+  "folders": [
+    {
+      "id": "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D",
+      "name": "Policies and procedures",
+      "source_url": "https://drive.google.com/drive/folders/1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D",
+      "local_path": "documents/policies-and-procedures/",
+      "directly_embedded": true,
+      "parent_ids": [],
+      "file_ids": [
+        "16jNAM8lIWBBR3VUV2itLf3pnJ97Vm366",
+        "1pj4tUbhl67liuXbqAo5RLqVALKQPTcks",
+        "1ErUAiMNpA3L56mQ5H-z4Dcyy43hE--mN",
+        "13MMn2pF3948SGI-IOersTghwFiYeMhwA",
+        "1baXD00vXLd6-NUeLO5agKWpU5PIE6JL-",
+        "1_3pKYY40SEplOSbYKPkpQFPR37XohpV8",
+        "11Kwm7o7KYF_GwIBq9YakTt53Angw-kRL",
+        "1fROtIkO5CMaQ3kX6CL7wwhu5g3DVBkGm",
+        "1aCdD0aKgTwSoYuwU6zvnWZ1hMMD1IDEH",
+        "1aJhEm61s51clBQQDafekCmOcmhir4Wdc",
+        "1QCT6-t0wHOg7Wck3lysXjb3t4B1OYiwo",
+        "1ux8lBY29rWYDIFNzE2tSc5UxpWo5Q_o0",
+        "15HdFdAeWd77qP56olRSBXp64d4G0ZV51",
+        "1g0mEWrRGm5CfbmYOM9RDLc8WbU0HtHEP",
+        "1hOIyUycABd-Hf2i8HclOAaVbgJBr9pe4Opuwg-nU8nA",
+        "1u61yG-3rgLQdcyPZGxC7Px9Jb5hNO0qW",
+        "1ifJiPxoeKQsqMSdahcxp5TX-oUpVB2z6",
+        "1VLntiAlUbcv9VMbnk97MjewLT749LaIl",
+        "1XsrjQeb3oSS6Igu3TYewUQO0E0gUtWK_"
+      ],
+      "folder_ids": [
+        "1uju1GiX2WzW6pPByX0YV0qGwjHQsF1uB",
+        "18ycIx-8OisH7PO-G2z_dvsXizYPtZtlR"
+      ]
+    },
+    {
+      "id": "1Wic2sz9z9jNv3WRw-1YKEWoNQKVE38Vp",
+      "name": "Administration",
+      "source_url": "https://drive.google.com/drive/folders/1Wic2sz9z9jNv3WRw-1YKEWoNQKVE38Vp",
+      "local_path": "documents/administration/",
+      "directly_embedded": true,
+      "parent_ids": [],
+      "file_ids": [
+        "1moQb2Uedv30Qb-SE5xyVg6299bHLWPhB",
+        "154ZjWBcwUNUGXqspPYk2PLI_VJGA3Qnc",
+        "1GmtgIl7UFa7VmnPkfMHRi8pMWhDPbupS",
+        "1yeRJMebjQw2K2XeNfGOwFD9SxSeywoPX",
+        "1ddU43Oqmbxj_Y6dZANBpzeAOQR39MV5o",
+        "1g62982-Ne1s_yjfbUDxPSGVRVZOEJhPn"
+      ],
+      "folder_ids": []
+    },
+    {
+      "id": "16EyTFnpoY4X5js6NqwcypJbFAn6Q6hco",
+      "name": "Finance",
+      "source_url": "https://drive.google.com/drive/folders/16EyTFnpoY4X5js6NqwcypJbFAn6Q6hco",
+      "local_path": "documents/finance/",
+      "directly_embedded": true,
+      "parent_ids": [],
+      "file_ids": [
+        "1B2sZF2F_dWWRh_bmB_k3vDq74-0-30rg",
+        "1kGSVYWWIkOwzDq3ccgxbWXI5UPDwMtcp",
+        "198o9fcXN5htqr_WhRyL95koIqoIOPHEk",
+        "1_79gzl4P-MaCA88yHgbxPRP9HHkig35L",
+        "1ryTVerHyMYYKWUsw_ZwelcfhN8FBpu7K",
+        "1thz6k50CEboIoi4Rk7EjlLoj5kc1B50p",
+        "1p4jOwmsqf_RyD57fF_lOqiAcr7keCF2p",
+        "1Z3lD6XwzLb89_57LY4xpsUXi4ObSffr5",
+        "14ch_KAtVE57cuzOa50lzR_42JofeXI0b",
+        "152szVMqetUA6KHLyK5MRMY8h2uZ-iP6S",
+        "1Rxm6WoPZ9eH4MGgd2aNBkITwkhCZ29Wu"
+      ],
+      "folder_ids": []
+    },
+    {
+      "id": "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm",
+      "name": "Human resources",
+      "source_url": "https://drive.google.com/drive/folders/1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm",
+      "local_path": "documents/human-resources/",
+      "directly_embedded": true,
+      "parent_ids": [],
+      "file_ids": [
+        "1MQmfsjXUqA2SEwcKqBqP8OT_aqZsxFz_",
+        "1U67oSinJK--1eoTmD0Yp16V6iYM_FT3j",
+        "1Krirfsdw__PjGhlEi2F4QIqqDKK6JysI",
+        "1iAIoCLhmJ8mlbsg23DTHi72Pax2s-bML",
+        "1siUQCEphh9niByvu2Oje7jXwcjBEB7U4",
+        "1TBE-wCmLG5XExh_1MMG-E0vlj3ZdVjPM",
+        "1ayT9PZ6pDaMXlrRonS1uF-zITj1JqHuw",
+        "1LgmWJmihJcZ8y3ok6X1WGgkrJb5YhQtS",
+        "1e2blqrioDYFkA06kaq0WrZN3F34NE8zC",
+        "1L1suzik1lEa8UDxvzBf30FGpdRqYoH0O",
+        "1EW1AfRicleuwc0KAEe9EYX0cAv-op_wc",
+        "1FJYkwekYpQpBdW4qNUjGf5YPXHpHq6Uk",
+        "1XH-FXFVW0lMeUtGiwS-ncGOrDU-miNcV",
+        "1K_rHFk1mDNtWYnLiRFj3nLp_km-L4PUY",
+        "1LmZT1UuFNp-xMN7Qb3dx3TUBn3WSZdMH"
+      ],
+      "folder_ids": [
+        "1n1VQqmQ_2Qn9ZST_S3PoyXGKHxFGzvFZ"
+      ]
+    },
+    {
+      "id": "1BQdUCDP5WFwHvbMc82yybAtJsjRtNV8L",
+      "name": "Marketing and communications",
+      "source_url": "https://drive.google.com/drive/folders/1BQdUCDP5WFwHvbMc82yybAtJsjRtNV8L",
+      "local_path": "documents/marketing-and-communications/",
+      "directly_embedded": true,
+      "parent_ids": [],
+      "file_ids": [
+        "1KOCdZF2oIW3fuSAIWWFc6D-TTtE9c5D7",
+        "1ZtEdaM2bS_BL0gqjmfQh9NFZVV_drnYG"
+      ],
+      "folder_ids": [
+        "1mqEjBrUVkb0TOyGYNKTBkOkBpS0Y5SRk"
+      ]
+    },
+    {
+      "id": "1uju1GiX2WzW6pPByX0YV0qGwjHQsF1uB",
+      "name": "Logistics Policies and procedures",
+      "source_url": "https://drive.google.com/drive/folders/1uju1GiX2WzW6pPByX0YV0qGwjHQsF1uB",
+      "local_path": "documents/policies-and-procedures/logistics/",
+      "directly_embedded": false,
+      "parent_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "file_ids": [
+        "1HbcYgFm_j5zZKR5H9E8d1YGHUUc5bMWx"
+      ],
+      "folder_ids": []
+    },
+    {
+      "id": "18ycIx-8OisH7PO-G2z_dvsXizYPtZtlR",
+      "name": "Record keeping policies and procedures",
+      "source_url": "https://drive.google.com/drive/folders/18ycIx-8OisH7PO-G2z_dvsXizYPtZtlR",
+      "local_path": "documents/policies-and-procedures/record-keeping/",
+      "directly_embedded": false,
+      "parent_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "file_ids": [
+        "1qYoUOpnEQopSzTSkRxHNkJh4oPdxb-LI",
+        "1Q7J5hI10qzdLyuxAANKMUOe1oQgMhJFP",
+        "1-xeJABM8wOan9QrYhOTyAuQTlyJbLRSd",
+        "11eSQKm6gQAB2KhSGuG7rog5lwhbNxlVG",
+        "1WMq0462Jluy_FoCJgNvVaTLQbaiy_5NW"
+      ],
+      "folder_ids": []
+    },
+    {
+      "id": "1n1VQqmQ_2Qn9ZST_S3PoyXGKHxFGzvFZ",
+      "name": "OHS",
+      "source_url": "https://drive.google.com/drive/folders/1n1VQqmQ_2Qn9ZST_S3PoyXGKHxFGzvFZ",
+      "local_path": "documents/human-resources/ohs/",
+      "directly_embedded": false,
+      "parent_ids": [
+        "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm"
+      ],
+      "file_ids": [
+        "15ZwMuYgrhljNz5TkdhM0IGcAjVFaKxOa",
+        "1rPIg3amCytxp0c5v7O4JWlIGrcBOYBL2",
+        "1tCxxfbZ52-d0C2nvB4QpjIxj31XxpMDw",
+        "1lIvVVI0oYVuw-Qhxh4GE6pkWCKavU2hm",
+        "1eyLCltDzStL9NLkIJhBv6N34j_aSDu3j"
+      ],
+      "folder_ids": []
+    },
+    {
+      "id": "1mqEjBrUVkb0TOyGYNKTBkOkBpS0Y5SRk",
+      "name": "Bagwan branding",
+      "source_url": "https://drive.google.com/drive/folders/1mqEjBrUVkb0TOyGYNKTBkOkBpS0Y5SRk",
+      "local_path": "documents/marketing-and-communications/bagwan-branding/",
+      "directly_embedded": false,
+      "parent_ids": [
+        "1BQdUCDP5WFwHvbMc82yybAtJsjRtNV8L"
+      ],
+      "file_ids": [
+        "1Qk18a0pUIV1c1Du_GkXp3zk5sXZr9rg8",
+        "1rn7t7LTUpnQRaXK08qHZ54je7ef4lBgF",
+        "1fDz8xPXcVf2nruAZVnGT8Fzlh7mVwuTV",
+        "1_3BfaogJS-fmlDPfJmGzrtgn0nmEzN2n",
+        "17CLd6wgTN_xsCH3sukMDt7EkGNmDGlY7"
+      ],
+      "folder_ids": []
+    },
+    {
+      "id": "1W4BXnRCYg4T2PgGh7lpfTQwhGqLl018M",
+      "name": "Logistics",
+      "source_url": "https://drive.google.com/drive/folders/1W4BXnRCYg4T2PgGh7lpfTQwhGqLl018M",
+      "local_path": "documents/departmental/logistics/",
+      "directly_embedded": true,
+      "parent_ids": [],
+      "file_ids": [
+        "1YyAiZcNNiYXM7OakPHnzQ6Ke8_l-D5dZ"
+      ],
+      "folder_ids": []
+    },
+    {
+      "id": "1Y80CJdcwtupHmBaDb4x-lB0POf6qOn4r",
+      "name": "Laboratory technologies",
+      "source_url": "https://drive.google.com/drive/folders/1Y80CJdcwtupHmBaDb4x-lB0POf6qOn4r",
+      "local_path": "documents/departmental/laboratory-technologies/",
+      "directly_embedded": true,
+      "parent_ids": [],
+      "file_ids": [
+        "1pxMhhDSTICBbXked83vIRXVpDKRMfVGJ",
+        "1qYhP5KeoeoGIL-rv70PeiCnJBPYozXK9",
+        "11_vyFQJ2C5N1fFdM78CMvBKxr81veFWo",
+        "1AXu6N4Thni1k0Gr3fov5LNH6vLsTk1mf",
+        "1c38q_QyWYF18J0EFWWjOwZVG6aXtvx_fbzUfDCYVCPQ",
+        "1sLP5xxPwn2oByOS266-Lecq-kVftYMOA",
+        "1fg0nNKyErFKVYLuGlZFI5P0jlvRgi9ks"
+      ],
+      "folder_ids": []
+    }
+  ],
+  "files": [
+    {
+      "id": "17CLd6wgTN_xsCH3sukMDt7EkGNmDGlY7",
+      "name": "~$deo Transcript Template.docx",
+      "kind": "office-lock-file",
+      "source_url": "https://docs.google.com/document/d/17CLd6wgTN_xsCH3sukMDt7EkGNmDGlY7/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 162,
+      "source_modified_at": "2020-01-07T01:57:30.733Z",
+      "source_folder_ids": [
+        "1mqEjBrUVkb0TOyGYNKTBkOkBpS0Y5SRk"
+      ],
+      "original_folder_path": "marketing-and-communications/bagwan-branding",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "archive/google-drive-office-lock-files/17CLd6wgTN_xsCH3sukMDt7EkGNmDGlY7/~$deo Transcript Template.docx",
+      "local_href": "archive/google-drive-office-lock-files/17CLd6wgTN_xsCH3sukMDt7EkGNmDGlY7/~%24deo%20Transcript%20Template.docx",
+      "size_bytes": 162,
+      "sha256": "1af9a06bef976bb2fd60c8e0c2d091c5aaa01f376fed2a1dc89a9b9a2e4e600c",
+      "archived": true
+    },
+    {
+      "id": "1moQb2Uedv30Qb-SE5xyVg6299bHLWPhB",
+      "name": "BagwanTemplate.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1moQb2Uedv30Qb-SE5xyVg6299bHLWPhB/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 96371,
+      "source_modified_at": "2020-02-04T23:46:20.815Z",
+      "source_folder_ids": [
+        "1Wic2sz9z9jNv3WRw-1YKEWoNQKVE38Vp"
+      ],
+      "original_folder_path": "administration",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/administration/BagwanTemplate.docx",
+      "local_href": "documents/administration/BagwanTemplate.docx",
+      "size_bytes": 96371,
+      "sha256": "915055ced850a68d251a987cf16da8f883ea53cd7381b88edc0cbd3a4b7d9f37",
+      "archived": false
+    },
+    {
+      "id": "1g62982-Ne1s_yjfbUDxPSGVRVZOEJhPn",
+      "name": "Fax Cover Sheet.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1g62982-Ne1s_yjfbUDxPSGVRVZOEJhPn/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 142638,
+      "source_modified_at": "2020-01-07T01:55:03.864Z",
+      "source_folder_ids": [
+        "1Wic2sz9z9jNv3WRw-1YKEWoNQKVE38Vp"
+      ],
+      "original_folder_path": "administration",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/administration/Fax Cover Sheet.docx",
+      "local_href": "documents/administration/Fax%20Cover%20Sheet.docx",
+      "size_bytes": 142638,
+      "sha256": "d13d662b8756892c6d566bd983c60e65912d1d08f7cffec8b817a8206d2f41f9",
+      "archived": false
+    },
+    {
+      "id": "1ddU43Oqmbxj_Y6dZANBpzeAOQR39MV5o",
+      "name": "meeting-agenda.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1ddU43Oqmbxj_Y6dZANBpzeAOQR39MV5o/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 103745,
+      "source_modified_at": "2020-01-07T01:55:04.675Z",
+      "source_folder_ids": [
+        "1Wic2sz9z9jNv3WRw-1YKEWoNQKVE38Vp"
+      ],
+      "original_folder_path": "administration",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/administration/meeting-agenda.docx",
+      "local_href": "documents/administration/meeting-agenda.docx",
+      "size_bytes": 103745,
+      "sha256": "669d89f378e5ad853771342f416b786c301c64d93d003ba2baeb7a3d8f517d5c",
+      "archived": false
+    },
+    {
+      "id": "154ZjWBcwUNUGXqspPYk2PLI_VJGA3Qnc",
+      "name": "meeting-agenda.pdf",
+      "kind": "file",
+      "source_url": "https://drive.google.com/file/d/154ZjWBcwUNUGXqspPYk2PLI_VJGA3Qnc/view",
+      "source_mime_type": "application/pdf",
+      "source_size_bytes": 112229,
+      "source_modified_at": "2020-01-07T01:55:06.570Z",
+      "source_folder_ids": [
+        "1Wic2sz9z9jNv3WRw-1YKEWoNQKVE38Vp"
+      ],
+      "original_folder_path": "administration",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/pdf",
+      "local_path": "documents/administration/meeting-agenda.pdf",
+      "local_href": "documents/administration/meeting-agenda.pdf",
+      "size_bytes": 112229,
+      "sha256": "975eb1fd2bc7374eec60a9014d518fb3cb147777f13b515b35b8feb8c5642ede",
+      "archived": false
+    },
+    {
+      "id": "1GmtgIl7UFa7VmnPkfMHRi8pMWhDPbupS",
+      "name": "Memo.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1GmtgIl7UFa7VmnPkfMHRi8pMWhDPbupS/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 143528,
+      "source_modified_at": "2020-01-07T01:55:05.649Z",
+      "source_folder_ids": [
+        "1Wic2sz9z9jNv3WRw-1YKEWoNQKVE38Vp"
+      ],
+      "original_folder_path": "administration",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/administration/Memo.docx",
+      "local_href": "documents/administration/Memo.docx",
+      "size_bytes": 143528,
+      "sha256": "2be7c84ac912eb726cea491d8c8af641411742ddba670db9a19915c734b7744a",
+      "archived": false
+    },
+    {
+      "id": "1yeRJMebjQw2K2XeNfGOwFD9SxSeywoPX",
+      "name": "With Compliments.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1yeRJMebjQw2K2XeNfGOwFD9SxSeywoPX/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 143314,
+      "source_modified_at": "2020-01-07T01:55:05.649Z",
+      "source_folder_ids": [
+        "1Wic2sz9z9jNv3WRw-1YKEWoNQKVE38Vp"
+      ],
+      "original_folder_path": "administration",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/administration/With Compliments.docx",
+      "local_href": "documents/administration/With%20Compliments.docx",
+      "size_bytes": 143314,
+      "sha256": "5f9a8d937f82faf8c74a61023cc62e7889e14da59ffb1ac4cdb5c9622a9e6137",
+      "archived": false
+    },
+    {
+      "id": "1mOCSmMUS4KAruBZiuZ1Bvf9Ko0ZOyE-i",
+      "name": "Bagwan Health Interpreter booking request form.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1mOCSmMUS4KAruBZiuZ1Bvf9Ko0ZOyE-i/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 308920,
+      "source_modified_at": "2020-01-07T06:07:42.447Z",
+      "source_folder_ids": [],
+      "original_folder_path": "departmental/interpreting-services",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/departmental/interpreting-services/Bagwan Health Interpreter booking request form.docx",
+      "local_href": "documents/departmental/interpreting-services/Bagwan%20Health%20Interpreter%20booking%20request%20form.docx",
+      "size_bytes": 308920,
+      "sha256": "160fb0473b0289a1cacc911df1463eed185f6434f2c5449b414a0ff3c6a07ab2",
+      "archived": false
+    },
+    {
+      "id": "1sLP5xxPwn2oByOS266-Lecq-kVftYMOA",
+      "name": "5StepsToChemicalSafety.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1sLP5xxPwn2oByOS266-Lecq-kVftYMOA/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 154292,
+      "source_modified_at": "2020-01-07T22:39:08.072Z",
+      "source_folder_ids": [
+        "1Y80CJdcwtupHmBaDb4x-lB0POf6qOn4r"
+      ],
+      "original_folder_path": "departmental/laboratory-technologies",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/departmental/laboratory-technologies/5StepsToChemicalSafety.docx",
+      "local_href": "documents/departmental/laboratory-technologies/5StepsToChemicalSafety.docx",
+      "size_bytes": 154292,
+      "sha256": "4cb015626d72c79ed361379e17f12309ee8aa38680e189af20b08e4b48469eca",
+      "archived": false
+    },
+    {
+      "id": "1fg0nNKyErFKVYLuGlZFI5P0jlvRgi9ks",
+      "name": "Chemistry Laboratory Safety Rules and Guidelines.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1fg0nNKyErFKVYLuGlZFI5P0jlvRgi9ks/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 144348,
+      "source_modified_at": "2020-01-07T22:38:54.587Z",
+      "source_folder_ids": [
+        "1Y80CJdcwtupHmBaDb4x-lB0POf6qOn4r"
+      ],
+      "original_folder_path": "departmental/laboratory-technologies",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/departmental/laboratory-technologies/Chemistry Laboratory Safety Rules and Guidelines.docx",
+      "local_href": "documents/departmental/laboratory-technologies/Chemistry%20Laboratory%20Safety%20Rules%20and%20Guidelines.docx",
+      "size_bytes": 144348,
+      "sha256": "227d7e9c0edf4ea474037d4fbdd2281ab7e90c2f4072c50be77e5e2f7b6166f4",
+      "archived": false
+    },
+    {
+      "id": "1pxMhhDSTICBbXked83vIRXVpDKRMfVGJ",
+      "name": "How to Handwash Poster_WHO.pdf",
+      "kind": "file",
+      "source_url": "https://drive.google.com/file/d/1pxMhhDSTICBbXked83vIRXVpDKRMfVGJ/view",
+      "source_mime_type": "application/pdf",
+      "source_size_bytes": 468241,
+      "source_modified_at": "2020-01-08T00:18:19.998Z",
+      "source_folder_ids": [
+        "1Y80CJdcwtupHmBaDb4x-lB0POf6qOn4r"
+      ],
+      "original_folder_path": "departmental/laboratory-technologies",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/pdf",
+      "local_path": "documents/departmental/laboratory-technologies/How to Handwash Poster_WHO.pdf",
+      "local_href": "documents/departmental/laboratory-technologies/How%20to%20Handwash%20Poster_WHO.pdf",
+      "size_bytes": 468241,
+      "sha256": "ddb7fde22a934e218776877301a04edf25f3e68e5d71421d2ee717614a7a02d0",
+      "archived": false
+    },
+    {
+      "id": "1c38q_QyWYF18J0EFWWjOwZVG6aXtvx_fbzUfDCYVCPQ",
+      "name": "Pathology request form",
+      "kind": "google-doc-export",
+      "source_url": "https://docs.google.com/document/d/1c38q_QyWYF18J0EFWWjOwZVG6aXtvx_fbzUfDCYVCPQ/edit",
+      "source_mime_type": "application/vnd.google-apps.document",
+      "source_size_bytes": null,
+      "source_modified_at": "2020-01-08T00:00:56.950Z",
+      "source_folder_ids": [
+        "1Y80CJdcwtupHmBaDb4x-lB0POf6qOn4r"
+      ],
+      "original_folder_path": "departmental/laboratory-technologies",
+      "shortcut_target_id": null,
+      "export_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/departmental/laboratory-technologies/Pathology request form (Google Doc export).docx",
+      "local_href": "documents/departmental/laboratory-technologies/Pathology%20request%20form%20%28Google%20Doc%20export%29.docx",
+      "size_bytes": 55614,
+      "sha256": "f73677b514cd1197cc76169745374d347a270bdaf88b34f53ab63f9c6297d2e9",
+      "archived": false
+    },
+    {
+      "id": "1qYhP5KeoeoGIL-rv70PeiCnJBPYozXK9",
+      "name": "Wash hands poster.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1qYhP5KeoeoGIL-rv70PeiCnJBPYozXK9/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 96396,
+      "source_modified_at": "2020-01-08T00:17:48.434Z",
+      "source_folder_ids": [
+        "1Y80CJdcwtupHmBaDb4x-lB0POf6qOn4r"
+      ],
+      "original_folder_path": "departmental/laboratory-technologies",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/departmental/laboratory-technologies/Wash hands poster.docx",
+      "local_href": "documents/departmental/laboratory-technologies/Wash%20hands%20poster.docx",
+      "size_bytes": 96396,
+      "sha256": "98f3102411071d41a5d02ef24249dfa5aa7e04ad63cdadb0ffd9cc8fb9e2d34d",
+      "archived": false
+    },
+    {
+      "id": "1AXu6N4Thni1k0Gr3fov5LNH6vLsTk1mf",
+      "name": "WasteDisposal_Lab1.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1AXu6N4Thni1k0Gr3fov5LNH6vLsTk1mf/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 143726,
+      "source_modified_at": "2020-01-08T00:13:59.028Z",
+      "source_folder_ids": [
+        "1Y80CJdcwtupHmBaDb4x-lB0POf6qOn4r"
+      ],
+      "original_folder_path": "departmental/laboratory-technologies",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/departmental/laboratory-technologies/WasteDisposal_Lab1.docx",
+      "local_href": "documents/departmental/laboratory-technologies/WasteDisposal_Lab1.docx",
+      "size_bytes": 143726,
+      "sha256": "9a7489e2f8101443cb3f7f22e3cf2dbef1904d64b4fac80258179059205c792a",
+      "archived": false
+    },
+    {
+      "id": "11_vyFQJ2C5N1fFdM78CMvBKxr81veFWo",
+      "name": "WasteDisposal_Lab2.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/11_vyFQJ2C5N1fFdM78CMvBKxr81veFWo/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 154207,
+      "source_modified_at": "2020-01-08T00:15:59.186Z",
+      "source_folder_ids": [
+        "1Y80CJdcwtupHmBaDb4x-lB0POf6qOn4r"
+      ],
+      "original_folder_path": "departmental/laboratory-technologies",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/departmental/laboratory-technologies/WasteDisposal_Lab2.docx",
+      "local_href": "documents/departmental/laboratory-technologies/WasteDisposal_Lab2.docx",
+      "size_bytes": 154207,
+      "sha256": "ce96a6a70cd5eed29cbb734fa81c168605e926ac837615135a7f590d746d13df",
+      "archived": false
+    },
+    {
+      "id": "1YyAiZcNNiYXM7OakPHnzQ6Ke8_l-D5dZ",
+      "name": "Logisitics Induction Quality Form.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1YyAiZcNNiYXM7OakPHnzQ6Ke8_l-D5dZ/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 197880,
+      "source_modified_at": "2020-10-30T05:56:57.019Z",
+      "source_folder_ids": [
+        "1W4BXnRCYg4T2PgGh7lpfTQwhGqLl018M"
+      ],
+      "original_folder_path": "departmental/logistics",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/departmental/logistics/Logisitics Induction Quality Form.docx",
+      "local_href": "documents/departmental/logistics/Logisitics%20Induction%20Quality%20Form.docx",
+      "size_bytes": 197880,
+      "sha256": "8208e63e08f420a2edbea425f026f7b2fb50ec18814407b192c109a3fe83d67c",
+      "archived": false
+    },
+    {
+      "id": "1S-Zk07WBLKwabG23R6akULmqQfgAFeJA",
+      "name": "Care plan.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1S-Zk07WBLKwabG23R6akULmqQfgAFeJA/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 45339,
+      "source_modified_at": "2020-01-08T02:03:11.614Z",
+      "source_folder_ids": [],
+      "original_folder_path": "departmental/nursing",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/departmental/nursing/Care plan.docx",
+      "local_href": "documents/departmental/nursing/Care%20plan.docx",
+      "size_bytes": 45339,
+      "sha256": "515a0042186493843e76f62bd690dc155d1f276db925e8a2537b103add85e7e8",
+      "archived": false
+    },
+    {
+      "id": "1Rxm6WoPZ9eH4MGgd2aNBkITwkhCZ29Wu",
+      "name": "Cash Receipts Journal.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1Rxm6WoPZ9eH4MGgd2aNBkITwkhCZ29Wu/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 143776,
+      "source_modified_at": "2020-01-07T01:55:37.470Z",
+      "source_folder_ids": [
+        "16EyTFnpoY4X5js6NqwcypJbFAn6Q6hco"
+      ],
+      "original_folder_path": "finance",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/finance/Cash Receipts Journal.docx",
+      "local_href": "documents/finance/Cash%20Receipts%20Journal.docx",
+      "size_bytes": 143776,
+      "sha256": "94c5cb2971a933e0087c2607c6798aaadc9ea6c42eab16205a6e27b0eb51a654",
+      "archived": false
+    },
+    {
+      "id": "14ch_KAtVE57cuzOa50lzR_42JofeXI0b",
+      "name": "Cash Slip.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/14ch_KAtVE57cuzOa50lzR_42JofeXI0b/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 141550,
+      "source_modified_at": "2020-01-07T01:55:38.315Z",
+      "source_folder_ids": [
+        "16EyTFnpoY4X5js6NqwcypJbFAn6Q6hco"
+      ],
+      "original_folder_path": "finance",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/finance/Cash Slip.docx",
+      "local_href": "documents/finance/Cash%20Slip.docx",
+      "size_bytes": 141550,
+      "sha256": "7170d838e3111b5f74f9b7099e0fee7d670e80131dba9697985614368654aef4",
+      "archived": false
+    },
+    {
+      "id": "1kGSVYWWIkOwzDq3ccgxbWXI5UPDwMtcp",
+      "name": "E-Trading Adjustment Note.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1kGSVYWWIkOwzDq3ccgxbWXI5UPDwMtcp/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 142241,
+      "source_modified_at": "2020-01-07T01:55:39.587Z",
+      "source_folder_ids": [
+        "16EyTFnpoY4X5js6NqwcypJbFAn6Q6hco"
+      ],
+      "original_folder_path": "finance",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/finance/E-Trading Adjustment Note.docx",
+      "local_href": "documents/finance/E-Trading%20Adjustment%20Note.docx",
+      "size_bytes": 142241,
+      "sha256": "fcb14bbf8f52e471d5063b5abea0a1a64702c0f78d397306b8a0a0d978889b83",
+      "archived": false
+    },
+    {
+      "id": "198o9fcXN5htqr_WhRyL95koIqoIOPHEk",
+      "name": "E-Trading Tax Invoice.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/198o9fcXN5htqr_WhRyL95koIqoIOPHEk/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 142631,
+      "source_modified_at": "2020-01-07T01:55:39.587Z",
+      "source_folder_ids": [
+        "16EyTFnpoY4X5js6NqwcypJbFAn6Q6hco"
+      ],
+      "original_folder_path": "finance",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/finance/E-Trading Tax Invoice.docx",
+      "local_href": "documents/finance/E-Trading%20Tax%20Invoice.docx",
+      "size_bytes": 142631,
+      "sha256": "52ad51737a4b9dff33f6e3940acae36dea36a175f17c30fb790652cdf64d54a3",
+      "archived": false
+    },
+    {
+      "id": "1_79gzl4P-MaCA88yHgbxPRP9HHkig35L",
+      "name": "Finance.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1_79gzl4P-MaCA88yHgbxPRP9HHkig35L/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 146897,
+      "source_modified_at": "2020-01-07T01:55:39.587Z",
+      "source_folder_ids": [
+        "16EyTFnpoY4X5js6NqwcypJbFAn6Q6hco"
+      ],
+      "original_folder_path": "finance",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/finance/Finance.docx",
+      "local_href": "documents/finance/Finance.docx",
+      "size_bytes": 146897,
+      "sha256": "598bd565859328fb18f76aa9a0d60397cf0c0f446371834152c970690cef1a35",
+      "archived": false
+    },
+    {
+      "id": "152szVMqetUA6KHLyK5MRMY8h2uZ-iP6S",
+      "name": "Manual Tax Invoice.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/152szVMqetUA6KHLyK5MRMY8h2uZ-iP6S/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 142587,
+      "source_modified_at": "2020-01-07T01:55:38.315Z",
+      "source_folder_ids": [
+        "16EyTFnpoY4X5js6NqwcypJbFAn6Q6hco"
+      ],
+      "original_folder_path": "finance",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/finance/Manual Tax Invoice.docx",
+      "local_href": "documents/finance/Manual%20Tax%20Invoice.docx",
+      "size_bytes": 142587,
+      "sha256": "a86a378d57dca7a83f8b28a7db74198ff2c9bb318816564c26e93cfd6d2bf843",
+      "archived": false
+    },
+    {
+      "id": "1ryTVerHyMYYKWUsw_ZwelcfhN8FBpu7K",
+      "name": "Online Payment Authorisation.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1ryTVerHyMYYKWUsw_ZwelcfhN8FBpu7K/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 146863,
+      "source_modified_at": "2020-01-07T01:55:39.587Z",
+      "source_folder_ids": [
+        "16EyTFnpoY4X5js6NqwcypJbFAn6Q6hco"
+      ],
+      "original_folder_path": "finance",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/finance/Online Payment Authorisation.docx",
+      "local_href": "documents/finance/Online%20Payment%20Authorisation.docx",
+      "size_bytes": 146863,
+      "sha256": "7828b70a97bbcdf5ebb677b32c89e00cbf3da3c7ef2fc79cdd6e26ac2e1a3520",
+      "archived": false
+    },
+    {
+      "id": "1thz6k50CEboIoi4Rk7EjlLoj5kc1B50p",
+      "name": "Petty Cash Voucher.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1thz6k50CEboIoi4Rk7EjlLoj5kc1B50p/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 142287,
+      "source_modified_at": "2020-01-07T01:55:39.587Z",
+      "source_folder_ids": [
+        "16EyTFnpoY4X5js6NqwcypJbFAn6Q6hco"
+      ],
+      "original_folder_path": "finance",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/finance/Petty Cash Voucher.docx",
+      "local_href": "documents/finance/Petty%20Cash%20Voucher.docx",
+      "size_bytes": 142287,
+      "sha256": "ae1c07cd2a4c4beedf5c1445ac8676779cab73d8efde320589426b497184383b",
+      "archived": false
+    },
+    {
+      "id": "1p4jOwmsqf_RyD57fF_lOqiAcr7keCF2p",
+      "name": "Purchase Order Form - Manual Orders.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1p4jOwmsqf_RyD57fF_lOqiAcr7keCF2p/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 142063,
+      "source_modified_at": "2020-01-07T01:55:39.587Z",
+      "source_folder_ids": [
+        "16EyTFnpoY4X5js6NqwcypJbFAn6Q6hco"
+      ],
+      "original_folder_path": "finance",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/finance/Purchase Order Form - Manual Orders.docx",
+      "local_href": "documents/finance/Purchase%20Order%20Form%20-%20Manual%20Orders.docx",
+      "size_bytes": 142063,
+      "sha256": "88e299cf38eec5509d1ebb8f50c884a68a75c989712e86c3d405a24624b22c38",
+      "archived": false
+    },
+    {
+      "id": "1Z3lD6XwzLb89_57LY4xpsUXi4ObSffr5",
+      "name": "Receipt.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1Z3lD6XwzLb89_57LY4xpsUXi4ObSffr5/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 141490,
+      "source_modified_at": "2020-01-07T01:55:39.587Z",
+      "source_folder_ids": [
+        "16EyTFnpoY4X5js6NqwcypJbFAn6Q6hco"
+      ],
+      "original_folder_path": "finance",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/finance/Receipt.docx",
+      "local_href": "documents/finance/Receipt.docx",
+      "size_bytes": 141490,
+      "sha256": "ab60d79ee4ed366a05e8e35bfcf58ff72f78b6da042607afa1c14a92ff53fb28",
+      "archived": false
+    },
+    {
+      "id": "1B2sZF2F_dWWRh_bmB_k3vDq74-0-30rg",
+      "name": "Statement of Account.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1B2sZF2F_dWWRh_bmB_k3vDq74-0-30rg/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 145059,
+      "source_modified_at": "2020-01-07T01:55:42.608Z",
+      "source_folder_ids": [
+        "16EyTFnpoY4X5js6NqwcypJbFAn6Q6hco"
+      ],
+      "original_folder_path": "finance",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/finance/Statement of Account.docx",
+      "local_href": "documents/finance/Statement%20of%20Account.docx",
+      "size_bytes": 145059,
+      "sha256": "3e1707d9c4ed3ccb061ab9a36e5aa62aae8d98c36a5c50fd8a0827a2eb20f458",
+      "archived": false
+    },
+    {
+      "id": "1iAIoCLhmJ8mlbsg23DTHi72Pax2s-bML",
+      "name": "Accident_form.doc",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1iAIoCLhmJ8mlbsg23DTHi72Pax2s-bML/edit",
+      "source_mime_type": "application/msword",
+      "source_size_bytes": 47616,
+      "source_modified_at": "2020-01-08T00:02:35.502Z",
+      "source_folder_ids": [
+        "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm"
+      ],
+      "original_folder_path": "human-resources",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/msword",
+      "local_path": "documents/human-resources/Accident_form.doc",
+      "local_href": "documents/human-resources/Accident_form.doc",
+      "size_bytes": 47616,
+      "sha256": "65d5685177af1259854758e22730c3eba6dfdf9a892e6431911a62a458c925af",
+      "archived": false
+    },
+    {
+      "id": "1TBE-wCmLG5XExh_1MMG-E0vlj3ZdVjPM",
+      "name": "Admin.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1TBE-wCmLG5XExh_1MMG-E0vlj3ZdVjPM/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 681644,
+      "source_modified_at": "2020-01-07T22:39:54.114Z",
+      "source_folder_ids": [
+        "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm"
+      ],
+      "original_folder_path": "human-resources",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/human-resources/Admin.docx",
+      "local_href": "documents/human-resources/Admin.docx",
+      "size_bytes": 681644,
+      "sha256": "7621c7342876cb088516a8ed041d39a26416702d8966aca338bb80b58d753b4f",
+      "archived": false
+    },
+    {
+      "id": "1Krirfsdw__PjGhlEi2F4QIqqDKK6JysI",
+      "name": "All Staff.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1Krirfsdw__PjGhlEi2F4QIqqDKK6JysI/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 98821,
+      "source_modified_at": "2020-01-08T01:00:51.736Z",
+      "source_folder_ids": [
+        "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm"
+      ],
+      "original_folder_path": "human-resources",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/human-resources/All Staff.docx",
+      "local_href": "documents/human-resources/All%20Staff.docx",
+      "size_bytes": 98821,
+      "sha256": "0f962fc4aa04c95b686cc389bb7903f4d56a935cd596f500640934320a9405ae",
+      "archived": false
+    },
+    {
+      "id": "1siUQCEphh9niByvu2Oje7jXwcjBEB7U4",
+      "name": "Bagwan Health Parental-leave-request-template.doc",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1siUQCEphh9niByvu2Oje7jXwcjBEB7U4/edit",
+      "source_mime_type": "application/msword",
+      "source_size_bytes": 184832,
+      "source_modified_at": "2020-01-07T22:45:39.053Z",
+      "source_folder_ids": [
+        "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm"
+      ],
+      "original_folder_path": "human-resources",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/msword",
+      "local_path": "documents/human-resources/Bagwan Health Parental-leave-request-template.doc",
+      "local_href": "documents/human-resources/Bagwan%20Health%20Parental-leave-request-template.doc",
+      "size_bytes": 184832,
+      "sha256": "0d7ca73817c9e669bb8239fc1c5165dbb5bee4df0592e855e035e84a3fec46e2",
+      "archived": false
+    },
+    {
+      "id": "1EW1AfRicleuwc0KAEe9EYX0cAv-op_wc",
+      "name": "ComputerPeople Management Skills Assess.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1EW1AfRicleuwc0KAEe9EYX0cAv-op_wc/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 100808,
+      "source_modified_at": "2020-01-07T05:42:49.943Z",
+      "source_folder_ids": [
+        "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm"
+      ],
+      "original_folder_path": "human-resources",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/human-resources/ComputerPeople Management Skills Assess.docx",
+      "local_href": "documents/human-resources/ComputerPeople%20Management%20Skills%20Assess.docx",
+      "size_bytes": 100808,
+      "sha256": "32ecb89ec58bc301c63e63b50186c044f4ad3d7c533bf4a9576aeab2866f8c2e",
+      "archived": false
+    },
+    {
+      "id": "1FJYkwekYpQpBdW4qNUjGf5YPXHpHq6Uk",
+      "name": "DAILY SIGN IN REGISTER.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1FJYkwekYpQpBdW4qNUjGf5YPXHpHq6Uk/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 100859,
+      "source_modified_at": "2020-01-07T05:42:03.811Z",
+      "source_folder_ids": [
+        "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm"
+      ],
+      "original_folder_path": "human-resources",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/human-resources/DAILY SIGN IN REGISTER.docx",
+      "local_href": "documents/human-resources/DAILY%20SIGN%20IN%20REGISTER.docx",
+      "size_bytes": 100859,
+      "sha256": "d73030c0d2d875be77b4b7e34c590689e9823eb08d07677d59983e27301c0a36",
+      "archived": false
+    },
+    {
+      "id": "1L1suzik1lEa8UDxvzBf30FGpdRqYoH0O",
+      "name": "Duty Statement and Rotation Record.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1L1suzik1lEa8UDxvzBf30FGpdRqYoH0O/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 98852,
+      "source_modified_at": "2020-01-07T05:43:31.974Z",
+      "source_folder_ids": [
+        "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm"
+      ],
+      "original_folder_path": "human-resources",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/human-resources/Duty Statement and Rotation Record.docx",
+      "local_href": "documents/human-resources/Duty%20Statement%20and%20Rotation%20Record.docx",
+      "size_bytes": 98852,
+      "sha256": "c2c92ec1e04fba382d2cebe5a7a60b17045f4590b813686fc73985df665029cc",
+      "archived": false
+    },
+    {
+      "id": "1e2blqrioDYFkA06kaq0WrZN3F34NE8zC",
+      "name": "Employee Job Card.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1e2blqrioDYFkA06kaq0WrZN3F34NE8zC/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 98974,
+      "source_modified_at": "2020-01-07T05:44:43.039Z",
+      "source_folder_ids": [
+        "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm"
+      ],
+      "original_folder_path": "human-resources",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/human-resources/Employee Job Card.docx",
+      "local_href": "documents/human-resources/Employee%20Job%20Card.docx",
+      "size_bytes": 98974,
+      "sha256": "f19633b29bb187367fc206b98815f6c748bc7c5d232d14e3c71da9d6695d6416",
+      "archived": false
+    },
+    {
+      "id": "1LgmWJmihJcZ8y3ok6X1WGgkrJb5YhQtS",
+      "name": "Employee Review Sheet.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1LgmWJmihJcZ8y3ok6X1WGgkrJb5YhQtS/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 102612,
+      "source_modified_at": "2020-01-07T05:46:03.668Z",
+      "source_folder_ids": [
+        "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm"
+      ],
+      "original_folder_path": "human-resources",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/human-resources/Employee Review Sheet.docx",
+      "local_href": "documents/human-resources/Employee%20Review%20Sheet.docx",
+      "size_bytes": 102612,
+      "sha256": "5ef5489f47effc94acc50c2d973b147447ff3a1de38ac6c533ebafdfad026214",
+      "archived": false
+    },
+    {
+      "id": "1ayT9PZ6pDaMXlrRonS1uF-zITj1JqHuw",
+      "name": "Employee Skills Review.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1ayT9PZ6pDaMXlrRonS1uF-zITj1JqHuw/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 103079,
+      "source_modified_at": "2020-01-07T22:24:38.910Z",
+      "source_folder_ids": [
+        "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm"
+      ],
+      "original_folder_path": "human-resources",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/human-resources/Employee Skills Review.docx",
+      "local_href": "documents/human-resources/Employee%20Skills%20Review.docx",
+      "size_bytes": 103079,
+      "sha256": "827a700669db2c54761ffbd1818e7ef44c077e0eec1e46d397be957850e061cb",
+      "archived": false
+    },
+    {
+      "id": "1K_rHFk1mDNtWYnLiRFj3nLp_km-L4PUY",
+      "name": "Employee Warning Notice.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1K_rHFk1mDNtWYnLiRFj3nLp_km-L4PUY/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 148500,
+      "source_modified_at": "2020-01-07T01:56:17.732Z",
+      "source_folder_ids": [
+        "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm"
+      ],
+      "original_folder_path": "human-resources",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/human-resources/Employee Warning Notice.docx",
+      "local_href": "documents/human-resources/Employee%20Warning%20Notice.docx",
+      "size_bytes": 148500,
+      "sha256": "a29de855bf56fb7ab0c548aa9d73700fb8f412f01d21aecb35d91b07d5344840",
+      "archived": false
+    },
+    {
+      "id": "1U67oSinJK--1eoTmD0Yp16V6iYM_FT3j",
+      "name": "ISBN-Officewise-guide-to-health-and-safety-in-the-office-2006-01.pdf",
+      "kind": "file",
+      "source_url": "https://drive.google.com/file/d/1U67oSinJK--1eoTmD0Yp16V6iYM_FT3j/view",
+      "source_mime_type": "application/pdf",
+      "source_size_bytes": 3062208,
+      "source_modified_at": "2020-04-22T04:39:26.000Z",
+      "source_folder_ids": [
+        "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm"
+      ],
+      "original_folder_path": "human-resources",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/pdf",
+      "local_path": "documents/human-resources/ISBN-Officewise-guide-to-health-and-safety-in-the-office-2006-01.pdf",
+      "local_href": "documents/human-resources/ISBN-Officewise-guide-to-health-and-safety-in-the-office-2006-01.pdf",
+      "size_bytes": 3062208,
+      "sha256": "d9f3a24c2e7573d3bcb09b499b940fad5c8dd61a6fffb023ec1bae2ebf2b64f8",
+      "archived": false
+    },
+    {
+      "id": "1MQmfsjXUqA2SEwcKqBqP8OT_aqZsxFz_",
+      "name": "ISBN-Using-office-areas-health-and-safety-solution-2011-05.pdf",
+      "kind": "file",
+      "source_url": "https://drive.google.com/file/d/1MQmfsjXUqA2SEwcKqBqP8OT_aqZsxFz_/view",
+      "source_mime_type": "application/pdf",
+      "source_size_bytes": 461574,
+      "source_modified_at": "2020-04-22T04:44:02.000Z",
+      "source_folder_ids": [
+        "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm"
+      ],
+      "original_folder_path": "human-resources",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/pdf",
+      "local_path": "documents/human-resources/ISBN-Using-office-areas-health-and-safety-solution-2011-05.pdf",
+      "local_href": "documents/human-resources/ISBN-Using-office-areas-health-and-safety-solution-2011-05.pdf",
+      "size_bytes": 461574,
+      "sha256": "e233f321d44140f0ff8e4712bc57baaafa83458f9a779b5fcd400c02b66c2f6f",
+      "archived": false
+    },
+    {
+      "id": "1XH-FXFVW0lMeUtGiwS-ncGOrDU-miNcV",
+      "name": "Meeting Sign-in Sheet Template.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1XH-FXFVW0lMeUtGiwS-ncGOrDU-miNcV/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 98510,
+      "source_modified_at": "2020-01-07T05:37:26.960Z",
+      "source_folder_ids": [
+        "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm"
+      ],
+      "original_folder_path": "human-resources",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/human-resources/Meeting Sign-in Sheet Template.docx",
+      "local_href": "documents/human-resources/Meeting%20Sign-in%20Sheet%20Template.docx",
+      "size_bytes": 98510,
+      "sha256": "403f307e92e6aa1516e75737597eac6dd26f0bdef88ad495ef2aee0c24bee75a",
+      "archived": false
+    },
+    {
+      "id": "1LmZT1UuFNp-xMN7Qb3dx3TUBn3WSZdMH",
+      "name": "OH&S.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1LmZT1UuFNp-xMN7Qb3dx3TUBn3WSZdMH/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 142847,
+      "source_modified_at": "2020-01-07T01:56:16.814Z",
+      "source_folder_ids": [
+        "1Iu77MDTdnNf6SVZ9NwVvytlePAhfyuTm"
+      ],
+      "original_folder_path": "human-resources",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/human-resources/OH&S.docx",
+      "local_href": "documents/human-resources/OH%26S.docx",
+      "size_bytes": 142847,
+      "sha256": "ee8a965057e3a8c0ad372e112c02d13310f1c183a552a8b1be6469976e02197d",
+      "archived": false
+    },
+    {
+      "id": "1tCxxfbZ52-d0C2nvB4QpjIxj31XxpMDw",
+      "name": "Bagwan Health - OHS - FORM-A-Initial Hazard Inspection.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1tCxxfbZ52-d0C2nvB4QpjIxj31XxpMDw/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 25672,
+      "source_modified_at": "2020-01-20T04:37:43.494Z",
+      "source_folder_ids": [
+        "1n1VQqmQ_2Qn9ZST_S3PoyXGKHxFGzvFZ"
+      ],
+      "original_folder_path": "human-resources/ohs",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/human-resources/ohs/Bagwan Health - OHS - FORM-A-Initial Hazard Inspection.docx",
+      "local_href": "documents/human-resources/ohs/Bagwan%20Health%20-%20OHS%20-%20FORM-A-Initial%20Hazard%20Inspection.docx",
+      "size_bytes": 25672,
+      "sha256": "469b199c4d84a04ec7c44c92e3a673dc5c80a37d91474f564a4251cde7435bad",
+      "archived": false
+    },
+    {
+      "id": "1lIvVVI0oYVuw-Qhxh4GE6pkWCKavU2hm",
+      "name": "Bagwan Health - OHS - FORM-B-Risk-assessment.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1lIvVVI0oYVuw-Qhxh4GE6pkWCKavU2hm/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 58555,
+      "source_modified_at": "2020-01-08T00:08:30.216Z",
+      "source_folder_ids": [
+        "1n1VQqmQ_2Qn9ZST_S3PoyXGKHxFGzvFZ"
+      ],
+      "original_folder_path": "human-resources/ohs",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/human-resources/ohs/Bagwan Health - OHS - FORM-B-Risk-assessment.docx",
+      "local_href": "documents/human-resources/ohs/Bagwan%20Health%20-%20OHS%20-%20FORM-B-Risk-assessment.docx",
+      "size_bytes": 58555,
+      "sha256": "4d71e227572d5448bf65beed665367d99ff6cc301a8354b2117eea58e1b21d6b",
+      "archived": false
+    },
+    {
+      "id": "1eyLCltDzStL9NLkIJhBv6N34j_aSDu3j",
+      "name": "Bagwan Health - OHS Workstation Self-Assessment Checklist - 20191217.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1eyLCltDzStL9NLkIJhBv6N34j_aSDu3j/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 984195,
+      "source_modified_at": "2020-01-08T00:06:06.272Z",
+      "source_folder_ids": [
+        "1n1VQqmQ_2Qn9ZST_S3PoyXGKHxFGzvFZ"
+      ],
+      "original_folder_path": "human-resources/ohs",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/human-resources/ohs/Bagwan Health - OHS Workstation Self-Assessment Checklist - 20191217.docx",
+      "local_href": "documents/human-resources/ohs/Bagwan%20Health%20-%20OHS%20Workstation%20Self-Assessment%20Checklist%20-%2020191217.docx",
+      "size_bytes": 984195,
+      "sha256": "baa860bee02a67211111e1cc0c8d187b2f0477bf24f39c6c06b3083f78524bb0",
+      "archived": false
+    },
+    {
+      "id": "1rPIg3amCytxp0c5v7O4JWlIGrcBOYBL2",
+      "name": "ISBN-Officewise-guide-to-health-and-safety-in-the-office-2006-01.pdf",
+      "kind": "file",
+      "source_url": "https://drive.google.com/file/d/1rPIg3amCytxp0c5v7O4JWlIGrcBOYBL2/view",
+      "source_mime_type": "application/pdf",
+      "source_size_bytes": 3062208,
+      "source_modified_at": "2020-04-22T04:39:26.000Z",
+      "source_folder_ids": [
+        "1n1VQqmQ_2Qn9ZST_S3PoyXGKHxFGzvFZ"
+      ],
+      "original_folder_path": "human-resources/ohs",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/pdf",
+      "local_path": "documents/human-resources/ohs/ISBN-Officewise-guide-to-health-and-safety-in-the-office-2006-01.pdf",
+      "local_href": "documents/human-resources/ohs/ISBN-Officewise-guide-to-health-and-safety-in-the-office-2006-01.pdf",
+      "size_bytes": 3062208,
+      "sha256": "d9f3a24c2e7573d3bcb09b499b940fad5c8dd61a6fffb023ec1bae2ebf2b64f8",
+      "archived": false
+    },
+    {
+      "id": "15ZwMuYgrhljNz5TkdhM0IGcAjVFaKxOa",
+      "name": "ISBN-Using-office-areas-health-and-safety-solution-2011-05.pdf",
+      "kind": "file",
+      "source_url": "https://drive.google.com/file/d/15ZwMuYgrhljNz5TkdhM0IGcAjVFaKxOa/view",
+      "source_mime_type": "application/pdf",
+      "source_size_bytes": 461574,
+      "source_modified_at": "2020-04-22T04:44:02.000Z",
+      "source_folder_ids": [
+        "1n1VQqmQ_2Qn9ZST_S3PoyXGKHxFGzvFZ"
+      ],
+      "original_folder_path": "human-resources/ohs",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/pdf",
+      "local_path": "documents/human-resources/ohs/ISBN-Using-office-areas-health-and-safety-solution-2011-05.pdf",
+      "local_href": "documents/human-resources/ohs/ISBN-Using-office-areas-health-and-safety-solution-2011-05.pdf",
+      "size_bytes": 461574,
+      "sha256": "e233f321d44140f0ff8e4712bc57baaafa83458f9a779b5fcd400c02b66c2f6f",
+      "archived": false
+    },
+    {
+      "id": "1ZtEdaM2bS_BL0gqjmfQh9NFZVV_drnYG",
+      "name": "Bagwan brand book_v02.pdf",
+      "kind": "file",
+      "source_url": "https://drive.google.com/file/d/1ZtEdaM2bS_BL0gqjmfQh9NFZVV_drnYG/view",
+      "source_mime_type": "application/pdf",
+      "source_size_bytes": 556478,
+      "source_modified_at": "2020-01-07T01:00:50.429Z",
+      "source_folder_ids": [
+        "1BQdUCDP5WFwHvbMc82yybAtJsjRtNV8L"
+      ],
+      "original_folder_path": "marketing-and-communications",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/pdf",
+      "local_path": "documents/marketing-and-communications/Bagwan brand book_v02.pdf",
+      "local_href": "documents/marketing-and-communications/Bagwan%20brand%20book_v02.pdf",
+      "size_bytes": 556478,
+      "sha256": "b39c0dd7e53337da0d22b30547996a38777ca8d14fe20aa9e18bf7b695bdf02b",
+      "archived": false
+    },
+    {
+      "id": "1fDz8xPXcVf2nruAZVnGT8Fzlh7mVwuTV",
+      "name": "Bagawan logo_colour.png",
+      "kind": "file",
+      "source_url": "https://drive.google.com/file/d/1fDz8xPXcVf2nruAZVnGT8Fzlh7mVwuTV/view",
+      "source_mime_type": "image/png",
+      "source_size_bytes": 81906,
+      "source_modified_at": "2020-01-07T01:57:31.618Z",
+      "source_folder_ids": [
+        "1mqEjBrUVkb0TOyGYNKTBkOkBpS0Y5SRk"
+      ],
+      "original_folder_path": "marketing-and-communications/bagwan-branding",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "image/png",
+      "local_path": "documents/marketing-and-communications/bagwan-branding/Bagawan logo_colour.png",
+      "local_href": "documents/marketing-and-communications/bagwan-branding/Bagawan%20logo_colour.png",
+      "size_bytes": 81906,
+      "sha256": "dfa7373ab3c963aeda6994c9dabbe4d1572ae3e5bbddd88adabf39bc4a69f59c",
+      "archived": false
+    },
+    {
+      "id": "1Qk18a0pUIV1c1Du_GkXp3zk5sXZr9rg8",
+      "name": "Bagwan brand book_v01.pdf",
+      "kind": "file",
+      "source_url": "https://drive.google.com/file/d/1Qk18a0pUIV1c1Du_GkXp3zk5sXZr9rg8/view",
+      "source_mime_type": "application/pdf",
+      "source_size_bytes": 543049,
+      "source_modified_at": "2020-01-07T01:57:33.659Z",
+      "source_folder_ids": [
+        "1mqEjBrUVkb0TOyGYNKTBkOkBpS0Y5SRk"
+      ],
+      "original_folder_path": "marketing-and-communications/bagwan-branding",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/pdf",
+      "local_path": "documents/marketing-and-communications/bagwan-branding/Bagwan brand book_v01.pdf",
+      "local_href": "documents/marketing-and-communications/bagwan-branding/Bagwan%20brand%20book_v01.pdf",
+      "size_bytes": 543049,
+      "sha256": "9597b5a69365d968fae9637beba015fb42edc396be17c3adee662cfe05a701e8",
+      "archived": false
+    },
+    {
+      "id": "1rn7t7LTUpnQRaXK08qHZ54je7ef4lBgF",
+      "name": "Bagwan brand book_v02.ai",
+      "kind": "file",
+      "source_url": "https://drive.google.com/file/d/1rn7t7LTUpnQRaXK08qHZ54je7ef4lBgF/view",
+      "source_mime_type": "application/postscript",
+      "source_size_bytes": 676127,
+      "source_modified_at": "2020-01-07T01:57:33.659Z",
+      "source_folder_ids": [
+        "1mqEjBrUVkb0TOyGYNKTBkOkBpS0Y5SRk"
+      ],
+      "original_folder_path": "marketing-and-communications/bagwan-branding",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/postscript",
+      "local_path": "documents/marketing-and-communications/bagwan-branding/Bagwan brand book_v02.ai",
+      "local_href": "documents/marketing-and-communications/bagwan-branding/Bagwan%20brand%20book_v02.ai",
+      "size_bytes": 676127,
+      "sha256": "a248a7ddcb9151e6d757c355ff54e763c69faf89e2af5aa41132b6ed0d238985",
+      "archived": false
+    },
+    {
+      "id": "1_3BfaogJS-fmlDPfJmGzrtgn0nmEzN2n",
+      "name": "Video Transcript Template.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1_3BfaogJS-fmlDPfJmGzrtgn0nmEzN2n/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 146888,
+      "source_modified_at": "2020-01-07T01:57:31.618Z",
+      "source_folder_ids": [
+        "1mqEjBrUVkb0TOyGYNKTBkOkBpS0Y5SRk"
+      ],
+      "original_folder_path": "marketing-and-communications/bagwan-branding",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/marketing-and-communications/bagwan-branding/Video Transcript Template.docx",
+      "local_href": "documents/marketing-and-communications/bagwan-branding/Video%20Transcript%20Template.docx",
+      "size_bytes": 146888,
+      "sha256": "e986448f7ac56049b9432e55154693e234ee323b21effe42934a88669da1ccbb",
+      "archived": false
+    },
+    {
+      "id": "1KOCdZF2oIW3fuSAIWWFc6D-TTtE9c5D7",
+      "name": "Marketing description.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1KOCdZF2oIW3fuSAIWWFc6D-TTtE9c5D7/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 821040,
+      "source_modified_at": "2020-01-08T01:06:22.921Z",
+      "source_folder_ids": [
+        "1BQdUCDP5WFwHvbMc82yybAtJsjRtNV8L"
+      ],
+      "original_folder_path": "marketing-and-communications",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/marketing-and-communications/Marketing description.docx",
+      "local_href": "documents/marketing-and-communications/Marketing%20description.docx",
+      "size_bytes": 821040,
+      "sha256": "c4f0565f38fec832b91a329193de4801b48284928379bd0b288650544fd4bc7d",
+      "archived": false
+    },
+    {
+      "id": "1g0mEWrRGm5CfbmYOM9RDLc8WbU0HtHEP",
+      "name": "Bagwan Health - Bullying and Harassment, V1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1g0mEWrRGm5CfbmYOM9RDLc8WbU0HtHEP/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 33733,
+      "source_modified_at": "2020-01-08T04:00:55.934Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health - Bullying and Harassment, V1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Bullying%20and%20Harassment%2C%20V1.0.docx",
+      "size_bytes": 33733,
+      "sha256": "bc12b6eb1418a177a76bdc9bab5146a5e86b722da4e1963a70af7d35607de35d",
+      "archived": false
+    },
+    {
+      "id": "1ux8lBY29rWYDIFNzE2tSc5UxpWo5Q_o0",
+      "name": "Bagwan Health - Code of conduct - V1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1ux8lBY29rWYDIFNzE2tSc5UxpWo5Q_o0/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 34196,
+      "source_modified_at": "2020-01-08T04:02:08.187Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health - Code of conduct - V1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Code%20of%20conduct%20-%20V1.0.docx",
+      "size_bytes": 34196,
+      "sha256": "824c3d193e57ed9b507091b567c0a68a8bcca79d83b7ac21b8a9f51f7fa3d707",
+      "archived": false
+    },
+    {
+      "id": "1QCT6-t0wHOg7Wck3lysXjb3t4B1OYiwo",
+      "name": "Bagwan Health - Complaints Handling V1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1QCT6-t0wHOg7Wck3lysXjb3t4B1OYiwo/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 37824,
+      "source_modified_at": "2020-01-08T04:02:20.136Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health - Complaints Handling V1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Complaints%20Handling%20V1.0.docx",
+      "size_bytes": 37824,
+      "sha256": "501d00e994942455eb94916cbd9f152f5aad1d99a76eea0afc7b6c68cc5340ae",
+      "archived": false
+    },
+    {
+      "id": "15HdFdAeWd77qP56olRSBXp64d4G0ZV51",
+      "name": "Bagwan Health - Emergency Incident Response, Management & Reporting, V1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/15HdFdAeWd77qP56olRSBXp64d4G0ZV51/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 120019,
+      "source_modified_at": "2020-01-08T04:01:31.866Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health - Emergency Incident Response, Management & Reporting, V1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Emergency%20Incident%20Response%2C%20Management%20%26%20Reporting%2C%20V1.0.docx",
+      "size_bytes": 120019,
+      "sha256": "e2775a553d9a9645e27e1ed711256d9ca7d243c17aeebe41e309b15edd72bc17",
+      "archived": false
+    },
+    {
+      "id": "1VLntiAlUbcv9VMbnk97MjewLT749LaIl",
+      "name": "Bagwan Health - Equal Opportunity - V1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1VLntiAlUbcv9VMbnk97MjewLT749LaIl/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 41079,
+      "source_modified_at": "2020-01-08T01:19:44.589Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health - Equal Opportunity - V1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Equal%20Opportunity%20-%20V1.0.docx",
+      "size_bytes": 41079,
+      "sha256": "c645998126c4ab36b00f5335328478277ab35e566edeeeeb85aebf704fac1f1a",
+      "archived": false
+    },
+    {
+      "id": "1aJhEm61s51clBQQDafekCmOcmhir4Wdc",
+      "name": "Bagwan Health - Freedom of Information V1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1aJhEm61s51clBQQDafekCmOcmhir4Wdc/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 28302,
+      "source_modified_at": "2020-01-08T04:03:48.964Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health - Freedom of Information V1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Freedom%20of%20Information%20V1.0.docx",
+      "size_bytes": 28302,
+      "sha256": "084605f55dd0bf48b7716abef0cd8ec011f3fc0ce85cdb6139a572fc9c8a9a4e",
+      "archived": false
+    },
+    {
+      "id": "1ifJiPxoeKQsqMSdahcxp5TX-oUpVB2z6",
+      "name": "Bagwan Health - Incident Management - V1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1ifJiPxoeKQsqMSdahcxp5TX-oUpVB2z6/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 44397,
+      "source_modified_at": "2020-01-08T03:02:43.485Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health - Incident Management - V1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Incident%20Management%20-%20V1.0.docx",
+      "size_bytes": 44397,
+      "sha256": "4cd06447a4013e3ec2d4052550020b9238b49c3ad3e417ccf3a65b85083a1f76",
+      "archived": false
+    },
+    {
+      "id": "1u61yG-3rgLQdcyPZGxC7Px9Jb5hNO0qW",
+      "name": "Bagwan Health - Infection Control V1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1u61yG-3rgLQdcyPZGxC7Px9Jb5hNO0qW/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 34289,
+      "source_modified_at": "2020-01-08T03:21:50.007Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health - Infection Control V1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Infection%20Control%20V1.0.docx",
+      "size_bytes": 34289,
+      "sha256": "a86cddbcb30be1b307c043982de4a3b8a0ee7b7e58634d000caa606b946ee786",
+      "archived": false
+    },
+    {
+      "id": "1hOIyUycABd-Hf2i8HclOAaVbgJBr9pe4Opuwg-nU8nA",
+      "name": "Bagwan Health - Language Services V1.0",
+      "kind": "google-doc-export",
+      "source_url": "https://docs.google.com/document/d/1hOIyUycABd-Hf2i8HclOAaVbgJBr9pe4Opuwg-nU8nA/edit",
+      "source_mime_type": "application/vnd.google-apps.document",
+      "source_size_bytes": null,
+      "source_modified_at": "2020-01-08T03:58:37.446Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health - Language Services V1.0 (Google Doc export).docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Language%20Services%20V1.0%20%28Google%20Doc%20export%29.docx",
+      "size_bytes": 225885,
+      "sha256": "19d0fb57bd5fcf2cca231e8e6c4e7b4358cbf6b837f053eecbf2fb697933fa0a",
+      "archived": false
+    },
+    {
+      "id": "1XsrjQeb3oSS6Igu3TYewUQO0E0gUtWK_",
+      "name": "Bagwan Health - Language Services V1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1XsrjQeb3oSS6Igu3TYewUQO0E0gUtWK_/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 59915,
+      "source_modified_at": "2020-01-07T00:13:06.031Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health - Language Services V1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Language%20Services%20V1.0.docx",
+      "size_bytes": 59915,
+      "sha256": "e58ad9f3127f54e792b26d47bf97f9a43d26f4ad1f3d348343222ffc9f6606c9",
+      "archived": false
+    },
+    {
+      "id": "1pj4tUbhl67liuXbqAo5RLqVALKQPTcks",
+      "name": "Bagwan Health - Mandatory Reporting V1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1pj4tUbhl67liuXbqAo5RLqVALKQPTcks/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 30621,
+      "source_modified_at": "2020-01-15T05:25:14.878Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health - Mandatory Reporting V1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Mandatory%20Reporting%20V1.0.docx",
+      "size_bytes": 30621,
+      "sha256": "79cc4442787b4c0817517f5e906f5a0c4a4fba50e5045155e2e1a35f81ad2d64",
+      "archived": false
+    },
+    {
+      "id": "1ErUAiMNpA3L56mQ5H-z4Dcyy43hE--mN",
+      "name": "Bagwan Health - OHS V1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1ErUAiMNpA3L56mQ5H-z4Dcyy43hE--mN/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 45042,
+      "source_modified_at": "2020-01-15T03:59:32.167Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health - OHS V1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20OHS%20V1.0.docx",
+      "size_bytes": 45042,
+      "sha256": "68a50a236ff655d268a3feb4514a8f82e8b76b5bbbdfc905ba88279681a0e461",
+      "archived": false
+    },
+    {
+      "id": "13MMn2pF3948SGI-IOersTghwFiYeMhwA",
+      "name": "Bagwan Health - Personal Leave - V1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/13MMn2pF3948SGI-IOersTghwFiYeMhwA/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 33102,
+      "source_modified_at": "2020-01-15T03:20:34.949Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health - Personal Leave - V1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Personal%20Leave%20-%20V1.0.docx",
+      "size_bytes": 33102,
+      "sha256": "d02b5cd05705f565830b44e9c69c5843f82ab39a069ad8c043e72229fe7a756e",
+      "archived": false
+    },
+    {
+      "id": "1baXD00vXLd6-NUeLO5agKWpU5PIE6JL-",
+      "name": "Bagwan Health - Privacy - v1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1baXD00vXLd6-NUeLO5agKWpU5PIE6JL-/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 39110,
+      "source_modified_at": "2020-01-15T03:03:54.748Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health - Privacy - v1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Privacy%20-%20v1.0.docx",
+      "size_bytes": 39110,
+      "sha256": "7e4849f0a6d2eeb1992b779a811af0d8c360249e84a725e4029d82e351d477e1",
+      "archived": false
+    },
+    {
+      "id": "16jNAM8lIWBBR3VUV2itLf3pnJ97Vm366",
+      "name": "Bagwan Health - Risk Management V1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/16jNAM8lIWBBR3VUV2itLf3pnJ97Vm366/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 121474,
+      "source_modified_at": "2020-11-26T01:39:49.709Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health - Risk Management V1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Risk%20Management%20V1.0.docx",
+      "size_bytes": 121474,
+      "sha256": "1e05f639475184086232e6c84d05d7340c371aa3f9441582454eb56d12c910c7",
+      "archived": false
+    },
+    {
+      "id": "1_3pKYY40SEplOSbYKPkpQFPR37XohpV8",
+      "name": "Bagwan Health - Specimen Storage and Collection V1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1_3pKYY40SEplOSbYKPkpQFPR37XohpV8/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 33403,
+      "source_modified_at": "2020-01-15T01:04:40.899Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health - Specimen Storage and Collection V1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Specimen%20Storage%20and%20Collection%20V1.0.docx",
+      "size_bytes": 33403,
+      "sha256": "3601c9eee5240953a402821ca17d2db8b4ae321079ae6dea2b5b66b304bbf037",
+      "archived": false
+    },
+    {
+      "id": "11Kwm7o7KYF_GwIBq9YakTt53Angw-kRL",
+      "name": "Bagwan Health - Training and Development V1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/11Kwm7o7KYF_GwIBq9YakTt53Angw-kRL/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 33325,
+      "source_modified_at": "2020-01-15T00:54:12.868Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health - Training and Development V1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-%20Training%20and%20Development%20V1.0.docx",
+      "size_bytes": 33325,
+      "sha256": "02ca884835e5700af2cfd9578f5cfb9d01a8c4e024b690db2e9288d16b14cc9b",
+      "archived": false
+    },
+    {
+      "id": "1fROtIkO5CMaQ3kX6CL7wwhu5g3DVBkGm",
+      "name": "Bagwan Health -Emergency Response V1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1fROtIkO5CMaQ3kX6CL7wwhu5g3DVBkGm/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 66080,
+      "source_modified_at": "2020-01-15T00:23:55.577Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health -Emergency Response V1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-Emergency%20Response%20V1.0.docx",
+      "size_bytes": 66080,
+      "sha256": "6c546802159d5d74174bb9228719200da4d11d1ad64df27c35fc33a137e2af2e",
+      "archived": false
+    },
+    {
+      "id": "1aCdD0aKgTwSoYuwU6zvnWZ1hMMD1IDEH",
+      "name": "Bagwan Health -Internet, Email and Social Media v1.0.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1aCdD0aKgTwSoYuwU6zvnWZ1hMMD1IDEH/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 32918,
+      "source_modified_at": "2020-01-14T23:10:40.586Z",
+      "source_folder_ids": [
+        "1_lCy8-s4UEvzZy7O3p9heuMgmUa6Gp9D"
+      ],
+      "original_folder_path": "policies-and-procedures",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/Bagwan Health -Internet, Email and Social Media v1.0.docx",
+      "local_href": "documents/policies-and-procedures/Bagwan%20Health%20-Internet%2C%20Email%20and%20Social%20Media%20v1.0.docx",
+      "size_bytes": 32918,
+      "sha256": "280695424f72b6a4ba68b43606e795c770d1e98316aed83f206c22b417943ef6",
+      "archived": false
+    },
+    {
+      "id": "1HbcYgFm_j5zZKR5H9E8d1YGHUUc5bMWx",
+      "name": "Bagwan Health - Risk Management V1.0.docx",
+      "kind": "shortcut-copy",
+      "source_url": "https://drive.google.com/file/d/1HbcYgFm_j5zZKR5H9E8d1YGHUUc5bMWx/view",
+      "source_mime_type": "application/vnd.google-apps.shortcut",
+      "source_size_bytes": null,
+      "source_modified_at": "2020-11-26T01:42:04.764Z",
+      "source_folder_ids": [
+        "1uju1GiX2WzW6pPByX0YV0qGwjHQsF1uB"
+      ],
+      "original_folder_path": "policies-and-procedures/logistics",
+      "shortcut_target_id": "16jNAM8lIWBBR3VUV2itLf3pnJ97Vm366",
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/logistics/Bagwan Health - Risk Management V1.0.docx",
+      "local_href": "documents/policies-and-procedures/logistics/Bagwan%20Health%20-%20Risk%20Management%20V1.0.docx",
+      "size_bytes": 121474,
+      "sha256": "1e05f639475184086232e6c84d05d7340c371aa3f9441582454eb56d12c910c7",
+      "archived": false
+    },
+    {
+      "id": "1qYoUOpnEQopSzTSkRxHNkJh4oPdxb-LI",
+      "name": "Bagwan Health - Freedom of Information V1.0.docx",
+      "kind": "shortcut-copy",
+      "source_url": "https://drive.google.com/file/d/1qYoUOpnEQopSzTSkRxHNkJh4oPdxb-LI/view",
+      "source_mime_type": "application/vnd.google-apps.shortcut",
+      "source_size_bytes": null,
+      "source_modified_at": "2020-10-20T02:12:33.710Z",
+      "source_folder_ids": [
+        "18ycIx-8OisH7PO-G2z_dvsXizYPtZtlR"
+      ],
+      "original_folder_path": "policies-and-procedures/record-keeping",
+      "shortcut_target_id": "1aJhEm61s51clBQQDafekCmOcmhir4Wdc",
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/record-keeping/Bagwan Health - Freedom of Information V1.0.docx",
+      "local_href": "documents/policies-and-procedures/record-keeping/Bagwan%20Health%20-%20Freedom%20of%20Information%20V1.0.docx",
+      "size_bytes": 28302,
+      "sha256": "084605f55dd0bf48b7716abef0cd8ec011f3fc0ce85cdb6139a572fc9c8a9a4e",
+      "archived": false
+    },
+    {
+      "id": "1Q7J5hI10qzdLyuxAANKMUOe1oQgMhJFP",
+      "name": "Bagwan Health - Privacy - v1.0.docx",
+      "kind": "shortcut-copy",
+      "source_url": "https://drive.google.com/file/d/1Q7J5hI10qzdLyuxAANKMUOe1oQgMhJFP/view",
+      "source_mime_type": "application/vnd.google-apps.shortcut",
+      "source_size_bytes": null,
+      "source_modified_at": "2020-10-20T02:11:59.911Z",
+      "source_folder_ids": [
+        "18ycIx-8OisH7PO-G2z_dvsXizYPtZtlR"
+      ],
+      "original_folder_path": "policies-and-procedures/record-keeping",
+      "shortcut_target_id": "1baXD00vXLd6-NUeLO5agKWpU5PIE6JL-",
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/record-keeping/Bagwan Health - Privacy - v1.0.docx",
+      "local_href": "documents/policies-and-procedures/record-keeping/Bagwan%20Health%20-%20Privacy%20-%20v1.0.docx",
+      "size_bytes": 39110,
+      "sha256": "7e4849f0a6d2eeb1992b779a811af0d8c360249e84a725e4029d82e351d477e1",
+      "archived": false
+    },
+    {
+      "id": "1-xeJABM8wOan9QrYhOTyAuQTlyJbLRSd",
+      "name": "Bagwan Health disposal of records NAP.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1-xeJABM8wOan9QrYhOTyAuQTlyJbLRSd/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 29819,
+      "source_modified_at": "2020-05-29T01:14:49.120Z",
+      "source_folder_ids": [
+        "18ycIx-8OisH7PO-G2z_dvsXizYPtZtlR"
+      ],
+      "original_folder_path": "policies-and-procedures/record-keeping",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/record-keeping/Bagwan Health disposal of records NAP.docx",
+      "local_href": "documents/policies-and-procedures/record-keeping/Bagwan%20Health%20disposal%20of%20records%20NAP.docx",
+      "size_bytes": 29819,
+      "sha256": "0daa4cb15961168e688c269f43c9db9faaec1b8136bc75fdded6906e63c42fd8",
+      "archived": false
+    },
+    {
+      "id": "1WMq0462Jluy_FoCJgNvVaTLQbaiy_5NW",
+      "name": "Bagwan Health recordkeeping related legislative summaries.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/1WMq0462Jluy_FoCJgNvVaTLQbaiy_5NW/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 45962,
+      "source_modified_at": "2020-05-19T04:17:40.000Z",
+      "source_folder_ids": [
+        "18ycIx-8OisH7PO-G2z_dvsXizYPtZtlR"
+      ],
+      "original_folder_path": "policies-and-procedures/record-keeping",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/record-keeping/Bagwan Health recordkeeping related legislative summaries.docx",
+      "local_href": "documents/policies-and-procedures/record-keeping/Bagwan%20Health%20recordkeeping%20related%20legislative%20summaries.docx",
+      "size_bytes": 45962,
+      "sha256": "de6c96ff82d8936d59047876cb37ad74f92e3412a138083447055dfd5fad15ab",
+      "archived": false
+    },
+    {
+      "id": "11eSQKm6gQAB2KhSGuG7rog5lwhbNxlVG",
+      "name": "Bagwan Health recordkeeping-policy-template.docx",
+      "kind": "file",
+      "source_url": "https://docs.google.com/document/d/11eSQKm6gQAB2KhSGuG7rog5lwhbNxlVG/edit",
+      "source_mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "source_size_bytes": 41230,
+      "source_modified_at": "2020-05-19T04:18:14.000Z",
+      "source_folder_ids": [
+        "18ycIx-8OisH7PO-G2z_dvsXizYPtZtlR"
+      ],
+      "original_folder_path": "policies-and-procedures/record-keeping",
+      "shortcut_target_id": null,
+      "export_mime_type": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "local_path": "documents/policies-and-procedures/record-keeping/Bagwan Health recordkeeping-policy-template.docx",
+      "local_href": "documents/policies-and-procedures/record-keeping/Bagwan%20Health%20recordkeeping-policy-template.docx",
+      "size_bytes": 41230,
+      "sha256": "a20d67872076d856817e6c0a65fc6657701322e2b9d723a545a25bb4d5413f48",
+      "archived": false
+    }
+  ]
+}

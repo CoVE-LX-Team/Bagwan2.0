@@ -1,0 +1,10 @@
+# Preserve source file bytes and keep document formats out of text diffs.
+*.doc binary
+*.docx binary
+*.pdf binary
+*.png binary
+*.ai binary
+
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
