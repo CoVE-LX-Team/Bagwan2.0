@@ -460,7 +460,7 @@
       "path": "assets/vendor/cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css",
       "done": true,
       "size_bytes": 9677,
-      "sha256": "c3a1b60055e08c0ed584fc738bd39aaf0688786957f4c6ec525a40b2e5e228e3"
+      "sha256": "a7f1d7b86f1068f228d92f1b0aef95bd41d1e2e12785516573adbf552ee2793d"
     },
     {
       "source_url": "https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js",
@@ -970,8 +970,8 @@
       "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/css/bootstrap.min.css",
       "path": "wp-content/themes/118/aged_care_forms/css/bootstrap.min.css",
       "done": true,
-      "size_bytes": 155715,
-      "sha256": "9979057c8b7a66a64fa5d7544d5d0ad162e55c69fb5a2452f3ecfbf01e15b7de"
+      "size_bytes": 155713,
+      "sha256": "f9ddd1e64827cb0fa09d74aa581ecfd468212261fa170ec9baddbd678389b342"
     },
     {
       "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/css/main.css",
@@ -984,8 +984,8 @@
       "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/css/sumoselect.min.css",
       "path": "wp-content/themes/118/aged_care_forms/css/sumoselect.min.css",
       "done": true,
-      "size_bytes": 6884,
-      "sha256": "c9ce04a911d3414cbf3da041c11628d42a8941760a0af80c2996d3155087520e"
+      "size_bytes": 6880,
+      "sha256": "0b6a051bbd14afc83710420c8eeabdc986706c2cd1af6e324153d3980b96b142"
     },
     {
       "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/aged_care_forms/img/agecare.jpg",
@@ -1187,15 +1187,15 @@
       "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/css/jquery.mCustomScrollbar.min.css",
       "path": "wp-content/themes/118/css/jquery.mCustomScrollbar.min.css",
       "done": true,
-      "size_bytes": 42827,
-      "sha256": "4a7b6ef8b8d2988c08b1ce52c7fbfae3a4f2203378dd5d35f062743e135d5e77"
+      "size_bytes": 42823,
+      "sha256": "745a70a5c7f20cf28f569117b2b77ccd22d8d44887074cc2e39939fce80debb3"
     },
     {
       "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/css/vwp.css",
       "path": "wp-content/themes/118/css/vwp.css",
       "done": true,
-      "size_bytes": 491643,
-      "sha256": "d51b99359dee9eca636a62d5f948cde813e3ed4fa5c59036128c8b2bba6869a2"
+      "size_bytes": 491579,
+      "sha256": "06b0ddf424cdc1f50d3b372ac19c7240360e4953c1b171314ef6e93e2eff2793"
     },
     {
       "source_url": "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/118/fonts/fontawesome-webfont.eot",

@@ -187,9 +187,16 @@ def document_list(folder_id, include_heading=False):
 
 def rewrite_css(text, base):
     def replace(match):
-        value = match.group(1).strip().strip('\"\'')
-        return 'url("' + queue_asset(value, base) + '")'
-    text = re.sub(r'url\(\s*([^)]*?)\s*\)', replace, text, flags=re.I)
+        value = next(value for value in match.groups() if value is not None).strip()
+        # SVG data URLs can contain parentheses, quotes and CSS-like text.
+        # Preserve them verbatim rather than treating the first ')' as the URL end.
+        if value.startswith(('data:', 'blob:', '#')):
+            return match.group(0)
+        return 'url(' + json.dumps(queue_asset(value, base)) + ')'
+    urls = r'''url\(\s*(?:"((?:\\.|[^"\\])*)"|'((?:\\.|[^'\\])*)'|([^)]*?))\s*\)'''
+    text = re.sub(urls, replace, text, flags=re.I)
+    # Excluded remote fonts must not turn into a self-import of this stylesheet.
+    text = re.sub(r'''@import\s+url\(\s*["']{2}\s*\)\s*;''', '', text, flags=re.I)
     return re.sub(r'/\*# sourceMappingURL=.*?\*/', '', text)
 
 
@@ -408,12 +415,20 @@ def repair_dependencies():
         text = re.sub(r'@font-face\s*\{[^}]+\}', font, text)
         return re.sub(r'url\("([^"\n]*)"\)', lambda m: m.group(0) if valid(m.group(1)) else 'none', text)
     for path in ROOT.rglob('*.css'):
+        if any(part in path.parts for part in ('.git', '.playwright-cli', 'output', 'node_modules')): continue
         path.write_text(clean_css(path.read_text(errors='replace')))
     for path in ROOT.rglob('*.html'):
-        if '.git' in path.parts: continue
+        if any(part in path.parts for part in ('.git', '.playwright-cli', 'output', 'node_modules')): continue
         soup = BeautifulSoup(path.read_text(), 'lxml')
         if soup.head and not soup.select_one('link[rel=icon]'):
             soup.head.append(soup.new_tag('link', rel='icon', type='image/svg+xml', href=public('assets/favicon.svg')))
+        for link in soup.select('link[rel=stylesheet][href]'):
+            href = link['href']
+            if href.startswith(SITE):
+                css_path = ROOT / unquote(urlsplit(href).path[len(SITE):])
+                if css_path.is_file():
+                    version = hashlib.sha256(css_path.read_bytes()).hexdigest()[:12]
+                    link['href'] = urlsplit(href).path + '?v=' + version
         for style in soup.select('style'):
             style.string = clean_css(node_text(style))
         for tag in list(soup.select('img[src=""]')): tag.decompose()

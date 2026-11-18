@@ -34,7 +34,7 @@ def inspect():
     errors = []
     pages = sorted(ROOT.rglob('*.html'))
     for path in pages:
-        if any(p in path.parts for p in ('.git', 'output', 'node_modules')):
+        if any(p in path.parts for p in ('.git', '.playwright-cli', 'output', 'node_modules')):
             continue
         soup = BeautifulSoup(path.read_text(), 'lxml')
         if not path.read_text().lower().startswith('<!doctype html>'):
@@ -51,6 +51,8 @@ def inspect():
                 if attr in ('src','poster') and raw.startswith(('http:','https:','//')):
                     errors.append((str(path.relative_to(ROOT)), 'External runtime asset: ' + raw))
     for path in ROOT.rglob('*.css'):
+        if any(p in path.parts for p in ('.git', '.playwright-cli', 'output', 'node_modules')):
+            continue
         for raw in re.findall(r'url\(\s*([^)]*?)\s*\)', path.read_text(errors='replace'), re.I):
             raw = raw.strip().strip('\"\'')
             target = local_target(raw, path)
