@@ -1,0 +1,71 @@
+async (page) => {
+  const base='http://127.0.0.1:4173/Bagwan2.0/3.0/';
+  const checks=[],errors=[];
+  const verify=(ok,label)=>{if(!ok)throw new Error(label);checks.push(label);};
+  page.on('pageerror',e=>errors.push(e.message));
+  await page.route('https://www.youtube.com/**',route=>route.abort());
+  const go=async(hash='home')=>{await page.goto(base+'#'+hash,{waitUntil:'domcontentloaded'});await page.locator('main h1').first().waitFor();await page.waitForTimeout(80);};
+  await page.setViewportSize({width:1440,height:1000});
+  await page.goto(base);await page.reload();
+  await go();
+  verify(await page.getByRole('heading',{name:'Staff home',exact:true}).count()===1,'Home provides one page heading');
+  await page.locator('#search').fill('privacy');await page.locator('#global-search button').click();
+  await page.waitForURL('**/#search?query=privacy');
+  await page.getByRole('heading',{name:'Search the intranet'}).waitFor();
+  verify((await page.locator('#results').innerText()).toLowerCase().includes('privacy'),'Global search finds policies and documents');
+  await go('people');await page.locator('#list-search').fill('George Dunn');
+  verify(await page.locator('.person').count()===1,'People filter resolves a source-backed person');
+  await page.locator('#list-search').fill('zzzz-no-person');
+  verify(await page.getByRole('heading',{name:'No results match your search.'}).count()===1,'Empty search gives a recovery message');
+  await go('policies');await page.locator('#list-search').fill('medication safety');
+  verify(await page.locator('#results .badge.draft').count()===1,'Draft policy is identified before opening');
+  await page.getByRole('link',{name:'Medication safety',exact:true}).click();
+  verify((await page.locator('.notice').innerText()).includes('SME'),'Draft policy explains pending review');
+  await page.locator('.page-tools [data-save]').click();
+  await go('saved');verify((await page.locator('main').innerText()).includes('Medication safety'),'Saved item persists after page reload');
+  await page.locator('main [data-save]').click();
+  await go('documents');await page.locator('#list-search').fill('Privacy');
+  const download=await page.locator('#results h2 a').first().getAttribute('href');
+  verify((await page.request.get(download)).status()===200,'Document search leads to an existing download');
+  await go('page/'+encodeURIComponent('scorm/intranet/our-community/index.html'));
+  verify(await page.locator('.values-reference section').count()===5,'All five values are visible reference sections');
+  verify(await page.locator('.flip-btn,.unflip-btn').count()===0,'The intranet does not require flip-card controls');
+  await go('page/'+encodeURIComponent('patient-management-system/abbeyscale/index.html'));
+  const frame=page.frameLocator('iframe.embedded-page');
+  await frame.locator('select[name^="score"]').first().waitFor();
+  verify(await frame.locator('select[name^="score"]').count()===6,'The clinical assessment is usable within 3.0');
+  await go('videos');verify(await page.locator('.video-grid iframe').count()===24,'The new video library includes all 24 unique videos');
+  await page.setViewportSize({width:375,height:900});await go();
+  verify(!await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),'Home fits a 375px viewport');
+  await page.getByRole('button',{name:'Open navigation',exact:true}).click();
+  verify(await page.locator('main').evaluate(e=>e.inert),'Mobile navigation prevents background interaction');
+  await page.keyboard.press('Escape');
+  verify(await page.getByRole('button',{name:'Open navigation',exact:true}).evaluate(e=>e===document.activeElement),'Escape returns focus to navigation control');
+  await page.screenshot({path:'Bagwan2.0/output/playwright/v3-home-mobile.png',fullPage:true});
+  for(const route of ['departments','people','policies','forms','resources','documents','news','search','saved','department/hr','department/nursing','department/laboratory','department/interpreting','department/logistics','department/liaison']){
+    await go(route);verify(!await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),route+' fits a phone');
+    await page.addScriptTag({path:'/tmp/bagwan-axe.min.js'});
+    const violations=await page.evaluate(async()=>{const r=await axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));});
+    verify(violations.length===0,route+' has no automated WCAG violations: '+JSON.stringify(violations));
+  }
+  for(const activity of ['ppe','waste']){
+    await page.goto(base+'practice.html?activity='+activity);
+    await page.locator('#quiz').waitFor();
+    await page.getByRole('button',{name:'Check my responses'}).click();
+    verify((await page.locator('#quiz-status').innerText()).includes('Complete the remaining'),'Unanswered '+activity+' practice is explicitly incomplete');
+    for(const fieldset of await page.locator('fieldset').all())await fieldset.locator('input[type=radio]').first().check();
+    await page.getByRole('button',{name:'Check my responses'}).click();
+    verify(await page.locator('.practice-feedback:visible').count()===await page.locator('fieldset').count(),activity+' provides feedback for every response');
+    await page.getByRole('button',{name:'Try again'}).click();
+    verify(await page.locator('input:checked').count()===0,activity+' resets responses');
+    verify(!await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),activity+' practice fits a phone');
+  }
+  await page.goto(base+'practice.html?activity=interpreter');
+  await page.getByLabel('Which credentials did you check and why?').fill('Checked the public credential and language pair.');
+  await page.getByLabel('What would you confirm about suitability and availability?').fill('Availability and relevant context for the assignment.');
+  await page.getByLabel('Record the source and the date you checked it').fill('NAATI directory, 20 November 2026.');
+  const downloadEvent=page.waitForEvent('download');await page.getByRole('button',{name:'Download reflection'}).click();
+  verify((await downloadEvent).suggestedFilename()==='bagwan-interpreter-reflection.txt','Directory reflection downloads as evidence without a fixed-name answer');
+  verify(errors.length===0,'No JavaScript errors during 3.0 journeys');
+  return {passed:checks.length,checks,errors};
+}

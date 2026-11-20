@@ -1,0 +1,10 @@
+/* Department charts retain reporting groups while fitting phone screens. */
+.department-org-chart .grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px;height:auto!important;margin-inline:0!important}
+.department-org-chart .grid-sizer{display:none}
+.department-org-chart .grid-item{position:relative!important;left:auto!important;top:auto!important;transform:none!important;width:100%!important;max-width:100%!important;flex-basis:auto!important;padding:0!important;margin:0!important;min-width:0}
+.department-org-chart .grid-item>div,.department-org-chart .material-card{max-width:100%;min-width:0;overflow-wrap:anywhere;white-space:normal}
+.department-org-chart .level0{font-size:26px;line-height:1.25;overflow-wrap:anywhere}
+.department-org-chart .row{margin-inline:0!important;width:100%}
+.department-org-chart .org_chart_profile img{width:80px;height:80px;object-fit:cover}
+.department-org-chart .org_title{white-space:normal!important;overflow-wrap:anywhere}
+.source-policy{max-width:82ch;line-height:1.7}.source-policy h2{margin-top:1.6em}.source-policy table{border-collapse:collapse;width:100%}.source-policy td{border:1px solid #ccd4db;padding:10px;vertical-align:top}

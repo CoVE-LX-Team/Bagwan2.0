@@ -1,0 +1,149 @@
+{
+  "created_on": "2026-11-20",
+  "status": "Draft for SME and SLD review",
+  "items": [
+    {
+      "id": "D01",
+      "path": "scorm/quick-link-pages/policy-and-procedures/medication-safety/index.html",
+      "title": "Medication safety",
+      "reviewers": [
+        "Clinical SME",
+        "Andrew — Senior Learning Designer"
+      ],
+      "review_status": "Pending",
+      "reason": "No source policy was supplied",
+      "sources": [
+        "https://www.safetyandquality.gov.au/national-standards/nsqhs-standards/medication-safety-standard"
+      ],
+      "html": "<h2>Purpose and scope</h2><p>This draft describes medication safety responsibilities for the Bagwan simulation. It applies to the use of medication information in learning scenarios. It does not authorise prescribing, dispensing or administration.</p><h2>Before proceeding</h2><ul><li>Work within your role, competence and the approved local procedure.</li><li>Confirm the patient identity and the current medication information provided in the scenario.</li><li>Check the documented allergy and adverse drug reaction history.</li><li>Refer discrepancies, missing information or uncertainty to the supervising clinician or pharmacist before proceeding.</li></ul><h2>Documentation and communication</h2><p>Keep medication information accurate, communicate changes during transitions of care, and record the relevant observations and actions. Use the incident reporting process for a medication incident or near miss.</p><h2>Approval requirements</h2><p>The SME must confirm responsibilities, local escalation arrangements, required checks and documentation before this draft is used for teaching. No medicine, dose, administration instruction or checking protocol is specified here.</p>"
+    },
+    {
+      "id": "D02",
+      "path": "scorm/quick-link-pages/policy-and-procedures/nursing-and-clinical-handover/index.html",
+      "title": "Nursing and clinical handover",
+      "reviewers": [
+        "Nursing SME",
+        "Andrew — Senior Learning Designer"
+      ],
+      "review_status": "Pending",
+      "reason": "No source policy was supplied",
+      "sources": [
+        "https://www.safetyandquality.gov.au/national-standards/nsqhs-standards/communicating-safety-standard"
+      ],
+      "html": "<h2>Purpose</h2><p>Support a structured transfer of relevant information and responsibility during the Bagwan simulation.</p><h2>Prepare the handover</h2><p>Use the handover structure approved for the learning scenario. Check the patient identity against the scenario record. Gather the current situation, relevant background, observations, identified risks, pending actions and the patient's preferences.</p><h2>Give and receive the handover</h2><ul><li>Identify who is handing over and who will accept responsibility.</li><li>Communicate accurate, relevant and current information in a logical order.</li><li>State outstanding actions, who will complete them and when they require attention.</li><li>Allow questions and confirm shared understanding.</li><li>Record the handover and clarify any information that remains uncertain.</li></ul><h2>Approval requirements</h2><p>The SME must define the required identifiers, handover framework, minimum information and escalation process for each scenario. This draft is a communication framework, not an approved clinical protocol.</p>"
+    },
+    {
+      "id": "D03",
+      "path": "scorm/quick-link-pages/policy-and-procedures/booking-an-interpreter/index.html",
+      "title": "Booking an interpreter",
+      "reviewers": [
+        "Interpreting SME",
+        "Andrew — Senior Learning Designer"
+      ],
+      "review_status": "Pending",
+      "reason": "The original page contained an unfilled policy template",
+      "sources": [
+        "https://www.vic.gov.au/guidelines-using-interpreting-services/arranging-interpreter",
+        "https://www.vic.gov.au/guidelines-using-interpreting-services/preparing-interpreting"
+      ],
+      "html": "<h2>Prepare the request</h2><p>Confirm the person's preferred language, dialect and communication needs. Identify the appointment time, expected duration, location or remote format, and the purpose of the appointment. Record any preferences or circumstances relevant to selecting an interpreter.</p><h2>Arrange the service</h2><p>Use the organisation's approved language service arrangements. Confirm the interpreter's suitability and credentials for the task. Provide the information required for the booking through the approved channel and confirm the arrangements with the patient and the appointment team.</p><h2>Before the appointment</h2><p>Plan suitable space, equipment and time. Brief the interpreter on the purpose and relevant context. Check that the patient understands the interpreter's role.</p><h2>In this simulation</h2><p>No external booking is sent. Record a proposed booking in your learning evidence and discuss it with your facilitator. The SME must confirm provider arrangements, urgency pathways and documentation requirements before approval.</p>"
+    },
+    {
+      "id": "D04",
+      "path": "scorm/department-pages/nursing/index.html",
+      "title": "Nursing team structure",
+      "reviewers": [
+        "Nursing SME",
+        "Andrew — Senior Learning Designer"
+      ],
+      "review_status": "Pending",
+      "reason": "No nursing names or reporting structure were supplied",
+      "sources": [],
+      "html": "<h2>Proposed service overview</h2><p>The nursing service supports patient care, clinical communication and accurate care documentation in the Bagwan simulation. Use the patient records, observation forms and handover resources relevant to your assigned scenario.</p><h2>Proposed reporting structure</h2><p>For review: nursing service lead, reporting to the hospital executive; nurse unit managers, reporting to the nursing service lead; and care teams organised by unit. Registered nurse, enrolled nurse and personal care assistant roles must be defined against the scenarios and approved scopes of practice. This is a proposed role structure, not a supplied staff roster.</p><h2>Team details awaiting confirmation</h2><p>Nursing leadership, unit reporting lines, staff names, scope of roles and contact details must be supplied or approved by the SME. No staff names or contact numbers have been invented.</p><h2>Available resources</h2><ul><li>Patient records and observation forms</li><li>Clinical handover draft for review</li><li>Infection control and incident reporting resources</li></ul>"
+    },
+    {
+      "id": "D05",
+      "path": "aboriginal-and-torres-strait-islander-liaison-office/index.html",
+      "title": "Aboriginal and Torres Strait Islander liaison services",
+      "reviewers": [
+        "Aboriginal and Torres Strait Islander cultural safety SME",
+        "Andrew — Senior Learning Designer"
+      ],
+      "review_status": "Pending",
+      "reason": "The original route was unavailable and no service procedure or staff list was supplied",
+      "sources": [],
+      "html": "<h2>Proposed service overview</h2><p>This service page is intended to help staff find culturally appropriate liaison support for Aboriginal and Torres Strait Islander patients and families in Bagwan scenarios.</p><h2>Discuss the person's needs</h2><p>Ask about the person's preferences for support and communication. Respect their choice about involving family, support people or a liaison service. Discuss the relevant referral arrangements with the scenario facilitator.</p><h2>Service details awaiting confirmation</h2><p>Referral processes, hours, staff details and responsibilities need to be developed with the cultural safety SME. The service description must be reviewed for cultural appropriateness before teaching use.</p><h2>Available resource</h2><p>The recovered Closing the Gap video is available in the video library as a discussion resource.</p>"
+    },
+    {
+      "id": "D06",
+      "path": "scorm/department-pages/lab-technologies/ppe-safety-activity/index.html",
+      "title": "Laboratory PPE reference",
+      "reviewers": [
+        "Laboratory safety SME",
+        "Andrew — Senior Learning Designer"
+      ],
+      "review_status": "Pending",
+      "reason": "Replace the archived drag activity with an appropriate intranet reference and separate practice",
+      "sources": [],
+      "html": "<h2>Use the task risk assessment</h2><p>Select protective equipment using the approved procedure and the hazards of the task. The original activity's single set of clothing choices does not establish suitable PPE for every laboratory task.</p><h2>Before work</h2><ul><li>Confirm the task, hazards and approved controls.</li><li>Check the specified protective clothing, hand protection, eye protection and footwear.</li><li>Check that equipment fits, is in good condition and is suitable for the task.</li><li>Clarify any missing instruction with the supervisor before proceeding.</li></ul><h2>Practical skills</h2><p>Selection, fit, use and removal require supervised practice. The optional HTML exercise is in the learning guide and does not assess practical competence.</p>"
+    },
+    {
+      "id": "D07",
+      "path": "scorm/department-pages/lab-technologies/waste-management/index.html",
+      "title": "Laboratory waste reference",
+      "reviewers": [
+        "Laboratory safety and waste SME",
+        "Andrew — Senior Learning Designer"
+      ],
+      "review_status": "Pending",
+      "reason": "The archived answer key categorised unspecified expired medication as cytotoxic waste",
+      "sources": [],
+      "html": "<h2>Identify the waste before disposal</h2><p>Use the current local waste procedure and the labels on the approved containers. Waste classification depends on what the material is and what it is contaminated with.</p><h2>When information is missing</h2><p>Do not guess from a picture or container colour. Ask the supervisor to confirm the classification and handling requirements.</p><h2>Archived activity correction</h2><p>The original activity described expired medication without specifying its type. That description does not establish that the medication is cytotoxic. The draft practice exercise uses an explicitly identified cytotoxic residue instead. The SME must review every category and example before use.</p>"
+    },
+    {
+      "id": "D08",
+      "path": "practice.html?activity=ppe",
+      "title": "PPE selection decisions",
+      "reviewers": [
+        "Laboratory safety SME",
+        "Andrew — Senior Learning Designer"
+      ],
+      "review_status": "Pending",
+      "reason": "Native HTML practice replaces picture-based drag and drop; questions now require reasoning about task risk and procedure",
+      "sources": [
+        "../wp-content/uploads/h5p/exports/virtual-hospital-laboratory-ppe-activity-5.h5p"
+      ],
+      "html": "<p>Review every question and feedback statement, align the task to learner level, and confirm that practical selection and use remain supervised. No universal PPE set is taught.</p>"
+    },
+    {
+      "id": "D09",
+      "path": "practice.html?activity=waste",
+      "title": "Waste classification examples",
+      "reviewers": [
+        "Laboratory safety and waste SME",
+        "Andrew — Senior Learning Designer"
+      ],
+      "review_status": "Pending",
+      "reason": "Corrects the archived expired medication ambiguity and replaces drag and drop with labelled choices and feedback",
+      "sources": [
+        "../wp-content/uploads/h5p/exports/waste-management-2-4.h5p"
+      ],
+      "html": "<p>Confirm the five examples, waste terminology and answer key against local requirements. The generic expired medicine example now requires more information. Container colour is not used as the teaching answer.</p>"
+    },
+    {
+      "id": "D10",
+      "path": "practice.html?activity=interpreter",
+      "title": "Finding an interpreter",
+      "reviewers": [
+        "Interpreting SME",
+        "Andrew — Senior Learning Designer"
+      ],
+      "review_status": "Pending",
+      "reason": "Replaces a hidden fixed-name answer with a current directory task and evidence-based reflection",
+      "sources": [
+        "https://www.naati.com.au/online-directory/"
+      ],
+      "html": "<p>Confirm the scenario and suitable credential criteria. Review the reflection prompts and evidence expectations. The task no longer claims one named person is the current correct answer.</p>"
+    }
+  ]
+}

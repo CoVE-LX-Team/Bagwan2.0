@@ -1,0 +1,85 @@
+/* Bagwan blue identity, with Material-inspired navigation, tonal surfaces and state layers. */
+:root{--side:252px;--radius:18px}
+.utility{background:#000054;letter-spacing:.025em;height:32px}
+.masthead{height:94px;gap:38px;box-shadow:0 2px 8px #0000540a;border-bottom-color:transparent}
+.brand{width:214px}
+.global-search{border:0;border-radius:30px;background:#edf0fc;min-height:54px;max-width:730px}
+.global-search input{font-size:15px;padding-block:16px}
+.global-search svg{stroke:#000054;margin-left:20px}
+.global-search button{align-self:stretch;background:#000054;color:white;border:0;border-radius:24px;margin:5px;padding:0 25px;font-weight:550;transition:box-shadow .2s,background .2s}
+.global-search button:hover{background:#24249b;box-shadow:0 2px 5px #00005433}
+.header-link{color:#000054;font-weight:550;font-size:14px}
+.sidebar{background:#000054;border-right:0;top:94px;height:calc(100vh - 94px);padding:36px 16px}
+.nav-caption{color:#c5c8f8;font-size:11px;font-weight:450;letter-spacing:.12em;padding-left:19px}
+#main-nav{gap:7px}
+#main-nav a{color:#e6e7ff;font-size:14px;padding:14px 18px;border-radius:26px;font-weight:450;gap:16px}
+#main-nav a:hover{background:#ffffff14;transform:none}
+#main-nav a[aria-current=page]{background:#e2e5ff;color:#000054;box-shadow:none;font-weight:650}
+#main-nav .nav-icon{width:21px;height:21px}
+#main-nav .nav-icon svg{width:21px;height:21px;stroke-width:1.7}
+.sidebar-bottom{padding:40px 18px 0;display:grid;gap:16px}
+.sidebar-bottom>a{color:#d6d9ff;font-size:13px;font-weight:450}
+.sidebar-bottom .version-label{margin-top:12px;color:#b1b5e9}
+main{padding-top:38px;padding-inline:clamp(26px,3.4vw,56px)}
+h1{font-size:48px;font-weight:480;line-height:1.12;letter-spacing:-1.8px;color:#000054}
+h2{font-weight:530;font-size:26px;letter-spacing:-.6px}
+.page-intro{margin-bottom:30px}
+.page-intro .eyebrow{font-size:11px;font-weight:550;letter-spacing:.1em;margin-bottom:10px}
+.page-intro p{font-size:15px;line-height:1.65;color:#50536d}
+.action-links{border-radius:18px;background:#e7eaff;padding:8px 14px;gap:0;margin-bottom:38px}
+.action-link{background:transparent;border:0;border-right:1px solid #c3c8ea;border-radius:0;padding:17px 18px;gap:12px;color:#000054;font-weight:550}
+.action-link:last-child{border-right:0}
+.action-link:hover{transform:none;background:#d9defc;border-radius:10px}
+.action-link .nav-icon{color:#000054}
+.home-columns{grid-template-columns:minmax(0,1.8fr) minmax(250px,1fr);gap:34px}
+.section-heading{margin-bottom:22px}
+.section-heading h2{font-size:26px;font-weight:530;color:#000054}
+.section-heading a{font-size:13px;color:#24249b;font-weight:550}
+.feature-news{border:0;border-radius:22px;box-shadow:0 3px 8px #00005418;background:#000054}
+.feature-photo{height:254px}
+.feature-photo img{object-position:center 38%}
+.feature-copy{padding:26px 29px 30px;background:#000054;color:white}
+.feature-copy .eyebrow{color:#c8cdfb;font-weight:450;letter-spacing:.11em;font-size:10px}
+.feature-copy h3{color:white;font-size:30px;font-weight:480;letter-spacing:-.5px;line-height:1.2;margin-bottom:13px}
+.feature-copy p{color:#e1e4ff;font-size:15px;line-height:1.7;margin-bottom:20px}
+.feature-copy .text-link{color:white;font-size:14px;font-weight:550;text-decoration:underline;text-underline-offset:5px}
+.notice-list{border-top:4px solid #000054}
+.notice-list li{padding:22px 0;border-bottom-color:#d6daf0}
+.notice-list li:first-child{padding-top:22px}
+.notice-list a{font-weight:550;color:#000054;font-size:17px;line-height:1.4}
+.notice-list p{font-size:14px;color:#50536d;line-height:1.6;margin-top:9px}
+.list-label{color:#3939a2;letter-spacing:.07em;font-weight:550;font-size:10px}
+.hospital-feature{background:transparent;border-left:4px solid #8a95e8;border-radius:0;padding:3px 0 3px 20px;margin-top:26px}
+.hospital-feature h3{color:#000054;font-size:20px;font-weight:530}
+.hospital-feature p{color:#50536d;font-size:14px}
+.hospital-feature a{font-size:14px}
+.home-bottom{border-top:0;padding-top:28px;margin-top:35px}
+.department-links{gap:0 26px}
+.department-links a{color:#000054;font-size:15px;font-weight:450;padding:18px 0}
+.department-links span{font-size:12px;color:#3939a2}
+.field-search{border-radius:7px;border-color:#8c91aa;background:white;min-height:50px}
+.field-search:focus{border-color:#000054}
+.button{border-radius:25px;background:#000054;border-color:#000054;padding:13px 24px;font-weight:550}
+.button:hover{background:#24249b;box-shadow:0 3px 7px #00005422}
+.button.secondary{background:#edf0ff;color:#000054;border-color:transparent}
+.button.secondary:hover{background:#e1e5ff}
+.save-button{border-radius:50%;background:#ecefff;color:#000054;border:0;font-size:25px}
+.save-button[aria-pressed=true]{background:#d7ddff;color:#000054}
+.badge{border-radius:5px;background:#e4e8ff;color:#000054}
+.initials{background:#e1e5ff;color:#000054;border-radius:14px}
+.content-document{border-color:#e2e5f2;border-radius:18px;padding:38px;box-shadow:0 1px 3px #00005408}
+.content-document p,.content-document>ul,.content-document>ol{max-width:78ch}.content-document h2,.content-document h3{scroll-margin-top:120px}.contents-nav{background:#edf0ff;border-radius:12px;padding:16px 20px;margin-bottom:28px}.contents-nav summary{font-weight:550;color:#000054;cursor:pointer}.contents-nav ul{list-style:none;padding:12px 0 0;margin:0;display:grid;gap:8px}.contents-nav a{font-size:14px}.practice-options input{accent-color:#000054}
+.content-document iframe{max-width:100%;width:100%;border:0}
+.context-panel{border-top-color:#000054}
+.guide-main .eyebrow,.report-page .eyebrow{color:#24249b}
+.guide-main h1{font-weight:480}
+.review-table th{background:#e7eaff}
+.report-page a{overflow-wrap:anywhere}
+.ripple-host{position:relative;overflow:hidden}
+.material-ripple{position:absolute;border-radius:50%;width:120px;height:120px;pointer-events:none;background:currentColor;opacity:.13;transform:translate(-50%,-50%) scale(0);animation:material-ripple .55s cubic-bezier(.2,0,0,1)}
+@keyframes material-ripple{to{transform:translate(-50%,-50%) scale(3);opacity:0}}
+@media(max-width:1150px){:root{--side:220px}.masthead{gap:24px}.brand{width:180px}.home-columns{grid-template-columns:minmax(0,1.5fr) minmax(230px,1fr);gap:26px}.action-link:nth-child(2){border-right:0}.action-link:nth-child(-n+2){border-bottom:1px solid #c3c8ea}.feature-copy h3{font-size:27px}}
+@media(max-width:850px){.masthead{height:auto;min-height:90px;gap:14px}.brand{width:180px}.sidebar{top:0;height:100dvh;width:280px}.global-search{flex-basis:100%;max-width:none}main{padding-inline:24px}.page-intro h1{font-size:43px}.action-links{padding:7px 12px}.action-link{padding:17px 15px}.home-columns{grid-template-columns:minmax(0,1.5fr) minmax(220px,1fr)}}
+@media(max-width:600px){.masthead{padding:17px 16px}.brand{width:174px}.global-search{min-height:50px}.global-search input{font-size:13px;padding-block:14px}.global-search button{padding-inline:18px;font-size:13px}.utility>span{font-size:10px}.utility nav{font-size:10px;gap:13px}.header-link{font-size:12px}.page-intro h1{font-size:41px;letter-spacing:-1.3px}.page-intro p{font-size:14px}.page-intro{margin-bottom:24px}main{padding:28px 18px 45px}.action-links{margin-bottom:30px;padding:4px 8px;border-radius:16px}.action-link{padding:18px 11px;font-size:13px;gap:10px}.home-columns{grid-template-columns:1fr;gap:32px}.section-heading h2{font-size:25px}.feature-photo{height:220px}.feature-copy{padding:23px}.feature-copy h3{font-size:28px}.feature-copy p{font-size:14px}.feature-news{border-radius:19px}.content-document{padding:22px}.guide-main h1{font-size:38px}}
+@media(prefers-reduced-motion:reduce){.material-ripple{display:none}}
+@media print{h1,h2,h3{color:black}.sidebar,.masthead{display:none}.feature-copy{background:white;color:black}.feature-copy p,.feature-copy .eyebrow,.feature-copy .text-link,.feature-copy h3{color:black}}
