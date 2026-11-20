@@ -1,0 +1,119 @@
+.people-nav {display: flex; gap: 28px; margin: -4px 0 26px; border-bottom: 1px solid #cdd3e7}
+.people-nav a {padding: 10px 1px; color: #494e67; text-decoration: none; font-size: .95rem}
+.people-nav a[aria-current=page] {color: #000054; font-weight: 650; border-bottom: 3px solid #24249b}
+.people-nav a:hover, .staff-directory a:hover, .staff-identity a:hover {text-decoration: underline}
+.people-filters {display: grid; grid-template-columns: minmax(12rem, 1.7fr) minmax(12rem, 1fr); gap: 16px}
+.people-filters label {display: grid; gap: 6px; color: #252949; font-size: .875rem; font-weight: 600}
+.people-filters .field-search {display: block; width: 100%; min-width: 0; height: 48px; min-height: 48px; padding: 0 14px; box-sizing: border-box; font: inherit; font-size: 1rem; font-weight: 400; color: #111543; background-color: white}
+.people-count {margin: 18px 0 10px; font-size: .875rem; color: #4d526a}
+.staff-directory {width: 100%; border-collapse: collapse; background: white; text-align: left; color: #20233e}
+.staff-directory thead {background: #e8ecfa}
+.staff-directory th, .staff-directory td {padding: 14px 12px; vertical-align: middle; text-align: left}
+.staff-directory thead th {color: #333a58; font-size: .8125rem; font-weight: 600}
+.staff-directory tr.person {display: table-row; background: transparent; border: 0}
+.staff-directory tr.person > * {border-bottom: 1px solid #dce0ed}
+.staff-directory .person td {font-size: .875rem; line-height: 1.45}
+.staff-directory .person a {color: #24247a; font-size: inherit; text-decoration: underline; text-decoration-color: #a0a7cd}
+.staff-directory th[scope=row] {min-width: 11rem; font-weight: 550}
+.staff-identity {display: flex; align-items: center; gap: 12px; min-width: 0; line-height: 1.35}
+.staff-identity > div {min-width: 0}
+.staff-identity a, .staff-directory th .staff-identity a {font-size: 1rem; font-weight: 600; text-decoration: none; color: #12154e}
+.staff-identity small {display: block; margin-top: 3px; font-size: .8125rem; font-weight: 400; line-height: 1.4; color: #50556d}
+.staff-avatar {display: inline-flex; align-items: center; justify-content: center; flex: 0 0 40px; width: 40px; height: 40px; overflow: hidden; border-radius: 50%; background: #e3e8fb; color: #252571; font-size: .8125rem; font-weight: 600}
+.staff-avatar img {width: 100%; height: 100%; object-fit: cover; object-position: center 32%}
+.staff-avatar.large {width: 80px; height: 80px; flex-basis: 80px; font-size: 1.6rem}
+.staff-field-label {display: none}
+.staff-unit {display: block; color: #50556d; font-size: .8125rem}
+.staff-muted {color: #55596c}
+.staff-profile {display: flex; align-items: center; gap: 20px; padding: 28px 26px; border-left: 5px solid #252587; border-radius: 0 12px 12px 0; background: #e9edfc}
+.staff-profile h1 {margin: 0 0 3px; color: #000054; font-size: clamp(1.9rem, 4vw, 3rem)}
+.staff-profile p {margin-bottom: 5px; color: #22274c; font-size: 1.125rem}
+.staff-profile a {font-size: .875rem}
+.staff-profile .save-button {margin-left: auto; flex-shrink: 0; background: white}
+.staff-relations {display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 36px; padding: 28px 0}
+.staff-relations h2, .staff-services h2 {color: #151950; font-size: 1.3rem; margin-bottom: 14px; letter-spacing: -.02em}
+.staff-relations h2 span {font-size: 1rem; color: #55596c; font-weight: 450}
+.staff-branches, .staff-tree, .staff-services ul {list-style: none; margin: 0; padding: 0}
+.staff-branches {margin-left: 6px; padding-left: 20px}
+.staff-branches > li {position: relative; padding: 9px 0}
+.staff-branches > li::before, .staff-branches > li::after {position: absolute; left: -19px; content: ""; pointer-events: none}
+.staff-branches > li::before {top: 0; bottom: 0; border-left: 2px solid #abb4d9}
+.staff-branches > li::after {top: 29px; width: 14px; border-top: 2px solid #abb4d9}
+.staff-branches > li:last-child::before {height: 29px}
+.hospital-org {container-type: inline-size; background: white; padding: 25px 12px 14px; border-block: 1px solid #c7cfe3; color: #131644}
+.org-chief > div {position: relative; display: flex; align-items: center; gap: 15px; max-width: max-content; margin: 0 auto; padding: 13px 24px 13px 15px; color: white; background: #000054; border-radius: 9px}
+.org-chief .staff-avatar {width: 58px; height: 58px; flex-basis: 58px}
+.org-chief h2, .org-leader h4 {line-height: 1.25; letter-spacing: -.025em; margin: 0}
+.org-chief h2 {font-size: 1.35rem}
+.org-chief a {color: white; text-decoration-color: #8f99dc; text-decoration-thickness: 1px}
+.org-chief p, .org-leader p {margin: 3px 0 0; font-size: .875rem; line-height: 1.4}
+.org-chief p {color: #e2e6ff}
+.org-level {position: relative; display: grid; justify-items: center; padding-block: 15px}
+.org-level::before {position: absolute; content: ""; top: 0; bottom: 0; left: 50%; border-left: 2px solid #858fb8}
+.org-level h3 {position: relative; margin: 0; padding: 3px 8px; background: white; color: #414763; font-size: .8125rem; font-weight: 550; letter-spacing: 0}
+.org-leaders {display: grid; grid-template-columns: repeat(var(--org-count), minmax(0, 1fr)); padding: 0; margin: 0; list-style: none}
+.org-leaders > li {position: relative; display: grid; min-width: 0; padding: 18px 4px 0}
+.org-leaders > li::before, .org-leaders > li::after {content: ""; position: absolute}
+.org-leaders > li::before {top: 0; left: 0; right: 0; border-top: 2px solid #858fb8}
+.org-leaders > li:first-child::before {left: 50%}
+.org-leaders > li:last-child::before {right: 50%}
+.org-leaders > li::after {top: 0; left: 50%; height: 19px; border-left: 2px solid #858fb8}
+.org-leader {display: flex; flex-direction: column; align-items: center; text-align: center; padding: 14px 8px 0; border-top: 3px solid #35378a; background: #eef1fc}
+.org-leader .staff-avatar {width: 46px; height: 46px; flex: 0 0 46px; margin-bottom: 8px}
+.org-person {flex: 1; padding-bottom: 13px}
+.org-leader h4 {font-size: 1rem; font-weight: 650}
+.org-leader h4 a {color: #11144f; text-decoration-color: #9da6d1}
+.org-leader p {color: #454a62; font-size: .8125rem}
+.org-team {display: flex; width: 100%; gap: 5px; justify-content: center; align-items: center; border-top: 1px solid #cbd1e7; min-height: 40px; color: #26267d; text-decoration: none; font-size: .8125rem; font-weight: 600}
+.org-team:hover {text-decoration: underline}
+.staff-services {margin-top: 30px}
+.staff-services ul {display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 0 20px}
+.staff-services li {border-top: 1px solid #d4daea}
+.staff-services li > a, .staff-services li > span {display: block; padding: 11px 2px; font-size: .9375rem}
+.staff-services small {display: block; color: #55596c}
+@container (max-width: 770px) {
+  .org-chief > div {margin-left: 0}
+  .org-level {justify-items: start; padding: 12px 0 8px 32px}
+  .org-level::before {left: 18px}
+  .org-leaders {display: block}
+  .org-leaders > li {padding: 0 0 8px 39px}
+  .org-leaders > li::before, .org-leaders > li:first-child::before, .org-leaders > li:last-child::before {left: 18px; top: 0; bottom: 0; right: auto; border: 0; border-left: 2px solid #858fb8}
+  .org-leaders > li:last-child::before {height: 31px}
+  .org-leaders > li::after {top: 30px; left: 18px; width: 21px; height: 0; border: 0; border-top: 2px solid #858fb8}
+  .org-leader {display: grid; grid-template-columns: 42px minmax(0, 1fr); align-items: center; gap: 3px 10px; text-align: left; padding: 10px 11px; border-top: 0; border-left: 3px solid #35378a}
+  .org-leader .staff-avatar {width: 42px; height: 42px; margin: 0}
+  .org-person {padding-bottom: 0}
+  .org-team {grid-column: 2; justify-content: start; border: 0; min-height: 30px}
+}
+.staff-tree > li {padding: 12px 0 20px}
+.staff-tree > li > .staff-identity {background: #e6eafa; border-left: 4px solid #27278b; padding: 14px 16px; border-radius: 0 8px 8px 0}
+.staff-tree ul {margin-top: 4px; margin-left: 18px}
+.staff-source-note {max-width: 72ch; margin-bottom: 18px; padding-left: 12px; border-left: 2px solid #bbc2dd; color: #454a63; font-size: .875rem}
+.staff-source {font-size: .875rem; color: #454a63}
+.staff-source dt {font-weight: 600}
+.staff-source dd {margin: 0}
+.staff-chart-link {margin: 0}
+@media(max-width: 1050px) and (min-width: 851px), (max-width: 670px) {
+  .staff-directory {display: block; background: transparent}
+  .staff-directory thead {position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%)}
+  .staff-directory tbody {display: block}
+  .staff-directory tr.person {display: grid; grid-template-columns: 1fr; gap: 6px; padding: 15px 0; border-top: 1px solid #d2d7e9}
+  .staff-directory tr.person > * {display: block; border: 0; padding: 0}
+  .staff-directory tr.person td {display: grid; grid-template-columns: 6.4rem minmax(0, 1fr); gap: 8px; margin-left: 52px}
+  .staff-directory tr.person th {margin-bottom: 3px}
+  .staff-field-label {display: inline; font-size: .8rem; color: #50556d}
+}
+@media(max-width: 650px) {
+  .people-filters {grid-template-columns: 1fr}
+  .staff-relations {grid-template-columns: 1fr; gap: 25px}
+  .staff-profile {position: relative; align-items: flex-start; gap: 12px; padding: 15px 10px; padding-right: 44px}
+  .staff-profile .save-button {position: absolute; top: 9px; right: 6px}
+  .staff-avatar.large {width: 44px; height: 44px; flex-basis: 44px; font-size: 1rem}
+  .staff-profile p {font-size: 1rem}
+  .staff-tree ul {margin-left: 5px; padding-left: 16px}
+  .staff-tree .staff-branches > li::before, .staff-tree .staff-branches > li::after {left: -15px}
+  .hospital-org {padding: 14px 8px}
+}
+@media(max-width: 390px) {
+  .staff-directory tr.person td {margin-left: 0}
+}

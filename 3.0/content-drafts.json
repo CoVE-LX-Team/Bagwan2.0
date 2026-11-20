@@ -57,9 +57,11 @@
         "Andrew — Senior Learning Designer"
       ],
       "review_status": "Pending",
-      "reason": "No nursing names or reporting structure were supplied",
-      "sources": [],
-      "html": "<h2>Proposed service overview</h2><p>The nursing service supports patient care, clinical communication and accurate care documentation in the Bagwan simulation. Use the patient records, observation forms and handover resources relevant to your assigned scenario.</p><h2>Proposed reporting structure</h2><p>For review: nursing service lead, reporting to the hospital executive; nurse unit managers, reporting to the nursing service lead; and care teams organised by unit. Registered nurse, enrolled nurse and personal care assistant roles must be defined against the scenarios and approved scopes of practice. This is a proposed role structure, not a supplied staff roster.</p><h2>Team details awaiting confirmation</h2><p>Nursing leadership, unit reporting lines, staff names, scope of roles and contact details must be supplied or approved by the SME. No staff names or contact numbers have been invented.</p><h2>Available resources</h2><ul><li>Patient records and observation forms</li><li>Clinical handover draft for review</li><li>Infection control and incident reporting resources</li></ul>"
+      "reason": "The archive supplies a Chief Nurse and five nursing unit charts. Their role descriptions and a conflicting Emergency reporting line need review.",
+      "sources": [
+        "../data/staff-hierarchy.json"
+      ],
+      "html": "<h2>Nursing units</h2><p>The archived charts name Patricia Whitby as Chief Nurse. Four unit managers report to her. Billy Shaw leads Outpatient, Charlie Bergen leads Inpatient, Sung Young-Mi leads Cardiac and Petra Germann leads Rehabilitation. Each unit chart also names its care team.</p><h2>Emergency nursing</h2><p>The Emergency unit chart names Romeo Knight as manager, as does the staff directory. The overview gives conflicting names and roles, so Romeo’s own reporting line awaits confirmation.</p><h2>For review</h2><p>The nursing SME and Senior Learning Designer will confirm the staffing for each simulation scenario, including discrepancies in the Outpatient and Emergency records. Role titles alone do not establish clinical scope or escalation arrangements.</p>"
     },
     {
       "id": "D05",
@@ -70,9 +72,11 @@
         "Andrew — Senior Learning Designer"
       ],
       "review_status": "Pending",
-      "reason": "The original route was unavailable and no service procedure or staff list was supplied",
-      "sources": [],
-      "html": "<h2>Proposed service overview</h2><p>This service page is intended to help staff find culturally appropriate liaison support for Aboriginal and Torres Strait Islander patients and families in Bagwan scenarios.</p><h2>Discuss the person's needs</h2><p>Ask about the person's preferences for support and communication. Respect their choice about involving family, support people or a liaison service. Discuss the relevant referral arrangements with the scenario facilitator.</p><h2>Service details awaiting confirmation</h2><p>Referral processes, hours, staff details and responsibilities need to be developed with the cultural safety SME. The service description must be reviewed for cultural appropriateness before teaching use.</p><h2>Available resource</h2><p>The recovered Closing the Gap video is available in the video library as a discussion resource.</p>"
+      "reason": "The source service page was unavailable. The archived directory identifies four liaison staff. Referral arrangements, hours and reporting lines still need confirmation.",
+      "sources": [
+        "../data/staff-hierarchy.json"
+      ],
+      "html": "<h2>Proposed service overview</h2><p>This service page is intended to help staff find culturally appropriate liaison support for Aboriginal and Torres Strait Islander patients and families in Bagwan scenarios.</p><h2>Discuss the person's needs</h2><p>Ask about the person's preferences for support and communication. Respect their choice about involving family, support people or a liaison service. Discuss the relevant referral arrangements with the scenario facilitator.</p><h2>Liaison team</h2><p>The archived staff directory names Gina Starr, Fiona Phillips, Monti Williams and Merindah Olden. Their formal reporting lines await confirmation.</p><h2>Service details awaiting confirmation</h2><p>Referral processes, hours, contact details and responsibilities need to be developed with the cultural safety SME. The service description must be reviewed for cultural appropriateness before teaching use.</p><h2>Available resource</h2><p>The recovered Closing the Gap video is available in the video library as a discussion resource.</p>"
     },
     {
       "id": "D06",

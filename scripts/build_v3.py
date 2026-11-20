@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import json
 import re
 from apply_review_fixes import docx_html
+from build_document_previews import preview_href, preview_image_href, preview_pages
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / '3.0'
@@ -26,6 +27,34 @@ def category(path):
     if 'department-pages' in path:
         return 'Department'
     return 'Resource'
+
+
+def document_records(entries):
+    by_id = {entry['id']: entry for entry in entries}
+    files = []
+    for entry in entries:
+        if entry.get('archived') or entry['kind'] == 'office-lock-file':
+            continue
+        folder = entry['original_folder_path'].split('/')
+        if folder[0] == 'departmental' and len(folder) > 1:
+            folder = folder[1:]
+        labels = ['OHS' if part == 'ohs' else part.replace('-', ' ').capitalize() for part in folder]
+        # A shortcut's own modification date describes the link. Use the target file's date.
+        source = by_id.get(entry.get('shortcut_target_id') or entry['id'], {})
+        record = {key: entry[key] for key in (
+            'name', 'local_path', 'local_href', 'size_bytes', 'mime_type', 'original_folder_path',
+        )}
+        record.update(
+            category=labels[0],
+            subcategory=' / '.join(labels[1:]),
+            file_type=Path(entry['local_path']).suffix[1:].upper(),
+            source_modified_at=source.get('source_modified_at'),
+            preview_href=preview_href(entry),
+            preview_image_href=preview_image_href(entry),
+            preview_pages=preview_pages(entry),
+        )
+        files.append(record)
+    return files
 
 
 def build():
@@ -103,9 +132,14 @@ def build():
             document = ROOT / 'documents/policies-and-procedures' / source_policies[relative]
             content = '<p><a href="/Bagwan2.0/' + quote(document.relative_to(ROOT).as_posix()) + '">Download the source policy (Word document)</a></p>' + docx_html(document)
         pages.append({'path': relative, 'title': title, 'category': category(relative), 'mode': mode, 'draft_id': draft['id'] if draft else None, 'html': content, 'text': BeautifulSoup(content, 'lxml').get_text(' ', strip=True)})
-    documents = json.loads((ROOT / 'documents/manifest.json').read_text())['files']
-    files = [{k: f[k] for k in ('name', 'local_path', 'local_href', 'size_bytes', 'mime_type', 'original_folder_path')} for f in documents if not f.get('archived') and f.get('kind') != 'office-lock-file']
-    data = {'version': '3.0', 'built_on': '2026-11-20', 'pages': pages, 'people': json.loads((ROOT / 'data/staff-directory.json').read_text()), 'videos': json.loads((ROOT / 'data/videos.json').read_text()), 'documents': files, 'drafts': drafts}
+    manifest = json.loads((ROOT / 'documents/manifest.json').read_text())
+    files = document_records(manifest['files'])
+    document_folders = {
+        f"library/{folder['id']}/index.html": Path(folder['local_path']).relative_to('documents').as_posix()
+        for folder in manifest['folders']
+    }
+    hierarchy = json.loads((ROOT / 'data/staff-hierarchy.json').read_text())
+    data = {'version': '3.0', 'built_on': '2026-11-20', 'pages': pages, 'people': json.loads((ROOT / 'data/staff-directory.json').read_text()), 'hierarchy': hierarchy, 'videos': json.loads((ROOT / 'data/videos.json').read_text()), 'documents': files, 'document_folders': document_folders, 'drafts': drafts}
     (OUT / 'content.json').write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n')
     print('Built 3.0:', len(pages), 'source routes,', len(files), 'document records,', len(drafts), 'review drafts.')
 

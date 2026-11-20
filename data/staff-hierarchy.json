@@ -1,0 +1,1928 @@
+[
+  {
+    "id": "dr-christina-jones",
+    "name": "Dr. Christina Jones",
+    "role": "Chief Executive Officer",
+    "department": "Executive leadership",
+    "manager_id": null,
+    "source_page": "scorm/intranet/static-org-chart-test/index.html",
+    "source_label": "Hospital organisation chart",
+    "source_refs": [
+      "chart:489"
+    ],
+    "image": "wp-content/uploads/2019/12/Christina-Jones-300x300.jpg"
+  },
+  {
+    "id": "anthony-holland",
+    "name": "Anthony Holland",
+    "role": "Emergency Director",
+    "department": "Emergency department",
+    "manager_id": null,
+    "source_page": "scorm/org-chart-updated/emergency-organisation-chart/index.html",
+    "source_label": "Emergency organisation chart",
+    "source_refs": [
+      "chart:577",
+      "directory:917"
+    ]
+  },
+  {
+    "id": "elliott-shaw",
+    "name": "Elliott Shaw",
+    "role": "Emergency Department Senior",
+    "department": "Emergency department",
+    "manager_id": "anthony-holland",
+    "source_page": "scorm/org-chart-updated/emergency-organisation-chart/index.html",
+    "source_label": "Emergency organisation chart",
+    "source_refs": [
+      "chart:577",
+      "directory:935"
+    ]
+  },
+  {
+    "id": "abhramu-malini",
+    "name": "Abhramu Malini",
+    "role": "Nurse Unit Management",
+    "department": "Emergency department",
+    "manager_id": "anthony-holland",
+    "source_page": "scorm/org-chart-updated/emergency-organisation-chart/index.html",
+    "source_label": "Emergency organisation chart",
+    "source_refs": [
+      "chart:577",
+      "directory:936"
+    ]
+  },
+  {
+    "id": "maryam-fox",
+    "name": "Maryam Fox",
+    "role": "Emergency Administration Officer",
+    "department": "Emergency department",
+    "manager_id": "anthony-holland",
+    "source_page": "scorm/org-chart-updated/emergency-organisation-chart/index.html",
+    "source_label": "Emergency organisation chart",
+    "source_refs": [
+      "chart:577",
+      "directory:937"
+    ]
+  },
+  {
+    "id": "joel-stevens",
+    "name": "Joel Stevens",
+    "role": "Laboratory Director",
+    "department": "Laboratory technologies",
+    "manager_id": null,
+    "source_page": "scorm/static-org-chart-test/lab-technology-department-organisation-chart/index.html",
+    "source_label": "Lab technology department organisation chart",
+    "source_refs": [
+      "chart:581",
+      "directory:963"
+    ]
+  },
+  {
+    "id": "vuu-vi-quyen",
+    "name": "Vưu Vi Quyên",
+    "role": "Senior scientist",
+    "department": "Laboratory technologies",
+    "manager_id": "joel-stevens",
+    "source_page": "scorm/static-org-chart-test/lab-technology-department-organisation-chart/index.html",
+    "source_label": "Lab technology department organisation chart",
+    "source_refs": [
+      "chart:581",
+      "directory:964"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_15060109791.jpg"
+  },
+  {
+    "id": "corina-klinger",
+    "name": "Corina Klinger",
+    "role": "Medical Scientist",
+    "department": "Laboratory technologies",
+    "manager_id": "joel-stevens",
+    "source_page": "scorm/static-org-chart-test/lab-technology-department-organisation-chart/index.html",
+    "source_label": "Lab technology department organisation chart",
+    "source_refs": [
+      "chart:581",
+      "directory:965"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_334359674.jpg"
+  },
+  {
+    "id": "aditi-musunur",
+    "name": "Aditi Musunur",
+    "role": "Quality manager",
+    "department": "Laboratory technologies",
+    "manager_id": "joel-stevens",
+    "source_page": "scorm/static-org-chart-test/lab-technology-department-organisation-chart/index.html",
+    "source_label": "Lab technology department organisation chart",
+    "source_refs": [
+      "chart:581",
+      "directory:966"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_1506010979.jpg"
+  },
+  {
+    "id": "jack-davies",
+    "name": "Jack Davies",
+    "role": "Technical manager",
+    "department": "Laboratory technologies",
+    "manager_id": "joel-stevens",
+    "source_page": "scorm/static-org-chart-test/lab-technology-department-organisation-chart/index.html",
+    "source_label": "Lab technology department organisation chart",
+    "source_refs": [
+      "chart:581",
+      "directory:967"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_378854845.jpg"
+  },
+  {
+    "id": "ben-richardson",
+    "name": "Ben Richardson",
+    "role": "Clinical Laboratory Scientist",
+    "department": "Laboratory technologies",
+    "manager_id": "jack-davies",
+    "source_page": "scorm/static-org-chart-test/lab-technology-department-organisation-chart/index.html",
+    "source_label": "Lab technology department organisation chart",
+    "source_refs": [
+      "chart:581",
+      "chart:606",
+      "directory:968"
+    ],
+    "note": "The archived laboratory team chart names the holder of this role."
+  },
+  {
+    "id": "chang-xinya",
+    "name": "Chang Xinya",
+    "role": "Laboratory Technicians",
+    "department": "Laboratory technologies",
+    "manager_id": "jack-davies",
+    "source_page": "scorm/static-org-chart-test/lab-technology-department-organisation-chart/index.html",
+    "source_label": "Lab technology department organisation chart",
+    "source_refs": [
+      "chart:581",
+      "chart:606",
+      "directory:969"
+    ],
+    "note": "The archived laboratory team chart names the holder of this role."
+  },
+  {
+    "id": "brooke-kaur",
+    "name": "Brooke Kaur",
+    "role": "Specimen receptionist",
+    "department": "Laboratory technologies",
+    "manager_id": "jack-davies",
+    "source_page": "scorm/static-org-chart-test/lab-technology-department-organisation-chart/index.html",
+    "source_label": "Lab technology department organisation chart",
+    "source_refs": [
+      "chart:581",
+      "chart:606",
+      "directory:970"
+    ],
+    "note": "The archived laboratory team chart names the holder of this role."
+  },
+  {
+    "id": "lyra-berry",
+    "name": "Lyra Berry",
+    "role": "Phlebotomist",
+    "department": "Laboratory technologies",
+    "manager_id": "jack-davies",
+    "source_page": "scorm/static-org-chart-test/lab-technology-department-organisation-chart/index.html",
+    "source_label": "Lab technology department organisation chart",
+    "source_refs": [
+      "chart:581",
+      "chart:606",
+      "directory:971"
+    ],
+    "note": "The archived laboratory team chart names the holder of this role."
+  },
+  {
+    "id": "konstantina-chondroti",
+    "name": "Konstantina Chondroti",
+    "role": "Chief strategy, business & development officer",
+    "department": "Interpreting department",
+    "manager_id": null,
+    "source_page": "scorm/static-org-chart-test/interpreting-department-organisation-chart/index.html",
+    "source_label": "Interpreting department organisation chart",
+    "source_refs": [
+      "chart:582",
+      "directory:972"
+    ]
+  },
+  {
+    "id": "cho-seung-hyun",
+    "name": "Cho Seung-Hyun",
+    "role": "Director",
+    "department": "Interpreting department",
+    "manager_id": "konstantina-chondroti",
+    "source_page": "scorm/static-org-chart-test/interpreting-department-organisation-chart/index.html",
+    "source_label": "Interpreting department organisation chart",
+    "source_refs": [
+      "chart:582",
+      "directory:973"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_445837729-e1576508933659.jpg"
+  },
+  {
+    "id": "daisy-matthews",
+    "name": "Daisy Matthews",
+    "role": "Senior ALO",
+    "department": "Interpreting department",
+    "manager_id": "konstantina-chondroti",
+    "source_page": "scorm/static-org-chart-test/interpreting-department-organisation-chart/index.html",
+    "source_label": "Interpreting department organisation chart",
+    "source_refs": [
+      "chart:582",
+      "directory:976"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_510397450-e1576508952731.jpg"
+  },
+  {
+    "id": "ma-ngoc-dao",
+    "name": "Mã Ngọc Ðào",
+    "role": "ALO",
+    "department": "Interpreting department",
+    "manager_id": "daisy-matthews",
+    "source_page": "scorm/static-org-chart-test/interpreting-department-organisation-chart/index.html",
+    "source_label": "Interpreting department organisation chart",
+    "source_refs": [
+      "chart:582",
+      "directory:977"
+    ]
+  },
+  {
+    "id": "daisy-matthews-permanent-and-casual-interpreters",
+    "name": null,
+    "role": "Permanent and Casual Interpreters",
+    "department": "Interpreting department",
+    "manager_id": "daisy-matthews",
+    "source_page": "scorm/static-org-chart-test/interpreting-department-organisation-chart/index.html",
+    "source_label": "Interpreting department organisation chart",
+    "source_refs": [
+      "chart:582"
+    ]
+  },
+  {
+    "id": "daisy-matthews-student-interpreter",
+    "name": null,
+    "role": "Student Interpreter",
+    "department": "Interpreting department",
+    "manager_id": "daisy-matthews",
+    "source_page": "scorm/static-org-chart-test/interpreting-department-organisation-chart/index.html",
+    "source_label": "Interpreting department organisation chart",
+    "source_refs": [
+      "chart:582"
+    ]
+  },
+  {
+    "id": "rosalind-hyams",
+    "name": "Rosalind Hyams",
+    "role": "CLO",
+    "department": "Interpreting department",
+    "manager_id": "konstantina-chondroti",
+    "source_page": "scorm/static-org-chart-test/interpreting-department-organisation-chart/index.html",
+    "source_label": "Interpreting department organisation chart",
+    "source_refs": [
+      "chart:582"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_1560589997.jpg",
+    "note": "The interpreting chart and IT staff directory both use this name for different positions. The identity and appointments await confirmation."
+  },
+  {
+    "id": "pania-hamuera",
+    "name": "Pania Hamuera",
+    "role": "Chief administration officer",
+    "department": "Administration",
+    "manager_id": "dr-christina-jones",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583",
+      "chart:489",
+      "directory:989"
+    ],
+    "image": "wp-content/uploads/2019/12/Pania-Hamuera-300x300.jpg"
+  },
+  {
+    "id": "barbara-linger",
+    "name": "Barbara Linger",
+    "role": "Information Management",
+    "department": "Administration",
+    "manager_id": "pania-hamuera",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583",
+      "directory:990"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_749845054.jpg"
+  },
+  {
+    "id": "barbara-linger-him-manager-imaging-data-integrity",
+    "name": "Nelly Brightman",
+    "role": "HIM Manager - Imaging, Data Integrity",
+    "department": "Administration",
+    "manager_id": "barbara-linger",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583",
+      "directory:991"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "barbara-linger-release-of-information-specialist",
+    "name": "Daisy Privett",
+    "role": "Release of Information Specialist",
+    "department": "Administration",
+    "manager_id": "barbara-linger",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583",
+      "directory:992"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "barbara-linger-imaging-specialist",
+    "name": "Jackson Barrett",
+    "role": "Imaging Specialist",
+    "department": "Administration",
+    "manager_id": "barbara-linger",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583",
+      "directory:993"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "barbara-linger-data-integrity-specialist",
+    "name": "Gracie-Mae Rees",
+    "role": "Data Integrity Specialist",
+    "department": "Administration",
+    "manager_id": "barbara-linger",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583",
+      "directory:994"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "nick-brightman",
+    "name": "Nick Brightman",
+    "role": "HIM Manager Coding",
+    "department": "Administration",
+    "manager_id": "pania-hamuera",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_552965956.jpg"
+  },
+  {
+    "id": "nick-brightman-coding-supervisor",
+    "name": null,
+    "role": "Coding Supervisor",
+    "department": "Administration",
+    "manager_id": "nick-brightman",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583"
+    ]
+  },
+  {
+    "id": "nick-brightman-inpatient-hb-coders",
+    "name": "Aleka Saloti",
+    "role": "Inpatient HB Coders",
+    "department": "Administration",
+    "manager_id": "nick-brightman",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583",
+      "directory:996"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "nick-brightman-outpatient-coder",
+    "name": "Jin Liang",
+    "role": "Outpatient Coder",
+    "department": "Administration",
+    "manager_id": "nick-brightman",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583",
+      "directory:997"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "cody-dempsey",
+    "name": "Cody Dempsey",
+    "role": "Transcription Supervisor",
+    "department": "Administration",
+    "manager_id": "pania-hamuera",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583",
+      "directory:998"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_591575675.jpg"
+  },
+  {
+    "id": "cody-dempsey-transcriptionist",
+    "name": "Cathal O'Mahony",
+    "role": "Transcriptionist",
+    "department": "Administration",
+    "manager_id": "cody-dempsey",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583",
+      "directory:999"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "cody-dempsey-transcription-clerk",
+    "name": "Ayana Yihun Getasew",
+    "role": "Transcription Clerk",
+    "department": "Administration",
+    "manager_id": "cody-dempsey",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583",
+      "directory:1000"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "cody-dempsey-chart-completion-specialist",
+    "name": "Lois Brockett",
+    "role": "Chart Completion Specialist",
+    "department": "Administration",
+    "manager_id": "cody-dempsey",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583",
+      "directory:1001"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "agnes-phillips",
+    "name": "Agnes Phillips",
+    "role": "Admissions Management",
+    "department": "Administration",
+    "manager_id": "pania-hamuera",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583",
+      "directory:1002"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_127216007.jpg"
+  },
+  {
+    "id": "dionissia-speraki",
+    "name": "Dionissia Speraki",
+    "role": "Facilities Management",
+    "department": "Administration",
+    "manager_id": "pania-hamuera",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_1010647510.jpg"
+  },
+  {
+    "id": "dionissia-speraki-fm-business-operations-director",
+    "name": "Louis George",
+    "role": "FM Business Operations Director",
+    "department": "Administration",
+    "manager_id": "dionissia-speraki",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583",
+      "directory:1004"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "dionissia-speraki-facilities-services-director",
+    "name": null,
+    "role": "Facilities Services Director",
+    "department": "Administration",
+    "manager_id": "dionissia-speraki",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583"
+    ]
+  },
+  {
+    "id": "dionissia-speraki-building-maintenance-associate-director",
+    "name": "Roy Starks",
+    "role": "Building Maintenance Associate Director",
+    "department": "Administration",
+    "manager_id": "dionissia-speraki",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583",
+      "directory:1006"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "dionissia-speraki-research-support-operations",
+    "name": "Elsa Moore",
+    "role": "Research Support & Operations",
+    "department": "Administration",
+    "manager_id": "dionissia-speraki",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583",
+      "directory:1007"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "dionissia-speraki-space-manager",
+    "name": "Cameron O'Toole",
+    "role": "Space Manager",
+    "department": "Administration",
+    "manager_id": "dionissia-speraki",
+    "source_page": "scorm/static-org-chart-test/administration-organisation-chart/index.html",
+    "source_label": "Administration organisation chart",
+    "source_refs": [
+      "chart:583",
+      "directory:1009"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "emmie-hunt",
+    "name": "Emmie Hunt",
+    "role": "Chief Technology Officer",
+    "department": "IT services",
+    "manager_id": "dr-christina-jones",
+    "source_page": "scorm/static-org-chart-test/it-services-organisation-chart/index.html",
+    "source_label": "IT services organisation chart",
+    "source_refs": [
+      "chart:584",
+      "chart:489",
+      "directory:980"
+    ],
+    "note": "The hospital chart and staff directory use Emmie Hunt. The IT chart spells the given name Emmi.",
+    "image": "wp-content/uploads/2019/12/shutterstock_383115955-300x300.jpg"
+  },
+  {
+    "id": "ana-marsh",
+    "name": "Ana Marsh",
+    "role": "Director of Clinical Apps",
+    "department": "IT services",
+    "manager_id": "emmie-hunt",
+    "source_page": "scorm/static-org-chart-test/it-services-organisation-chart/index.html",
+    "source_label": "IT services organisation chart",
+    "source_refs": [
+      "chart:584",
+      "directory:981"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_1010065423-e1578957532458.jpg"
+  },
+  {
+    "id": "ana-marsh-outpatient-apps-manager",
+    "name": null,
+    "role": "Outpatient Apps Manager",
+    "department": "IT services",
+    "manager_id": "ana-marsh",
+    "source_page": "scorm/static-org-chart-test/it-services-organisation-chart/index.html",
+    "source_label": "IT services organisation chart",
+    "source_refs": [
+      "chart:584"
+    ]
+  },
+  {
+    "id": "ana-marsh-inpatient-apps-manager",
+    "name": "Rosalind Hyams",
+    "role": "Inpatient Apps Manager",
+    "department": "IT services",
+    "manager_id": "ana-marsh",
+    "source_page": "scorm/static-org-chart-test/it-services-organisation-chart/index.html",
+    "source_label": "IT services organisation chart",
+    "source_refs": [
+      "chart:584",
+      "directory:983"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position. The interpreting chart and IT staff directory both use this name for different positions. The identity and appointments await confirmation."
+  },
+  {
+    "id": "rees-brisley",
+    "name": "Rees Brisley",
+    "role": "Outpatient Apps Manager",
+    "department": "IT services",
+    "manager_id": "emmie-hunt",
+    "source_page": "scorm/static-org-chart-test/it-services-organisation-chart/index.html",
+    "source_label": "IT services organisation chart",
+    "source_refs": [
+      "chart:584",
+      "directory:982"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_778317646.jpg"
+  },
+  {
+    "id": "rees-brisley-networks-manager",
+    "name": null,
+    "role": "Networks Manager",
+    "department": "IT services",
+    "manager_id": "rees-brisley",
+    "source_page": "scorm/static-org-chart-test/it-services-organisation-chart/index.html",
+    "source_label": "IT services organisation chart",
+    "source_refs": [
+      "chart:584"
+    ]
+  },
+  {
+    "id": "rees-brisley-help-desk-manager",
+    "name": null,
+    "role": "Help Desk Manager",
+    "department": "IT services",
+    "manager_id": "rees-brisley",
+    "source_page": "scorm/static-org-chart-test/it-services-organisation-chart/index.html",
+    "source_label": "IT services organisation chart",
+    "source_refs": [
+      "chart:584"
+    ]
+  },
+  {
+    "id": "rees-brisley-business-apps-manager",
+    "name": null,
+    "role": "Business Apps Manager",
+    "department": "IT services",
+    "manager_id": "rees-brisley",
+    "source_page": "scorm/static-org-chart-test/it-services-organisation-chart/index.html",
+    "source_label": "IT services organisation chart",
+    "source_refs": [
+      "chart:584"
+    ]
+  },
+  {
+    "id": "alagesan-poduri",
+    "name": "Alagesan Poduri",
+    "role": "Director of Project Management",
+    "department": "IT services",
+    "manager_id": "emmie-hunt",
+    "source_page": "scorm/static-org-chart-test/it-services-organisation-chart/index.html",
+    "source_label": "IT services organisation chart",
+    "source_refs": [
+      "chart:584"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_785571763.jpg"
+  },
+  {
+    "id": "george-dunn",
+    "name": "George Dunn",
+    "role": "Executive Director of People and Culture",
+    "department": "People and Culture",
+    "manager_id": "dr-christina-jones",
+    "source_page": "scorm/static-org-chart-test/people-and-culture-hr-organisation-chart/index.html",
+    "source_label": "People and culture (HR) organisation chart",
+    "source_refs": [
+      "chart:585",
+      "chart:489",
+      "directory:1010"
+    ],
+    "image": "wp-content/uploads/2019/12/GeorgeDunn-300x300.png"
+  },
+  {
+    "id": "rowland-stevens",
+    "name": "Rowland Stevens",
+    "role": "Recruitment Officer",
+    "department": "People and Culture",
+    "manager_id": "george-dunn",
+    "source_page": "scorm/static-org-chart-test/people-and-culture-hr-organisation-chart/index.html",
+    "source_label": "People and culture (HR) organisation chart",
+    "source_refs": [
+      "chart:585",
+      "directory:1011"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_1451773346.jpg"
+  },
+  {
+    "id": "oliver-hermon",
+    "name": "Oliver Hermon",
+    "role": "Learning and Development Officer",
+    "department": "People and Culture",
+    "manager_id": "george-dunn",
+    "source_page": "scorm/static-org-chart-test/people-and-culture-hr-organisation-chart/index.html",
+    "source_label": "People and culture (HR) organisation chart",
+    "source_refs": [
+      "chart:585",
+      "directory:1012"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_1468343240.jpg"
+  },
+  {
+    "id": "henry-natana",
+    "name": "Henry Natana",
+    "role": "Occupational Health and Safety Officer",
+    "department": "People and Culture",
+    "manager_id": "george-dunn",
+    "source_page": "scorm/static-org-chart-test/people-and-culture-hr-organisation-chart/index.html",
+    "source_label": "People and culture (HR) organisation chart",
+    "source_refs": [
+      "chart:585"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_437079151.jpg"
+  },
+  {
+    "id": "brigida-serra",
+    "name": "Brígida Serra",
+    "role": "Workplace Relations Officer",
+    "department": "People and Culture",
+    "manager_id": "george-dunn",
+    "source_page": "scorm/static-org-chart-test/people-and-culture-hr-organisation-chart/index.html",
+    "source_label": "People and culture (HR) organisation chart",
+    "source_refs": [
+      "chart:585",
+      "directory:1014"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_102139462.jpg"
+  },
+  {
+    "id": "charlie-vasconcelos",
+    "name": "Charlie Vasconcelos",
+    "role": "Chief Financial Officer",
+    "department": "Finance",
+    "manager_id": "dr-christina-jones",
+    "source_page": "scorm/static-org-chart-test/finance-organisation-chart/index.html",
+    "source_label": "Finance organisation chart",
+    "source_refs": [
+      "chart:586",
+      "chart:489"
+    ],
+    "image": "wp-content/uploads/2019/12/Charlie-Vasconcelos-300x300.jpg"
+  },
+  {
+    "id": "sonya-king",
+    "name": "Sonya King",
+    "role": "Revenue Services Officer",
+    "department": "Finance",
+    "manager_id": "charlie-vasconcelos",
+    "source_page": "scorm/static-org-chart-test/finance-organisation-chart/index.html",
+    "source_label": "Finance organisation chart",
+    "source_refs": [
+      "chart:586"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_502443262.jpg"
+  },
+  {
+    "id": "vitoria-brito",
+    "name": "Vitória Brito",
+    "role": "Administrative officer",
+    "department": "Finance",
+    "manager_id": "sonya-king",
+    "source_page": "scorm/static-org-chart-test/finance-organisation-chart/index.html",
+    "source_label": "Finance organisation chart",
+    "source_refs": [
+      "chart:586"
+    ]
+  },
+  {
+    "id": "nicole-pires",
+    "name": "Nicole Pires",
+    "role": "Financial Coordinator",
+    "department": "Finance",
+    "manager_id": "charlie-vasconcelos",
+    "source_page": "scorm/static-org-chart-test/finance-organisation-chart/index.html",
+    "source_label": "Finance organisation chart",
+    "source_refs": [
+      "chart:586"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_1104093659.jpg"
+  },
+  {
+    "id": "henry-scovell",
+    "name": "Henry Scovell",
+    "role": "Accounting assistant",
+    "department": "Finance",
+    "manager_id": "nicole-pires",
+    "source_page": "scorm/static-org-chart-test/finance-organisation-chart/index.html",
+    "source_label": "Finance organisation chart",
+    "source_refs": [
+      "chart:586",
+      "directory:1019"
+    ]
+  },
+  {
+    "id": "percy-allen",
+    "name": "Percy Allen",
+    "role": "Payroll and tax",
+    "department": "Finance",
+    "manager_id": "charlie-vasconcelos",
+    "source_page": "scorm/static-org-chart-test/finance-organisation-chart/index.html",
+    "source_label": "Finance organisation chart",
+    "source_refs": [
+      "chart:586",
+      "directory:1020"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_563813287.jpg"
+  },
+  {
+    "id": "vo-minh-thac",
+    "name": "Võ Minh Thạc",
+    "role": "Budget planning",
+    "department": "Finance",
+    "manager_id": "charlie-vasconcelos",
+    "source_page": "scorm/static-org-chart-test/finance-organisation-chart/index.html",
+    "source_label": "Finance organisation chart",
+    "source_refs": [
+      "chart:586",
+      "directory:1021"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_1569973414.jpg"
+  },
+  {
+    "id": "andrea-dehnert",
+    "name": "Andrea Dehnert",
+    "role": "Financial analyst",
+    "department": "Finance",
+    "manager_id": "vo-minh-thac",
+    "source_page": "scorm/static-org-chart-test/finance-organisation-chart/index.html",
+    "source_label": "Finance organisation chart",
+    "source_refs": [
+      "chart:586",
+      "directory:1022"
+    ]
+  },
+  {
+    "id": "maryam-wan",
+    "name": "Maryam Wan",
+    "role": "Financial reporting and cashier",
+    "department": "Finance",
+    "manager_id": "vo-minh-thac",
+    "source_page": "scorm/static-org-chart-test/finance-organisation-chart/index.html",
+    "source_label": "Finance organisation chart",
+    "source_refs": [
+      "chart:586"
+    ]
+  },
+  {
+    "id": "ayla-hood",
+    "name": "Ayla Hood",
+    "role": "Logistics Chief",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "dr-christina-jones",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "chart:489",
+      "directory:1024"
+    ],
+    "image": "wp-content/uploads/2019/12/Ayla-Hood-300x300.jpg",
+    "note": "The staff directory also lists an Ayla Hood as Purchasing Agent. These appointments are shown separately pending review."
+  },
+  {
+    "id": "tirza-kirchwey",
+    "name": "Tirza Kirchwey",
+    "role": "Facility Unit Leader",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "ayla-hood",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1027"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_766425403.jpg"
+  },
+  {
+    "id": "che-kyung-jae",
+    "name": "Che Kyung-Jae",
+    "role": "Damage Assessment and Control Officer",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "ayla-hood",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1028"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_370335194.jpg"
+  },
+  {
+    "id": "elena-spencer",
+    "name": "Elena Spencer",
+    "role": "Communications Unit Leader",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "ayla-hood",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1029"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_193462049.jpg"
+  },
+  {
+    "id": "waraki-piripi",
+    "name": "Waraki Piripi",
+    "role": "Transportation Unit Leader",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "elena-spencer",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1030"
+    ],
+    "note": "The chart lists Waraki Piripi. The staff directory lists Piripi Waraki for the same position. The name order awaits confirmation."
+  },
+  {
+    "id": "kwak-chong-su",
+    "name": "Kwak Chong-Su",
+    "role": "Materials Supply Unit Leader",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "elena-spencer",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1031"
+    ]
+  },
+  {
+    "id": "anewa-arana",
+    "name": "Anewa Arana",
+    "role": "Nutritional Supply Unit Leader",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "elena-spencer",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1032"
+    ]
+  },
+  {
+    "id": "manuela-beckerm",
+    "name": "Manuela Beckerm",
+    "role": "Incident Commander",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "ayla-hood",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1033"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_530446444-e1578957553518.jpg"
+  },
+  {
+    "id": "manuela-beckerm-planning-chief",
+    "name": "Linda Seidl",
+    "role": "Planning Chief",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "manuela-beckerm",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1034"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "manuela-beckerm-situation-status-unit-leader",
+    "name": "Manewa Pihopa",
+    "role": "Situation Status Unit Leader",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "manuela-beckerm",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1035"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "manuela-beckerm-labor-pool-unit-leader",
+    "name": "Steve Benson",
+    "role": "Labor Pool Unit Leader",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "manuela-beckerm",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1036"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "manuela-beckerm-medical-staff-unit-leader",
+    "name": null,
+    "role": "Medical Staff Unit Leader",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "manuela-beckerm",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587"
+    ],
+    "note": "The source chart repeats this unnamed role. Its holder and headcount await confirmation."
+  },
+  {
+    "id": "manuela-beckerm-nursing-unit-leader",
+    "name": "Atakul Ozsoy",
+    "role": "Nursing Unit Leader",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "manuela-beckerm",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1038"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "manuela-beckerm-facilities-planning",
+    "name": "Tyler Jones",
+    "role": "Facilities Planning",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "manuela-beckerm",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1039"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "manuela-beckerm-patient-tracking-officer",
+    "name": "Tihun Demissie Godefai",
+    "role": "Patient Tracking Officer",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "manuela-beckerm",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1040"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "manuela-beckerm-patient-information-officer",
+    "name": "Yitayew Tolla Abera",
+    "role": "Patient Information Officer",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "manuela-beckerm",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1041"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "adam-clegg",
+    "name": "Adam Clegg",
+    "role": "Operations Chief",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "ayla-hood",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_1191865255.jpg"
+  },
+  {
+    "id": "adam-clegg-purchasing-director",
+    "name": "Ruby Wheaton",
+    "role": "Purchasing Director",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "adam-clegg",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1044"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "adam-clegg-purchasing-agent",
+    "name": null,
+    "role": "Purchasing Agent",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "adam-clegg",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587"
+    ]
+  },
+  {
+    "id": "adam-clegg-purchasing-coordinator",
+    "name": "Geoff Altintop",
+    "role": "Purchasing Coordinator",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "adam-clegg",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1046"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "adam-clegg-purchasing-assistant",
+    "name": "Ihakara Tukaki",
+    "role": "Purchasing Assistant",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "adam-clegg",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1047"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "pong-jung-su",
+    "name": "Pong Jung-Su",
+    "role": "Clinical Engineering Director",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "ayla-hood",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1048"
+    ],
+    "image": "wp-content/uploads/2019/12/shutterstock_367853870.jpg"
+  },
+  {
+    "id": "pong-jung-su-supervisor-ce",
+    "name": "Andrew Williams",
+    "role": "Supervisor CE",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "pong-jung-su",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1049"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "pong-jung-su-senior-ce",
+    "name": "Lisa Welser",
+    "role": "Senior CE",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "pong-jung-su",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1050"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "pong-jung-su-clinical-engineer",
+    "name": "Abdimelech Eyob Ashenafi",
+    "role": "Clinical Engineer",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": "pong-jung-su",
+    "source_page": "scorm/static-org-chart-test/logistics-and-emergency-preparedness-organisation-chart/index.html",
+    "source_label": "Logistics and emergency preparedness organisation chart",
+    "source_refs": [
+      "chart:587",
+      "directory:1052"
+    ],
+    "note": "The chart records the reporting line. The staff directory names the holder of this position."
+  },
+  {
+    "id": "patricia-whitby",
+    "name": "Patricia Whitby",
+    "role": "Chief Nurse",
+    "department": "Nursing",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Nursing organisation chart",
+    "source_refs": [
+      "chart:814"
+    ]
+  },
+  {
+    "id": "billy-shaw",
+    "name": "Billy Shaw",
+    "role": "Nursing Unit Manager",
+    "department": "Nursing",
+    "manager_id": "patricia-whitby",
+    "source_page": null,
+    "source_label": "Nursing Department Outpatient",
+    "source_refs": [
+      "chart:589",
+      "chart:814",
+      "directory:938"
+    ],
+    "unit": "Outpatient"
+  },
+  {
+    "id": "jake-reid",
+    "name": "Jake Reid",
+    "role": "Nurse Full time",
+    "department": "Nursing",
+    "manager_id": "billy-shaw",
+    "source_page": null,
+    "source_label": "Nursing Department Outpatient",
+    "source_refs": [
+      "chart:589",
+      "directory:939"
+    ],
+    "unit": "Outpatient"
+  },
+  {
+    "id": "annanya-shvetank",
+    "name": "Annanya Shvetank",
+    "role": "Nurse Full time",
+    "department": "Nursing",
+    "manager_id": "billy-shaw",
+    "source_page": null,
+    "source_label": "Nursing Department Outpatient",
+    "source_refs": [
+      "chart:589",
+      "directory:940"
+    ],
+    "unit": "Outpatient",
+    "note": "The outpatient unit chart and staff directory agree on this role. The nursing overview gives a different role."
+  },
+  {
+    "id": "beatrice-fraser",
+    "name": "Beatrice Fraser",
+    "role": "Assistant / PCA",
+    "department": "Nursing",
+    "manager_id": "billy-shaw",
+    "source_page": null,
+    "source_label": "Nursing Department Outpatient",
+    "source_refs": [
+      "chart:589",
+      "directory:941"
+    ],
+    "unit": "Outpatient",
+    "note": "The outpatient unit chart and staff directory agree on this role. The nursing overview gives a different role."
+  },
+  {
+    "id": "zhou-yi",
+    "name": "Zhou Yi",
+    "role": "Student Nurse",
+    "department": "Nursing",
+    "manager_id": "billy-shaw",
+    "source_page": null,
+    "source_label": "Nursing Department Outpatient",
+    "source_refs": [
+      "chart:589",
+      "directory:942"
+    ],
+    "unit": "Outpatient"
+  },
+  {
+    "id": "charlie-bergen",
+    "name": "Charlie Bergen",
+    "role": "Nursing Unit Manager",
+    "department": "Nursing",
+    "manager_id": "patricia-whitby",
+    "source_page": null,
+    "source_label": "Nursing Department Inpatient",
+    "source_refs": [
+      "chart:591",
+      "chart:814",
+      "directory:943"
+    ],
+    "unit": "Inpatient"
+  },
+  {
+    "id": "aybike-sahin",
+    "name": "Aybike Sahin",
+    "role": "Nurse Full time",
+    "department": "Nursing",
+    "manager_id": "charlie-bergen",
+    "source_page": null,
+    "source_label": "Nursing Department Inpatient",
+    "source_refs": [
+      "chart:591",
+      "directory:944"
+    ],
+    "unit": "Inpatient"
+  },
+  {
+    "id": "basanti-yogendra",
+    "name": "Basanti Yogendra",
+    "role": "Nurse Full time",
+    "department": "Nursing",
+    "manager_id": "charlie-bergen",
+    "source_page": null,
+    "source_label": "Nursing Department Inpatient",
+    "source_refs": [
+      "chart:591",
+      "directory:945"
+    ],
+    "unit": "Inpatient"
+  },
+  {
+    "id": "ayaan-evans",
+    "name": "Ayaan Evans",
+    "role": "Assistant / PCA",
+    "department": "Nursing",
+    "manager_id": "charlie-bergen",
+    "source_page": null,
+    "source_label": "Nursing Department Inpatient",
+    "source_refs": [
+      "chart:591",
+      "directory:946"
+    ],
+    "unit": "Inpatient"
+  },
+  {
+    "id": "timothy-read",
+    "name": "Timothy Read",
+    "role": "Student Nurse",
+    "department": "Nursing",
+    "manager_id": "charlie-bergen",
+    "source_page": null,
+    "source_label": "Nursing Department Inpatient",
+    "source_refs": [
+      "chart:591",
+      "directory:947"
+    ],
+    "unit": "Inpatient"
+  },
+  {
+    "id": "sung-young-mi",
+    "name": "Sung Young-Mi",
+    "role": "Nursing Unit Manager",
+    "department": "Nursing",
+    "manager_id": "patricia-whitby",
+    "source_page": null,
+    "source_label": "Nursing Department Cardiac",
+    "source_refs": [
+      "chart:593",
+      "chart:814",
+      "directory:948"
+    ],
+    "unit": "Cardiac"
+  },
+  {
+    "id": "advitiya-sujeet",
+    "name": "Advitiya Sujeet",
+    "role": "Nurse Full time",
+    "department": "Nursing",
+    "manager_id": "sung-young-mi",
+    "source_page": null,
+    "source_label": "Nursing Department Cardiac",
+    "source_refs": [
+      "chart:593",
+      "directory:949"
+    ],
+    "unit": "Cardiac"
+  },
+  {
+    "id": "nguyen-vinh-dieu",
+    "name": "Nguyễn Vinh Diệu",
+    "role": "Nurse Full time",
+    "department": "Nursing",
+    "manager_id": "sung-young-mi",
+    "source_page": null,
+    "source_label": "Nursing Department Cardiac",
+    "source_refs": [
+      "chart:593",
+      "directory:950"
+    ],
+    "unit": "Cardiac"
+  },
+  {
+    "id": "flynn-matthews",
+    "name": "Flynn Matthews",
+    "role": "Assistant / PCA",
+    "department": "Nursing",
+    "manager_id": "sung-young-mi",
+    "source_page": null,
+    "source_label": "Nursing Department Cardiac",
+    "source_refs": [
+      "chart:593",
+      "directory:951"
+    ],
+    "unit": "Cardiac"
+  },
+  {
+    "id": "wang-ran",
+    "name": "Wang Ran",
+    "role": "Student Nurse",
+    "department": "Nursing",
+    "manager_id": "sung-young-mi",
+    "source_page": null,
+    "source_label": "Nursing Department Cardiac",
+    "source_refs": [
+      "chart:593",
+      "directory:952"
+    ],
+    "unit": "Cardiac"
+  },
+  {
+    "id": "romeo-knight",
+    "name": "Romeo Knight",
+    "role": "Nursing Unit Manager",
+    "department": "Nursing",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Nursing Department Emergency",
+    "source_refs": [
+      "chart:595",
+      "directory:953"
+    ],
+    "unit": "Emergency",
+    "note": "The unit chart and directory name Romeo Knight as manager. The nursing overview gives conflicting names and roles, so the next reporting line awaits confirmation."
+  },
+  {
+    "id": "mario-harvey",
+    "name": "Mario Harvey",
+    "role": "Nurse Full time",
+    "department": "Nursing",
+    "manager_id": "romeo-knight",
+    "source_page": null,
+    "source_label": "Nursing Department Emergency",
+    "source_refs": [
+      "chart:595",
+      "directory:954"
+    ],
+    "unit": "Emergency"
+  },
+  {
+    "id": "liao-luoyang",
+    "name": "Liao Luoyang",
+    "role": "Nurse Full time",
+    "department": "Nursing",
+    "manager_id": "romeo-knight",
+    "source_page": null,
+    "source_label": "Nursing Department Emergency",
+    "source_refs": [
+      "chart:595",
+      "directory:955"
+    ],
+    "unit": "Emergency"
+  },
+  {
+    "id": "samuel-fern",
+    "name": "Samuel Fern",
+    "role": "Assistant / PCA",
+    "department": "Nursing",
+    "manager_id": "romeo-knight",
+    "source_page": null,
+    "source_label": "Nursing Department Emergency",
+    "source_refs": [
+      "chart:595",
+      "directory:956"
+    ],
+    "unit": "Emergency"
+  },
+  {
+    "id": "isla-madden",
+    "name": "Isla Madden",
+    "role": "Student Nurse",
+    "department": "Nursing",
+    "manager_id": "romeo-knight",
+    "source_page": null,
+    "source_label": "Nursing Department Emergency",
+    "source_refs": [
+      "chart:595",
+      "directory:957"
+    ],
+    "unit": "Emergency"
+  },
+  {
+    "id": "petra-germann",
+    "name": "Petra Germann",
+    "role": "Nursing Unit Manager",
+    "department": "Nursing",
+    "manager_id": "patricia-whitby",
+    "source_page": null,
+    "source_label": "Nursing Department Rehab",
+    "source_refs": [
+      "chart:604",
+      "chart:814",
+      "directory:958"
+    ],
+    "unit": "Rehabilitation"
+  },
+  {
+    "id": "hudson-baines",
+    "name": "Hudson Baines",
+    "role": "Nurse Full time",
+    "department": "Nursing",
+    "manager_id": "petra-germann",
+    "source_page": null,
+    "source_label": "Nursing Department Rehab",
+    "source_refs": [
+      "chart:604",
+      "directory:959"
+    ],
+    "unit": "Rehabilitation"
+  },
+  {
+    "id": "uc-mai-ha",
+    "name": "Úc Mai Hạ",
+    "role": "Nurse Full time",
+    "department": "Nursing",
+    "manager_id": "petra-germann",
+    "source_page": null,
+    "source_label": "Nursing Department Rehab",
+    "source_refs": [
+      "chart:604",
+      "directory:960"
+    ],
+    "unit": "Rehabilitation"
+  },
+  {
+    "id": "min-seo-yeon",
+    "name": "Min Seo-Yeon",
+    "role": "Assistant / PCA",
+    "department": "Nursing",
+    "manager_id": "petra-germann",
+    "source_page": null,
+    "source_label": "Nursing Department Rehab",
+    "source_refs": [
+      "chart:604",
+      "directory:961"
+    ],
+    "unit": "Rehabilitation"
+  },
+  {
+    "id": "vincent-whelan",
+    "name": "Vincent Whelan",
+    "role": "Student Nurse",
+    "department": "Nursing",
+    "manager_id": "petra-germann",
+    "source_page": null,
+    "source_label": "Nursing Department Rehab",
+    "source_refs": [
+      "chart:604",
+      "directory:962"
+    ],
+    "unit": "Rehabilitation"
+  },
+  {
+    "id": "marcus-stone",
+    "name": "Marcus Stone",
+    "role": "CLO",
+    "department": "Interpreting department",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:974"
+    ],
+    "note": "The staff directory and organisation chart give different or incomplete details for this position. Its reporting line awaits review."
+  },
+  {
+    "id": "nguyen-khanh-van",
+    "name": "Nguyễn Khánh Vân",
+    "role": "CLO",
+    "department": "Interpreting department",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:975"
+    ],
+    "note": "The staff directory and organisation chart give different or incomplete details for this position. Its reporting line awaits review."
+  },
+  {
+    "id": "gorgu-demirel",
+    "name": "Gorgu Demirel",
+    "role": "Accounts & Supplies",
+    "department": "Interpreting department",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:978"
+    ]
+  },
+  {
+    "id": "urangi-natana",
+    "name": "Urangi Natana",
+    "role": "Student",
+    "department": "Interpreting department",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:979"
+    ]
+  },
+  {
+    "id": "phan-minh-dan",
+    "name": "Phan Minh Dân",
+    "role": "Director of Technical apps",
+    "department": "IT services",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:984"
+    ]
+  },
+  {
+    "id": "reginald-bywater",
+    "name": "Reginald Bywater",
+    "role": "Networks manager",
+    "department": "IT services",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:985"
+    ],
+    "note": "The staff directory and organisation chart give different or incomplete details for this position. Its reporting line awaits review. The archived IT chart and linked IT chart place this role under different managers. The reporting line awaits confirmation."
+  },
+  {
+    "id": "alagesan-poduri-help-desk-manager-986",
+    "name": "Alagesan Poduri",
+    "role": "Help desk manager",
+    "department": "IT services",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:986"
+    ],
+    "note": "The staff directory lists this role. The department chart records another position for the same name. The reporting line for this entry awaits review."
+  },
+  {
+    "id": "gwendoline-udy",
+    "name": "Gwendoline Udy",
+    "role": "Director of project management",
+    "department": "IT services",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:987"
+    ],
+    "note": "The staff directory and organisation chart give different or incomplete details for this position. Its reporting line awaits review."
+  },
+  {
+    "id": "harriet-mendoza",
+    "name": "Harriet Mendoza",
+    "role": "Business Apps Manager",
+    "department": "IT services",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:988"
+    ],
+    "note": "The staff directory and organisation chart give different or incomplete details for this position. Its reporting line awaits review. The archived IT chart and linked IT chart place this role under different managers. The reporting line awaits confirmation."
+  },
+  {
+    "id": "minnie-hunter",
+    "name": "Minnie Hunter",
+    "role": "HIM Manager Coding, transcription, Chart completion",
+    "department": "Administration",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:995"
+    ]
+  },
+  {
+    "id": "vincent-rick",
+    "name": "Vincent Rick",
+    "role": "Facilities management",
+    "department": "Administration",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:1003"
+    ],
+    "note": "The staff directory and organisation chart give different or incomplete details for this position. Its reporting line awaits review."
+  },
+  {
+    "id": "dionissia-speraki-facilities-services-director-1005",
+    "name": "Dionissia Speraki",
+    "role": "Facilities Services Director",
+    "department": "Administration",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:1005"
+    ],
+    "note": "The staff directory lists this role. The department chart records another position for the same name. The reporting line for this entry awaits review."
+  },
+  {
+    "id": "yetkin-onarici",
+    "name": "Yetkin Onarici",
+    "role": "Planning and Construction Director",
+    "department": "Administration",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:1008"
+    ]
+  },
+  {
+    "id": "tom-penn",
+    "name": "Tom Penn",
+    "role": "Occupational health and safety officer",
+    "department": "People and Culture",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:1013"
+    ],
+    "note": "The staff directory and organisation chart give different or incomplete details for this position. Its reporting line awaits review."
+  },
+  {
+    "id": "sonia-vasconcelos",
+    "name": "Sonia Vasconcelos",
+    "role": "Chief Financial officer",
+    "department": "Finance",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:1015"
+    ],
+    "note": "The staff directory and organisation chart give different or incomplete details for this position. Its reporting line awaits review."
+  },
+  {
+    "id": "charlie-king",
+    "name": "Charlie King",
+    "role": "Revenue Services Officer",
+    "department": "Finance",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:1016"
+    ],
+    "note": "The staff directory and organisation chart give different or incomplete details for this position. Its reporting line awaits review."
+  },
+  {
+    "id": "vitoria-brito-financial-coordinator-1017",
+    "name": "Vitória Brito",
+    "role": "Financial Coordinator",
+    "department": "Finance",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:1017"
+    ],
+    "note": "The staff directory lists this role. The department chart records another position for the same name. The reporting line for this entry awaits review."
+  },
+  {
+    "id": "nicole-pires-administrative-officer-1018",
+    "name": "Nicole Pires",
+    "role": "Administrative officer",
+    "department": "Finance",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:1018"
+    ],
+    "note": "The staff directory lists this role. The department chart records another position for the same name. The reporting line for this entry awaits review."
+  },
+  {
+    "id": "flossy-barnes",
+    "name": "Flossy Barnes",
+    "role": "Financial reporting and cashier",
+    "department": "Finance",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:1023"
+    ],
+    "note": "The staff directory and organisation chart give different or incomplete details for this position. Its reporting line awaits review."
+  },
+  {
+    "id": "nehir-ozkok",
+    "name": "Nehir Ozkok",
+    "role": "Medical Staff Unit Leader",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:1037"
+    ],
+    "note": "The staff directory and organisation chart give different or incomplete details for this position. Its reporting line awaits review."
+  },
+  {
+    "id": "eva-terrell",
+    "name": "Eva Terrell",
+    "role": "Operations Chief",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:1042"
+    ],
+    "note": "The staff directory and organisation chart give different or incomplete details for this position. Its reporting line awaits review."
+  },
+  {
+    "id": "ayla-hood-purchasing-agent-1045",
+    "name": "Ayla Hood",
+    "role": "Purchasing Agent",
+    "department": "Logistics and emergency preparedness",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:1045"
+    ],
+    "note": "The staff directory lists this role. The department chart records another position for the same name. The reporting line for this entry awaits review."
+  },
+  {
+    "id": "gina-starr",
+    "name": "Gina Starr",
+    "role": "ATSI Program manager",
+    "department": "Aboriginal and Torres Strait Islander liaison office",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:1184"
+    ]
+  },
+  {
+    "id": "fiona-phillips",
+    "name": "Fiona Phillips",
+    "role": "Aboriginal & Torres Strait Islander Health Liaison Officer (ATSIHLO) for women and families",
+    "department": "Aboriginal and Torres Strait Islander liaison office",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:1185"
+    ]
+  },
+  {
+    "id": "monti-williams",
+    "name": "Monti Williams",
+    "role": "Aboriginal & Torres Strait Islander Health Liaison Officer (ATSIHLO)",
+    "department": "Aboriginal and Torres Strait Islander liaison office",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:1186"
+    ]
+  },
+  {
+    "id": "merindah-olden",
+    "name": "Merindah Olden",
+    "role": "Health Outreach Coordinator - Aboriginal & Torres Strait Islander Communities",
+    "department": "Aboriginal and Torres Strait Islander liaison office",
+    "manager_id": null,
+    "source_page": null,
+    "source_label": "Archived staff directory",
+    "source_refs": [
+      "directory:1187"
+    ]
+  }
+]

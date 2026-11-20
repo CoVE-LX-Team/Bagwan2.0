@@ -25,7 +25,7 @@ async (page) => {
   await go('saved');verify((await page.locator('main').innerText()).includes('Medication safety'),'Saved item persists after page reload');
   await page.locator('main [data-save]').click();
   await go('documents');await page.locator('#list-search').fill('Privacy');
-  const download=await page.locator('#results h2 a').first().getAttribute('href');
+  const download=await page.locator('#results a[download]').first().evaluate(link=>link.href);
   verify((await page.request.get(download)).status()===200,'Document search leads to an existing download');
   await go('page/'+encodeURIComponent('scorm/intranet/our-community/index.html'));
   verify(await page.locator('.values-reference section').count()===5,'All five values are visible reference sections');
