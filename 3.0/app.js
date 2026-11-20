@@ -11,6 +11,7 @@ try { saved = new Set(JSON.parse(localStorage.getItem(savedKey) || '[]')); } cat
 const iconPaths = {
   preview:'M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z',
   download:'M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4', bookmark:'M6 3h12v18l-6-4-6 4z',
+  bookmarks:'M4 6h12v15l-6-4-6 4z M8 3h12v14',
   close:'M6 6l12 12M18 6 6 18', arrowUp:'M12 19V5m-6 6 6-6 6 6', arrowDown:'M12 5v14m-6-6 6 6 6-6',
   home:'M3 10 12 3l9 7M5 9v12h5v-7h4v7h5V9', departments:'M3 21V5h11v16M14 10h7v11M7 9h3M7 13h3M7 17h3M17 14h1M17 18h1',
   people:'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M15 3a4 4 0 0 1 0 8M22 21v-2a4 4 0 0 0-3-4M13 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0',
@@ -19,6 +20,8 @@ const iconPaths = {
   news:'M4 3h16v18H4zM8 7h8M8 11h8M8 15h4M8 18h8', incident:'M12 3 2 21h20zM12 9v5M12 17v1', search:'M15 15l6 6M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0'
 };
 const icon = name => '<span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="' + (iconPaths[name] || iconPaths.resources) + '"></path></svg></span>';
+const savedItemsLink = document.querySelector('.header-link[href="#saved"]');
+savedItemsLink.innerHTML = icon('bookmarks');
 const nav = [['home','Staff home'],['departments','Departments'],['people','People directory'],['policies','Policies & procedures'],['forms','Forms & records'],['resources','Resources'],['tour','Hospital tour'],['news','News & updates']];
 document.querySelector('#main-nav').innerHTML = nav.map(([id,label]) => '<a href="#' + id + '" data-nav="' + id + '">' + icon(id) + esc(label) + '</a>').join('');
 const departmentData = [
@@ -30,7 +33,11 @@ const departmentData = [
   {id:'liaison',name:'Aboriginal & Torres Strait Islander liaison',source:'aboriginal-and-torres-strait-islander-liaison-office/index.html',description:'Liaison service overview and cultural safety resources.',group:'Aboriginal and Torres Strait Islander liaison office'}
 ];
 function toast(message) { const node=document.querySelector('.toast');node.textContent=message;node.classList.add('visible');clearTimeout(saveTimer);saveTimer=setTimeout(()=>node.classList.remove('visible'),2600); }
-function saveButton(id,title) { const active=saved.has(id);return '<button class="save-button" type="button" data-save="'+esc(id)+'" data-title="'+esc(title)+'" aria-label="'+(active?'Remove saved item: ':'Save item: ')+esc(title)+'" aria-pressed="'+active+'">'+(active?'★':'☆')+'</button>'; }
+function saveButton(id,title) {
+  const active = saved.has(id);
+  const label = esc((active ? 'Remove saved item: ' : 'Save item: ') + title);
+  return '<button class="save-button" type="button" data-save="'+esc(id)+'" data-title="'+esc(title)+'" aria-label="'+label+'" title="'+label+'" aria-pressed="'+active+'">'+icon('bookmark')+'</button>';
+}
 function intro(title,description,eyebrow='STAFF INTRANET') { return '<div class="page-intro"><div><p class="eyebrow">'+esc(eyebrow)+'</p><h1>'+esc(title)+'</h1><p>'+esc(description)+'</p></div></div>'; }
 function footer() { return '<footer class="footer-note"><a href="learning-guide.html">Learning guide</a><br>We acknowledge the Wurundjeri people of the Kulin Nations and pay our respects to Elders past and present.</footer>'; }
 function row(title,href,description,kind,id) { return '<li class="resource-row"><div><span class="kind">'+esc(kind)+'</span><h2><a href="'+esc(href)+'">'+esc(title)+'</a></h2><p>'+esc(description)+'</p></div>'+(id?saveButton(id,title):'')+'</li>'; }
@@ -64,10 +71,19 @@ function department(id) {
 }
 const policyIndexPath='scorm/quick-link-pages/policy-and-procedures/index.html';
 function policies() {
-  main.innerHTML=intro('Policies & procedures','Browse hospital policies and departmental procedures.');
-  const items=data.pages.filter(p=>p.category==='Policy').map(p=>({...p,search:p.title+' '+p.text,filter:policyScope(p)}));
-  wireFilter(items,found=>'<ul class="resource-list">'+found.map(policyResult).join('')+'</ul>','<label class="sr-only" for="category-filter">Policy scope</label><select class="field-search" id="category-filter"><option value="">All policies</option><option>Hospital wide</option><option>Departmental</option></select>');
-  main.insertAdjacentHTML('beforeend','<p class="policy-index-link"><a href="'+pageLink(policyIndexPath)+'">Policy governance framework</a></p>');
+  const index=recordBody(pageMap.get(policyIndexPath));
+  const framework=index.querySelector('article');
+  const unlinkedTopic=index.querySelector('#collapseDepartmental .card-body > p:not(:has(a))');
+  const showFramework=new URLSearchParams(location.hash.split('?')[1]).get('view')==='framework';
+  main.innerHTML=intro('Policies & procedures','Find hospital policies and departmental procedures. Dates show when the downloadable file was last updated.')+
+    '<div class="policy-library-links"><details id="policy-framework" class="policy-framework"'+(showFramework?' open':'')+'><summary>Policy governance framework</summary><div>'+
+    [...framework.querySelectorAll('p')].map(p=>p.outerHTML).join('')+
+    (unlinkedTopic?'<p><strong>Nursing topic in the framework</strong><br>'+esc(unlinkedTopic.textContent.trim())+'</p>':'')+
+    saveButton('page:'+policyIndexPath,'Policy governance framework')+'</div></details>'+
+    '<a class="policy-documents-link" href="#documents?category=Policies+and+procedures">Related policy documents</a></div>'+
+    '<section class="file-browser policy-browser" aria-label="Policy library"></section>';
+  const records=data.pages.filter(p=>p.category==='Policy').map(policyFile);
+  mountFileBrowser(main.querySelector('.policy-browser'),records,{route:'#policies',label:'Policies and procedures',collection:'policies'});
 }
 function forms() {
   const online=new URLSearchParams(location.hash.split('?')[1]).get('view')==='online';
@@ -80,7 +96,7 @@ function forms() {
     browser.className='file-browser';
     browser.setAttribute('aria-label','Downloadable forms');
     main.append(browser);
-    mountFileBrowser(browser,data.documents.filter(formTemplateTitle),{route:'#forms',label:'Downloadable forms',forms:true});
+    mountFileBrowser(browser,data.documents.filter(formTemplateTitle),{route:'#forms',label:'Downloadable forms',collection:'forms'});
     return;
   }
   const records=[
@@ -189,7 +205,7 @@ function article(path) {
   }
   main.innerHTML='<p class="breadcrumbs"><a href="#home">Staff home</a> / '+esc(record.category)+'</p>'+intro(record.title,'',record.category.toUpperCase());
   main.innerHTML+='<div class="page-tools">'+(record.category==='Policy'?policyActions(record):'')+
-    (path===policyIndexPath?'<a class="small-link" href="#policies">Browse all policies</a>':'')+saveButton('page:'+path,record.title)+'</div>';
+    saveButton('page:'+path,record.title)+'</div>';
   if(record.mode==='embed'){
     const frame=document.createElement('iframe');frame.className='embedded-page';frame.title=record.title;frame.allowFullscreen=true;setupEmbeddedFrame(frame,record);frame.src=path.startsWith('VR/')?tourFrameUrl(absolute(path)):absolute(path);main.append(frame);
   }else{
@@ -211,10 +227,6 @@ function adaptContent(container,sourcePath) {
     if(url.origin===ROOT.origin&&url.pathname.startsWith(ROOT.pathname)){
       const path=decodeURIComponent(url.pathname.slice(ROOT.pathname.length));const target=path.endsWith('/')?path+'index.html':path;
       a.href=pageMap.has(target)?pageLink(target):url.href;
-      if(sourcePath===policyIndexPath && pageMap.get(target)?.category==='Policy'){
-        a.parentElement.classList.add('policy-index-entry');
-        a.insertAdjacentHTML('afterend',policyActions(pageMap.get(target)));
-      }
       const file=documentByHref.get(target);
       if(file){
         a.href=absolute(file.local_href);
@@ -266,7 +278,7 @@ main.addEventListener('click',event=>{
   const preview=event.target.closest('[data-preview]');
   if(preview){openDocumentPreview(documentMap.get(preview.dataset.preview));return;}
   const button=event.target.closest('[data-save]');
-  if(button){const id=button.dataset.save;if(saved.has(id))saved.delete(id);else saved.add(id);try{localStorage.setItem(savedKey,JSON.stringify([...saved]));toast(saved.has(id)?'Added to saved items':'Removed from saved items');}catch{toast('Browser storage is unavailable. This shortcut will last for this visit.');}const active=saved.has(id);button.setAttribute('aria-pressed',String(active));button.setAttribute('aria-label',(active?'Remove saved item: ':'Save item: ')+button.dataset.title);if(button.classList.contains('doc-action'))button.innerHTML=icon('bookmark');else button.textContent=active?'★':'☆';if(button.hasAttribute('title'))button.title=button.getAttribute('aria-label');if(location.hash.startsWith('#saved'))savedItems();return;}
+  if(button){const id=button.dataset.save;if(saved.has(id))saved.delete(id);else saved.add(id);try{localStorage.setItem(savedKey,JSON.stringify([...saved]));toast(saved.has(id)?'Added to saved items':'Removed from saved items');}catch{toast('Browser storage is unavailable. This shortcut will last for this visit.');}const active=saved.has(id);button.setAttribute('aria-pressed',String(active));button.setAttribute('aria-label',(active?'Remove saved item: ':'Save item: ')+button.dataset.title);button.title=button.getAttribute('aria-label');if(location.hash.startsWith('#saved'))savedItems();return;}
   const tab=event.target.closest('[data-toggle=tab]');if(tab){event.preventDefault();const container=tab.closest('.content-document');const target=tab.getAttribute('data-target')||tab.getAttribute('href');container.querySelectorAll('[role=tabpanel]').forEach(panel=>{panel.hidden='#'+panel.id!==target;});container.querySelectorAll('[role=tab]').forEach(control=>{control.setAttribute('aria-selected',String(control===tab));control.tabIndex=control===tab?0:-1;});return;}
   const toggle=event.target.closest('[data-toggle=collapse]');if(toggle){event.preventDefault();const id=(toggle.getAttribute('data-target')||toggle.getAttribute('href')||'').replace(/^#/,'');const panel=main.querySelector('[id="'+CSS.escape(id)+'"]');if(panel){panel.hidden=!panel.hidden;toggle.setAttribute('aria-expanded',String(!panel.hidden));}return;}
   const a=event.target.closest('.content-document a[href^="#"]');if(a&&!a.getAttribute('href').startsWith('#page/')){const target=main.querySelector('[id="'+CSS.escape(a.hash.slice(1))+'"]');if(target){event.preventDefault();target.scrollIntoView({behavior:'smooth'});}}
@@ -279,6 +291,15 @@ function render(focus=false) {
     try{identifier=decodeURIComponent(path.slice(path.indexOf('/')+1));}catch{identifier='';}
   }
   if(section==='page'){
+    if(identifier.split('#')[0]===policyIndexPath){
+      const params=new URLSearchParams((route.split('?')[1]||'').split('#')[0]);
+      const anchor=identifier.split('#')[1]||route.split('#')[1]||'';
+      if(/^(?:heading|collapse)Hospitalwide$/.test(anchor))params.set('category','Hospital wide');
+      if(/^(?:heading|collapse)Departmental$/.test(anchor))params.set('category','Departmental');
+      if(anchor==='policy-framework')params.set('view','framework');
+      replaceSectionHash('#policies'+(params.size?'?'+params:''));
+      return render(focus);
+    }
     const publicPath=publicPagePath(identifier);
     if(publicPath!==identifier)history.replaceState(history.state,'',pageLink(identifier)+(route.includes('?')?'?'+route.split('?')[1]:''));
     identifier=pageMap.has(identifier)?identifier:sourcePagePath(identifier);
@@ -301,6 +322,8 @@ function render(focus=false) {
     else a.removeAttribute('aria-current');
   });
   const views={'patient-case':renderDraftPatientCase,home,departments,people:renderPeopleDirectory,policies,forms,resources,videos,documents,news:renderNews,search,saved:savedItems,tour:()=>article('VR/public/index.html')};
+  if(path==='saved')savedItemsLink.setAttribute('aria-current','page');
+  else savedItemsLink.removeAttribute('aria-current');
   if(path.startsWith('page/'))article(identifier);
   else if(path.startsWith('person/'))renderPerson(identifier);
   else if(path.startsWith('department/'))department(path.split('/')[1]);

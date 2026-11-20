@@ -8,7 +8,11 @@
 .global-search svg{stroke:#000054;margin-left:20px}
 .global-search button{align-self:stretch;background:#000054;color:white;border:0;border-radius:24px;margin:5px;padding:0 25px;font-weight:550;transition:box-shadow .2s,background .2s}
 .global-search button:hover{background:#24249b;box-shadow:0 2px 5px #00005433}
-.header-link{color:#000054;font-weight:550;font-size:14px}
+.header-link{display:inline-flex;flex:none;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;color:#000054}
+.header-link:hover,.header-link:focus-visible,.header-link[aria-current=page]{background:#e7eaff}
+.header-link .nav-icon,.header-link svg{width:23px;height:23px}
+.save-button{display:inline-flex;align-items:center;justify-content:center}
+[data-save][aria-pressed=true] svg path{fill:currentColor}
 .sidebar{background:#000054;border-right:0;top:94px;height:calc(100vh - 94px);padding:36px 16px}
 .nav-caption{color:#c5c8f8;font-size:11px;font-weight:450;letter-spacing:.12em;padding-left:19px}
 #main-nav{gap:7px}

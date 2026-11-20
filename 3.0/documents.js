@@ -64,11 +64,12 @@ function documentDate(doc) {
 }
 function documentPreviewButton(doc) {
   const label='Preview '+documentTitle(doc);
-  return '<button type="button" class="doc-action" data-preview="'+esc(doc.local_path)+'" aria-label="'+esc(label)+'" title="'+esc(label)+'">'+icon('preview')+'</button>';
+  const dataAttribute=doc.policy?'data-policy-preview':'data-preview';
+  return '<button type="button" class="doc-action" '+dataAttribute+'="'+esc(doc.local_path)+'" aria-label="'+esc(label)+'" title="'+esc(label)+'">'+icon('preview')+'</button>';
 }
 function documentActions(doc) {
-  const download='Download '+documentTitle(doc);
-  const id='doc:'+doc.local_path;
+  const download=doc.policy?policyDownloadLabel(doc):'Download '+documentTitle(doc);
+  const id=(doc.policy?'page:':'doc:')+doc.local_path;
   const active=saved.has(id);
   const bookmark=(active?'Remove saved item: ':'Save item: ')+documentTitle(doc);
   return '<div class="doc-actions">'+documentPreviewButton(doc)+
@@ -91,10 +92,12 @@ function compareDocuments(left, right, sort) {
   return (direction==='desc'?-order:order)||names||documentCollator.compare(left.local_path,right.local_path);
 }
 function documentRow(doc) {
-  const date=doc.source_modified_at?'<time datetime="'+esc(doc.source_modified_at)+'">'+documentDate(doc)+'</time>':'Date unavailable';
-  return '<tr role="row"><th scope="row" role="rowheader"><span class="doc-name">'+esc(documentTitle(doc))+'</span><span class="doc-file-meta">'+esc([doc.file_type,documentSize(doc),doc.edition_source_url?'WorkSafe Victoria':null].filter(Boolean).join(' · '))+'</span></th>'+
+  const date=doc.source_modified_at?'<span class="doc-mobile-label">Updated </span><time datetime="'+esc(doc.source_modified_at)+'">'+documentDate(doc)+'</time>':'Date unavailable';
+  const name=doc.policy?'<a href="'+esc(pageLink(doc.policy.path))+'">'+esc(doc.name)+'</a>':esc(documentTitle(doc));
+  const metadata=[doc.file_type,doc.size_bytes?documentSize(doc):null,doc.edition_source_url?'WorkSafe Victoria':null].filter(Boolean);
+  return '<tr role="row"><th scope="row" role="rowheader"><span class="doc-name">'+name+'</span><span class="doc-file-meta">'+esc(metadata.join(' · '))+'</span></th>'+
     '<td role="cell" class="doc-category">'+esc(doc.category)+(doc.subcategory?'<small>'+esc(doc.subcategory)+'</small>':'')+'</td>'+
-    '<td role="cell" class="doc-updated"><span class="doc-mobile-label">Updated </span>'+date+'</td><td role="cell">'+documentActions(doc)+'</td></tr>';
+    '<td role="cell" class="doc-updated">'+date+'</td><td role="cell">'+documentActions(doc)+'</td></tr>';
 }
 function sortedHeader(label, key, sort) {
   const [field,direction]=sort.split('-');
@@ -107,15 +110,15 @@ function documents() {
   mountFileBrowser(main.querySelector('.file-browser'),data.documents,{route:'#documents',label:'Documents and templates',clinical:true});
 }
 
-function mountFileBrowser(container, records, {route='', label='Department documents', forms=false, clinical=false}={}) {
+function mountFileBrowser(container, records, {route='', label='Department documents', collection='documents', clinical=false}={}) {
   const params=new URLSearchParams(route ? location.hash.split('?')[1] : '');
-  const noun=forms?'form':'document';
+  const noun={documents:'document',forms:'form',policies:'policy'}[collection];
   const options=values=>values.map(v=>'<option value="'+esc(v)+'">'+esc(v)+'</option>').join('');
   const categories=[...new Set(records.flatMap(doc=>[doc.category,documentCategory(doc)]))].sort(documentCollator.compare);
   const types=[...new Set(records.map(doc=>doc.file_type))].sort();
   const id=value=>route?' id="'+value+'"':'';
   const field=(name,html,visible=true)=>'<label'+(visible?'':' hidden')+'>'+name+'<span class="doc-field">'+html+'</span></label>';
-  container.innerHTML='<div class="doc-controls"><label>Search '+noun+'s<span class="doc-field doc-query">'+icon('search')+
+  container.innerHTML='<div class="doc-controls"><label>Search '+collection+'<span class="doc-field doc-query">'+icon('search')+
     '<input'+id('list-search')+' data-field="query" type="search" placeholder="Name or keyword"></span></label>'+
     field('Category','<select'+id('category-filter')+' data-field="category"><option value="">All categories</option>'+options(categories)+'</select>',route||categories.length>1)+
     field('File type','<select'+id('type-filter')+' data-field="type"><option value="">All file types</option>'+options(types)+'</select>',route||types.length>1)+
@@ -131,16 +134,16 @@ function mountFileBrowser(container, records, {route='', label='Department docum
   order.value=Object.hasOwn(documentSorts,params.get('sort'))?params.get('sort'):'name-asc';
   function update(writeUrl=true) {
     const found=records.filter(doc=>(!category.value||doc.category===category.value||documentCategory(doc)===category.value) &&
-      (!type.value||doc.file_type===type.value) && matches([documentTitle(doc),doc.name,documentCategory(doc),doc.file_type,doc.original_folder_path].join(' '),query.value));
+      (!type.value||doc.file_type===type.value) && matches([documentTitle(doc),doc.name,documentCategory(doc),doc.file_type,doc.original_folder_path,doc.policy?.text].join(' '),query.value));
     found.sort((a,b)=>compareDocuments(a,b,order.value));
     const formCount=clinical?showClinicalFormLinks(query.value,!category.value&&!type.value):0;
-    count.textContent=found.length+' '+noun+(found.length===1?'':'s')+
+    count.textContent=found.length+' '+(found.length===1?noun:collection)+
       (formCount?' · '+formCount+' clinical '+(formCount===1?'form':'forms'):'');
     clear.hidden=!(query.value||category.value||type.value);
     results.innerHTML=found.length?'<table class="doc-table" role="table" aria-label="'+esc(label)+'"><thead role="rowgroup"><tr role="row">'+
       sortedHeader('Name','name',order.value)+sortedHeader('Category','category',order.value)+sortedHeader('Last updated','updated',order.value)+
       '<th scope="col" role="columnheader" class="actions-heading">Actions</th></tr></thead><tbody role="rowgroup">'+found.map(documentRow).join('')+'</tbody></table>':
-      formCount?'':'<div class="empty-state"><h2>No matching '+noun+'s</h2><p>Try another keyword or clear the filters.</p></div>';
+      formCount?'':'<div class="empty-state"><h2>No matching '+collection+'</h2><p>Try another keyword or clear the filters.</p></div>';
     if(writeUrl && route){
       const next=new URLSearchParams();
       for(const [key,value] of [['query',query.value],['category',category.value],['type',type.value],['sort',order.value==='name-asc'?'':order.value]])if(value)next.set(key,value);
@@ -187,7 +190,7 @@ function mountInlineFiles(files) {
   if(files.length===1)group.innerHTML=compactFile(files[0]);
   else {
     const forms=files.every(formTemplateTitle);
-    mountFileBrowser(group,files,{forms,label:forms?'Department forms':'Department documents'});
+    mountFileBrowser(group,files,{collection:forms?'forms':'documents',label:forms?'Department forms':'Department documents'});
   }
   return group;
 }
@@ -267,31 +270,48 @@ function policyPdfUrl(policy) {
   return absolute('3.0/policy-copies/'+encodeURIComponent(slug)+'.pdf');
 }
 
-function policyActions(policy) {
-  const original=documentMap.get(policy.policy_document);
-  const format=original?'Word':'PDF';
-  const href=original?absolute(original.local_href):policyPdfUrl(policy);
-  return '<span class="policy-actions">'+
-    '<button type="button" class="policy-action" data-policy-preview="'+esc(policy.path)+'" aria-label="'+esc('Preview '+policy.title)+'">'+icon('preview')+'Preview</button>'+
-    '<a class="policy-action" download href="'+esc(href)+'" aria-label="'+esc('Download '+format+' – '+policy.title)+'">'+icon('download')+'Download '+format+'</a></span>';
+function policyDownloadLabel(file) {
+  return 'Download '+(file.file_type==='DOCX'?'Word':file.file_type)+' – '+file.name;
 }
 
-let policyScopes;
-function policyScope(policy) {
-  if (!policyScopes) {
-    policyScopes = new Map();
-    const body = recordBody(pageMap.get(policyIndexPath));
-    for (const control of body.querySelectorAll('[data-toggle="collapse"][aria-controls]')) {
-      const panel = body.getElementById(control.getAttribute('aria-controls'));
-      for (const link of panel?.querySelectorAll('a[href]') || []) {
-        const path = decodeURIComponent(new URL(link.getAttribute('href'),ROOT).pathname.slice(ROOT.pathname.length));
-        policyScopes.set(path,control.textContent.trim());
+let policyCategories;
+function policyCategory(policy) {
+  if(!policyCategories){
+    policyCategories=new Map();
+    const body=recordBody(pageMap.get(policyIndexPath));
+    for(const control of body.querySelectorAll('[data-toggle="collapse"][aria-controls]')){
+      const category=control.textContent.trim();
+      const panel=body.getElementById(control.getAttribute('aria-controls'));
+      let subcategory='';
+      for(const item of panel.querySelectorAll('h4,h5,a[href]')){
+        if(item.tagName!=='A'){subcategory=item.textContent.trim();continue;}
+        const path=decodeURIComponent(new URL(item.getAttribute('href'),ROOT).pathname.slice(ROOT.pathname.length));
+        policyCategories.set(path,{category,subcategory});
       }
     }
-    policyScopes.set('scorm/quick-link-pages/policy-and-procedures/booking-an-interpreter/index.html','Departmental');
+    policyCategories.set('scorm/quick-link-pages/policy-and-procedures/booking-an-interpreter/index.html',
+      {category:'Departmental',subcategory:'Interpreting and Language Services'});
   }
-  return policyScopes.get(policy.path) || '';
+  return policyCategories.get(policy.path) || {category:'Policy',subcategory:''};
 }
+
+function policyScope(policy) { return policyCategory(policy).category; }
+
+function policyFile(policy) {
+  const doc=documentMap.get(policy.policy_document);
+  return {...policyCategory(policy),policy,name:policy.title,local_path:policy.path,
+    local_href:doc?.local_href || policyPdfUrl(policy),file_type:doc?.file_type || 'PDF',
+    size_bytes:doc?.size_bytes,source_modified_at:doc?.source_modified_at};
+}
+
+function policyActions(policy) {
+  const file=policyFile(policy);
+  const format=file.file_type==='DOCX'?'Word':file.file_type;
+  return '<span class="policy-actions">'+
+    '<button type="button" class="policy-action" data-policy-preview="'+esc(policy.path)+'" aria-label="'+esc('Preview '+policy.title)+'">'+icon('preview')+'Preview</button>'+
+    '<a class="policy-action" download href="'+esc(absolute(file.local_href))+'" aria-label="'+esc(policyDownloadLabel(file))+'">'+icon('download')+'Download '+format+'</a></span>';
+}
+
 function policyResult(policy) {
   return '<li class="resource-row policy-row"><div><span class="kind">'+esc(policyScope(policy) || 'Policy')+
     '</span><h2><a href="'+esc(pageLink(policy.path))+'">'+esc(policy.title)+'</a></h2></div>'+

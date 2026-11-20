@@ -69,8 +69,16 @@ body:has(#document-preview[open]){overflow:hidden}
 .policy-action:hover,.policy-action:focus-visible{border-color:#686eaa;background:#edf0ff;color:#000054}
 .policy-action .nav-icon,.policy-action svg{width:17px;height:17px}
 .policy-row h2 .badge{display:inline-block;vertical-align:middle;letter-spacing:0}
-.policy-index-link{margin:22px 0}
-.policy-index-entry{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 15px}
+.policy-library-links{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 24px;margin:-5px 0 22px;color:#343958}
+.policy-framework{max-width:72ch}
+.policy-framework summary,.policy-documents-link{padding-block:8px;font-size:.9rem;color:#242488;text-underline-offset:3px}
+.policy-framework summary{cursor:pointer;font-weight:550}
+.policy-framework>div{padding:2px 0 6px 16px;border-left:2px solid #cbd2eb}
+.policy-framework p{margin:4px 0 12px}
+.policy-browser .doc-actions{justify-content:flex-end}
+.policy-browser .actions-heading{text-align:right}
+.policy-browser .doc-name a{color:#17176a;text-decoration:underline;text-decoration-color:#a5afd4;text-underline-offset:4px}
+.policy-browser .doc-name a:hover,.policy-browser .doc-name a:focus-visible{text-decoration-color:currentColor}
 .policy-text-preview{background:white;padding:24px clamp(18px,4vw,48px);color:#22253e;overflow-wrap:anywhere}
 .policy-text-preview p,.policy-text-preview li{max-width:78ch}
 .policy-text-preview h2{margin:24px 0 6px;font-size:1.18rem}.policy-text-preview h2:first-child{margin-top:0}

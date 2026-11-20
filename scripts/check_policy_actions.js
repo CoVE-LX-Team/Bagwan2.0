@@ -24,11 +24,20 @@ async page => {
   await page.setViewportSize({width:1440, height:900});
   await go('policies');
   const results = page.locator('#results');
+  const table = results.getByRole('table', {name:'Policies and procedures'});
+  const rows = table.locator('tbody tr');
+  check(await rows.count() === policies.length && await table.getByRole('columnheader').count() === 4,
+    'The table includes each published policy once with name, category, date and actions.');
   for (const record of policies) {
     check(await preview(results, record.title).count() === 1, record.title + ' has one named preview in the policy list.');
     const href = await download(results, record.title).evaluate(link => link.href);
     const slug = record.path.split('/').at(-2);
     const edition = catalogue.documents.find(doc => doc.local_path === record.policy_document);
+    const row=rows.filter({has:page.getByRole('link',{name:record.title,exact:true})});
+    const date=row.locator('time');
+    check(edition?.source_modified_at ? await date.getAttribute('datetime')===edition.source_modified_at :
+      await date.count()===0 && (await row.locator('.doc-updated').innerText()).includes('Date unavailable'),
+      record.title+' uses its edition date or shows that no date is available.');
     const expected = edition ? new URL(edition.local_href, new URL('../', base)).href : 'policy-copies/' + slug + '.pdf';
     const actualPath = decodeURIComponent(new URL(href).pathname);
     const expectedPath = decodeURIComponent(new URL(expected, base).pathname);
@@ -94,11 +103,43 @@ async page => {
       await toolbar.locator('[data-save]').click();
     }
   }
-  await go(pageRoute(directory + 'index.html'));
-  await page.getByRole('button', {name:'Hospital wide'}).click();
-  check(await page.getByRole('link', {name:'Browse all policies'}).count() === 1 &&
-    (await page.locator('main').innerText()).includes('Policy Governance Framework') &&
-    await preview(page.locator('main'), privacy).count() === 1, 'The legacy policy hub retains the framework and offers policy actions.');
+  await go(pageRoute(directory + 'index.html')+'?from=nursing');
+  await table.waitFor();
+  check(page.url().includes('#policies?from=nursing') && await rows.count()===policies.length &&
+    await page.locator('.breadcrumbs').getByRole('link',{name:'Nursing',exact:true}).count()===1,
+    'The former index opens the same complete table and retains the originating department.');
+  await page.locator('#policy-framework summary').click();
+  check((await page.locator('#policy-framework').innerText()).includes('principles-based') &&
+    (await page.locator('#policy-framework').innerText()).includes('Escalation and patient deterioration'), 'The governance text and its nursing topic remain readable.');
+  await go(pageRoute(directory+'index.html')+'#collapseDepartmental');
+  await table.waitFor();
+  check(await rows.count()===5 && await page.locator('#category-filter').inputValue()==='Departmental',
+    'The historical departmental anchor opens the five departmental entries.');
+  await page.locator('#type-filter').selectOption('PDF');
+  check(await rows.count()===3 && page.url().includes('type=PDF'), 'File type and policy scope combine and can be shared.');
+  await page.reload();await table.waitFor();
+  check(await rows.count()===3, 'Reload keeps the catalogue filters.');
+  await go('policies?from=nursing');
+  const dateHeader=table.getByRole('columnheader',{name:'Last updated'});
+  await dateHeader.getByRole('button').click();
+  check(await dateHeader.getAttribute('aria-sort')==='descending' && await page.locator('#document-order').inputValue()==='updated-desc',
+    'Clicking Last updated selects newest first in both sort controls.');
+  const dates=await rows.locator('time').evaluateAll(nodes=>nodes.map(n=>Date.parse(n.dateTime)));
+  check(dates.every((d,i)=>i===0||dates[i-1]>=d) && !(await rows.last().locator('time').count()),
+    'Dated editions sort first in date order, with the undated PDFs last.');
+  await page.locator('#document-order').selectOption('updated-asc');
+  check(await dateHeader.getAttribute('aria-sort')==='ascending' && !(await rows.last().locator('time').count()) && page.url().includes('from=nursing'),
+    'Oldest first also leaves missing dates last and retains the department context.');
+  await page.locator('#list-search').fill('unmatched-policy-xyz');
+  check(await page.getByRole('heading',{name:'No matching policies'}).count()===1,'Empty policy searches offer clear feedback.');
+  await page.getByRole('button',{name:'Clear filters'}).click();
+  check(await rows.count()===policies.length && await page.locator('#list-search').evaluate(input=>input===document.activeElement),
+    'Clearing a search restores the table and returns focus to the search box.');
+  const rowSave=rows.filter({has:page.getByRole('link',{name:privacy,exact:true})}).locator('[data-save]');
+  await rowSave.click();
+  await go('saved');
+  check(await preview(page.locator('main'),privacy).count()===1,'Saving from the table stores the policy page and its actions.');
+  await page.locator('main [data-save$="/privacy/index.html"]').click();
   await page.setViewportSize({width:320, height:760});
   await go('policies');
   await preview(results, privacy).click();

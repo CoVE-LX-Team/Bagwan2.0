@@ -13,33 +13,35 @@ async page => {
     checks.push(message);
   }
   const inbox = tab.getByRole('heading', {name:'Inbox', exact:true});
-  const rows = tab.locator('[data-message]');
-  const details = tab.locator('.board-body');
-  const subjects = rows.locator('h3 button');
+  const list = tab.locator('.board-list');
+  const reader = tab.locator('.board-reader');
+  const subjects = tab.locator('.board-subject');
+  const back = reader.locator('[data-inbox]');
+  const selected = tab.locator('.board-subject[aria-current="true"]');
   const count = tab.locator('.board-count');
   try {
     await tab.goto(board);
     await inbox.waitFor();
-    check(await rows.count() === 3 && await count.innerText() === '3 unread', 'A new inbox has three unread notices.');
-    for (const [index, sender] of ['Admin','Admin','Reception'].entries()) {
-      const row = rows.nth(index);
+    check(await subjects.count() === 3 && await count.innerText() === '3 unread', 'A new inbox has three unread notices.');
+    for (const [index, title] of ['Reported missing belongings','Staff meeting','Interpreter request'].entries()) {
       const subject = subjects.nth(index);
       await subject.press('Enter');
-      check(await details.nth(index).isVisible() && await subject.getAttribute('aria-expanded') === 'true'
-        && await row.locator('.board-sender').innerText() === sender && tab.url() === board,
-        'Notice ' + (index + 1) + ' opens in the inbox from the keyboard.');
-      await subject.press('Space');
-      check(await details.nth(index).isHidden() && await subject.getAttribute('aria-expanded') === 'false'
-        && await row.locator('.board-state').innerText() === 'Read' && tab.url() === board,
-        'Notice ' + (index + 1) + ' closes in place and keeps its read receipt.');
+      const left = await list.boundingBox(), right = await reader.boundingBox();
+      check(await reader.getByRole('heading', {name:title,exact:true}).isVisible()
+        && await subject.getAttribute('aria-current') === 'true' && await selected.count() === 1
+        && left.x + left.width <= right.x + 1 && tab.url() === board,
+        title + ' opens beside the inbox from the keyboard.');
     }
+    await back.press('Enter');
+    check(await selected.count() === 0 && await subjects.nth(2).evaluate(el => el === document.activeElement),
+      'Back to inbox restores keyboard focus to the message just read.');
     await subjects.nth(1).click();
-    await rows.nth(1).getByRole('button', {name:'Mark as unread'}).click();
+    await reader.getByRole('button', {name:'Mark as unread'}).click();
     check(await count.innerText() === '1 unread' && await subjects.nth(1).evaluate(el => el === document.activeElement),
       'Mark as unread closes the notice and returns keyboard focus to its subject.');
     await tab.reload();
     await inbox.waitFor();
-    check(await count.innerText() === '1 unread' && await rows.nth(1).locator('.board-state').innerText() === 'Unread',
+    check(await count.innerText() === '1 unread' && await subjects.nth(1).locator('.board-state').textContent() === 'Unread',
       'Read and unread receipts survive reload.');
 
     const legacy = [{key:'date-filter',value:'past'}, {key:'customCheck1',value:false},
@@ -51,7 +53,7 @@ async page => {
     }, [receiptKey, legacy]);
     await tab.reload();
     await inbox.waitFor();
-    check(await count.innerText() === '2 unread' && await rows.nth(1).locator('.board-state').innerText() === 'Read',
+    check(await count.innerText() === '2 unread' && await subjects.nth(1).locator('.board-state').textContent() === 'Read',
       'The original read receipts reopen under the same messages.');
     await subjects.nth(2).click();
     const patient = tab.getByRole('link', {name:'Open Alex Morgan’s patient record'});
@@ -60,7 +62,7 @@ async page => {
     await tab.getByRole('heading', {name:'Alex Morgan', exact:true}).waitFor();
     await tab.goBack();
     await patient.waitFor();
-    check(tab.url() === board && await subjects.nth(2).getAttribute('aria-expanded') === 'true',
+    check(tab.url() === board && await subjects.nth(2).getAttribute('aria-current') === 'true',
       'Browser Back restores the open reception notice.');
     const stored = await tab.evaluate(key => JSON.parse(localStorage.getItem(key)), receiptKey);
     check(stored[0].key === 'date-filter' && stored[0].value === 'past', 'Saving receipts retains the older form fields.');
@@ -72,7 +74,8 @@ async page => {
     await tab.goto(base + '#home');
     await tab.goto(bookmark);
     await patient.waitFor();
-    check(await tab.locator('.board-body:visible').count() === 1, 'The patient-record link can be bookmarked and opens only its reception notice.');
+    check(await selected.count() === 1 && await reader.getByRole('heading',{name:'Interpreter request'}).isVisible(),
+      'The patient-record link can be bookmarked and opens only its reception notice.');
     await tab.getByRole('button', {name:'Save item: Staff messageboard'}).click();
     await tab.goto(base + '#saved');
     await tab.getByRole('link', {name:'Staff messageboard', exact:true}).click();
@@ -83,18 +86,27 @@ async page => {
     const downloadEvent = tab.waitForEvent('download');
     await tab.getByRole('button', {name:'Download read status'}).press('Enter');
     const download = await downloadEvent;
-    check(download.suggestedFilename() === 'bagwan-form-draft.json' && !await download.failure(),
-      'Read status downloads from the keyboard.');
+    const chunks = [];
+    for await (const chunk of await download.createReadStream()) chunks.push(chunk);
+    const exported = JSON.parse(chunks.join(''));
+    check(download.suggestedFilename() === 'bagwan-form-draft.json' && exported.form === 'Staff messageboard'
+      && JSON.stringify(exported.fields) === JSON.stringify(legacy.slice(1).map(field => (
+        field.key === 'v3-read-request' ? {...field,value:true} : field))),
+      'The keyboard download contains each original receipt key and its current read status.');
     await tab.evaluate(() => {window.print = () => {window.boardPrintRequested = true;};});
     await tab.getByRole('button', {name:'Print messages'}).click();
     check(await tab.evaluate(() => window.boardPrintRequested === true), 'The print action opens the browser print flow.');
     for (const width of [320,375]) {
       await tab.setViewportSize({width,height:640});
-      await subjects.nth(0).click();
-      check(await tab.evaluate(() => document.documentElement.scrollWidth <= innerWidth)
-        && await subjects.evaluateAll(nodes => nodes.every(el => el.getBoundingClientRect().height >= 44)),
-        'The open inbox fits a ' + width + ' px screen with touch-sized subjects.');
-      await subjects.nth(0).click();
+      check(await list.isVisible() && await subjects.evaluateAll(nodes => nodes.every(el => el.getBoundingClientRect().height >= 44)),
+        'The ' + width + ' px inbox has touch-sized subjects.');
+      await subjects.nth(0).press('Space');
+      check(await list.isHidden() && await reader.getByRole('heading',{name:'Reported missing belongings'}).isVisible()
+        && await back.isVisible() && await tab.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
+        'At ' + width + ' px the message gets a full-width reading view with a way back.');
+      await back.press('Enter');
+      check(await list.isVisible() && await subjects.nth(0).evaluate(el => el === document.activeElement),
+        'Returning from the ' + width + ' px reading view restores the subject and keyboard focus.');
     }
     check(errors.length === 0, 'The inbox completes these journeys without browser errors.');
     return checks;
