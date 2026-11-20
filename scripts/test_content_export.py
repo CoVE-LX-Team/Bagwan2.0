@@ -15,11 +15,26 @@ class ContentExportTests(unittest.TestCase):
     def test_original_youtube_players_survive_export(self):
         expected = {'s9N4BsPuBnk', 'l3iT30eQlwY', 'VGCKcsdSngM', 'FdlWSEsw-So', 'eikmfDb7UHM', 'vTdrE-V_i6s', 'Fv5IgjDsofs', 'aI5AIkYL3cc', 'q8rQ559UqqA', 'QDvZ_gri_UY', 'YB_UTHG0vjg', 'Wut1CWc7E1I'}
         videos = json.loads((ROOT / 'data/videos.json').read_text())
-        self.assertEqual(len(videos), 12)
+        recovered = json.loads((ROOT / 'data/recovered-galleries.json').read_text())['galleries']
+        expected.update(v['youtube_id'] for g in recovered for v in g['videos'])
+        self.assertEqual(len(videos), 24)
         self.assertEqual({v['youtube_id'] for v in videos}, expected)
         for video in videos:
             frames = page(video['source_page']).select('iframe.youtube-video')
             self.assertTrue(any('/embed/' + video['youtube_id'] in f['src'] for f in frames))
+
+    def test_recovered_galleries_are_present_in_their_original_locations(self):
+        for relative, selector, count in (
+            ('scorm/department-pages/hr-services/index.html', '[data-recovered-gallery="1"]', 11),
+            ('scorm/intranet/resources/index.html', '#Humanresources [data-recovered-gallery="1"]', 11),
+            ('scorm/intranet/resources/index.html', '#ATSIliaisonservices [data-recovered-gallery="2"]', 1),
+        ):
+            soup = page(relative)
+            gallery = soup.select_one(selector)
+            self.assertIsNotNone(gallery)
+            self.assertEqual(len(gallery.select('iframe.youtube-video')), count)
+            self.assertEqual(len(gallery.select('a[href^="https://www.youtube.com/watch"]')), count)
+            self.assertNotIn('original departmental video playlist is unavailable', soup.get_text())
 
     def test_missing_policy_templates_are_not_presented_as_completed_policies(self):
         for slug in ('medication-safety', 'nursing-and-clinical-handover'):

@@ -9,7 +9,7 @@ The root [`index.html`](index.html) is the intranet homepage. The original route
 ## Static site
 
 - The public intranet pages, departments, news, policies, organisation charts and patient-management screens have been exported to HTML.
-- Images, styles, scripts, fonts, H5P activity data and 360° panoramas are served from this repository. The 12 original YouTube embeds are preserved; YouTube hosts playback and video files. [Browse the videos](videos/index.html).
+- Images, styles, scripts, fonts, H5P activity data and 360° panoramas are served from this repository. The 12 original YouTube embeds and 12 recovered gallery videos are available; YouTube hosts playback and video files. [Browse the videos](videos/index.html).
 - Google Drive embeds are replaced with local document lists and download links. The complete migrated files remain in `documents/`.
 - The virtual tour uses the original panoramas and hotspot text with a self-hosted Pannellum viewer, room navigation and keyboard-accessible information controls.
 - Patient forms and the replacement training incident report support browser-local drafts, draft downloads and printing to PDF. GitHub Pages does not receive form submissions.
@@ -23,9 +23,11 @@ The Next page / Previous page footer navigation has been removed from news artic
 
 The hospital organisation charts use responsive grids that preserve every published name, role and destination. Both chart routes fit phone, tablet and desktop widths. All seven patient-management dashboard cards have full-card links to the corresponding form or staff resource.
 
-Remaining content gaps require source material: the HR/ATSI video galleries supplied only broken plugin IDs and are skipped for now after public-site/API/archive recovery checks found no URLs; nursing and ATSI staff lists were absent; medication-safety and nursing-handover policy pages contained no documents. Those pages identify the gap and link to available resources. Clinical accuracy and outdated references in original materials need content-owner review.
+Remaining content gaps require source material: nursing and ATSI staff lists were absent; medication-safety and nursing-handover policy pages contained no documents. Those pages identify the gap and link to available resources. Clinical accuracy and outdated references in original materials need content-owner review.
 
 The largest copied site asset is `VR/public/static_assets/360_images/dentalroom_Panorama.jpg` (5,400,055 bytes). No LFS pointers are used by the published site.
+
+The HR and ATSI video galleries were recovered from the 14 April 2025 WordPress backup. HR Services and the Resources tabs now use direct YouTube players and watch links for all 12 recovered videos, with titles from archived YouTube responses. The video index contains 24 unique videos. The public source list is `data/recovered-galleries.json`; no database dump or plugin credentials are included. Future exports restore these galleries automatically. Reapply only this repair with `python3 scripts/repair_video_galleries.py`. Current playback depends on YouTube availability.
 
 ## Preview and regenerate
 

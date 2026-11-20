@@ -1,5 +1,5 @@
 {
-  "reviewed_on": "2026-11-18",
+  "reviewed_on": "2026-11-20",
   "fixed": [
     "Departments index now links to all five existing department pages.",
     "All seven patient-management dashboard cards have named, full-card links to their actual forms, messageboard and patient list.",
@@ -13,15 +13,15 @@
     "Removed the Next page / Previous page footer navigation from news articles.",
     "Hospital organisation charts reflow into readable department and executive grids at phone, tablet and desktop widths, preserving all source names, roles and links.",
     "Interpreting scenario buttons now have real section targets for every step.",
-    "Wide policy and patient-form tables scroll within the page; PDF controls support printing partially completed forms and the messageboard proceeds to the local patient database."
+    "Wide policy and patient-form tables scroll within the page; PDF controls support printing partially completed forms and the messageboard proceeds to the local patient database.",
+    "Restored 12 gallery videos from the 14 April 2025 backup: 11 meeting resources in HR Services and Resources, and Closing the Gap in ATSI Resources."
   ],
   "unresolved": [
     "The original nursing and standalone ATSI staff lists were not provided; no staff or contact details were invented.",
     "Medication safety: no source policy text or document was supplied.",
     "Nursing and clinical handover: no source policy text or document was supplied.",
-    "HR and ATSI galleries are skipped for now: public live/development pages, the public WordPress API and Wayback lookups did not recover their intended video URLs.",
     "Clinical policy accuracy, outdated legal references and review comments inside the supplied documents require a content-owner review; original document bytes are preserved."
   ],
   "staff_entries": 40,
-  "youtube_embeds": 12
+  "youtube_embeds": 24
 }

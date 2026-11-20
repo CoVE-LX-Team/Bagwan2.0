@@ -5,6 +5,7 @@ from repair_responsive import repair_responsive_markup
 from repair_accessibility import repair_accessibility_markup
 from repair_clinical import repair_clinical_markup
 from repair_links import repair_exported_links
+from repair_video_galleries import restore_galleries
 import html
 import json
 import re
@@ -230,8 +231,12 @@ def repair_site(root, base, files, folders):
                 report['unresolved'].append(title + ': no source policy text or document was supplied.')
         save(path, soup)
 
-    # Preserve every supplied YouTube embed; playback remains on YouTube.
+    galleries = restore_galleries(root, base)
+    recovered_titles = {v['youtube_id']: v['title'] for g in galleries for v in g['videos']}
+    report['fixed'].append('Restored 12 gallery videos from the 14 April 2025 backup: 11 meeting resources in HR Services and Resources, and Closing the Gap in ATSI Resources.')
+    # Preserve supplied players, including the recovered galleries; index each video once.
     videos = []
+    seen_video_ids = set()
     for path in sorted(root.rglob('*.html')):
         if any(p in path.parts for p in ('.git', '.playwright-cli', 'output', 'node_modules')): continue
         relative = path.relative_to(root).as_posix()
@@ -242,13 +247,19 @@ def repair_site(root, base, files, folders):
             if not match: continue
             identifier = match.group(1)
             panel = frame.find_parent(id=re.compile(r'^collapse\d+$'))
-            label = 'Interpreting scenario — step ' + panel['id'].removeprefix('collapse') if panel else 'Welcome to Bagwan Health' if 'our-community' in relative else 'Update from the CEO'
+            label = recovered_titles.get(identifier) or ('Interpreting scenario — step ' + panel['id'].removeprefix('collapse') if panel else 'Welcome to Bagwan Health' if 'our-community' in relative else 'Update from the CEO')
             frame['title'] = label;frame['referrerpolicy'] = 'strict-origin-when-cross-origin'
+            for old in frame.parent.select('.video-fallback') if frame.parent.name == 'li' else []:
+                old.decompose()
+            sibling = frame.find_next_sibling()
+            if sibling and 'video-fallback' in sibling.get('class', []): sibling.decompose()
             fallback = fragment('<p class="video-fallback"><a href="https://www.youtube.com/watch?v=' + identifier + '" target="_blank" rel="noopener">Watch ' + esc(label) + ' on YouTube</a></p>').p.extract()
             wrapper = frame.parent
             if 'padding-bottom' in wrapper.get('style', '') or 'embed-responsive' in wrapper.get('class', []): wrapper.insert_after(fallback)
             else: frame.insert_after(fallback)
-            videos.append({'youtube_id': identifier, 'title': label, 'source_page': relative})
+            if identifier not in seen_video_ids:
+                videos.append({'youtube_id': identifier, 'title': label, 'source_page': relative})
+                seen_video_ids.add(identifier)
         for a in soup.select('#BranchingScenario a[data-target]'):
             target = a['data-target'].strip();a['href'] = target;a['aria-controls'] = target.lstrip('#')
             for key in list(a.attrs):
@@ -257,15 +268,7 @@ def repair_site(root, base, files, folders):
     (root / 'data/videos.json').write_text(json.dumps(videos, indent=2, ensure_ascii=False) + '\n')
     video_cards = ''.join('<li><h2>' + esc(v['title']) + '</h2><iframe class="youtube-video" loading="lazy" title="' + esc(v['title']) + '" src="https://www.youtube.com/embed/' + v['youtube_id'] + '?rel=0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe><p>' + anchor(v['source_page'], 'Open the original learning page') + '</p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=' + v['youtube_id'] + '">Watch on YouTube</a></li>' for v in videos)
     create('videos/index.html', 'Video resources', '<p>Bagwan Health videos. Playback is provided by YouTube.</p><ul class="video-library">' + video_cards + '</ul>')
-    report['fixed'].append(f'Restored all {len(videos)} original YouTube embeds, responsive players, watch-on-YouTube links and a video resource index.')
-    report['unresolved'].append('HR and ATSI galleries are skipped for now: public live/development pages, the public WordPress API and Wayback lookups did not recover their intended video URLs.')
-    for relative in ['scorm/department-pages/hr-services/index.html', 'scorm/intranet/resources/index.html']:
-        soup = read(relative)
-        headings = [x for x in soup.find_all(['h2','h3','h4']) if 'video' in x.get_text().lower()]
-        note = fragment('<p class="static-site-notice">The original departmental video playlist is unavailable. Ask your course facilitator for its link. ' + anchor('videos/index.html', 'Browse available Bagwan videos') + '.</p>')
-        if headings: headings[0].insert_after(note)
-        elif soup.h1: soup.h1.insert_after(note)
-        save(relative, soup)
+    report['fixed'].append(f'Preserved {len(videos)} unique YouTube videos, responsive players, watch-on-YouTube links and a video resource index.')
 
     # Repair navigation labels and construct working breadcrumb links for each page.
     titles = {}

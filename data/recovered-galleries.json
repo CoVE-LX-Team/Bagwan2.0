@@ -1,0 +1,90 @@
+{
+  "recovered_from": "Bagwan Health WordPress backup dated 2025-04-14",
+  "plugin": "Elfsight YouTube Gallery CC 3.4.0",
+  "galleries": [
+    {
+      "id": 1,
+      "name": "Conducting meeting resources",
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=ypxH_2qdePc",
+          "youtube_id": "ypxH_2qdePc",
+          "title": "8 Tips for Running More Effective Meetings | The Distilled Man",
+          "channel": "The Distilled Man"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=Xp0VAutGFyg",
+          "youtube_id": "Xp0VAutGFyg",
+          "title": "Efficient Meetings - 7 Tips To Run an Effective Meeting",
+          "channel": "Adriana Girdler"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=X8BkGpi_skQ",
+          "youtube_id": "X8BkGpi_skQ",
+          "title": "How to Write Meeting Minutes",
+          "channel": "The Strategic What?! Podcast"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=oPhKhTI0Lss",
+          "youtube_id": "oPhKhTI0Lss",
+          "title": "Chairing a meeting",
+          "channel": "Elena Adamova"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=FQYUHpi0fhk",
+          "youtube_id": "FQYUHpi0fhk",
+          "title": "Effective Meetings in Plain English",
+          "channel": "Greg Z Fainberg"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=Ecd9OhMf73k",
+          "youtube_id": "Ecd9OhMf73k",
+          "title": "Team meeting updates",
+          "channel": "Elena Adamova"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=w1tSYtk93Ug",
+          "youtube_id": "w1tSYtk93Ug",
+          "title": "Effective Meetings - How to Lead Great Meetings",
+          "channel": "Evil Genius Leadership Consultants"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=If0lKsEb0z8",
+          "youtube_id": "If0lKsEb0z8",
+          "title": "Example of a Poorly-Managed Meeting",
+          "channel": "Kantola Training Solutions"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=xQW1fEwYZVA",
+          "youtube_id": "xQW1fEwYZVA",
+          "title": "Meeting from Hell!  Running A Meeting or Drowning in Chaos?  (Facilitation Training - Dana Brownlee)",
+          "channel": "Dana Brownlee"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=F6Qo8IDsVNg",
+          "youtube_id": "F6Qo8IDsVNg",
+          "title": "David Grady: How to save the world (or at least yourself) from bad meetings",
+          "channel": "TED"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=FotM0FYoUkc",
+          "youtube_id": "FotM0FYoUkc",
+          "title": "The Power of Meetings | Henric Ehrenblad | TEDxSSE",
+          "channel": "TEDx Talks"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Australian Aboriginal and Torres Strait Islander Health Services video resources",
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=Rdyfl6REmN4",
+          "youtube_id": "Rdyfl6REmN4",
+          "title": "Closing the Gap - video for Melbourne Health staff",
+          "channel": "The Royal Melbourne Hospital"
+        }
+      ]
+    }
+  ]
+}
