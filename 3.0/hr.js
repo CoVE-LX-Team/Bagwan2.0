@@ -65,7 +65,7 @@ function renderHRDepartment() {
                   <span>${esc(video.title)}</span>
                 </button>
                 <a href="https://www.youtube.com/watch?v=${esc(video.youtube_id)}" target="_blank" rel="noopener"
-                   aria-label="Watch ${esc(video.title)} on YouTube">YouTube ${icon('external')}</a>
+                   aria-label="Watch ${esc(video.title)} on YouTube">YouTube</a>
               </div>
               <div class="hr-player" id="hr-player-${index}" hidden></div>
             </li>`).join('')}

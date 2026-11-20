@@ -255,9 +255,9 @@ function openDocumentPreview(doc, policy) {
   }else{
     content='<p>This file is available to download.</p>';
   }
-  const publisher=doc.edition_source_url?'<a href="'+esc(doc.edition_source_url)+'" target="_blank" rel="noopener">Publisher page '+icon('external')+'</a>':'';
+  const publisher=doc.edition_source_url?'<a href="'+esc(doc.edition_source_url)+'" target="_blank" rel="noopener">Publisher page</a>':'';
   const label='Download '+(doc.file_type==='DOCX'?'Word':doc.file_type);
-  const actions=publisher+(pdf?'<a href="'+esc(absolute(doc.preview_href))+'" target="_blank" rel="noopener">Open full PDF '+icon('external')+'</a>':'')+
+  const actions=publisher+(pdf?'<a href="'+esc(absolute(doc.preview_href))+'" target="_blank" rel="noopener">Open full PDF</a>':'')+
     '<a class="button" download href="'+esc(absolute(doc.local_href))+'">'+icon('download')+' '+esc(label)+'</a>';
   showFilePreview(title,metadata,content,actions);
 }

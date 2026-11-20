@@ -25,6 +25,7 @@ def document(title, body, stylesheet=None, script='review.js'):
         f'<title>{esc(title)} · Bagwan 3.0</title><link rel="icon" href="../assets/favicon.svg">'
         '<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="material.css">'
         '<link rel="stylesheet" href="handoff.css">' + (extra_styles if stylesheet != 'handoff.css' else '') +
+        '<script src="external-links.js" defer></script>'
         f'<script src="{esc(script)}" defer></script></head><body class="review-workspace"><a class="skip-link" href="#report">Skip to content</a>'
         '<header class="review-mast"><div><a class="review-brand" href="./"><img src="../documents/marketing-and-communications/bagwan-branding/Bagawan%20logo_colour.png" width="190" height="46" alt="Bagwan Health"></a>'
         '<a href="./">Staff intranet</a></div></header><nav class="review-tabs" aria-label="Reviewer pages"><div>' + navigation +

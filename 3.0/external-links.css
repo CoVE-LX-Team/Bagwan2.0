@@ -1,0 +1,29 @@
+.bagwan-external-icon {
+  display:inline;
+  flex:none;
+  white-space:nowrap;
+  line-height:1;
+}
+/* Keep the symbol with the final word of an inline link as the text wraps. */
+.bagwan-external-icon::before { content:'\2060'; }
+.bagwan-external-icon::after {
+  content:'';
+  display:inline-block;
+  width:.88em;
+  height:.88em;
+  margin-inline-start:.24em;
+  vertical-align:-.04em;
+  background-color:currentColor;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 3h7v7m0-7L10 14m0-9H4v15h15v-6'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.bagwan-external-note {
+  position:absolute;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  clip-path:inset(50%);
+  white-space:nowrap;
+}
+@media (forced-colors:active) {
+  .bagwan-external-icon::after { forced-color-adjust:none; background-color:LinkText; }
+}

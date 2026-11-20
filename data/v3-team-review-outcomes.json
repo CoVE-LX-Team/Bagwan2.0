@@ -590,7 +590,7 @@
   {
     "row": 98,
     "status": "Review needed",
-    "finding": "The staff messages lead to the patient list. The clinical and interpreting reviewers check the wording of the interpreter request and the missing-belongings message.",
+    "finding": "Staff can read each message in the inbox. The interpreter request links to Alex’s record. Clinical and interpreting reviewers check the wording of that request and the missing-belongings message.",
     "reviewer": "Clinical / interpreting SMEs",
     "topic": "Messageboard and handover"
   },

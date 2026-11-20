@@ -12,7 +12,6 @@ const iconPaths = {
   preview:'M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z',
   download:'M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4', bookmark:'M6 3h12v18l-6-4-6 4z',
   close:'M6 6l12 12M18 6 6 18', arrowUp:'M12 19V5m-6 6 6-6 6 6', arrowDown:'M12 5v14m-6-6 6 6 6-6',
-  external:'M14 3h7v7m0-7L10 14m0-9H4v15h15v-6',
   home:'M3 10 12 3l9 7M5 9v12h5v-7h4v7h5V9', departments:'M3 21V5h11v16M14 10h7v11M7 9h3M7 13h3M7 17h3M17 14h1M17 18h1',
   people:'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M15 3a4 4 0 0 1 0 8M22 21v-2a4 4 0 0 0-3-4M13 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0',
   policies:'M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7', forms:'M8 4H4v17h16V4h-4M8 2h8v5H8zM8 12h8M8 16h5',
@@ -163,6 +162,7 @@ function setupEmbeddedFrame(frame,record) {
 }
 function article(path) {
   const record=pageMap.get(path);if(!record)return notFound();
+  if(path===staffMessagesPath)return renderMessageboard();
   if(path==='scorm/department-pages/hr-services/index.html')return renderHRDepartment();
   const service = departmentData.find(item => item.source === path && serviceDesks[item.id]);
   if(service)return renderServiceDesk(service);

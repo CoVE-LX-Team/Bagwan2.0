@@ -65,7 +65,10 @@ def page_finding(result, record, affected):
     if category == 'News':
         before.append('Past staff notices could be mistaken for current alerts.')
         now.append('Readers can browse past notices in News &amp; updates.')
-    if category == 'Form or record':
+    if path == 'patient-management-system/messageboard/index.html':
+        before.append('Readers had to mark every message as read to proceed, which sent them to the patient list.')
+        now.append('Each message opens in the inbox and keeps its read status. Opening a patient record is a separate, labelled action.')
+    elif category == 'Form or record':
         before.append('It was unclear where a form saved its contents.')
         now.append('Records and forms retain their save, print and download controls as applicable. Drafts save on the device.')
     if category == 'Hospital tour':

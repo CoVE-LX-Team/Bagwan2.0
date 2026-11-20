@@ -92,6 +92,9 @@ const staffResources = (() => {
 
   function initialize(catalog) {
     const pages = catalog.pages;
+    const board = pages.find(page => page.path === staffMessagesPath);
+    board.title = 'Staff messageboard';
+    board.text = boardMessages.map(message => [message.sender, message.subject, message.body].join(' ')).join(' ');
     const alliedGuide = guide('allied-health','Working with allied health.pdf','Allied health',73936);
     const liaisonGuide = guide('liaison','Aboriginal and Torres Strait Islander liaison resources.pdf',liaisonCategory,76687);
     catalog.documents.push(alliedGuide,liaisonGuide);

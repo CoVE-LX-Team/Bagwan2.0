@@ -4,17 +4,17 @@ const assets = new URL('../VR/public/static_assets/', document.baseURI);
 const tourBase = new URL('./', document.baseURI);
 const roomName = id => ({NurseWard:'Nursing ward', NurseStation:'Nurses’ station', XrayRoom:'X-ray room', NursingRoom:'Nursing room', MainReception:'Main reception', InterpretingReception:'Interpreting reception', DirtyStoreroom:'Dirty storeroom', CleanStoreroom:'Clean storeroom', RehabilitationClinic:'Rehabilitation clinic', HandwashingStation:'Handwashing station', DentalRoom:'Dental room', SpecimenReception:'Specimen reception', MedicationRoom:'Medication room', CounsellingRoom:'Counselling room'}[id] || id);
 const roomNotes = {
-  Corridor: ['Finding your way', 'Look for signs or landmarks that would help you describe your location. Use Choose a room to jump to a named area.', 'Browse departments', '#departments'],
-  NurseWard: ['Ward records', 'Forms & records holds the food and fluids, personal care, continence and pain observation forms. Open the directory to find the form you need.', 'Find forms and patient records', '#forms'],
-  XrayRoom: ['Imaging enquiries', 'Use this view to familiarise yourself with the imaging room. The staff directory lists colleagues by team and role if you need to follow up an enquiry.', 'Find a staff member', '#people'],
-  Bathroom: ['Privacy and access', 'Look at the entrance and layout when describing this space to a visitor. The Nursing department page lists staff and patient-care resources.', 'Find nursing services', '#department/nursing'],
-  NursingRoom: ['Nursing services', 'Find the nursing team in the department directory. Its page brings together patient records, observation forms and clinical handover resources.', 'Open the nursing department', '#department/nursing'],
-  Logistics: ['Supplies and logistics', 'Look around the storage area for landmarks you could use to describe a location to a colleague. The Logistics department page lists the team and its resources.', 'Open the Logistics department', '#department/logistics']
+  Corridor: ['Finding your way', 'The room selector takes you directly to another part of the hospital. The department directory lists the teams and their services.', 'Browse departments', '#departments'],
+  NurseWard: ['Ward records', 'Forms & records includes the food and fluids, personal care, continence and pain observation forms.', 'Find forms and patient records', '#forms?view=online'],
+  XrayRoom: ['Imaging enquiries', 'The staff directory lists hospital colleagues by team and role.', 'Find a staff member', '#people'],
+  Bathroom: ['Ward contacts', 'The nursing directory lists ward staff and patient-care resources.', 'Find nursing services', '#department/nursing'],
+  NursingRoom: ['Nursing services', 'The Nursing department page brings together patient records, observation forms and clinical handover resources.', 'Open the nursing department', '#department/nursing'],
+  Logistics: ['Supplies and logistics', 'The Logistics department page lists the team and links to induction forms and risk management resources.', 'Open the Logistics department', '#department/logistics']
 };
 const guide = [
-  ['MainReception','Receive the enquiry','Alex Morgan has asked for an interpreter for an upcoming appointment. At the public desk, what would you need to clarify, and what would you discuss privately?'],
-  ['InterpretingReception','Find the right service','Open Room information and find the interpreting office. Which service could advise you on this request? Which details still need confirmation?'],
-  ['NurseStation','Prepare a handover','A colleague asks whether an interpreter has been booked. How would you describe what Alex requested and what remains unconfirmed?']
+  ['MainReception','Alex at reception','Alex asks, “I would like an interpreter at my next appointment. Could someone tell me whether that has been arranged?”'],
+  ['InterpretingReception','At the interpreting office','A colleague asks, “When is Alex’s appointment, and which language should we request?” You can check Alex’s reception note before you reply.'],
+  ['NurseStation','The next shift','Your colleague asks, “Is Alex’s interpreter booked, or do I need to follow up?”']
 ];
 const namedLinks = {
   'https://www.who.int/gpsc/5may/resources/posters/en/': [
@@ -98,8 +98,11 @@ const appendLink = (container, text, destination) => {
   const link = element('a', text);
   const url = new URL(destination, tourBase);
   const context = new URLSearchParams(location.search).get('from');
-  if (context && url.origin === location.origin && /^#(page\/|people$|forms$)/.test(url.hash)) {
-    url.hash += '?from='+encodeURIComponent(context);
+  const [route,query] = url.hash.split('?');
+  if (context && url.origin === location.origin && /^#(page\/|people$|forms$)/.test(route)) {
+    const params = new URLSearchParams(query);
+    params.set('from',context);
+    url.hash = route+'?'+params;
   }
   link.href = url;
   link.target = url.origin === location.origin ? '_top' : '_blank';
@@ -163,6 +166,8 @@ async function startTour() {
   let stopIndex = Math.max(0,guide.findIndex(([id]) => id === requested));
   let current = guided ? guide[stopIndex][0] : byId.has(requested) ? requested : 'Entrance';
   let viewer;
+  let panoramaRoom;
+  let panoramaLoading = false;
   const scenes = {};
   const cards = {};
   const hotspotCaption = element('span','');
@@ -223,6 +228,9 @@ async function startTour() {
           if (part.type === 'header') part.txt = 'Laboratory technologies';
           if (part.type === 'content') part.txt = 'The department page brings together information and resources for laboratory staff.';
         }
+        if (scene.id === 'Laboratory' && title === 'Handling and disposal of waste materials' && part.type === 'content') {
+          part.txt = part.txt.replace(/\s*Click the link below to test your knowledge[^.]*\./i,'').trim();
+        }
         if (part.type === 'content' && scene.id === 'NurseStation' && title === 'Nurse Unit Manager') part.txt = 'The nursing team structure lists the unit managers for outpatient, inpatient, cardiac, rehabilitation and emergency nursing.';
         if (part.type === 'header' && scene.id === 'SpecimenReception') {
           if (part.txt === 'Specimen Reception') part.txt = 'Checking incoming specimens';
@@ -239,11 +247,13 @@ async function startTour() {
       const locationKey = JSON.stringify([key,pitch,yaw]);
       if (locations.has(locationKey)) continue;
       locations.add(locationKey);
-      hotSpots.push({pitch,yaw,cssClass:'info-hotspot',createTooltipFunc:hotspot(titleOf(topic),'info',node => showCard(topic,node))});
+      hotSpots.push({pitch,yaw,cssClass:'info-hotspot',createTooltipFunc:hotspot(titleOf(topic),'info',node => {
+        if (current === scene.id) showCard(topic,node);
+      })});
     }
     cards[scene.id] = [...topics.values()];
     for (const nav of scene.navs || []) {
-      if (byId.has(nav.to)) hotSpots.push({pitch:Number(nav.rotateX)||0,yaw:-Number(nav.rotateY)||0,cssClass:'direction-hotspot',createTooltipFunc:hotspot('Go to '+roomName(nav.to),'direction',() => viewer.loadScene(nav.to))});
+      if (byId.has(nav.to)) hotSpots.push({pitch:Number(nav.rotateX)||0,yaw:-Number(nav.rotateY)||0,cssClass:'direction-hotspot',createTooltipFunc:hotspot('Go to '+roomName(nav.to),'direction',() => changeRoom(nav.to))});
     }
     scenes[scene.id] = {type:'equirectangular',panorama:new URL(scene.photopanos[0].src.slice(1),assets).href,hotSpots};
   }
@@ -281,8 +291,8 @@ async function startTour() {
     if (!guided) return;
     document.querySelector('#tour-guide').hidden = false;
     document.querySelector('#guide-step').textContent = completed ? 'Orientation complete' : 'Stop '+(stopIndex+1)+' of '+guide.length+' · '+roomName(guide[stopIndex][0]);
-    document.querySelector('#guide-title').textContent = completed ? 'Debrief the handover' : guide[stopIndex][1];
-    document.querySelector('#guide-prompt').textContent = completed ? 'Return to the learning guide and compare your message with the information in Alex’s record.' : guide[stopIndex][2];
+    document.querySelector('#guide-title').textContent = completed ? 'Reception handover' : guide[stopIndex][1];
+    document.querySelector('#guide-prompt').textContent = completed ? 'Your shift is ending. Leave the next receptionist a note about Alex’s request and the follow-up they need to pick up.' : guide[stopIndex][2];
     document.querySelector('#guide-back').disabled = stopIndex === 0;
     document.querySelector('#guide-return').hidden = completed || current === guide[stopIndex][0];
     document.querySelector('#guide-next').hidden = completed;
@@ -311,12 +321,26 @@ async function startTour() {
     current = id; picker.value = id;
     if (dialog.open) dialog.close();
     history.replaceState(null,'','#'+id);
-    statusMessage.textContent = '';
+    if (viewer) statusMessage.textContent = panoramaLoading || panoramaRoom !== current ? 'Loading '+roomName(id)+' panorama…' : '';
     updateGuide();
   }
   function changeRoom(id) {
     selectRoom(id);
-    if (viewer) viewer.loadScene(id);
+    loadSelectedPanorama();
+  }
+  function loadSelectedPanorama() {
+    if (!viewer || panoramaLoading || panoramaRoom === current) return;
+    panoramaRoom = current;
+    panoramaLoading = true;
+    viewer.loadScene(panoramaRoom);
+  }
+  function finishPanorama(failed) {
+    // Finish the viewer's own load callback before starting another image.
+    queueMicrotask(() => {
+      panoramaLoading = false;
+      if (panoramaRoom !== current) loadSelectedPanorama();
+      else statusMessage.textContent = failed ? 'Panorama unavailable. Choose a room or open Room information.' : '';
+    });
   }
   window.addEventListener('hashchange',() => {
     const slug = location.hash.slice(1);
@@ -326,10 +350,11 @@ async function startTour() {
   picker.addEventListener('change',() => changeRoom(picker.value));
   updateGuide();
   try {
-    viewer = pannellum.viewer('panorama',{default:{firstScene:current,autoLoad:true,hfov:100,sceneFadeDuration:0,showControls:true},scenes});
+    viewer = pannellum.viewer('panorama',{default:{firstScene:current,autoLoad:false,hfov:100,sceneFadeDuration:0,showControls:true},scenes});
     document.querySelector('#panorama').append(hotspotCaption);
-    viewer.on('scenechange',selectRoom);
-    viewer.on('error',() => {statusMessage.textContent = 'Panorama unavailable. Choose a room or open Room information.';});
+    viewer.on('load',() => finishPanorama(false));
+    viewer.on('error',() => finishPanorama(true));
+    loadSelectedPanorama();
     for (const [selector,label] of [['.pnlm-zoom-in','Zoom in'],['.pnlm-zoom-out','Zoom out'],['.pnlm-fullscreen-toggle-button','Toggle panorama fullscreen']]) {
       const control = document.querySelector(selector);
       if (!control) continue;
