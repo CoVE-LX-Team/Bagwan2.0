@@ -136,6 +136,22 @@ async (page) => {
   await go('page/' + encodeURIComponent('scorm/intranet/static-org-chart-test/index.html'));
   check(await page.getByRole('link', {name:/open in bagwan 2\.0/i}).count() === 0,
     'The organisation chart stays inside Bagwan 3.0.');
+  await go('forms?category=Interpreting+services&from=nursing');
+  await rows.first().waitFor();
+  check(await rows.count()===1 && /interpreter booking/i.test(await rows.innerText()), 'The forms hub opens the exact departmental template from a shared URL.');
+  await rows.first().getByRole('button',{name:/^Preview /}).click();
+  check(await dialog.locator('a[download]').evaluate(a=>a.href)===await rows.first().locator('a[download]').evaluate(a=>a.href),
+    'Form preview and row download point to the same original.');
+  await page.keyboard.press('Escape');
+  await page.getByRole('link',{name:'Online forms & records',exact:true}).click();
+  await page.locator('.online-form-groups').waitFor();
+  check(await page.locator('.online-form-groups li>a').count()===7, 'Clinical entry and patient-record workflows remain available.');
+  await go('page/'+encodeURIComponent('resources-and-tools/nursing/index.html'));
+  await page.getByRole('button',{name:'Forms and templates'}).click();
+  const localFiles=page.locator('.embedded-file-list').first();
+  await localFiles.getByRole('searchbox').fill('pathology');
+  check(await localFiles.locator('tbody tr').count()===1 && await localFiles.locator('[data-preview]').count()===1 && page.url().includes('resources-and-tools'),
+    'Searching departmental forms keeps the page and offers an exact-file preview.');
   check(errors.length === 0, 'The library journeys complete without JavaScript errors.');
   return {passed:checks.length, checks, errors};
 }

@@ -60,7 +60,7 @@ function enhancePatientFrame(frame,record) {
   const nav = doc.createElement('nav');
   nav.className = 'v3-patient-nav';
   nav.setAttribute('aria-label','Patient system');
-  const links = [['Patient list',patientDirectoryPath],['Staff messageboard',staffMessagesPath],['Forms & records','#forms']];
+  const links = [['Patient list',patientDirectoryPath],['Staff messageboard',staffMessagesPath],['Forms & records','#forms?view=online']];
   const hrefFor = route => new URL(withDepartment(route.startsWith('#') ? route : pageLink(route)),document.baseURI).href;
   for (const [text,path] of links) {
     const link = doc.createElement('a');

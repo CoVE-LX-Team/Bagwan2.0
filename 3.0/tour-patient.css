@@ -12,15 +12,59 @@
 .tour-area {position:relative; flex:1; min-height:110px}
 .tour-sr {position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%)}
 #panorama {width:100%; height:100%}
+.tour-hotspot-caption:not(:empty) {position:absolute; z-index:5; inset:auto 12px 12px; width:max-content; max-width:calc(100% - 24px); margin:auto; padding:6px 12px; border:1px solid #b3cdeb; border-radius:5px; background:#102e50; color:white; font:600 .95rem/1.4 Arial,sans-serif; text-align:center; pointer-events:none}
 #tour-status:not(:empty) {position:absolute; bottom:8px; left:12px; right:12px; margin:0; padding:8px 12px; background:white; color:#172e4b}
-#room-information {width:min(27rem,calc(100% - 2rem)); max-height:calc(100dvh - 2rem); border:0; border-top:5px solid #20588d; border-radius:8px; padding:20px; color:#172e4b; box-shadow:0 12px 48px #081d3b6e}
-#room-information::backdrop {background:#10243db0}
-.tour-dialog-head,.tour-guide-actions {display:flex; align-items:center; justify-content:space-between; gap:12px}
-.tour-dialog-head small,#guide-step {font-weight:700; color:#25516f}
-#room-information h2 {line-height:1.2; margin:12px 0}
-#info-items img {display:block; max-width:100%; max-height:180px; object-fit:contain; margin-block:10px}
-#info-items p {white-space:pre-line; margin-block:12px}
-#info-items :is(a,button) {display:flex; align-items:center; width:100%; text-align:left; margin-top:8px; min-height:44px}
+#room-information {
+  --tour-pad:clamp(16px,3.4vw,32px);
+  width:min(42rem,calc(100% - 24px)); max-width:none; max-height:calc(100dvh - 24px);
+  margin:auto; padding:0; overflow:hidden; border:1px solid #b7c6d7; border-radius:14px;
+  background:white; color:#162f4e; font:1rem/1.52 Arial,sans-serif; text-align:left; text-shadow:none;
+  box-shadow:0 18px 60px #07182f66;
+}
+#room-information[open] {display:flex; flex-direction:column}
+#room-information::backdrop {background:#0c213db5}
+.tour-dialog-head {display:flex; flex:none; align-items:center; justify-content:space-between; gap:12px; padding:5px 8px 5px var(--tour-pad); background:#173c67; color:white}
+#room-label {font-size:.9rem; font-weight:700; letter-spacing:.01em}
+#close-information,.tour-dialog-foot button {display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:44px; border:0; padding:6px 12px; font-weight:700}
+#close-information {background:transparent; color:white}
+#close-information:hover {background:#2c527e}
+#close-information span {font:1.6rem/1 Arial,sans-serif}
+#room-information :focus-visible {outline-offset:-3px; outline:3px solid #a96300; box-shadow:none}
+#close-information:focus-visible {outline-color:#ffcf69}
+.tour-dialog-scroll {overflow:auto; overscroll-behavior:contain; padding:20px var(--tour-pad) 24px; min-height:0}
+#info-title {margin:0 0 16px; color:#102e50; font-size:clamp(1.32rem,3.4vw,1.75rem); line-height:1.15; overflow-wrap:anywhere}
+#info-title:focus {outline:none}
+.tour-topics ul {padding:0; margin:0; list-style:none; border-block:1px solid #c6d2df}
+.tour-topics li+li {border-top:1px solid #d9e2eb}
+.tour-topics button,.tour-card-links a {display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:48px; width:100%; border:0; border-radius:0; padding:10px 8px; line-height:1.4; text-align:left; font-weight:600}
+.tour-topics button::after,.tour-card-links a::after {content:''; flex:none; width:8px; height:8px; border-right:2px solid currentColor; border-top:2px solid currentColor; transform:rotate(45deg); margin-right:4px}
+.tour-card-links a[target="_blank"]::after {transform:none; background:linear-gradient(135deg,transparent 43%,currentColor 44% 56%,transparent 57%)}
+.tour-topics button:hover,.tour-card-links a:hover {background:#edf4fb}
+.tour-card {display:grid; gap:16px 24px; align-items:start}
+.tour-card-text {min-width:0; overflow-wrap:break-word}
+.tour-card-text p,.tour-card-text ul {margin:0}
+.tour-card-text > :is(p,ul) + :is(p,ul) {margin-top:.8em}
+.tour-card-text ul {padding-inline-start:1.4em}
+.tour-card-text li + li {margin-top:.25em}
+.tour-card-text h3 {margin:1em 0 .35em; font-size:1.05rem; color:#163d67}
+.tour-card-text h3:first-child {margin-top:0}
+.tour-card-text h3 + ul {margin-top:0}
+.tour-card figure {grid-row:2; margin:0; text-align:center}
+.tour-card figure img {display:block; width:100%; height:auto; max-height:clamp(8rem,35dvh,17rem); margin:auto; border-radius:4px; object-fit:contain}
+.tour-card figcaption a {display:inline-flex; align-items:center; min-height:44px; font-size:.875rem}
+.tour-card-links {grid-column:1/-1; border-block:1px solid #c6d2df}
+.tour-card-links a {position:relative; color:#154e87; text-decoration:underline; text-underline-offset:3px; overflow-wrap:anywhere}
+.tour-card-links a+a {border-top:1px solid #d9e2eb}
+.tour-dialog-foot {flex:none; padding:3px var(--tour-pad); border-top:1px solid #d2dde8; background:#f4f7fb}
+.tour-dialog-foot button {color:#164b82; background:transparent; padding-inline:2px 10px}
+.tour-dialog-foot button:hover {text-decoration:underline}
+@media (min-width:660px) {
+  .tour-card:has(figure) {grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}
+  .tour-card figure {grid-column:2; grid-row:1}
+  .tour-card-text {grid-column:1; grid-row:1}
+}
+.tour-guide-actions {display:flex; align-items:center; justify-content:space-between; gap:12px}
+#guide-step {font-weight:700; color:#25516f}
 #tour-guide {display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px 28px; padding:12px 16px; background:#f7faff; border-top:3px solid #3072b4}
 #tour-guide>div:first-child {flex:1 1 280px}
 #guide-title {font-size:1.12rem; margin:0}

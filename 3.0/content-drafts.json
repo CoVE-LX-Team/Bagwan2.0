@@ -1,14 +1,14 @@
 {
   "created_on": "2026-11-20",
-  "status": "Draft for SME and SLD review",
+  "status": "Drafts awaiting the decisions listed for each item",
   "items": [
     {
       "id": "D01",
       "path": "scorm/quick-link-pages/policy-and-procedures/medication-safety/index.html",
       "title": "Medication safety",
       "reviewers": [
-        "Clinical SME",
-        "Andrew — Senior Learning Designer"
+        "Clinical SME — medication record checks and escalation responsibilities",
+        "Andrew, Senior Learning Designer — fit of the reference for the intended learning activity"
       ],
       "review_status": "Pending",
       "reason": "No source policy was supplied",
@@ -22,8 +22,8 @@
       "path": "scorm/quick-link-pages/policy-and-procedures/nursing-and-clinical-handover/index.html",
       "title": "Nursing and clinical handover",
       "reviewers": [
-        "Nursing SME",
-        "Andrew — Senior Learning Designer"
+        "Nursing SME — clinical handover content and transfer of responsibility",
+        "Andrew, Senior Learning Designer — whether the handover task elicits the evidence expected for the unit"
       ],
       "review_status": "Pending",
       "reason": "No source policy was supplied",
@@ -37,8 +37,7 @@
       "path": "scorm/quick-link-pages/policy-and-procedures/booking-an-interpreter/index.html",
       "title": "Booking an interpreter",
       "reviewers": [
-        "Interpreting SME",
-        "Andrew — Senior Learning Designer"
+        "Interpreting SME — booking steps and the local confirmation and follow-up process"
       ],
       "review_status": "Pending",
       "reason": "The original page contained an unfilled policy template",
@@ -53,8 +52,7 @@
       "path": "scorm/department-pages/nursing/index.html",
       "title": "Nursing team structure",
       "reviewers": [
-        "Nursing SME",
-        "Andrew — Senior Learning Designer"
+        "Nursing department lead — unit managers and reporting lines"
       ],
       "review_status": "Pending",
       "reason": "The archive supplies a Chief Nurse and five nursing unit charts. Their role descriptions and a conflicting Emergency reporting line need review.",
@@ -68,8 +66,7 @@
       "path": "aboriginal-and-torres-strait-islander-liaison-office/index.html",
       "title": "Aboriginal and Torres Strait Islander liaison services",
       "reviewers": [
-        "Aboriginal and Torres Strait Islander cultural safety SME",
-        "Andrew — Senior Learning Designer"
+        "Aboriginal and Torres Strait Islander liaison or cultural safety reviewer — cultural wording, service scope and local referral arrangements"
       ],
       "review_status": "Pending",
       "reason": "The source service page was unavailable. The archived directory identifies four liaison staff. Referral arrangements, hours and reporting lines still need confirmation.",
@@ -83,8 +80,7 @@
       "path": "scorm/department-pages/lab-technologies/ppe-safety-activity/index.html",
       "title": "Laboratory PPE reference",
       "reviewers": [
-        "Laboratory safety SME",
-        "Andrew — Senior Learning Designer"
+        "Laboratory safety SME — task-specific protective equipment guidance"
       ],
       "review_status": "Pending",
       "reason": "Replace the archived drag activity with an appropriate intranet reference and separate practice",
@@ -96,8 +92,7 @@
       "path": "scorm/department-pages/lab-technologies/waste-management/index.html",
       "title": "Laboratory waste reference",
       "reviewers": [
-        "Laboratory safety and waste SME",
-        "Andrew — Senior Learning Designer"
+        "Laboratory safety and waste SME — local waste classifications and handling guidance"
       ],
       "review_status": "Pending",
       "reason": "The archived answer key categorised unspecified expired medication as cytotoxic waste",
@@ -109,8 +104,8 @@
       "path": "practice.html?activity=ppe",
       "title": "PPE selection decisions",
       "reviewers": [
-        "Laboratory safety SME",
-        "Andrew — Senior Learning Designer"
+        "Laboratory safety SME — accuracy of the protective equipment questions and feedback",
+        "Andrew, Senior Learning Designer — whether the questions draw out the learner’s reasoning"
       ],
       "review_status": "Pending",
       "reason": "Native HTML practice replaces picture-based drag and drop; questions now require reasoning about task risk and procedure",
@@ -124,8 +119,8 @@
       "path": "practice.html?activity=waste",
       "title": "Waste classification examples",
       "reviewers": [
-        "Laboratory safety and waste SME",
-        "Andrew — Senior Learning Designer"
+        "Laboratory safety and waste SME — waste classifications and answer key",
+        "Andrew, Senior Learning Designer — whether the examples and feedback suit the intended learners"
       ],
       "review_status": "Pending",
       "reason": "Corrects the archived expired medication ambiguity and replaces drag and drop with labelled choices and feedback",
@@ -139,8 +134,8 @@
       "path": "practice.html?activity=interpreter",
       "title": "Finding an interpreter",
       "reviewers": [
-        "Interpreting SME",
-        "Andrew — Senior Learning Designer"
+        "Interpreting SME — suitability of the credential checks in the scenario",
+        "Andrew, Senior Learning Designer — whether the reflection demonstrates the intended learning outcome"
       ],
       "review_status": "Pending",
       "reason": "Replaces a hidden fixed-name answer with a current directory task and evidence-based reflection",

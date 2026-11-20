@@ -55,12 +55,11 @@ def register_body(drafts, current, outcomes, editions):
         return '<details class="supporting"><summary>Revised documents (' + str(len(urls)) + ')</summary>' + contents + '</details>'
 
     pending = sum(row['status'] == 'Review needed' for row in outcomes)
-    fixed = len(outcomes) - pending
     interpreter_scenario = './#page/' + quote('scorm/department-pages/interpreting-office/new-interpreting-pd/index.html', safe='')
     orientation = './#page/' + quote('scorm/intranet/news-feed/womin-djeka/index.html', safe='')
     register = (
         '<div class="register" id="team-review"><header class="register-intro"><h1>Review Bagwan 3.0</h1>'
-        '<p>Andrew, start with Alex’s handover. Then share the relevant section below with each subject-matter reviewer.</p></header>'
+        '<p>Andrew reviews the learning task and the evidence it gives him. Subject-matter reviewers can open their area below.</p></header>'
         + disclosure('learning-review', 'Andrew · Reception handover',
                      '<p>Try the reception role. Can a learner use Alex’s record to write two sentences and one clarifying question?</p>'
                      '<p><a class="handoff-action" href="learning-guide.html#visit">Try the handover <span aria-hidden="true">→</span></a></p>'
@@ -72,14 +71,14 @@ def register_body(drafts, current, outcomes, editions):
         '<p>Would staff take the right next action from the handover, PPE and waste guidance? Flag the exact step or answer you would change.</p>'
         + actions(('#D02', 'Review the handover'), ('#D09', 'Check the waste examples'))
         + related(['D01','D02','D06','D07','D08','D09'])
-        + '<details class="supporting"><summary>Patient records and tour</summary><p>Check Alex’s message, the missing-belongings correspondence and the room prompts. Nursing and X-ray share a photograph. Counselling and the evacuation plan lack images.</p>'
-        + actions(('./#patient-case','Alex’s record'),('./#page/patient-management-system%2Fmessageboard%2Findex.html','Staff messages'),('./#tour','Hospital tour')) + '</details>')
+        + '<details class="supporting"><summary>Patient records and tour</summary><p>Check Alex’s message and the missing-belongings correspondence.</p><p>Do the nursing and laboratory hotspot labels fit local practice? Should Main reception’s emergency information link to the defibrillator guidance?</p>'
+        + actions(('./#patient-case','Alex’s record'),('./#page/patient-management-system%2Fmessageboard%2Findex.html','Staff messages'),('./#tour?stop=NurseStation','Nurses’ station')) + '</details>')
     register += disclosure('cultural-review', 'Liaison and interpreting',
         '<p>Does the wording respect the person’s choice of support? Check the liaison conversation starter and how the interpreter responds when a family member asks them to soften a message.</p>'
         + actions(('./#documents?category=Aboriginal+and+Torres+Strait+Islander+liaison','Read the liaison guide'),(interpreter_scenario,'Try the interpreter scenario'))
         + related(['D03','D05','D10'])
-        + '<details class="supporting"><summary>Training and references</summary><p>Andrew, check that learners can enrol in the RMIT modules. The language services reviewer can compare the briefing and accuracy feedback with the original clips.</p>'
-        + actions((orientation, 'Womin Djeka orientation'),('https://www.vic.gov.au/guidelines-using-interpreting-services/working-interpreters','Victorian interpreting guidance'),('https://ausit.org/wp-content/uploads/2024/09/AUSIT-Code-of-Ethics-and-Code-of-Conduct.pdf','AUSIT Code of Ethics')) + '</details>')
+        + '<details class="supporting"><summary>Training and references</summary><p>Does the reference library describe the role of family interpreters accurately? The cultural reviewer checks how the RMIT modules are introduced.</p>'
+        + actions(('./#page/resources-and-tools%2Finterpreting-services%2Findex.html','Interpreting reference library'),(orientation, 'Womin Djeka orientation'),('https://www.vic.gov.au/guidelines-using-interpreting-services/working-interpreters','Victorian interpreting guidance'),('https://ausit.org/wp-content/uploads/2024/09/AUSIT-Code-of-Ethics-and-Code-of-Conduct.pdf','AUSIT Code of Ethics')) + '</details>')
     register += disclosure('service-review', 'Allied health and team structure',
         '<p>Does the meal-preparation example reflect how the team works? Check the roles it names. Reporting lines with conflicting records are left blank.</p>'
         + actions(('./#documents?category=Allied+health','Read the Allied health guide'),('./#people','Open the people directory'))
@@ -95,9 +94,10 @@ def register_body(drafts, current, outcomes, editions):
         + files())
     register += ('</section><section class="review-reply"><h2>Give your decision</h2>'
         '<p>In the shared workbook, record <strong>approve, revise or withdraw</strong> beside the row or draft ID. Add your name, the date and any wording or source you want changed.</p>'
-        f'<p>{fixed} of {len(outcomes)} findings are fixed. {pending} have a decision ready for review.</p>'
+        f'<p>{pending} workbook findings need a content decision.</p>'
         + actions(('team-review-outcomes.html','Look up a workbook row'),('what-changed.pdf','One-page brief (PDF)')) + '</section>'
-        + disclosure('release-checks', 'Before teaching use', '<p>Try the handover with a representative learner on their usual device and access tools. Confirm local contacts, policy currency and enrolment access with the appropriate reviewer.</p>'
-                     + link('content-drafts.json', 'Download the register of ten content drafts (JSON)'))
+        + disclosure('release-checks', 'Before teaching use', '<p>The project team handles device and accessibility testing, link checks and enrolment access. '
+                     'Department leads confirm local contacts. Policy owners confirm which edition is current.</p>'
+                     + actions(('team-review-outcomes.html#row-4','Project team’s phone check'),('content-drafts.json','Download the draft register (JSON)')))
         + '</div>')
     return register

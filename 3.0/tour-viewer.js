@@ -28,12 +28,73 @@ const namedLinks = {
 const picker = document.querySelector('#room-select');
 const information = document.querySelector('#information-button');
 const dialog = document.querySelector('#room-information');
+const dialogTitle = document.querySelector('#info-title');
+const dialogScroll = document.querySelector('.tour-dialog-scroll');
+const dialogFooter = document.querySelector('.tour-dialog-foot');
 const infoItems = document.querySelector('#info-items');
 const statusMessage = document.querySelector('#tour-status');
 const guided = new URLSearchParams(location.search).get('guide') === 'orientation';
-const titleOf = info => info.card.find(part => part.type === 'header')?.txt || 'Room information';
+const titleOf = info => info.card.find(part => part.type === 'header')?.txt.trim() || 'Room information';
 const element = (tag, text) => {const node = document.createElement(tag); node.textContent = text; return node;};
-const appendLink = (text, destination) => {
+const cardImages = {
+  'AED-1.jpg':'Defibrillator in a wall-mounted cabinet.',
+  'EmergencyShower.png':'Green emergency shower sign.',
+  'HazardousWaste.jpg':'A gloved hand holding a red biohazard bag.',
+  'PPE-sign.jpg':'Sign headed “PPE required” with protective equipment symbols.',
+  'Pathology_computer.jpg':'Microscope beside a monitor showing a specimen.',
+  'Pathology_test.jpg':'A gloved hand placing a sample in laboratory equipment.',
+  'Welcome_to_Bagwan.jpg':'Nursing staff in a hospital corridor.',
+  'clean_laundry.jpg':'A staff member making a hospital bed with fresh linen.',
+  'dirty_laundry.jpg':'A staff member handling used linen in a laundry.',
+  'evacuation_plan.png':'Evacuation floor plan showing routes and exit symbols.',
+  'handwashing.jpg':'Illustrations of hand positions for hand hygiene.',
+  'interpreting.jpg':'A healthcare worker speaking with two visitors.',
+  'medication_cupboard.jpg':'A staff member checking stock in a medication cupboard.',
+  'nurses_station.jpg':'Nursing staff talking at a workstation.',
+  'reception_01.jpg':'A visitor speaking with a receptionist at a counter.'
+};
+const detailedImages = new Set(['evacuation_plan.png','PPE-sign.jpg','handwashing.jpg']);
+const signDimensions = {'evacuation_plan.png':[1000,725],'PPE-sign.jpg':[1080,779],'EmergencyShower.png':[601,364]};
+function cardImage(src) {
+  const name = src.split('/').pop();
+  const url = new URL(src.slice(1), assets);
+  const image = document.createElement('img');
+  image.alt = cardImages[name] || '';
+  // Reserve space for the photograph or sign while its full-size file loads.
+  [image.width,image.height] = signDimensions[name] || [600,400];
+  image.src = url;
+  const figure = document.createElement('figure');
+  if (detailedImages.has(name)) {
+    const link = element('a','View full-size image');
+    link.href = url; link.target = '_blank'; link.rel = 'noopener';
+    link.append(element('span',' (opens in a new tab)')); link.lastChild.className = 'tour-sr';
+    const caption = document.createElement('figcaption');
+    caption.append(link);
+    figure.append(image,caption);
+  } else figure.append(image);
+  return figure;
+}
+function cardText(text) {
+  const article = document.createElement('div');
+  article.className = 'tour-card-text';
+  for (const group of text.trim().split(/\n\s*\n/)) {
+    const lines = group.split('\n').map(line => line.trim()).filter(Boolean);
+    let list;
+    const section = ['Lab requisition','Handling of specimens'].includes(lines[0]);
+    if (section) article.append(element('h3',lines.shift()));
+    for (const line of lines) {
+      if (section || /^[-•]/.test(line)) {
+        if (!list) {list = document.createElement('ul'); article.append(list);}
+        list.append(element('li',line.replace(/^[-•]\s*/,'')));
+      } else {
+        list = undefined;
+        article.append(element('p',line));
+      }
+    }
+  }
+  return article;
+}
+const appendLink = (container, text, destination) => {
   const link = element('a', text);
   const url = new URL(destination, tourBase);
   const context = new URLSearchParams(location.search).get('from');
@@ -43,26 +104,32 @@ const appendLink = (text, destination) => {
   link.href = url;
   link.target = url.origin === location.origin ? '_top' : '_blank';
   link.rel = 'noopener';
-  infoItems.append(link);
+  if (link.target === '_blank') {
+    const hint = element('span',' (opens in a new tab)'); hint.className = 'tour-sr'; link.append(hint);
+  }
+  container.append(link);
 };
-function appendSourceLink(item) {
+function appendSourceLink(container,item) {
   if (!item.uri) return;
   if (namedLinks[item.uri]) {
-    namedLinks[item.uri].forEach(([title,url]) => appendLink(title,url));
+    namedLinks[item.uri].forEach(([title,url]) => appendLink(container,title,url));
   } else if (item.uri.startsWith('/Bagwan2.0/')) {
     const path = item.uri.slice('/Bagwan2.0/'.length);
-    if (item.txt === 'Enter activity') appendLink('Open the laboratory PPE reference', '#page/' + encodeURIComponent('scorm/department-pages/lab-technologies/ppe-safety-activity/index.html'));
-    else if (path.endsWith('/waste-management/index.html')) appendLink('Open the laboratory waste reference', '#page/' + encodeURIComponent(path));
-    else if (path === 'scorm/intranet/index.html') appendLink('Open the staff intranet', '#home');
-    else appendLink(item.txt.trim(), '#page/' + encodeURIComponent(path));
+    if (item.txt === 'Enter activity') appendLink(container,'Open the laboratory PPE reference', '#page/' + encodeURIComponent('scorm/department-pages/lab-technologies/ppe-safety-activity/index.html'));
+    else if (path.endsWith('/waste-management/index.html')) appendLink(container,'Open the laboratory waste reference', '#page/' + encodeURIComponent(path));
+    else if (path === 'scorm/intranet/index.html') appendLink(container,'Open the staff intranet', '#home');
+    else {
+      const titles = {'lab-technologies':'Open Laboratory technologies',nursing:'Open the nursing team structure','interpreting-office':'Open the interpreting office'};
+      appendLink(container,titles[path.split('/').at(-2)] || item.txt.trim(), '#page/' + encodeURIComponent(path));
+    }
   } else if (item.uri === 'https://www.worksafe.vic.gov.au/use-automated-external-defibrillator-aed-workplace') {
-    appendLink('WorkSafe Victoria · Automated external defibrillators in the workplace',item.uri);
-  } else if (/^https?:\/\//i.test(item.uri)) appendLink(item.txt.trim(), item.uri);
+    appendLink(container,'WorkSafe Victoria · Automated external defibrillators in the workplace',item.uri);
+  } else if (/^https?:\/\//i.test(item.uri)) appendLink(container,item.txt.trim(), item.uri);
 }
 let opener;
-function openDialog() {
+function openDialog(trigger,focusTarget = dialogTitle) {
   if (!dialog.open) {
-    opener = document.activeElement;
+    opener = trigger || document.activeElement;
     const frame = window.frameElement;
     if (frame) {
       const bounds = frame.getBoundingClientRect();
@@ -71,10 +138,14 @@ function openDialog() {
     if (document.fullscreenElement && !document.fullscreenElement.contains(dialog)) document.fullscreenElement.append(dialog);
     dialog.showModal();
   }
-  document.querySelector('#close-information').focus();
+  dialogScroll.scrollTop = 0;
+  focusTarget.focus({preventScroll:focusTarget === dialogTitle});
 }
 document.querySelector('#close-information').addEventListener('click', () => dialog.close());
-dialog.addEventListener('close', () => (opener?.isConnected ? opener : information).focus());
+dialog.addEventListener('close', () => {
+  if (dialog.parentNode !== document.body && !document.fullscreenElement) document.body.append(dialog);
+  (opener?.isConnected ? opener : information).focus({preventScroll:true});
+});
 
 async function startTour() {
   async function loadFile(name) {
@@ -94,35 +165,83 @@ async function startTour() {
   let viewer;
   const scenes = {};
   const cards = {};
-  function showCard(info) {
+  const hotspotCaption = element('span','');
+  hotspotCaption.className = 'tour-hotspot-caption';
+  hotspotCaption.setAttribute('aria-hidden','true');
+  let captionOwner;
+  function hideCaption(node) {
+    if (!node || node === captionOwner) {captionOwner = undefined; hotspotCaption.textContent = '';}
+  }
+  let selectedTopic;
+  function showCard(info,trigger) {
+    hideCaption();
+    selectedTopic = info;
     infoItems.replaceChildren();
-    document.querySelector('#info-title').textContent = titleOf(info);
+    infoItems.className = 'tour-card';
+    dialogTitle.textContent = titleOf(info);
     document.querySelector('#room-label').textContent = roomName(current);
+    dialogFooter.hidden = cards[current].length < 2;
+    const links = document.createElement('div');
+    links.className = 'tour-card-links';
     for (const part of info.card) {
-      if (part.type === 'content') infoItems.append(element('p',part.txt));
+      if (part.type === 'content' && part.txt.trim()) infoItems.append(cardText(part.txt));
       if (part.type === 'image' && part.src && !absent.has(part.src.slice(1))) {
-        const image = document.createElement('img'); image.alt = ''; image.src = new URL(part.src.slice(1),assets);
-        infoItems.append(image);
+        infoItems.append(cardImage(part.src));
       }
-      if (part.type === 'row') part.buttons.forEach(appendSourceLink);
-      if (part.type === 'reference') appendLink(part.txt,part.href);
+      if (part.type === 'row') part.buttons.forEach(item => appendSourceLink(links,item));
+      if (part.type === 'reference') appendLink(links,part.txt,part.href);
     }
-    openDialog();
+    if (links.childElementCount) infoItems.append(links);
+    openDialog(trigger);
   }
   function hotspot(label, kind, click) {
     return node => {
-      node.setAttribute('role','button'); node.tabIndex = 0; node.setAttribute('aria-label',label); node.title = label;
+      node.setAttribute('role','button'); node.tabIndex = 0; node.setAttribute('aria-label',label);
       node.append(element('span',kind === 'info' ? 'i' : '➜')); node.firstChild.setAttribute('aria-hidden','true');
-      node.addEventListener('click',click);
-      node.addEventListener('keydown',event => {if (event.key === 'Enter' || event.key === ' ') {event.preventDefault(); event.stopPropagation(); click();}});
+      if (kind === 'info') node.setAttribute('aria-haspopup','dialog');
+      const showCaption = () => {captionOwner = node; hotspotCaption.textContent = label;};
+      node.addEventListener('pointerenter',event => {if (event.pointerType === 'mouse') showCaption();});
+      node.addEventListener('pointerleave',() => {if (node !== document.activeElement) hideCaption(node);});
+      node.addEventListener('focus',showCaption);
+      node.addEventListener('blur',() => hideCaption(node));
+      node.addEventListener('click',() => click(node));
+      node.addEventListener('keydown',event => {if (event.key === 'Enter' || event.key === ' ') {event.preventDefault(); event.stopPropagation(); click(node);}});
     };
   }
   for (const scene of available) {
-    const infos = [...new Map((scene.infos || []).map(info => [JSON.stringify(info.card),info])).values()];
+    const infos = [...(scene.infos || [])];
     const note = roomNotes[scene.id];
     if (note) infos.push({rotateX:0, rotateY:0, card:[{type:'header',txt:note[0]},{type:'content',txt:note[1]},{type:'reference',txt:note[2],href:note[3]}]});
-    cards[scene.id] = infos;
-    const hotSpots = infos.map(info => ({pitch:Number(info.rotateX)||0, yaw:-Number(info.rotateY)||0, cssClass:'info-hotspot', createTooltipFunc:hotspot(titleOf(info),'info',() => showCard(info))}));
+    const topics = new Map();
+    const locations = new Set();
+    const hotSpots = [];
+    for (const info of infos) {
+      const title = titleOf(info);
+      for (const part of info.card) {
+        if (part.src === '/hotspot_images/Evacuation plan.png') part.src = '/hotspot_images/evacuation_plan.png';
+        if (scene.id === 'Laboratory' && title === 'Intranet') {
+          if (part.type === 'header') part.txt = 'Laboratory technologies';
+          if (part.type === 'content') part.txt = 'The department page brings together information and resources for laboratory staff.';
+        }
+        if (part.type === 'content' && scene.id === 'NurseStation' && title === 'Nurse Unit Manager') part.txt = 'The nursing team structure lists the unit managers for outpatient, inpatient, cardiac, rehabilitation and emergency nursing.';
+        if (part.type === 'header' && scene.id === 'SpecimenReception') {
+          if (part.txt === 'Specimen Reception') part.txt = 'Checking incoming specimens';
+          if (part.txt === 'Specimen reception') part.txt = 'Sample types and laboratory disciplines';
+        }
+      }
+      if (scene.id === 'NurseStation' && title === 'Nurse Unit Manager') info.card.push({type:'reference',txt:'View the nursing team structure',href:'#page/'+encodeURIComponent('scorm/department-pages/nursing/index.html')});
+      // A topic can appear at several locations in the panorama.
+      const key = JSON.stringify(info.card, (property,value) => property === 'txt' ? value.trim().replace(/\s+/g,' ') : value);
+      if (!topics.has(key)) topics.set(key,info);
+      const topic = topics.get(key);
+      const pitch = Number(info.rotateX) || 0;
+      const yaw = -Number(info.rotateY) || 0;
+      const locationKey = JSON.stringify([key,pitch,yaw]);
+      if (locations.has(locationKey)) continue;
+      locations.add(locationKey);
+      hotSpots.push({pitch,yaw,cssClass:'info-hotspot',createTooltipFunc:hotspot(titleOf(topic),'info',node => showCard(topic,node))});
+    }
+    cards[scene.id] = [...topics.values()];
     for (const nav of scene.navs || []) {
       if (byId.has(nav.to)) hotSpots.push({pitch:Number(nav.rotateX)||0,yaw:-Number(nav.rotateY)||0,cssClass:'direction-hotspot',createTooltipFunc:hotspot('Go to '+roomName(nav.to),'direction',() => viewer.loadScene(nav.to))});
     }
@@ -132,16 +251,29 @@ async function startTour() {
     const option = element('option',roomName(scene.id) + (byId.has(scene.id) ? '' : ' (panorama unavailable)'));
     option.value = scene.id; option.disabled = !byId.has(scene.id); picker.append(option);
   }
-  const showRoomList = () => {
-    document.querySelector('#info-title').textContent = 'Room information';
+  function showRoomList(returnToTopic) {
+    dialogTitle.textContent = 'Room information';
     document.querySelector('#room-label').textContent = roomName(current);
     infoItems.replaceChildren();
+    infoItems.className = 'tour-topics';
+    dialogFooter.hidden = true;
+    const list = document.createElement('ul');
+    let focusTarget;
     for (const info of cards[current]) {
-      const button = element('button',titleOf(info)); button.addEventListener('click',() => showCard(info)); infoItems.append(button);
+      const item = document.createElement('li');
+      const button = element('button',titleOf(info));
+      button.addEventListener('click',() => showCard(info));
+      item.append(button); list.append(item);
+      if (returnToTopic === info) focusTarget = button;
     }
-    openDialog();
-  };
-  information.addEventListener('click',showRoomList);
+    infoItems.append(list);
+    openDialog(information,focusTarget);
+  }
+  information.addEventListener('click',() => {
+    if (cards[current].length === 1) showCard(cards[current][0],information);
+    else showRoomList();
+  });
+  document.querySelector('#room-topics').addEventListener('click',() => showRoomList(selectedTopic));
   picker.value = current;
   picker.disabled = information.disabled = false;
   let completed = false;
@@ -175,6 +307,7 @@ async function startTour() {
     else moveStop(stopIndex+1);
   });
   function selectRoom(id) {
+    hideCaption();
     current = id; picker.value = id;
     if (dialog.open) dialog.close();
     history.replaceState(null,'','#'+id);
@@ -194,6 +327,7 @@ async function startTour() {
   updateGuide();
   try {
     viewer = pannellum.viewer('panorama',{default:{firstScene:current,autoLoad:true,hfov:100,sceneFadeDuration:0,showControls:true},scenes});
+    document.querySelector('#panorama').append(hotspotCaption);
     viewer.on('scenechange',selectRoom);
     viewer.on('error',() => {statusMessage.textContent = 'Panorama unavailable. Choose a room or open Room information.';});
     for (const [selector,label] of [['.pnlm-zoom-in','Zoom in'],['.pnlm-zoom-out','Zoom out'],['.pnlm-fullscreen-toggle-button','Toggle panorama fullscreen']]) {

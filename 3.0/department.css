@@ -1,0 +1,61 @@
+.service-desk {
+  --desk-rule: #cdd2e4;
+  --desk-blue: #101064;
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(230px, 1fr);
+  grid-template-areas: "intro room" "services team" "related related" "hospital hospital";
+  align-items: start;
+  gap: clamp(26px, 3vw, 44px) clamp(24px, 4.8vw, 76px);
+  max-width: 1240px;
+}
+.service-desk h1, .service-desk h2, .service-desk p, .service-desk ul { margin: 0; }
+.service-desk ul { list-style: none; padding: 0; }
+.service-desk h2 { color: var(--desk-blue); font-size: clamp(21px, 1.7vw, 27px); line-height: 1.25; }
+.desk-intro { grid-area: intro; align-self: center; }
+.desk-intro h1 { font-size: clamp(36px, 3.8vw, 58px); line-height: 1.05; text-wrap: balance; }
+.desk-intro > p { margin-top: 14px; max-width: 48ch; color: var(--muted); font-size: 16px; line-height: 1.55; }
+.desk-actions { display: flex; align-items: center; gap: 10px; margin-top: 20px; }
+.desk-primary, .desk-room > span, .desk-people li a { display: flex; align-items: center; gap: 10px; }
+.desk-primary { padding: 11px 17px; background: var(--desk-blue); color: white; border-radius: 8px; font-size: 15px; line-height: 1.4; font-weight: 600; min-height: 46px; text-decoration: none; }
+.desk-primary:hover { background: #29298e; }
+.desk-actions .save-button { flex: 0 0 44px; width: 44px; height: 44px; }
+.desk-room { grid-area: room; display: block; overflow: hidden; border-radius: 12px; text-decoration: none; background: var(--desk-blue); }
+.desk-room img { width: 100%; height: auto; max-height: 185px; aspect-ratio: 2.65; display: block; object-fit: cover; }
+.desk-room > span { min-height: 44px; padding: 8px 15px; color: white; font-size: 14px; font-weight: 550; }
+.desk-arrow { flex: none; margin-left: auto; font-size: 19px; line-height: 1; }
+.desk-room:hover > span { background: #29298e; }
+.desk-services { grid-area: services; }
+.service-desk .desk-list { margin-top: 13px; border-top: 2px solid var(--desk-blue); }
+.desk-list li { border-bottom: 1px solid var(--desk-rule); }
+.desk-list a { display: flex; align-items: center; gap: 12px; padding: 14px 8px 14px 2px; color: var(--desk-blue); text-decoration: none; }
+.desk-list strong, .desk-related strong { display: block; font-size: 17px; font-weight: 590; line-height: 1.35; }
+.desk-list small, .desk-contact p { display: block; margin-top: 4px; color: var(--muted); font-size: 14px; line-height: 1.45; }
+.desk-list a:hover, .desk-list a:focus-visible, .desk-related a:hover { background: #eaf0fb; }
+.desk-people { grid-area: team; background: #e9eefb; color: var(--desk-blue); border-radius: 12px; padding: clamp(18px, 2.2vw, 30px); }
+.desk-people h2 { font-size: 21px; }
+.desk-contact { margin: 18px 0 12px; }
+.desk-contact a, .desk-hospital a { font-weight: 550; text-underline-offset: 3px; }
+.desk-contact p { margin-top: 3px; }
+.desk-people ul { border-top: 1px solid #c4cbe1; }
+.desk-people li a { min-height: 44px; padding: 6px 0; font-weight: 520; font-size: 14px; text-underline-offset: 3px; }
+.desk-related { grid-area: related; }
+.desk-related ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 16px; }
+.desk-related li { border-top: 2px solid #889ac5; }
+.desk-related a { display: block; height: 100%; padding: 13px 5px 10px 0; text-decoration: none; color: var(--desk-blue); }
+.desk-related strong { font-size: 16px; }
+.desk-related small { display: block; font-size: 13px; color: var(--muted); margin-bottom: 5px; }
+.desk-hospital { grid-area: hospital; display: flex; align-items: baseline; gap: 12px 32px; flex-wrap: wrap; border-top: 1px solid var(--desk-rule); padding-top: 16px; }
+.desk-hospital h2 { font-size: 17px; }
+.desk-hospital ul { display: flex; flex-wrap: wrap; column-gap: 20px; }
+.desk-hospital a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
+@media (max-width: 700px) {
+  .service-desk { grid-template-columns: minmax(0, 1fr); grid-template-areas: "intro" "services" "room" "team" "related" "hospital"; gap: 26px; }
+  .desk-intro > p { margin-top: 9px; font-size: 15px; }
+  .desk-actions { margin-top: 15px; }
+  .desk-room img { max-height: 175px; }
+  .desk-related ul { grid-template-columns: 1fr; gap: 0; }
+  .desk-related li { border-top: 1px solid var(--desk-rule); }
+  .desk-related a { padding-block: 11px; }
+  .desk-hospital { display: block; }
+  .desk-hospital ul { margin-top: 5px; }
+}

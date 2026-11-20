@@ -7,6 +7,35 @@ const staffResources = (() => {
   const nursingPath = 'scorm/department-pages/nursing/index.html';
   const liaisonPath = 'aboriginal-and-torres-strait-islander-liaison-office/index.html';
   const laboratoryTools = 'resources-and-tools/lab-technologies/index.html';
+  const referenceLibraries = {
+    [laboratoryTools]: {
+      title:'Laboratory reference library', sections:{
+        collapseFormsandtemplates:['Forms and templates','Pathology requests, waste disposal and safety posters.','forms'],
+        collapseTools:['Laboratory references','Protective equipment and waste management.','policies'],
+        collapseResources:['Safety resources and practice','Chemical safety guidance and practice questions.','resources']
+      }
+    },
+    'resources-and-tools/interpreting-services/index.html': {
+      title:'Interpreting reference library', sections:{
+        collapseFormsandtemplates:['Interpreter booking form','The request form for an upcoming appointment.','forms'],
+        collapseResources:['Policies and guidance','Hospital procedures, government guidance and translated information.','policies'],
+        collapseTools:['Consultation practice and interpreter cards','A cardiology scenario and the Victorian interpreter assistance card.','resources']
+      }
+    },
+    'resources-and-tools/logisitics/index.html': {
+      title:'Logistics reference library', sections:{
+        collapseFormsandtemplates:['Forms and templates','Logistics induction, meeting agendas and correspondence.','forms'],
+        collapseResources:['Risk management policy','The hospital’s risk management document.','policies']
+      }
+    },
+    'resources-and-tools/nursing/index.html': {
+      title:'Nursing reference library', sections:{
+        collapseFormsandtemplates:['Forms and templates','Care plans, pathology requests, incident and workplace safety forms.','forms'],
+        collapseTools:['Hand hygiene','Hand cleaning guidance from the World Health Organization.','resources'],
+        collapseResources:['Professional guidance','Fact sheets from the Nursing and Midwifery Board of Australia.','policies']
+      }
+    }
+  };
   const interpretingScenario = 'scorm/department-pages/interpreting-office/new-interpreting-pd/index.html';
   const liaisonCategory = 'Aboriginal and Torres Strait Islander liaison';
   const documentCategoryLink = label => '#documents?' + new URLSearchParams({category:label});
@@ -23,7 +52,7 @@ const staffResources = (() => {
   const culturalTitle = 'Cultural awareness resources for staff';
   const culturalSummary = 'Find RMIT learning modules and guidance on working with people from migrant and refugee backgrounds.';
   const nursingLinks = [
-    ['Pathology request form','#documents?query=Pathology+request+form','Preview or download the request template.'],
+    ['Pathology request form','#forms?query=Pathology+request+form','Preview or download the request template.'],
     ['Internet, email and social media',pageLinkFor('internet-email-and-social-media'),'Read the hospital’s policy on staff use of email, the internet and social media.'],
     ['Complaints and feedback handling',pageLinkFor('complaints-and-feedback-handling'),'Find the hospital’s process for responding to feedback.']
   ];
@@ -156,6 +185,39 @@ const staffResources = (() => {
         if(replacement){anchor.textContent=replacement[0];anchor.setAttribute('href',replacement[1]);}
       }
     });
+    for (const [path, library] of Object.entries(referenceLibraries)) {
+      updateContent(pages,path,(body, record)=>{
+        const sections=[];
+        for (const [id, [title, description, glyph]] of Object.entries(library.sections)) {
+          const content=body.querySelector('#'+id+' .card-body');
+          if (!content) continue;
+          if (id==='collapseFormsandtemplates' && !content.querySelector('.document-list')) {
+            const list=body.ownerDocument.createElement('ul');
+            list.className='document-list';
+            for (const paragraph of content.querySelectorAll(':scope > p')) {
+              const anchor=paragraph.querySelector(':scope > a:only-child');
+              if (!anchor || paragraph.textContent.trim()!==anchor.textContent.trim()) continue;
+              if(!list.parentNode)paragraph.before(list);
+              const item=body.ownerDocument.createElement('li');
+              item.append(anchor);
+              list.append(item);
+              paragraph.remove();
+            }
+          }
+          for (const heading of content.querySelectorAll('h2,h4')) {
+            const subtitle=body.ownerDocument.createElement('h3');
+            subtitle.textContent=heading.textContent.trim();
+            heading.replaceWith(subtitle);
+          }
+          const labelId='heading'+id.slice('collapse'.length);
+          sections.push('<section class="reference-group"><h2><button type="button" class="reference-toggle" id="'+labelId+'" data-toggle="collapse" data-target="#'+id+'" aria-expanded="false" aria-controls="'+id+'" aria-describedby="'+id+'-summary">'+
+            icon(glyph)+'<span class="reference-label"><strong>'+esc(title)+'</strong><span id="'+id+'-summary" aria-hidden="true">'+esc(description)+'</span></span><span class="reference-chevron" aria-hidden="true"></span></button></h2>'+
+            '<div class="reference-content" role="region" id="'+id+'" aria-labelledby="'+labelId+'" hidden>'+content.innerHTML+'</div></section>');
+        }
+        record.title=library.title;
+        body.innerHTML='<div class="reference-library">'+sections.join('')+'</div>';
+      });
+    }
     updateContent(pages,nursingPath,body=>body.insertAdjacentHTML('beforeend',appendix('Nursing quick links',nursingLinks)));
     updateContent(pages,liaisonPath,body=>body.insertAdjacentHTML('beforeend',appendix('Resources for staff',[
       ['Aboriginal and Torres Strait Islander liaison resources',documentCategoryLink(liaisonCategory),'Preview or download the staff reference.']
@@ -170,6 +232,16 @@ const staffResources = (() => {
         }
       }
     });
+    for (const department of departmentData) {
+      const desk = serviceDesks[department.id];
+      if (!desk) continue;
+      const record = pages.find(page => page.path === department.source);
+      const previousTitle = record.title;
+      record.title = department.name;
+      const keywords = [...desk.resources, ...desk.related].map(([title,, detail]) => title + ' ' + detail);
+      record.text = [previousTitle, department.source.split('/').at(-2).replaceAll('-', ' '), desk.summary,
+        desk.primary[0], desk.room[2], ...keywords].join(' ');
+    }
     // Both chart renderers resolve service destinations from the archived chart anchors.
     for(const record of pages.filter(p=>p.html.includes('org-department-unlinked')&&p.html.includes('Allied health'))){
       updateContent(pages,record.path,body=>{
@@ -180,13 +252,15 @@ const staffResources = (() => {
     }
   }
 
-  function restoreLaboratoryPanels() {
-    const toggles=[...main.querySelectorAll('[data-toggle="collapse"][aria-controls]')];
+  function restoreReferencePanels(identifier) {
+    const toggles=[...main.querySelectorAll('.reference-toggle')];
+    const state=history.state;
+    const open=state?.referencePanels?.[identifier] || (identifier===laboratoryTools && state?.laboratoryPanels) || [];
     for(const button of toggles){
       const id=button.getAttribute('aria-controls');
       const panel=document.getElementById(id);
       if(!panel)continue;
-      if(history.state?.laboratoryPanels?.includes(id)) {
+      if(open.includes(id)) {
         button.setAttribute('aria-expanded','true');
         button.classList.remove('collapsed');
         panel.hidden=false;
@@ -195,9 +269,17 @@ const staffResources = (() => {
         // The delegated collapse handler toggles this button as the same click bubbles to main.
         const ids=toggles.filter(toggle=>toggle===button ? toggle.getAttribute('aria-expanded')!=='true' :
           toggle.getAttribute('aria-expanded')==='true').map(toggle=>toggle.getAttribute('aria-controls'));
-        history.replaceState({...history.state,laboratoryPanels:ids},'');
+        history.replaceState({...history.state,referencePanels:{...history.state?.referencePanels,[identifier]:ids}},'');
       });
     }
+  }
+
+  function renderDepartments() {
+    const sorted=[...departmentData].sort((a,b)=>a.name.localeCompare(b.name,'en-AU'));
+    main.innerHTML=intro('Departments','Find a team, its services and the resources you need.')+
+      '<ul class="department-directory">'+sorted.map(department=>
+        '<li><a href="#department/'+esc(department.id)+'"><span><strong>'+esc(department.name)+'</strong><span>'+esc(department.description)+'</span></span><span class="department-arrow" aria-hidden="true">→</span></a></li>'
+      ).join('')+'</ul>';
   }
 
   function rewriteInterpretingScenario(doc) {
@@ -270,19 +352,23 @@ const staffResources = (() => {
     if(path==='department/nursing') {
       main.querySelector('.resource-list')?.insertAdjacentHTML('beforeend',nursingLinks.map(([title,href,description])=>row(title,href,description,'Resource')).join(''));
     }
-    if(path==='department/interpreting'||path==='department/liaison'||path==='department/allied-health'){
+    if(path==='department/liaison'||path==='department/allied-health'){
       const allied=path==='department/allied-health';
       const title=allied?'Working with allied health':'Aboriginal and Torres Strait Islander liaison resources';
       const href=documentCategoryLink(allied?'Allied health':liaisonCategory);
       main.querySelector('.resource-list')?.insertAdjacentHTML('beforeend',row(title,href,'Preview or download the staff reference.','Staff guide'));
     }
-    if(identifier===laboratoryTools)restoreLaboratoryPanels();
+    if(referenceLibraries[identifier]){
+      restoreReferencePanels(identifier);
+      const tools=main.querySelector('.page-tools');
+      if(tools)main.querySelector('.page-intro')?.append(tools);
+    }
     if(path==='home'||identifier==='scorm/intranet/index.html'||identifier==='index.html'){
       main.querySelector('.notice-list')?.insertAdjacentHTML('beforeend','<li><span class="list-label">INFECTION CONTROL</span>'+
         link(pageLink(news('influenza-outbreak')),'Influenza outbreak')+'<p>Read the earlier staff update and find infection control resources.</p></li>');
     }
   }
-  return {initialize,enhance};
+  return {initialize,enhance,renderDepartments};
 })();
 function initializeResourceUpdates(catalog) { staffResources.initialize(catalog); }
 function enhanceResourceView(path,identifier) { staffResources.enhance(path,identifier); }

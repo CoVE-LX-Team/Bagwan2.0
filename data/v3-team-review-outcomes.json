@@ -7,9 +7,9 @@
   },
   {
     "row": 4,
-    "status": "Review needed",
-    "finding": "Every migrated view fits a 375 px viewport. Seven high-use views also fit at 320, 375, 768 and 1440 px. Andrew to try the scenario on a learner’s actual phone and confirm it is usable with their usual access tools.",
-    "reviewer": "Andrew + representative learner",
+    "status": "Project follow-up",
+    "finding": "All 103 migrated pages fit at 375 pixels. Seven frequently used views also fit at 320, 768 and 1440 pixels. The project team will check the reception task on a physical phone with assistive technology.",
+    "reviewer": "Project team",
     "topic": "Learner access on a phone"
   },
   {
@@ -167,7 +167,7 @@
   {
     "row": 30,
     "status": "Review needed",
-    "finding": "Medication safety and Nursing and clinical handover have readable draft procedures and downloadable PDFs. The clinical or nursing SME should verify their content. Andrew should confirm their suitability for the intended activity.",
+    "finding": "The medication safety and nursing handover references are ready, with matching PDFs. The clinical SME reviews the guidance. Andrew reviews whether the handover provides useful evidence for the unit.",
     "reviewer": "Clinical SME + Andrew",
     "topic": "Medication safety and handover"
   },
@@ -246,7 +246,7 @@
   {
     "row": 43,
     "status": "Review needed",
-    "finding": "All five departmental categories return files with preview and download. Added two dated one-page staff references for Allied health and Aboriginal and Torres Strait Islander liaison. Verified PDF delivery for both and mobile preview. The allied health SME and an Aboriginal and/or Torres Strait Islander liaison or cultural safety reviewer should confirm content and service scope. Andrew to review scenario fit.",
+    "finding": "All five departmental collections have working previews and downloads. The Allied health lead reviews the service scope in its new guide. A liaison or cultural reviewer checks the liaison guide’s wording and referral process.",
     "reviewer": "Allied health + liaison SMEs",
     "topic": "Department document collections"
   },
@@ -326,8 +326,8 @@
   {
     "row": 56,
     "status": "Review needed",
-    "finding": "The Logistics warehouse has a clickable supplies hotspot, a room-specific observation prompt and a link to the Logistics department. SME to check the prompt against the intended role.",
-    "reviewer": "Logistics SME + Andrew",
+    "finding": "The Logistics room now has a supplies hotspot and a link to the department. Does its observation prompt reflect the work of the logistics team?",
+    "reviewer": "Logistics SME",
     "topic": "Logistics warehouse tour"
   },
   {
@@ -339,8 +339,8 @@
   {
     "row": 59,
     "status": "Review needed",
-    "finding": "The CEO’s Next story opens a Womin Djeka orientation article, with the current RMIT course catalogue and RMIT Library’s description of the learning pathway. Verified the public enrolment page and keyboard navigation. Andrew and a culturally appropriate reviewer should review its use here. Course completion behind sign-in was not tested.",
-    "reviewer": "Andrew + liaison/cultural reviewer",
+    "finding": "The CEO story now opens the Womin Djeka article. The RMIT course listing and enrolment option are available. The liaison reviewer checks how the module is introduced. The project team owns any signed-in access check.",
+    "reviewer": "Liaison/cultural reviewer",
     "topic": "Womin Djeka orientation"
   },
   {
@@ -358,14 +358,14 @@
   {
     "row": 62,
     "status": "Review needed",
-    "finding": "Replaced the retired course offers with current, named resources. The revised article links to RMIT’s Womin Djeka and Truth Telling modules and the Australian Commission’s guide to care for people from migrant and refugee backgrounds. Department and News teasers were updated. Andrew to confirm the resources meet the intended learning outcome.",
+    "finding": "The retired courses have been replaced with RMIT’s Womin Djeka and Truth Telling modules and a guide to care for people from migrant and refugee backgrounds. Andrew reviews the learning fit. The cultural reviewer checks how the resources are described.",
     "reviewer": "Andrew + liaison/cultural reviewer",
     "topic": "Cultural awareness training"
   },
   {
     "row": 63,
     "status": "Review needed",
-    "finding": "The Cultural Differences and Similarities credential offer and generic redirect were removed from 3.0. The revised staff article links directly to two RMIT course listings and an Australian Commission guide. Andrew to confirm learning fit and whether a credited activity is required.",
+    "finding": "The same resources replace the old Cultural Differences and Similarities link. Andrew decides whether the activity requires course credit. The cultural wording is covered by the review in row 62.",
     "reviewer": "Andrew + liaison/cultural reviewer",
     "topic": "Cultural learning resources"
   },
@@ -396,7 +396,7 @@
   {
     "row": 68,
     "status": "Review needed",
-    "finding": "Allied health now opens a 3.0 service overview from the hospital chart and appears in Departments. The draft includes a downloadable staff guide and Victorian Department of Health profession directory. An allied health SME must confirm the Bagwan team, referral process and reporting lines; Andrew to confirm teaching use.",
+    "finding": "Allied health now has a service overview and staff guide, linked from the hospital chart and Departments. The Allied health lead checks the Bagwan team, referral process and reporting lines.",
     "reviewer": "Allied health lead",
     "topic": "Allied health service overview"
   },
@@ -421,8 +421,8 @@
   {
     "row": 72,
     "status": "Review needed",
-    "finding": "3.0 serves 12 revised Word resources and WorkSafe's current handbook through 17 catalogue entries. The staff-facing documents have plain titles, with editorial decisions held in the review materials. Document owners still need to confirm the historical policy content, contact roles, dates and suitability for each teaching activity. A hidden author query about microbreak timing was removed from the Workstation Self-Assessment Checklist, and the unverified intervals were replaced with general guidance to vary tasks and posture.",
-    "reviewer": "Document owners + Andrew",
+    "finding": "Twelve revised Word files and the WorkSafe handbook are available through 17 catalogue entries. Document owners check policy currency, contact roles and dates. The workstation checklist now gives general advice on varying tasks and posture.",
+    "reviewer": "Document owners",
     "topic": "Staff document editions"
   },
   {
@@ -434,14 +434,14 @@
   {
     "row": 74,
     "status": "Review needed",
-    "finding": "A one-page Recordkeeping reference guide replaces the dated legislative summaries in 3.0. Eight links identify official Victorian and Commonwealth sources. The old funding examples, inaccessible Canvas checklist and dated legislative summaries remain available in the 2.0 archive. Andrew should compare the guide with assessment tasks, then the records SME should confirm scope and whether any historical example or checklist is required.",
+    "finding": "The records guide links to eight public sources. The records SME checks the scope and jurisdiction. Andrew decides whether an assessment still needs an example or checklist from the earlier material.",
     "reviewer": "Records SME + Andrew",
     "topic": "Recordkeeping references"
   },
   {
     "row": 75,
     "status": "Review needed",
-    "finding": "A one-page Records disposal reference replaces the unfinished template, links to National Archives guidance and separates Victorian and Commonwealth sources. The records SME should confirm which authority and learning examples the activity requires.",
+    "finding": "The disposal reference links to National Archives guidance and separates Victorian and Commonwealth sources. The records SME confirms which disposal authority applies.",
     "reviewer": "Records SME",
     "topic": "Records disposal reference"
   },
@@ -460,7 +460,7 @@
   {
     "row": 78,
     "status": "Review needed",
-    "finding": "The Bullying and Harassment download has no editorial comment parts or markers. Workplace contacts and external agencies are grouped in the downloadable policy and the web article. Outdated phone numbers were replaced by the organisations’ own pages. The people-policy SME should confirm team role names and the escalation pathway. Confirm access to the Fair Work Commission page.",
+    "finding": "The revised Bullying and Harassment policy groups workplace contacts and external agencies. The People & culture policy owner confirms the role names and escalation pathway.",
     "reviewer": "People & culture policy owner",
     "topic": "Bullying and harassment contacts"
   },
@@ -500,7 +500,7 @@
   {
     "row": 84,
     "status": "Review needed",
-    "finding": "The Word policy and staff article link to the Victorian Department of Health privacy policy and the OAIC Notifiable Data Breaches scheme. A Greendale offboarding clause and the obsolete DHHS reporting instruction were removed from the staff-facing article and download. The privacy SME should confirm the actual offboarding and breach-reporting paths. Confirm access to the OAIC guidance.",
+    "finding": "The updated Privacy policy links to the Victorian Department of Health and OAIC guidance. The unsupported Greendale and DHHS directions have been removed. The privacy owner confirms who handles offboarding and breach reporting.",
     "reviewer": "Privacy officer / policy owner",
     "topic": "Privacy and breach reporting"
   },
@@ -513,15 +513,15 @@
   {
     "row": 86,
     "status": "Review needed",
-    "finding": "HR/OHS now previews and downloads WorkSafe Victoria’s complete December 2024 Office health and safety handbook, 136 pages. The official publisher PDF is preserved byte for byte; the January 2006 Officewise copy is accessible in 2.0. The OHS SME should confirm the newer guide suits the activity.",
-    "reviewer": "WHS SME + Andrew",
+    "finding": "Both Officewise entries now open the same December 2024 WorkSafe handbook. The WHS reviewer checks whether the guidance fits the workplace practice shown.",
+    "reviewer": "WHS SME",
     "topic": "Office health and safety handbook"
   },
   {
     "row": 87,
     "status": "Review needed",
-    "finding": "The Human Resources entry uses exactly the same updated WorkSafe handbook as the HR/OHS entry. One OHS suitability decision covers both rows.",
-    "reviewer": "WHS SME + Andrew",
+    "finding": "This Human Resources shortcut opens the same handbook as row 86. The WHS reviewer can record one decision for both rows.",
+    "reviewer": "WHS SME",
     "topic": "HR office safety shortcut"
   },
   {
@@ -533,7 +533,7 @@
   {
     "row": 89,
     "status": "Review needed",
-    "finding": "All 19 available panoramas now offer clickable information. Opened all 37 information cards in the browser. Six new room prompts await SME review. The archive supplies the same image for Nursing room and X-ray room.",
+    "finding": "All 19 available panoramas offer room information. Check the six added prompts, the revised nursing and laboratory descriptions and the two specimen reception labels. Nursing and X-ray share an archive photograph.",
     "reviewer": "Department and clinical SMEs",
     "topic": "Room information in the tour"
   },
@@ -546,7 +546,7 @@
   {
     "row": 91,
     "status": "Review needed",
-    "finding": "The optional three-stop orientation includes a staff role, a two-sentence handover, one clarifying question, three observable evidence criteria and a structured peer/facilitator debrief. Andrew can review the prepared task and its alignment to the target unit. Reviewer messaging is confined to the register.",
+    "finding": "The three-stop orientation includes a two-sentence handover, one clarifying question and a facilitator debrief. Andrew reviews the evidence criteria against the unit. The interpreting SME checks the booking and follow-up workflow.",
     "reviewer": "Andrew + interpreting SME",
     "topic": "Three-stop orientation and handover"
   },
@@ -590,15 +590,15 @@
   {
     "row": 98,
     "status": "Review needed",
-    "finding": "Three messages have descriptive subjects and read progress, all receipts survive reload, and Proceed opens the patient list with the correct URL and heading. Reviewed the receiver-facing correspondence without editorial labels. The interpreter request and the revised missing-belongings wording are ready for SME and Andrew.",
-    "reviewer": "Andrew + clinical / interpreting SMEs",
+    "finding": "The staff messages lead to the patient list. The clinical and interpreting reviewers check the wording of the interpreter request and the missing-belongings message.",
+    "reviewer": "Clinical / interpreting SMEs",
     "topic": "Messageboard and handover"
   },
   {
     "row": 99,
     "status": "Review needed",
-    "finding": "The directory offers Jane Doe, Yusef Duke and Alex Morgan with direct return navigation. Alex’s case records the request and unknown booking status. The staff view and message omit editorial labels. Source pathology gaps display “Not supplied”. The communication case is prepared for SME and Andrew.",
-    "reviewer": "Clinical / interpreting SMEs + Andrew",
+    "finding": "Alex’s record distinguishes a request from a confirmed booking. The clinical and interpreting reviewers check that the case is plausible. Row 91 covers the handover activity.",
+    "reviewer": "Clinical / interpreting SMEs",
     "topic": "Patient cases and interpreter request"
   },
   {

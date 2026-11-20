@@ -25,5 +25,15 @@
 <div><small id="guide-step"></small><h2 id="guide-title"></h2><p id="guide-prompt"></p></div>
 <div class="tour-guide-actions"><button id="guide-return" hidden>Return to current stop</button><button id="guide-back">Previous stop</button><button id="guide-next">Next stop</button><a href="learning-guide.html#visit" target="_top">Learning guide</a></div>
 </section>
-<dialog id="room-information" aria-labelledby="info-title"><div class="tour-dialog-head"><small id="room-label"></small><button id="close-information" aria-label="Close room information">Close</button></div><h2 id="info-title"></h2><div id="info-items"></div></dialog>
+<dialog id="room-information" aria-labelledby="info-title" aria-describedby="room-label">
+  <header class="tour-dialog-head">
+    <span id="room-label"></span>
+    <button type="button" id="close-information" aria-label="Close room information">Close<span aria-hidden="true">×</span></button>
+  </header>
+  <div class="tour-dialog-scroll">
+    <h2 id="info-title" tabindex="-1"></h2>
+    <div id="info-items"></div>
+  </div>
+  <footer class="tour-dialog-foot" hidden><button type="button" id="room-topics"><span aria-hidden="true">←</span> All room topics</button></footer>
+</dialog>
 </body></html>

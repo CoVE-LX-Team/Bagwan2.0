@@ -1,6 +1,6 @@
 # People directory and reporting lines
 
-**Review status: pending Bagwan SME and Senior Learning Designer review.** This is an archival reconstruction for the hospital simulation. Andrew and the SME can record approved corrections in `staff-hierarchy.json`. Running `python3 scripts/build_v3.py` incorporates them into the 3.0 site.
+**Department leads are reviewing the reporting lines.** The directory and charts draw on archived records. Department leads can record a correction and its source in the team workbook. The project team updates `staff-hierarchy.json` and rebuilds the site.
 
 The archive supports 142 position records across 11 departments or services. They contain 126 distinct personal names, ten roles with an unidentified holder and 110 reporting links. Six names occur in more than one position. Each position has its own ID so a reporting line follows the particular appointment. A blank manager means the available evidence leaves that line open. The CEO heads the hospital overview.
 
@@ -19,7 +19,7 @@ The Bagwan WordPress backup dated 14 April 2025 contains the organisation-chart 
 
 Where a chart gives only a role, a unique match on department and role in the roster can identify its holder. These records cite both sources and say how the name was matched. Conflicting positions, alternative reporting lines and repeated roles stay open. The 35 portraits come from images explicitly attached to named people in the Bagwan charts.
 
-## Questions for the SME and Andrew
+## Decisions for department leads
 
 | Area | Decision requested |
 | --- | --- |

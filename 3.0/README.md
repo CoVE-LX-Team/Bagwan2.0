@@ -8,11 +8,11 @@ The document library at `#documents` supports combined search, category and file
 
 The Policies & procedures list and individual policy pages offer preview and download actions. Fifteen policies link to their matched Word editions. The three web-only policies download as tagged PDFs with their staff-facing text and references. Editorial status and approval requests belong in the reviewer register. When draft text or review status changes, run `python3 scripts/build_v3.py` followed by `python3 scripts/build_policy_copies.py` to refresh these copies.
 
-The People directory and charts use [the recovered position records](../data/staff-hierarchy.json). The [source and review notes](../data/staff-hierarchy-review.md) explain missing managers, unnamed positions and conflicting records. The review register also lists decisions for the SME and Senior Learning Designer.
+The People directory and charts use [the recovered position records](../data/staff-hierarchy.json). The [source and review notes](../data/staff-hierarchy-review.md) explain missing managers, unnamed positions and conflicting records. Department leads confirm appointments and reporting lines. The project team applies agreed changes to the directory and charts.
 
 The teaching context lives separately in `learning-guide.html`. `practice.html` and `practice.js` replace the three H5P activities with native HTML exercises. Intranet values are readable reference content, without flip cards.
 
-`content-drafts.json` records new and adapted content, sources, reasons and review requirements. Its ten entries and the additional team-workbook decisions in the review register are pending SME and SLD review. No approval, clinical currency, curriculum mapping or competency outcome is implied.
+`content-drafts.json` records new and adapted content, sources, reasons and review requirements. Each entry names the reviewer and the decision they own. Andrew reviews learning outcomes, task design and evidence for the unit. Subject-matter reviewers check content in their area. The project team owns device, accessibility and resource-access checks.
 
 ## Build and preview
 

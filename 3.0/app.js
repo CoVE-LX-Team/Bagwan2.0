@@ -48,19 +48,18 @@ function home() {
   main.innerHTML=intro('Staff home','People, information and services across Bagwan Health.')+
     '<div class="action-links">'+[['policies','Policies & procedures','policies'],['forms','Forms & records','forms'],['people','Find a colleague','people'],['page/'+encodeURIComponent('scorm/quick-link-pages/incident-reporting/index.html'),'Report an incident','incident']].map(([route,label,i])=>'<a class="action-link" href="#'+route+'">'+icon(i)+'<span>'+label+'</span></a>').join('')+'</div>'+
     '<div class="home-columns"><section aria-labelledby="updates-title"><div class="section-heading"><h2 id="updates-title">Hospital updates</h2><a href="#news">All updates</a></div><article class="feature-news"><a href="'+pageLink(ceo)+'"><div class="feature-photo"><img src="'+absolute('wp-content/uploads/2019/12/happy-hospital-staff.jpg')+'" alt="Hospital colleagues working together" width="1000" height="576"></div><div class="feature-copy"><p class="eyebrow">CEO UPDATE</p><h3>An update from our CEO</h3><p>Hospital upgrades, our community and the work happening across Bagwan Health.</p><span class="text-link">Read the update</span></div></a></article></section>'+
-    '<aside aria-labelledby="staff-resources-title"><div class="section-heading"><h2 id="staff-resources-title">Staff resources</h2></div><ul class="notice-list"><li><span class="list-label">PEOPLE & CULTURE</span><a href="#department/hr">Support for your working day</a><p>HR documents, workplace resources and meeting guides.</p></li><li><span class="list-label">LANGUAGE SERVICES</span><a href="'+pageLink('scorm/quick-link-pages/policy-and-procedures/booking-an-interpreter/index.html')+'">Arranging an interpreter</a><p>What to record when requesting an interpreter.</p></li><li><span class="list-label">PATIENT CARE</span><a href="#forms">Records and observation forms</a><p>Access the patient system and care documentation.</p></li></ul><div class="hospital-feature"><h3>Find your way around</h3><p>Explore departments and spaces in the virtual hospital.</p><a href="#tour">Open the hospital tour</a></div></aside></div>'+
+    '<aside aria-labelledby="staff-resources-title"><div class="section-heading"><h2 id="staff-resources-title">Staff resources</h2></div><ul class="notice-list"><li><span class="list-label">PEOPLE & CULTURE</span><a href="#department/hr">Support for your working day</a><p>HR documents, workplace resources and meeting guides.</p></li><li><span class="list-label">LANGUAGE SERVICES</span><a href="'+pageLink('scorm/quick-link-pages/policy-and-procedures/booking-an-interpreter/index.html')+'">Arranging an interpreter</a><p>What to record when requesting an interpreter.</p></li><li><span class="list-label">PATIENT CARE</span><a href="#forms?view=online">Records and observation forms</a><p>Access the patient system and care documentation.</p></li></ul><div class="hospital-feature"><h3>Find your way around</h3><p>Explore departments and spaces in the virtual hospital.</p><a href="#tour">Open the hospital tour</a></div></aside></div>'+
     '<section class="home-bottom"><div class="section-heading"><h2>Across the hospital</h2><a href="#departments">All departments</a></div><div class="department-links">'+departmentData.map(d=>'<a href="#department/'+d.id+'">'+esc(d.name)+'<span>View</span></a>').join('')+'</div></section>';
 }
-function departments() { main.innerHTML=intro('Departments','Find a team, its services and the resources you need.');main.innerHTML+='<ul class="resource-list">'+departmentData.map(d=>row(d.name,'#department/'+d.id,d.description,'Department')).join('')+'</ul>'; }
+function departments() { staffResources.renderDepartments(); }
 function department(id) {
   if(id==='hr')return renderHRDepartment();
   const d=departmentData.find(d=>d.id===id);if(!d)return notFound();
+  if(serviceDesks[id])return renderServiceDesk(d);
   main.innerHTML='<p class="breadcrumbs"><a href="#departments">Departments</a> / '+esc(d.name)+'</p>'+intro(d.name,d.description,'DEPARTMENT');
   const relevant=data.hierarchy.filter(p=>p.name && p.department===d.group);
   const resources=[['Service information',pageLink(d.source),'Department contacts and resources.']];
-  if(id==='laboratory')resources.push(['Laboratory PPE reference',pageLink('scorm/department-pages/lab-technologies/ppe-safety-activity/index.html'),'Check the protective equipment required for the task.'],['Laboratory waste reference',pageLink('scorm/department-pages/lab-technologies/waste-management/index.html'),'Identify the appropriate waste stream.'],['Laboratory documents','#documents?query=laboratory','Local documents and templates.']);
-  if(id==='interpreting')resources.push(['Booking an interpreter',pageLink('scorm/quick-link-pages/policy-and-procedures/booking-an-interpreter/index.html'),'Prepare a request and follow up on the booking.'],['Interpreting resources','#search?query=interpreting','Policies, people and resources.']);
-  if(id==='nursing')resources.push(['Forms and patient records','#forms','Patient system and observation forms.'],['Clinical handover',pageLink('scorm/quick-link-pages/policy-and-procedures/nursing-and-clinical-handover/index.html'),'Prepare the handover and agree the next action with the receiving colleague.']);
+  if(id==='nursing')resources.push(['Forms and patient records','#forms?view=online','Patient system and observation forms.'],['Clinical handover',pageLink('scorm/quick-link-pages/policy-and-procedures/nursing-and-clinical-handover/index.html'),'Prepare the handover and agree the next action with the receiving colleague.']);
   if(id==='liaison')resources.push(['Closing the Gap','#videos?query=Closing%20the%20Gap','Melbourne Health video resource.']);
   main.innerHTML+='<div class="two-columns"><section><h2>Services and resources</h2><ul class="resource-list">'+resources.map(([title,href,description])=>row(title,href,description,'Resource')).join('')+'</ul></section><aside class="context-panel"><h2>Our people</h2>'+(relevant.length?'<ul>'+relevant.map(p=>'<li><strong><a href="'+esc(personLink(p))+'">'+esc(p.name)+'</a></strong><br>'+esc(p.role)+'</li>').join('')+'</ul><a class="small-link" href="#people?query='+encodeURIComponent(d.group)+'">View in the people directory</a>':'<p>No team members are listed for this service.</p>')+'</aside></div>';
 }
@@ -72,9 +71,31 @@ function policies() {
   main.insertAdjacentHTML('beforeend','<p class="policy-index-link"><a href="'+pageLink(policyIndexPath)+'">Policy governance framework</a></p>');
 }
 function forms() {
-  main.innerHTML=intro('Forms & records','Access patient records, observation forms and staff templates.');
-  const items=[['Patient records','patient-management-system/patient-database/index.html','Open the patient list and view individual records.'],['Pain observation — Abbey scale','patient-management-system/abbeyscale/index.html','Record observations and review the calculated total.'],['Food and fluids record','patient-management-system/foodrecord/index.html','Record observations in repeatable entries.'],['Personal care record','patient-management-system/personalcare/index.html','Record care observations and daily living information.'],['Continence record','patient-management-system/continence/index.html','Record observations by day and hour.'],['Incident report','scorm/quick-link-pages/incident-reporting/index.html','Create a local draft of an incident report.'],['Staff messageboard','patient-management-system/messageboard/index.html','Read the supplied scenario correspondence.']];
-  main.innerHTML+='<ul class="resource-list">'+items.map(([title,path,description])=>row(title,pageLink(path),description,'Form or record','page:'+path)).join('')+row('Staff forms and templates','#documents','Download HR, administration and other workplace templates.','Document library')+'</ul>';
+  const online=new URLSearchParams(location.hash.split('?')[1]).get('view')==='online';
+  main.innerHTML=intro('Forms & records','Find a staff template, enter observations or open a patient record.')+
+    '<nav class="forms-switch" aria-label="Forms and records views">'+
+    '<a href="#forms"'+(online?'':' aria-current="page"')+'>'+icon('download')+'Downloadable forms</a>'+
+    '<a href="#forms?view=online"'+(online?' aria-current="page"':'')+'>'+icon('forms')+'Online forms &amp; records</a></nav>';
+  if(!online){
+    const browser=document.createElement('section');
+    browser.className='file-browser';
+    browser.setAttribute('aria-label','Downloadable forms');
+    main.append(browser);
+    mountFileBrowser(browser,data.documents.filter(formTemplateTitle),{route:'#forms',label:'Downloadable forms',forms:true});
+    return;
+  }
+  const records=[
+    ['Patient records',patientDirectoryPath,'Open the patient list and view individual records.'],
+    ['Staff messageboard',staffMessagesPath,'Read staff correspondence and follow up on messages.']
+  ];
+  const clinical=[
+    ...clinicalRecords.map(([title,slug])=>[title,'patient-management-system/'+slug+'/index.html']),
+    ['Incident report','scorm/quick-link-pages/incident-reporting/index.html']
+  ];
+  const group=(heading,items)=>'<section class="online-form-group"><h2>'+heading+'</h2><ul>'+
+    items.map(([title,path,description])=>'<li><a href="'+esc(pageLink(path))+'">'+esc(title)+'</a>'+
+      (description?'<p>'+esc(description)+'</p>':'')+saveButton('page:'+path,title)+'</li>').join('')+'</ul></section>';
+  main.insertAdjacentHTML('beforeend','<div class="online-form-groups">'+group('Clinical forms',clinical)+group('Patient records and messages',records)+'</div>');
 }
 function resources() {
   main.innerHTML=intro('Resources','Reference material, documents and video across the hospital.');
@@ -86,7 +107,7 @@ function videos() {
 }
 function search() {
   main.innerHTML=intro('Search the intranet','Search people, pages, policies, documents and video.');
-  const items=[...data.pages.map(p=>({policy:p.category==='Policy'?p:null,title:p.title,href:pageLink(p.path),description:p.category,id:'page:'+p.path,filter:p.category,search:p.title+' '+p.text})),...data.hierarchy.filter(p=>p.name).map(p=>({title:p.name,href:personLink(p),description:p.role+' · '+p.department,id:'person:'+p.id,filter:'Person',search:p.name+' '+p.role+' '+p.department})),...data.documents.map(d=>({title:d.name,document:d,description:d.original_folder_path,id:'doc:'+d.local_path,filter:'Document',search:d.name+' '+d.original_folder_path})),...data.videos.map(v=>({title:v.title,href:'#videos?query='+encodeURIComponent(v.title),description:'YouTube video',id:'video:'+v.youtube_id,filter:'Video',search:v.title}))];
+  const items=[...data.pages.map(p=>({policy:p.category==='Policy'?p:null,title:p.title,href:pageLink(p.path),description:p.category,id:'page:'+p.path,filter:p.category,search:p.title+' '+p.text})),...data.hierarchy.filter(p=>p.name).map(p=>({title:p.name,href:personLink(p),description:p.role+' · '+p.department,id:'person:'+p.id,filter:'Person',search:p.name+' '+p.role+' '+p.department})),...data.documents.map(d=>({title:documentTitle(d),document:d,description:d.original_folder_path,id:'doc:'+d.local_path,filter:'Document',search:[documentTitle(d),d.name,documentCategory(d),d.original_folder_path].join(' ')})),...data.videos.map(v=>({title:v.title,href:'#videos?query='+encodeURIComponent(v.title),description:'YouTube video',id:'video:'+v.youtube_id,filter:'Video',search:v.title}))];
   const kinds=[...new Set(items.map(x=>x.filter))].sort();
   wireFilter(items,found=>'<ul class="resource-list">'+found.map(p=>p.document?documentResult(p.document):p.policy?policyResult(p.policy):row(p.title,p.href,p.description,p.filter,p.id)).join('')+'</ul>','<label class="sr-only" for="category-filter">Result type</label><select class="field-search" id="category-filter"><option value="">All result types</option>'+kinds.map(k=>'<option>'+esc(k)+'</option>').join('')+'</select>');
 }
@@ -143,11 +164,21 @@ function setupEmbeddedFrame(frame,record) {
 function article(path) {
   const record=pageMap.get(path);if(!record)return notFound();
   if(path==='scorm/department-pages/hr-services/index.html')return renderHRDepartment();
+  const service = departmentData.find(item => item.source === path && serviceDesks[item.id]);
+  if(service)return renderServiceDesk(service);
   if(path==='scorm/intranet/news-feed/index.html')return renderNews();
   if(path==='scorm/intranet/our-community/index.html')return renderCommunity(record);
+  if(path==='scorm/department-pages/index.html'){
+    replaceSectionHash('#departments');
+    return departments();
+  }
   if(path==='index.html'||path==='scorm/intranet/index.html')return home();
   if(path.includes('staff-directory-2/'))return renderPeopleDirectory();
   if(renderTeamChart(path))return;
+  if(path==='scorm/quick-link-pages/forms/index.html'||path==='patient-management-system/index.html'){
+    replaceSectionHash(path==='patient-management-system/index.html'?'#forms?view=online':'#forms');
+    return forms();
+  }
   if(path==='documents/index.html'||path==='scorm/intranet/staff-repository/index.html'||data.document_folders?.[path]){
     const folder=data.document_folders?.[path];
     const first=data.documents.find(doc=>doc.original_folder_path===folder);
@@ -188,17 +219,28 @@ function adaptContent(container,sourcePath) {
       if(file){
         a.href=absolute(file.local_href);
         a.download='';
-        if(a.closest('.document-list'))a.insertAdjacentHTML('afterend',documentPreviewButton(file));
+        if(!a.closest('.document-list') && pageMap.get(sourcePath)?.policy_document!==file.local_path){
+          if(a.parentElement.tagName==='P' && a.parentElement.textContent.trim()===a.textContent.trim()){
+            a.parentElement.outerHTML=compactFile(file);
+          }else{
+            a.insertAdjacentHTML('afterend',documentPreviewButton(file)+fileLibraryLink(file));
+          }
+        }
       }
       if(pageMap.has(target))a.removeAttribute('target');
     }else if(['http:','https:'].includes(url.protocol)){a.href=url.href;a.target='_blank';a.rel='noopener';}
   }
+  if(sourcePath==='scorm/quick-link-pages/policy-and-procedures/booking-an-interpreter/index.html'){
+    const form=documentMap.get('documents/departmental/interpreting-services/Bagwan Health Interpreter booking request form.docx');
+    if(form)container.insertAdjacentHTML('afterbegin',compactFile(form));
+  }
+  enhanceFileListings(container);
   for(const img of container.querySelectorAll('img[src]'))img.src=new URL(img.getAttribute('src'),ROOT).href;
   for(const frame of container.querySelectorAll('iframe[src]')){
     const url=new URL(frame.getAttribute('src'),ROOT);
     const path=decodeURIComponent(url.pathname.slice(ROOT.pathname.length));
     if(url.origin===ROOT.origin&&path.startsWith('resources-and-tools/')&&pageMap.has(path)){
-      const link=document.createElement('a');link.className='button secondary';link.href=pageLink(path);link.textContent='Open '+pageMap.get(path).title+' resources';frame.replaceWith(link);
+      const link=document.createElement('a');link.className='button secondary';link.href=pageLink(path);link.textContent='Open '+pageMap.get(path).title;frame.replaceWith(link);
     }else if(url.origin===ROOT.origin && path.startsWith('VR/') && pageMap.has(path)){
       frame.title=pageMap.get(sourcePath)?.title || 'Hospital tour';
       setupEmbeddedFrame(frame,pageMap.get(path));frame.src=tourFrameUrl(url);
@@ -245,7 +287,7 @@ function render(focus=false) {
     else if(sourcePath.startsWith('scorm/department-pages/'))section='departments';
     else if(sourcePath.includes('/news-feed/'))section='news';
     else if(sourcePath.includes('/policy-and-procedures/'))section='policies';
-    else if(sourcePath.includes('patient-management-system/')||sourcePath.includes('incident-reporting'))section='forms';
+    else if(sourcePath.includes('patient-management-system/')||sourcePath.includes('incident-reporting')||sourcePath==='scorm/quick-link-pages/forms/index.html')section='forms';
     else if(sourcePath.startsWith('library/')||sourcePath.includes('documents/')||sourcePath.includes('staff-repository'))section='resources';
     else if(sourcePath==='index.html'||sourcePath==='scorm/intranet/index.html')section='home';
     else section=sectionForCategory(pageMap.get(sourcePath)?.category) || section;

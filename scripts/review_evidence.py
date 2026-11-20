@@ -18,21 +18,23 @@ def group(key, label, items):
 
 
 def outcome_lookup(outcomes):
+    fixed = sum(row['status'] == 'Fixed' for row in outcomes)
     review_count = sum(row['status'] == 'Review needed' for row in outcomes)
+    project_count = sum(row['status'] == 'Project follow-up' for row in outcomes)
     body = ('<header class="evidence-intro"><h1>Team workbook outcomes</h1>'
-            f'<p>Of {len(outcomes)} findings, {len(outcomes) - review_count} are fixed. '
-            f'The remaining {review_count} have a change or decision ready to review.</p>'
+            f'<p>Of {len(outcomes)} findings, {fixed} are fixed and {review_count} need a content decision. '
+            f'The project team owns the follow-up on {project_count} {"finding" if project_count == 1 else "findings"}.</p>'
             '<a href="review-register.html#team-review">Open the reviewer decisions</a></header>'
             '<section class="evidence-lookup" data-lookup data-unit="row" aria-labelledby="row-title">'
             '<h2 id="row-title">Find a workbook item</h2>' +
-            lookup_tools('outcome', 'Workbook row, topic or reviewer', 'For example, 30 or handover'))
-    for status, key in [('Review needed', 'decisions'), ('Fixed', 'fixed')]:
+            lookup_tools('outcome', 'Workbook row, topic or owner', 'For example, 30 or handover'))
+    for status, key in [('Review needed', 'decisions'), ('Project follow-up', 'project-follow-up'), ('Fixed', 'fixed')]:
         items = []
         for row in outcomes:
             if row['status'] != status:
                 continue
             number = row['row']
-            owner = f'<p class="row-owner"><strong>Reviewer</strong> · {escape(row["reviewer"])}</p>' if row.get('reviewer') else ''
+            owner = f'<p class="row-owner"><strong>Owner</strong> · {escape(row["reviewer"])}</p>' if row.get('reviewer') else ''
             items.append(f'<li class="evidence-item" data-number="{number}"><details id="row-{number}">'
                          f'<summary><span class="row-number">Row {number}</span><span>{escape(row["topic"])}</span></summary>'
                          f'<div class="evidence-text"><p>{escape(row["finding"])}</p>{owner}</div></details></li>')
@@ -68,7 +70,16 @@ def page_finding(result, record, affected):
         now.append('Records and forms retain their save, print and download controls as applicable. Drafts save on the device.')
     if category == 'Hospital tour':
         before.append('The tour needed keyboard access and some original photographs were missing.')
-        now.append('Room information and the guided route work with a keyboard. The register identifies the missing images.')
+        now.append('Room information groups topics by room, with the close control kept in view while reading. The register tracks missing images.')
+    if path in {'scorm/department-pages/interpreting-office/index.html', 'scorm/department-pages/lab-technologies/index.html', 'scorm/department-pages/logisitics/index.html'}:
+        before.append('Large news images pushed everyday staff tasks several screens down on a phone.')
+        now.append('The department opens with its most useful form. Service guidance, team contacts and a link to the room in the tour are grouped together.')
+    if path.startswith('resources-and-tools/'):
+        before.append('Form downloads and references were buried inside the old section layout.')
+        now.append('Staff can expand a labelled section and preview or download its files there.')
+    if path == 'scorm/quick-link-pages/forms/index.html':
+        before.append('Finding a downloadable form meant browsing separate department folders.')
+        now.append('Downloadable forms share one searchable, sortable list with previews and downloads. The adjacent online view opens clinical forms and patient records.')
     if category == 'Document library':
         before.append('Documents were difficult to find by folder alone.')
         now.append('Staff can filter and sort the library, preview a file and download the same edition.')
@@ -99,7 +110,7 @@ def critical_review(baseline, current, affected, links, broken, repairs):
     return (
         '<header class="evidence-intro"><h1>Critical review of Bagwan</h1>'
         '<p>The staff intranet now brings the hospital’s people, policies, forms and tour into one place. '
-        'The remaining teaching decisions concern clinical accuracy, cultural suitability and access on learners’ devices.</p>'
+        'Andrew reviews the learning task and its evidence. Subject-matter reviewers check the clinical and cultural content.</p>'
         '<a href="review-register.html#team-review">Open the reviewer decisions</a></header>'
         '<section class="evidence-lookup" data-lookup data-unit="page" aria-labelledby="lookup-title">'
         '<h2 id="lookup-title">Find a page finding</h2>' +
@@ -126,16 +137,17 @@ def critical_review(baseline, current, affected, links, broken, repairs):
         '<h3>External references</h3><p>Nine of 60 external links returned a missing-page response on the original site. '
         'Their replacements opened on 20 November 2026.</p>'
         '<details class="source-detail"><summary>Original and replacement addresses</summary><ul class="replacement-list">' + ''.join(replacements) + '</ul></details>'
-        '<p>AustLII and Cole-Parmer declined access during the link check. The NAATI directory and the meeting video '
-        '<em>Example of a Poorly-Managed Meeting</em> also need a playback or access check on the learner’s device.</p>'
+        '<p>The project team will check access to AustLII, Cole-Parmer, the NAATI directory and the Fair Work Commission page, '
+        'and playback of <em>Example of a Poorly-Managed Meeting</em>. OAIC guidance opened in WebKit. Both linked RMIT course listings display their enrolment options. '
+        'Access through a learner account is a project check.</p>'
         '</div></details>'
         '<details id="verification-summary"><summary>Coverage and remaining checks</summary><div class="evidence-text">'
         '<h3>Coverage</h3><p>All 103 migrated pages were checked in Chromium at desktop and phone sizes. '
         'The original review included 42 keyboard and 51 clinical-form checks. The first 3.0 review included 55 task checks. '
-        'Two embedded resource layouts were corrected after the initial mobile review.</p>'
-        '<h3>Still to confirm</h3><p>Try the learning tasks with a representative learner, their assistive technology and a physical phone. '
-        'Safari, Firefox, downloaded-document accessibility and full video playback remain to be confirmed.</p>'
-        '<p>The counselling panorama and evacuation-plan image were missing from the source. '
+        'The reception task, from Alex’s record to the end of the three-stop tour, was also checked in WebKit at 320 and 375 pixels.</p>'
+        '<h3>Project team follow-up</h3><p>The project team owns checks on physical devices and across browsers, including assistive technology, '
+        'document accessibility and video playback. <a href="team-review-outcomes.html#row-4">See the phone layout finding</a>.</p>'
+        '<p>The counselling panorama is missing. Nursing and X-ray share a photograph in the archive. Both Main reception hotspots now open the recovered evacuation diagram. '
         'The Emergency nursing reporting line, liaison contacts and policy authority also need content-owner confirmation. '
         '<a href="review-register.html#reporting-lines">Check the staffing questions</a>.</p>'
         '</div></details></section>'
