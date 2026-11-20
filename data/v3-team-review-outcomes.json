@@ -546,7 +546,7 @@
   {
     "row": 91,
     "status": "Review needed",
-    "finding": "The three-stop orientation includes a two-sentence handover, one clarifying question and a facilitator debrief. Andrew reviews the evidence criteria against the unit. The interpreting SME checks the booking and follow-up workflow.",
+    "finding": "After the three-stop tour, learners tell the next shift what Alex asked for, what still needs confirming and what to follow up. Andrew checks whether the handover fits the unit. The interpreting SME checks the booking process.",
     "reviewer": "Andrew + interpreting SME",
     "topic": "Three-stop orientation and handover"
   },
@@ -597,7 +597,7 @@
   {
     "row": 99,
     "status": "Review needed",
-    "finding": "Alex’s record distinguishes a request from a confirmed booking. The clinical and interpreting reviewers check that the case is plausible. Row 91 covers the handover activity.",
+    "finding": "Alex asked whether an interpreter had been arranged. The preferred language, dialect and booking status are still open for the next shift to follow up. The clinical and interpreting SMEs check whether the record sounds like one reception would keep.",
     "reviewer": "Clinical / interpreting SMEs",
     "topic": "Patient cases and interpreter request"
   },

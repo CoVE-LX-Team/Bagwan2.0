@@ -124,7 +124,7 @@ def critical_review(baseline, current, affected, links, broken, repairs):
         'The new exercise distinguishes a known cytotoxic medicine from a case with too little information. '
         '<a href="review-register.html#D09">Review the waste examples</a>.</p>'
         '<p>Staff can read values, PPE and waste guidance directly. Learners practise the decisions in the separate guide. '
-        'The reception handover includes evidence criteria and a facilitator debrief. <a href="learning-guide.html#visit">Try the handover</a>.</p>'
+        'Learners leave a handover for the next receptionist. A sample note is available in the facilitator debrief. <a href="learning-guide.html#visit">Try the handover</a>.</p>'
         '<h3>Finding and using resources</h3><p>Search covers staff, policies, files and videos. Ten charts now fit phone screens. '
         'Twelve original policies exceeded 1,400 words. Longer policies now link between sections, and departments link directly to their resources.</p>'
         '<p>News distinguishes past notices. Forms can save or clear working drafts on the device, and learners can download their reflections.</p>'

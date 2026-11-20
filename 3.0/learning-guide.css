@@ -63,12 +63,11 @@
 .step-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 20px; margin-top: 16px; }
 a.orientation-link { justify-content: center; padding: 10px 17px; border-radius: 5px; background: var(--guide-blue); color: #fff; text-decoration: none; line-height: 1.4; }
 .orientation-link:hover { background: var(--guide-navy); }
-.handover-check { padding: clamp(22px, 2.55vw, 36px); border-top: 4px solid var(--guide-blue); background: #edf2fb; }
-.handover-check h3 { font-size: clamp(1.3rem, 1.8vw, 1.65rem); line-height: 1.22; }
-.handover-check dl { margin-top: 22px; }
-.handover-check dt { font-weight: 650; line-height: 1.4; }
-.handover-check dt:not(:first-child) { border-top: 1px solid #c8d3e8; margin-top: 17px; padding-top: 17px; }
-.handover-check dd { color: #35425e; margin-top: 4px; }
+.reception-note { padding: clamp(22px, 2.55vw, 36px); border-top: 4px solid var(--guide-blue); background: #edf2fb; }
+.reception-note h3 { font-size: 1.12rem; }
+.reception-note blockquote { margin: 17px 0 8px; font-size: clamp(1.18rem, 1.55vw, 1.42rem); line-height: 1.5; }
+.reception-note p { color: var(--guide-muted); font-size: .9rem; }
+.reception-note a { display: inline-flex; align-items: center; gap: .45em; min-height: 44px; margin-top: 13px; font-weight: 600; }
 
 .task-band { padding-block: clamp(38px, 4.5vw, 66px); border-block: 1px solid var(--guide-line); background: #f5f7fb; }
 .task-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(45px, 7vw, 100px); }
@@ -80,10 +79,13 @@ a.orientation-link { justify-content: center; padding: 10px 17px; border-radius:
 .task-links p { max-width: 54ch; color: var(--guide-muted); }
 .debrief-prompts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(32px, 7vw, 100px); margin-top: 24px; }
 .debrief-prompts p { max-width: 54ch; margin-top: 8px; color: var(--guide-muted); }
+.example-note { margin-top: 15px; border-top: 1px solid var(--guide-line); }
+.example-note summary { padding-block: 12px; color: var(--guide-blue); font-weight: 600; cursor: pointer; }
+.example-note p { margin: 0; padding: 15px 18px; border-left: 3px solid var(--guide-blue); background: #edf2fb; }
 
 @media (max-width: 780px) {
   .case-layout { grid-template-columns: minmax(0, 1fr); gap: 32px; }
-  .handover-check { max-width: 66ch; }
+  .reception-note { max-width: 66ch; }
   .intro-copy { padding-right: 24px; }
   .reception-photo { max-height: none; }
 }
@@ -106,13 +108,13 @@ a.orientation-link { justify-content: center; padding: 10px 17px; border-radius:
   .learning-page { --guide-gutter: 0px; background: white; }
   .learning-header, .guide-nav, .reception-photo { display: none; }
   .guide-width { width: 100%; }
-  .guide-intro, .task-band, .handover-check { color: #111; background: white; }
+  .guide-intro, .task-band, .reception-note { color: #111; background: white; }
   .intro-layout, .case-layout, .task-columns, .debrief-prompts { display: block; }
   .intro-copy, .case-section, .debrief, .task-band { padding: 12pt 0; }
   .intro-copy p { color: #222; }
-  .handover-check { margin: 16pt 0; border: 1pt solid #687594; padding: 12pt; }
+  .reception-note { margin: 16pt 0; border: 1pt solid #687594; padding: 12pt; }
   .task-columns section + section, .debrief-prompts > div + div { margin-top: 16pt; }
-  .case-steps li, .task-links li, .handover-check { break-inside: avoid; }
+  .case-steps li, .task-links li, .reception-note { break-inside: avoid; }
   .orientation-link { border: 1pt solid #526383; }
   a.orientation-link { background: white; color: #111; }
 }

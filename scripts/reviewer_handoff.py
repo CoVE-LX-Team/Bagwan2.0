@@ -61,9 +61,9 @@ def register_body(drafts, current, outcomes, editions):
         '<div class="register" id="team-review"><header class="register-intro"><h1>Review Bagwan 3.0</h1>'
         '<p>Andrew reviews the learning task and the evidence it gives him. Subject-matter reviewers can open their area below.</p></header>'
         + disclosure('learning-review', 'Andrew · Reception handover',
-                     '<p>Try the reception role. Can a learner use Alex’s record to write two sentences and one clarifying question?</p>'
+                     '<p>Alex is waiting for an answer about an interpreter. The learner’s handover should give the next receptionist enough information to follow up.</p>'
                      '<p><a class="handoff-action" href="learning-guide.html#visit">Try the handover <span aria-hidden="true">→</span></a></p>'
-                     '<p><strong>Your decision</strong> · Do the task, success criteria and debrief suit your cohort and unit?</p>',
+                     '<p><strong>Your decision</strong> · Would this handover show the communication skills your unit expects? There’s a sample note in the facilitator debrief.</p>',
                      open_by_default=True)
         + '<section id="register-index" class="review-roles"><h2>Subject-matter review</h2>'
     )
@@ -74,8 +74,8 @@ def register_body(drafts, current, outcomes, editions):
         + '<details class="supporting"><summary>Patient records and tour</summary><p>Check Alex’s message and the missing-belongings correspondence.</p><p>Do the nursing and laboratory hotspot labels fit local practice? Should Main reception’s emergency information link to the defibrillator guidance?</p>'
         + actions(('./#patient-case','Alex’s record'),('./#page/patient-management-system%2Fmessageboard%2Findex.html','Staff messages'),('./#tour?stop=NurseStation','Nurses’ station')) + '</details>')
     register += disclosure('cultural-review', 'Liaison and interpreting',
-        '<p>Does the wording respect the person’s choice of support? Check the liaison conversation starter and how the interpreter responds when a family member asks them to soften a message.</p>'
-        + actions(('./#documents?category=Aboriginal+and+Torres+Strait+Islander+liaison','Read the liaison guide'),(interpreter_scenario,'Try the interpreter scenario'))
+        '<p>Does the wording respect the person’s choice of support? Check the liaison conversation starter, the reception handover example and how the interpreter responds to a family member.</p>'
+        + actions(('./#documents?category=Aboriginal+and+Torres+Strait+Islander+liaison','Read the liaison guide'),('learning-guide.html#debrief','Reception handover example'),(interpreter_scenario,'Try the interpreter scenario'))
         + related(['D03','D05','D10'])
         + '<details class="supporting"><summary>Training and references</summary><p>Does the reference library describe the role of family interpreters accurately? The cultural reviewer checks how the RMIT modules are introduced.</p>'
         + actions(('./#page/resources-and-tools%2Finterpreting-services%2Findex.html','Interpreting reference library'),(orientation, 'Womin Djeka orientation'),('https://www.vic.gov.au/guidelines-using-interpreting-services/working-interpreters','Victorian interpreting guidance'),('https://ausit.org/wp-content/uploads/2024/09/AUSIT-Code-of-Ethics-and-Code-of-Conduct.pdf','AUSIT Code of Ethics')) + '</details>')
