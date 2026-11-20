@@ -1,71 +1,37 @@
-.report-page:has(.register) { max-width: 1050px; }
-.register { color: #191c39; }
-.outcome-group ol { list-style: none; margin: 0; padding: 0; }
-.outcome-group li { max-width: 76ch; margin: .8rem 0; padding: 1rem 1.25rem; background: #fff; border: 1px solid #ccd1e2; border-radius: 8px; scroll-margin-top: 1rem; }
-.outcome-group li:target { border-color: #172965; }
-.outcome-group h3 { margin: 0; font-size: 1rem; }
-.outcome-group li p { margin: .4rem 0 0; }
-.register-intro { max-width: 72ch; }
-.register-intro h1 { margin-bottom: .35em; }
-.register-intro .lead { line-height: 1.5; margin-bottom: .7em; }
-.register-intro p:last-child { color: #444a61; }
-.register-jump { margin: 22px 0 32px; }
-.register-jump details { border-block: 1px solid #c9cee2; }
-.register-jump summary { display: flex; justify-content: space-between; align-items: center; padding: 12px 2px; color: #22246f; font-weight: 600; }
-.register summary { cursor: pointer; list-style: none; }
-.register summary::-webkit-details-marker { display: none; }
-.register summary::after { content: ''; display: block; height: 8px; width: 8px; flex: none; border: solid currentColor; border-width: 0 2px 2px 0; margin: 0 7px 4px 0; transform: rotate(45deg); }
-.register details[open] > summary::after { transform: rotate(225deg); margin-block: 5px 0; }
-.register-jump ul { margin: 0; padding: 0 0 16px; list-style: none; columns: 2; column-gap: 36px; }
-.register-jump li { break-inside: avoid; }
-.register-jump a { display: inline-block; padding-block: 6px; }
-.register-group { margin: 32px 0; }
-.report-page .register-group h2, .report-page .register-release h2 { margin: 0 0 14px; font-size: 1.5rem; }
-.review-items { display: grid; gap: 12px; }
-.review-entry { background: white; border: 1px solid #ccd1e2; border-radius: 9px; overflow-wrap: anywhere; scroll-margin-top: 16px; }
-.review-entry[open] { border-color: #8d98cb; }
-.review-entry > summary { display: flex; align-items: center; gap: 16px; min-height: 70px; padding: 13px 20px; color: #15164c; border-radius: 8px; }
-.review-entry > summary:hover { background: #f1f3fc; }
-.review-entry[open] > summary { border-bottom: 1px solid #cbd2ec; border-radius: 8px 8px 0 0; background: #e9ecfa; }
-.review-entry > summary h3 { display: flex; flex: 1; align-items: center; gap: 14px; margin: 0; font-size: 1.08rem; font-weight: 580; line-height: 1.4; }
-.entry-id { flex: none; display: grid; place-items: center; background: #eeeffa; border: 1px solid #d1d7ef; color: #252970; border-radius: 4px; width: 46px; min-height: 34px; font-size: .82rem; letter-spacing: .035em; font-weight: 650; font-variant-numeric: tabular-nums; }
-.review-entry[open] .entry-id { background: #fff; }
-.entry-status { flex: none; margin-inline-start: auto; color: #624518; background: #fff3d9; border: 1px solid #e6d4af; border-radius: 20px; padding: 3px 11px; font-size: .76rem; font-weight: 580; }
-.entry-body { padding: 20px clamp(16px, 3vw, 32px) 25px; }
-.entry-body p, .entry-body ul { max-width: 78ch; }
-.entry-body h4 { margin: 20px 0 5px; font-size: 1.03rem; font-weight: 620; color: #171948; }
-.entry-body h4 + p, .entry-body h4 + ul { margin-top: 0; }
-.review-context { display: grid; grid-template-columns: 1.2fr 1fr; gap: 12px 24px; margin: 0 0 22px; padding-bottom: 18px; border-bottom: 1px solid #d9dded; }
-.review-context dt { color: #404660; font-size: .82rem; font-weight: 650; }
-.review-context dd { margin: 3px 0 0; }
-.review-context ul { list-style: none; margin: 0; padding: 0; }
-.review-decision { border-left: 3px solid #5466a8; background: #f3f5fc; margin-top: 22px; padding: 14px 18px; }
-.review-decision h4, .review-decision p:last-child, .entry-body > p:last-child { margin: 0; }
-.review-decision h4 + p { margin: 4px 0 7px; }
-.entry-body > .register-return { margin: 18px 0 0; font-size: .89rem; }
-.register-release { padding-top: 22px; border-top: 1px solid #c9cee2; max-width: 78ch; }
-@media (max-width: 650px) {
-  .report-page:has(.register) { padding: 26px 16px 44px; }
-  .report-page:has(.register) h1 { font-size: 2.15rem; }
-  .register-jump ul { columns: 1; }
-  .register-jump a { padding-block: 9px; }
-  .review-entry > summary { padding: 13px 12px; gap: 8px; }
-  .review-entry > summary h3 { display: grid; grid-template-columns: auto 1fr; gap: 6px 10px; }
-  .entry-id { grid-row: span 2; width: 38px; font-size: .72rem; }
-  .entry-status { grid-column: 2; margin-inline-start: 0; justify-self: start; padding: 1px 8px; }
-  .entry-title:first-child { grid-column: 1/-1; }
-  .entry-title:first-child + .entry-status { grid-column: 1/-1; }
-  .review-context { grid-template-columns: 1fr; }
-}
+.register { max-width: 840px; }
+.register [id] { scroll-margin-top: 16px; }
+.register .review-entry { background: #fff; border: 1px solid var(--handoff-rule); border-radius: 7px; overflow-wrap: anywhere; }
+.register .review-entry > summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 55px; padding: 12px clamp(14px,2.2vw,24px); font-weight: 615; font-size: 1.04rem; color: #172557; }
+.register summary { cursor: pointer; }
+.register .review-entry > summary { list-style: none; }
+.register .review-entry > summary::-webkit-details-marker { display: none; }
+.register .review-entry > summary::after { content: ''; flex: none; width: 8px; height: 8px; margin-right: 4px; border: solid currentColor; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.register .review-entry[open] > summary::after { transform: rotate(225deg); }
+.register .review-entry > summary:hover { background: #edf2fc; }
+.register .review-entry[open] > summary { border-bottom: 1px solid var(--handoff-rule); background: #f5f7fc; }
+.register > #learning-review { margin-top: 28px; border-top: 3px solid var(--handoff-blue); }
+.register > #learning-review > summary { font-size: 1.2rem; }
+.decision-body { padding: 16px clamp(14px,2.2vw,24px) 20px; }
+.decision-body p, .review-reply p { max-width: 66ch; margin: 0 0 12px; }
+.decision-body > :last-child, .review-reply > :last-child { margin-bottom: 0; }
+.register .supporting { margin-top: 14px; border-top: 1px solid var(--handoff-rule); }
+.supporting summary { min-height: 44px; padding: 10px 0; font-size: .96rem; font-weight: 580; color: var(--handoff-blue); }
+.supporting > details { margin: 6px 0; }
+.supporting .review-entry > summary { min-height: 46px; font-size: .98rem; }
+.supporting ul { margin: 0 0 16px; padding-left: 22px; }
+.supporting li { margin: 8px 0; }
+.decision-body > .review-entry { margin-top: 12px; }
+.review-links { display: flex; flex-wrap: wrap; align-items: center; gap: 3px 24px; }
+.review-links a, .decision-body > a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 580; }
+a.handoff-action { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; padding: 9px 16px; border-radius: 5px; color: #fff; background: var(--handoff-blue); text-decoration: none; font-weight: 600; }
+a.handoff-action:hover { background: #151f55; }
+.review-roles, .review-reply { margin-top: clamp(30px,4vw,46px); }
+.review-roles h2, .review-reply h2 { margin: 0 0 16px; }
+.review-roles > .review-entry + .review-entry { margin-top: 10px; }
+.register > #release-checks { margin-top: 24px; }
 @media print {
-  .register-jump, .register-return, .review-entry > summary::after { display: none; }
-  .report-page:has(.register) { max-width: none; padding: 0; }
-  .review-items { display: block; }
-  .review-entry { margin: 12pt 0; border: 0; }
-  .review-entry::details-content { display: contents; content-visibility: visible; }
-  .review-entry > summary, .review-entry[open] > summary { min-height: 0; border: 0; border-top: 1.5pt solid #30304d; padding: 8pt 0; background: white; break-after: avoid; }
-  .entry-body { padding: 0; }
-  .review-context, .review-decision { break-inside: avoid; }
-  .entry-body h4 { break-after: avoid; }
-  .review-entry .entry-status, .review-entry .entry-id { color: black; background: white; }
+  .register > #learning-review, .review-reply, .review-roles { margin-top: 14pt; }
+  .register summary { break-after: avoid; }
+  .register details::details-content { content-visibility: visible; }
+  .register details:not([open])::details-content { display: none; }
 }
