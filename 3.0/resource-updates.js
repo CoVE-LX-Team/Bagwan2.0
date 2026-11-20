@@ -7,6 +7,7 @@ const staffResources = (() => {
   const nursingPath = 'scorm/department-pages/nursing/index.html';
   const liaisonPath = 'aboriginal-and-torres-strait-islander-liaison-office/index.html';
   const laboratoryTools = 'resources-and-tools/lab-technologies/index.html';
+  const interpretingScenario = 'scorm/department-pages/interpreting-office/new-interpreting-pd/index.html';
   const liaisonCategory = 'Aboriginal and Torres Strait Islander liaison';
   const documentCategoryLink = label => '#documents?' + new URLSearchParams({category:label});
   const practiceLink = kind => absolute('3.0/practice.html?activity=' + kind);
@@ -112,6 +113,7 @@ const staffResources = (() => {
         }
       });
     }
+    updateContent(pages,interpretingScenario,body=>rewriteInterpretingScenario(body.ownerDocument));
     updateContent(pages,news('influenza-outbreak'),body=>{
       for(const anchor of body.querySelectorAll('a')){
         if(anchor.textContent.includes('Infection Control Policy'))anchor.setAttribute('href',pageLinkFor('infection-control'));
@@ -198,66 +200,66 @@ const staffResources = (() => {
     }
   }
 
-  function updateInterpretingScenario(frame) {
-    function update() {
-      const doc=frame.contentDocument;
-      const scenario=doc?.getElementById('BranchingScenario');
-      if(!scenario)return;
-      const panel=id=>scenario.querySelector('#collapse'+id+' .card-body');
-      const label=(id,destination,title)=>{
-        const choice=panel(id)?.querySelector('[data-target="#collapse'+destination+'"]');
-        if(choice)choice.textContent=title;
-      };
-      // Keep the original video players, character table, branch controls and progress indicators.
-      function narrative(id,title,paragraphs) {
-        const card=panel(id);
-        if(!card)return;
-        for(const old of card.querySelectorAll(':scope > h2,:scope > h3,:scope > p:not(.video-fallback),:scope > ul:not(.button-list)'))old.remove();
-        if(title){
-          const heading=doc.createElement('h3');
-          heading.textContent=title;
-          card.prepend(heading);
-        }
-        const reference=card.querySelector('.table-responsive,.button-list');
-        for(const line of paragraphs){
-          const p=doc.createElement('p');
-          p.textContent=line;
-          card.insertBefore(p,reference);
-        }
+  function rewriteInterpretingScenario(doc) {
+    const scenario=doc?.getElementById('BranchingScenario');
+    if(!scenario)return;
+    const panel=id=>scenario.querySelector('#collapse'+id+' .card-body');
+    const label=(id,destination,title)=>{
+      const choice=panel(id)?.querySelector('[data-target="#collapse'+destination+'"]');
+      if(choice)choice.textContent=title;
+    };
+    // Keep the original video players, character table, branch controls and progress indicators.
+    function narrative(id,title,paragraphs) {
+      const card=panel(id);
+      if(!card)return;
+      for(const old of card.querySelectorAll(':scope > h2,:scope > h3,:scope > p:not(.video-fallback),:scope > ul:not(.button-list)'))old.remove();
+      if(title){
+        const heading=doc.createElement('h3');
+        heading.textContent=title;
+        card.prepend(heading);
       }
-      const introduction=doc.querySelector('main article .MsoNormal')?.parentElement;
-      if(introduction){
-        const paragraph=doc.createElement('p');
-        paragraph.textContent='Follow an interpreter through a cardiology appointment. Choose how to respond at three points in the consultation.';
-        introduction.replaceChildren(paragraph);
+      const reference=card.querySelector('.table-responsive,.button-list');
+      for(const line of paragraphs){
+        const p=doc.createElement('p');
+        p.textContent=line;
+        card.insertBefore(p,reference);
       }
-      narrative(1,'The appointment',['Mrs Trang is seeing a cardiologist to discuss her results. Her grandson, Parker, is with her. An interpreter has been booked.']);
-      narrative(2,'Your role',['You are the interpreter. Consider how to prepare for the appointment and how Mrs Trang and the cardiologist can each be heard accurately.']);
-      narrative(3,'How it works',['Watch each scene, then choose how you would respond. Explore another response by replaying the scene.']);
-      narrative(4,'At the consultation room',['Parker tells the cardiologist he can interpret for his grandmother. The interpreter who was booked has not yet arrived.']);
-      label(5,6,'A. Wait for the booked interpreter to arrive.');
-      label(5,7,'B. Continue with Parker interpreting for his grandmother.');
-      narrative(6,'Working with the booked interpreter',['The interpreter can convey the discussion between Mrs Trang and the cardiologist. Parker can take part as a family member in the way Mrs Trang chooses.']);
-      narrative(7,'Relying on a family member',['Asking Parker to interpret a discussion of medical results introduces a risk that detail will be lost. Return to the scene and consider the support already arranged for Mrs Trang.']);
-      narrative(8,'Before entering the room',['The interpreter meets the cardiologist outside the consultation room. The cardiologist wants to begin straight away.']);
-      label(9,10,'A. Ask the cardiologist for a short briefing on the purpose of the consultation and any specialist terms before entering.');
-      label(9,11,'B. Go straight into the consultation using the details on the booking form.');
-      narrative(10,'Pre-consultation briefing',['A briefing lets you clarify the purpose of the consultation and any unfamiliar terms before you interpret for the patient.']);
-      narrative(11,'Starting with the booking form alone',['The booking form gives you some background. Going straight in leaves no opportunity to clarify terms with the cardiologist beforehand. Replay the arrival, then choose again.']);
-      narrative(13,'A request from the family',['The cardiologist discusses Mrs Trang’s blood pressure and a follow-up appointment. Parker asks you to make the information sound less serious because he is worried his grandmother will be upset.']);
-      label(14,15,'A. Explain your role and interpret what the cardiologist says, preserving the meaning.');
-      label(14,16,'B. Use softer wording that makes the cardiologist’s concern sound less serious.');
-      narrative(15,'Preserving the speaker’s meaning',['Conveying the cardiologist’s concern accurately allows Mrs Trang to hear the same information and ask her own questions.']);
-      narrative(16,'Changing the message',['Softening the concern changes what Mrs Trang hears. Revisit the scene and choose how to respond to Parker while preserving the meaning of the cardiologist’s message.']);
     }
-    frame.addEventListener('load',update);
-    update();
+    doc.querySelector('.instruction')?.remove();
+    const introduction=doc.querySelector('article .MsoNormal')?.parentElement;
+    if(introduction){
+      const paragraph=doc.createElement('p');
+      paragraph.textContent='Follow an interpreter through a cardiology appointment. Choose how to respond at three points in the consultation.';
+      introduction.replaceChildren(paragraph);
+    }
+    narrative(1,'The appointment',['Mrs Trang is seeing a cardiologist to discuss her results. Her grandson, Parker, is with her. An interpreter has been booked.']);
+    narrative(2,'Your role',['You are the interpreter. Consider how to prepare for the appointment and how Mrs Trang and the cardiologist can each be heard accurately.']);
+    narrative(3,'How it works',['Watch each scene, then choose how you would respond. Explore another response by replaying the scene.']);
+    narrative(4,'At the consultation room',['Parker tells the cardiologist he can interpret for his grandmother. The interpreter who was booked has not yet arrived.']);
+    label(5,6,'A. Wait for the booked interpreter to arrive.');
+    label(5,7,'B. Continue with Parker interpreting for his grandmother.');
+    narrative(6,'Working with the booked interpreter',['The interpreter can convey the discussion between Mrs Trang and the cardiologist. Parker can take part as a family member in the way Mrs Trang chooses.']);
+    narrative(7,'Relying on a family member',['Asking Parker to interpret a discussion of medical results introduces a risk that detail will be lost. Return to the scene and consider the support already arranged for Mrs Trang.']);
+    narrative(8,'Before entering the room',['The interpreter meets the cardiologist outside the consultation room. The cardiologist wants to begin straight away.']);
+    label(9,10,'A. Ask the cardiologist for a short briefing on the purpose of the consultation and any specialist terms before entering.');
+    label(9,11,'B. Go straight into the consultation using the details on the booking form.');
+    narrative(10,'Pre-consultation briefing',['A briefing lets you clarify the purpose of the consultation and any unfamiliar terms before you interpret for the patient.']);
+    narrative(11,'Starting with the booking form alone',['The booking form gives you some background. Going straight in leaves no opportunity to clarify terms with the cardiologist beforehand. Replay the arrival, then choose again.']);
+    narrative(13,'A request from the family',['The cardiologist discusses Mrs Trang’s blood pressure and a follow-up appointment. Parker asks you to make the information sound less serious because he is worried his grandmother will be upset.']);
+    label(14,15,'A. Explain your role and interpret what the cardiologist says, preserving the meaning.');
+    label(14,16,'B. Use softer wording that makes the cardiologist’s concern sound less serious.');
+    narrative(15,'Preserving the speaker’s meaning',['Conveying the cardiologist’s concern accurately allows Mrs Trang to hear the same information and ask her own questions.']);
+    narrative(16,'Changing the message',['Softening the concern changes what Mrs Trang hears. Revisit the scene and choose how to respond to Parker while preserving the meaning of the cardiologist’s message.']);
   }
 
   function enhance(path,identifier) {
-    if(identifier==='scorm/department-pages/interpreting-office/new-interpreting-pd/index.html'){
+    if(identifier===interpretingScenario){
       const frame=main.querySelector('.embedded-page');
-      if(frame)updateInterpretingScenario(frame);
+      if(frame){
+        const refresh=()=>rewriteInterpretingScenario(frame.contentDocument);
+        frame.addEventListener('load',refresh);
+        refresh();
+      }
     }
     const index=stories.indexOf(identifier);
     if(index!==-1){
