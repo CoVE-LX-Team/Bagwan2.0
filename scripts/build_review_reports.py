@@ -11,8 +11,86 @@ EVIDENCE = ROOT.parent / 'deliverables'
 esc = html.escape
 
 
-def document(title, body):
-    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + esc(title) + ' · Bagwan 3.0</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="material.css"><style>.report-page{max-width:1120px}.report-page h1{font-size:42px}.report-page h2{margin-top:34px}.report-page .lead{font-size:19px}.report-page .review-table td{font-size:13px}.report-page code{font-size:12px;overflow-wrap:anywhere}.report-page figure{margin:24px 0}.report-page figcaption{font-size:13px;margin-top:8px;color:#50536d}.report-nav{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:32px;font-size:14px}.report-page .table-responsive{margin-block:24px}.report-page table{min-width:640px}@media print{.report-nav,.no-print{display:none}.report-page{max-width:none;padding:0}.report-page h1{font-size:28px;color:black}.report-page h2{font-size:19px;color:black}.report-page .table-responsive{overflow:visible}.report-page table{min-width:0}body{font-size:11px}.report-page section{break-inside:auto}}</style><script src="review.js" defer></script></head><body><a class="skip-link" href="#report">Skip to content</a><main class="report-page" id="report"><nav class="report-nav" aria-label="Review documents"><a href="./">Staff intranet 3.0</a><a href="../index.html">Compare 2.0</a><a href="what-changed.html">What we changed</a><a href="critical-review.html">Critical review</a><a href="review-register.html">Content review register</a></nav>' + body + '</main></body></html>\n'
+def document(title, body, stylesheet=None, script='review.js'):
+    extra_styles = f'<link rel="stylesheet" href="{esc(stylesheet)}">' if stylesheet else ''
+    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + esc(title) + ' · Bagwan 3.0</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="material.css"><style>.report-page{max-width:1120px}.report-page h1{font-size:42px}.report-page h2{margin-top:34px}.report-page .lead{font-size:19px}.report-page .review-table td{font-size:13px}.report-page code{font-size:12px;overflow-wrap:anywhere}.report-page figure{margin:24px 0}.report-page figcaption{font-size:13px;margin-top:8px;color:#50536d}.report-nav{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:32px;font-size:14px}.report-page .table-responsive{margin-block:24px}.report-page table{min-width:640px}@media print{.report-nav,.no-print{display:none}.report-page{max-width:none;padding:0}.report-page h1{font-size:28px;color:black}.report-page h2{font-size:19px;color:black}.report-page .table-responsive{overflow:visible}.report-page table{min-width:0}body{font-size:11px}.report-page section{break-inside:auto}}</style>' + extra_styles + '<script src="' + esc(script) + '" defer></script></head><body><a class="skip-link" href="#report">Skip to content</a><main class="report-page" id="report"><nav class="report-nav" aria-label="Review documents"><a href="./">Staff intranet 3.0</a><a href="../index.html">Compare 2.0</a><a href="what-changed.html">What we changed</a><a href="critical-review.html">Critical review</a><a href="review-register.html">Content review register</a></nav>' + body + '</main></body></html>\n'
+
+
+def review_entry(item_id, title, status, body, code=''):
+    identifier = f'<span class="entry-id">{esc(code)}</span>' if code else ''
+    return (
+        f'<details class="review-entry" id="{esc(item_id)}">'
+        f'<summary><h3>{identifier}<span class="entry-title">{esc(title)}</span>'
+        f'<span class="entry-status"><span class="sr-only">Review status: </span>{esc(status)}</span></h3></summary>'
+        f'<div class="entry-body">{body}<p class="register-return"><a href="#register-index">Return to item index</a></p></div></details>'
+    )
+
+
+def build_register(drafts, current):
+    sections = [('reporting-lines', 'Staff records and reporting lines'),
+                ('document-identity', 'Which organisation owns the incident response policy?'),
+                ('release-checks', 'Additional release checks')]
+    jump_links = [(d['id'], f"{d['id']} · {d['title']}") for d in drafts] + sections
+    register = (
+        '<div class="register"><header class="register-intro">'
+        '<p class="eyebrow">Content governance · 20 November 2026</p><h1>Content review register</h1>'
+        '<p class="lead">Ten new or adapted items need SME and Senior Learning Designer review before teaching use.</p>'
+        '<p>All statuses are <strong>Pending</strong>. Andrew is the Senior Learning Designer for this review. '
+        'Subject-matter reviewers still need to be nominated. Approval requires a recorded decision from the reviewers.</p></header>'
+        '<nav class="register-jump" aria-label="Review item index"><details id="register-index"><summary>Jump to an item</summary><ul>'
+        + ''.join(f'<li><a href="#{esc(key)}">{esc(label)}</a></li>' for key, label in jump_links)
+        + '</ul></details></nav><section class="register-group" aria-labelledby="drafts-title">'
+        '<h2 id="drafts-title">Draft items</h2><div class="review-items">'
+    )
+    for draft in drafts:
+        href = 'index.html#page/' + quote(draft['path'], safe='') if draft['path'] in current else draft['path']
+        reviewers = ''.join(f'<li>{esc(reviewer)}</li>' for reviewer in draft['reviewers'])
+        # Drafts use h2s on their own pages. Their sections sit below the item heading here.
+        draft_text = draft['html'].replace('<h2>', '<h4>').replace('</h2>', '</h4>')
+        body = (
+            f'<dl class="review-context"><div><dt>Why this was created</dt><dd>{esc(draft["reason"])}</dd></div>'
+            f'<div><dt>Reviewers</dt><dd><ul>{reviewers}</ul></dd></div></dl>'
+            f'<div class="draft-text">{draft_text}</div><p><a class="draft-link" href="{esc(href)}">Open the draft</a></p>'
+        )
+        if draft['sources']:
+            body += '<h4>Reference sources</h4><ul>' + ''.join(
+                f'<li><a href="{esc(source)}">{esc("Recovered staff positions and source references (JSON)" if source == "../data/staff-hierarchy.json" else source)}</a></li>'
+                for source in draft['sources']) + '</ul>'
+        body += (
+            '<div class="review-decision"><h4>Decision to record</h4>'
+            '<p>Record the reviewer’s name and role, decision (approve, revise or reject), date, required corrections, '
+            'approved scenario or scope, and next review trigger.</p>'
+            f'<p>The current recorded decision is <strong>{esc(draft["review_status"])}</strong>.</p></div>'
+        )
+        register += review_entry(draft['id'], draft['title'], draft['review_status'], body, draft['id'])
+    register += '</div></section><section class="register-group" aria-labelledby="questions-title"><h2 id="questions-title">Source questions</h2><div class="review-items">'
+    questions = (
+        '<p>The April 2025 backup contains the original hospital charts and staff directory. The reconstructed directory '
+        'has 126 distinct names, ten roles whose holder is unknown and 110 documented reporting lines. Some people appear '
+        'in more than one role. A missing manager or contact needs confirmation from the relevant SME.</p>'
+    )
+    notes = (ROOT / 'data/staff-hierarchy-review.md').read_text().split('## Questions for the SME and Andrew', 1)[1]
+    for line in notes.splitlines():
+        if line.startswith('| ') and not line.startswith(('| Area |', '| ---')):
+            area, question = [part.strip() for part in line.strip('|').split('|')]
+            questions += f'<h4>{esc(area)}</h4><p>{esc(question)}</p>'
+    questions += '<p><a href="./#people">Open the People directory</a> · <a href="../data/staff-hierarchy-review.md" download>Download the source and review notes (Markdown)</a></p>'
+    register += review_entry(*sections[0], 'Pending', questions)
+    identity = (
+        '<p>The original Word file for <a href="./#documents?query=Emergency%20Incident%20Response">Emergency Incident '
+        'Response, Management &amp; Reporting</a> names Greendale Community in its first-page header and body. The Bagwan '
+        'filename gives a different identity. Andrew and the SME should confirm ownership and suitability before using '
+        'this policy in a Bagwan scenario.</p>'
+    )
+    register += review_entry(*sections[1], 'Pending', identity)
+    register += (
+        '</div></section><section class="register-release" id="release-checks"><h2>Additional release checks</h2>'
+        '<p>Review the original source policies for clinical and legal currency, document ownership, versioning and approval. '
+        'Confirm missing contact details and source media. Review the learning guide, unit mapping, evidence expectations '
+        'and learner testing. Record the release decisions separately.</p>'
+        '<p><a href="content-drafts.json" download>Download the structured draft register (JSON)</a></p></section></div>'
+    )
+    return document('Content review register', register, stylesheet='review-register.css', script='review-register.js')
 
 
 def build():
@@ -95,24 +173,7 @@ def build():
     review += '</tbody></table></div><h2>Verification and limits</h2><p id="verification-summary">The original 103 pages were reviewed. Ten chart repairs were rechecked with no remaining page overflow. The 103 blue 3.0 content views were scanned with no automated WCAG violations; two nested resource-frame width issues identified in that pass were subsequently repaired. Final verification details are included in the downloadable evidence and the final handover.</p><p>The current 2.0 URL remains the comparison baseline. The wider link and chart repairs also exist locally. The 3.0 content snapshot includes the corrections without requiring the comparison site to be replaced.</p><p>Evidence: source route manifest, live HTTP results, page inventories, screenshots, keyboard and clinical journey logs, the 3.0 browser results, the archived plugin settings and the supplied policy files. Raw backup files and database contents are not published.</p>'
     (OUT / 'critical-review.html').write_text(document('Critical review of Bagwan', review))
 
-    register = '<p class="eyebrow">CONTENT GOVERNANCE · 20 NOVEMBER 2026</p><h1>Content review register</h1><p class="lead">Ten new or adapted items need SME and Senior Learning Designer review before teaching use.</p><p>All statuses are <strong>Pending</strong>. The preview has not recorded or implied anyone’s approval. Andrew is the requested SLD reviewer; subject-matter reviewers must be nominated. A changed review date alone is not approval.</p>'
-    register += '<p><a href="#reporting-lines">Review the recovered staff records and reporting lines</a></p>'
-    for draft in drafts:
-        href = 'index.html#page/' + quote(draft['path'], safe='') if draft['path'] in current else draft['path']
-        register += '<section id="' + draft['id'] + '"><p class="eyebrow">' + draft['id'] + ' · PENDING REVIEW</p><h2>' + esc(draft['title']) + '</h2><p><strong>Why this was created</strong><br>' + esc(draft['reason']) + '</p><p><strong>Reviewers</strong><br>' + esc('; '.join(draft['reviewers'])) + '</p>' + draft['html'] + '<p><a class="button secondary" href="' + esc(href) + '">Open the draft</a></p>'
-        if draft['sources']:
-            register += '<p><strong>Reference sources</strong></p><ul>' + ''.join('<li><a href="' + esc(url) + '">' + esc('Recovered staff positions and source references (JSON)' if url == '../data/staff-hierarchy.json' else url) + '</a></li>' for url in draft['sources']) + '</ul>'
-        register += '<p><strong>Decision to record</strong><br>Approve, revise or reject; reviewer name and role; date; corrections required; approved scenario or scope; next review trigger. The current recorded decision is Pending.</p></section>'
-    register += '<section id="reporting-lines"><p class="eyebrow">PEOPLE DIRECTORY · PENDING REVIEW</p><h2>Staff records and reporting lines</h2><p>The April 2025 backup contains the original hospital charts and staff directory. The reconstructed directory has 126 distinct names, ten roles whose holder is unknown and 110 documented reporting lines. Some people appear in more than one role. A missing manager or contact needs confirmation from the relevant SME.</p>'
-    notes = (ROOT / 'data/staff-hierarchy-review.md').read_text().split('## Questions for the SME and Andrew', 1)[1]
-    for line in notes.splitlines():
-        if line.startswith('| ') and not line.startswith(('| Area |', '| ---')):
-            area, question = [part.strip() for part in line.strip('|').split('|')]
-            register += '<h3>' + esc(area) + '</h3><p>' + esc(question) + '</p>'
-    register += '<p><a href="./#people">Open the People directory</a> · <a href="../data/staff-hierarchy-review.md" download>Download the source and review notes (Markdown)</a></p></section>'
-    register += '<section id="document-identity"><p class="eyebrow">DOCUMENT LIBRARY · PENDING REVIEW</p><h2>Which organisation owns the incident response policy?</h2><p>The original Word file for <a href="./#documents?query=Emergency%20Incident%20Response">Emergency Incident Response, Management &amp; Reporting</a> names Greendale Community in its first-page header and body. The Bagwan filename gives a different identity. Andrew and the SME should confirm ownership and suitability before using this policy in a Bagwan scenario.</p></section>'
-    register += '<h2>Additional release checks</h2><p>Review the original source policies for clinical and legal currency, document ownership, versioning and approval. Confirm missing contact details and source media. Review the learning guide, unit mapping, evidence expectations and learner testing. These are release decisions, not assumed approvals.</p><p><a href="content-drafts.json">Download the structured draft register</a></p>'
-    (OUT / 'review-register.html').write_text(document('Content review register', register))
+    (OUT / 'review-register.html').write_text(build_register(drafts, current))
 
     changed = '<p class="eyebrow">FOR ANDREW · SENIOR LEARNING DESIGNER · 20 NOVEMBER 2026</p><h1>Bagwan 3.0 What we changed</h1><p class="lead">A clearer hospital staff intranet, with learning support kept separate and new content made visible for review.</p><p>Bagwan 3.0 is a parallel review version. It brings the existing workplace resources into a more coherent intranet, restores missing material and removes interactions that made reference information harder to use. The original site remains available so you can compare both experiences.</p><div class="button-row"><a class="button" href="./">Review Bagwan 3.0</a><a class="button secondary" href="../index.html">Compare Bagwan 2.0</a></div>'
     changed += '<p><a href="what-changed.pdf">Download the five-page document for Andrew (PDF)</a></p><h2>The main changes</h2><ul><li><strong>Bagwan stays blue.</strong> The redesign retains the hospital identity, using Material-inspired navigation, clear selection states, locally hosted Roboto and deliberate visual hierarchy.</li><li><strong>People can start with the task.</strong> Policies, forms, people, departments, resources and the hospital tour have direct entry points.</li><li><strong>Search covers the intranet.</strong> People can search source pages, names, roles, documents and videos, then filter within a section.</li><li><strong>Open the right document.</strong> Filter by category and file type, sort by title or last update, and preview a document before downloading the original. Dates come from the source files. The <a href="review-register.html#document-identity">incident response policy needs an ownership check</a>. <a href="./#documents">Open Documents &amp; templates</a>.</li><li><strong>Follow a reporting line.</strong> A staff profile shows the recorded manager and direct reports. The archive supplies five nursing unit charts and four liaison staff. <a href="review-register.html#reporting-lines">Review the unresolved reporting lines and appointments</a>.</li><li><strong>The recovered videos are back.</strong> Eleven meeting videos and the Closing the Gap video join the twelve original embeds.</li><li><strong>Reference information is visible.</strong> All five values can be read without flipping cards. PPE and waste references belong in the intranet.</li><li><strong>Learning guidance is separate.</strong> The guide contains suggested workplace tasks, reflection and optional practice, without turning the staff home into a course dashboard.</li></ul>'

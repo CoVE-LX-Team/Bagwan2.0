@@ -64,10 +64,12 @@ function department(id) {
   if(id==='liaison')resources.push(['Closing the Gap','#videos?query=Closing%20the%20Gap','Recovered Melbourne Health video resource.']);
   main.innerHTML+='<div class="two-columns"><section><h2>Services and resources</h2><ul class="resource-list">'+resources.map(([title,href,description])=>row(title,href,description,'Resource')).join('')+'</ul></section><aside class="context-panel"><h2>Our people</h2>'+(relevant.length?'<ul>'+relevant.map(p=>'<li><strong><a href="'+esc(personLink(p))+'">'+esc(p.name)+'</a></strong><br>'+esc(p.role)+'</li>').join('')+'</ul><a class="small-link" href="#people?query='+encodeURIComponent(d.group)+'">View in the people directory</a>':'<p>Names, reporting lines and contact details are awaiting SME confirmation. The draft service overview records what still needs review.</p>')+'</aside></div>';
 }
+const policyIndexPath='scorm/quick-link-pages/policy-and-procedures/index.html';
 function policies() {
   main.innerHTML=intro('Policies & procedures','Browse hospital policies and departmental procedures.');
   const items=data.pages.filter(p=>p.category==='Policy').map(p=>({...p,search:p.title+' '+p.text,filter:p.draft_id?'Draft for review':'Source policy'}));
-  wireFilter(items,found=>'<ul class="resource-list">'+found.map(p=>row(p.title,pageLink(p.path),p.draft_id?'SME and SLD review pending.':'Migrated source policy. Content currency and approval details require owner review.','Policy','page:'+p.path,!!p.draft_id)).join('')+'</ul>','<label class="sr-only" for="category-filter">Policy status</label><select class="field-search" id="category-filter"><option value="">All policies</option><option>Source policy</option><option>Draft for review</option></select>');
+  wireFilter(items,found=>'<ul class="resource-list">'+found.map(policyResult).join('')+'</ul>','<label class="sr-only" for="category-filter">Policy status</label><select class="field-search" id="category-filter"><option value="">All policies</option><option>Source policy</option><option>Draft for review</option></select>');
+  main.insertAdjacentHTML('beforeend','<p class="policy-index-link"><a href="'+pageLink(policyIndexPath)+'">Policy governance framework</a></p>');
 }
 function forms() {
   main.innerHTML=intro('Forms & records','Access patient records, observation forms and staff templates.');
@@ -84,14 +86,14 @@ function videos() {
 }
 function search() {
   main.innerHTML=intro('Search the intranet','Search people, pages, policies, documents and video.');
-  const items=[...data.pages.map(p=>({title:p.title,href:pageLink(p.path),description:p.category,draft:!!p.draft_id,id:'page:'+p.path,filter:p.category,search:p.title+' '+p.text})),...data.hierarchy.filter(p=>p.name).map(p=>({title:p.name,href:personLink(p),description:p.role+' · '+p.department,id:'person:'+p.id,filter:'Person',search:p.name+' '+p.role+' '+p.department})),...data.documents.map(d=>({title:d.name,document:d,description:d.original_folder_path,id:'doc:'+d.local_path,filter:'Document',search:d.name+' '+d.original_folder_path})),...data.videos.map(v=>({title:v.title,href:'#videos?query='+encodeURIComponent(v.title),description:'YouTube video',id:'video:'+v.youtube_id,filter:'Video',search:v.title}))];
+  const items=[...data.pages.map(p=>({policy:p.category==='Policy'?p:null,title:p.title,href:pageLink(p.path),description:p.category,draft:!!p.draft_id,id:'page:'+p.path,filter:p.category,search:p.title+' '+p.text})),...data.hierarchy.filter(p=>p.name).map(p=>({title:p.name,href:personLink(p),description:p.role+' · '+p.department,id:'person:'+p.id,filter:'Person',search:p.name+' '+p.role+' '+p.department})),...data.documents.map(d=>({title:d.name,document:d,description:d.original_folder_path,id:'doc:'+d.local_path,filter:'Document',search:d.name+' '+d.original_folder_path})),...data.videos.map(v=>({title:v.title,href:'#videos?query='+encodeURIComponent(v.title),description:'YouTube video',id:'video:'+v.youtube_id,filter:'Video',search:v.title}))];
   const kinds=[...new Set(items.map(x=>x.filter))].sort();
-  wireFilter(items,found=>'<ul class="resource-list">'+found.map(p=>p.document?documentResult(p.document):row(p.title,p.href,p.description,p.filter,p.id,p.draft)).join('')+'</ul>','<label class="sr-only" for="category-filter">Result type</label><select class="field-search" id="category-filter"><option value="">All result types</option>'+kinds.map(k=>'<option>'+esc(k)+'</option>').join('')+'</select>');
+  wireFilter(items,found=>'<ul class="resource-list">'+found.map(p=>p.document?documentResult(p.document):p.policy?policyResult(p.policy):row(p.title,p.href,p.description,p.filter,p.id,p.draft)).join('')+'</ul>','<label class="sr-only" for="category-filter">Result type</label><select class="field-search" id="category-filter"><option value="">All result types</option>'+kinds.map(k=>'<option>'+esc(k)+'</option>').join('')+'</select>');
 }
 function savedItems() {
   main.innerHTML=intro('Saved items','Your shortcuts are stored in this browser.');
   const items=[];
-  for(const key of saved){const [type,...parts]=key.split(':');const id=parts.join(':');if(type==='page'){const p=pageMap.get(id);if(p)items.push(row(p.title,pageLink(id),p.category,'Saved page',key,!!p.draft_id));}else if(type==='doc'){const d=documentMap.get(id);if(d)items.push(documentResult(d));}else if(type==='video'){const v=data.videos.find(v=>v.youtube_id===id);if(v)items.push(row(v.title,'#videos?query='+encodeURIComponent(v.title),'Video resource','Saved video',key));}else if(type==='person'){const p=data.hierarchy.find(p=>p.id===id||p.name===id);if(p)items.push(row(p.name||p.role,personLink(p),p.role,'Saved person',key));}}
+  for(const key of saved){const [type,...parts]=key.split(':');const id=parts.join(':');if(type==='page'){const p=pageMap.get(id);if(p)items.push(p.category==='Policy'?policyResult(p):row(p.title,pageLink(id),p.category,'Saved page',key,!!p.draft_id));}else if(type==='doc'){const d=documentMap.get(id);if(d)items.push(documentResult(d));}else if(type==='video'){const v=data.videos.find(v=>v.youtube_id===id);if(v)items.push(row(v.title,'#videos?query='+encodeURIComponent(v.title),'Video resource','Saved video',key));}else if(type==='person'){const p=data.hierarchy.find(p=>p.id===id||p.name===id);if(p)items.push(row(p.name||p.role,personLink(p),p.role,'Saved person',key));}}
   main.innerHTML+=items.length?'<ul class="resource-list">'+items.join('')+'</ul>':empty('No saved items yet.');
 }
 // Update the actual destination so keyboard, context-menu and tour links also open 3.0.
@@ -157,25 +159,33 @@ function article(path) {
   const draft=data.drafts.find(d=>d.id===record.draft_id);
   if(draft)main.innerHTML+='<div class="notice"><strong>Draft for review · '+esc(draft.id)+'</strong><p>Pending review by the SME and Senior Learning Designer.</p><a href="review-register.html#'+esc(draft.id)+'">View the review requirements</a></div>';
   else if(record.category==='Policy')main.innerHTML+='<p class="notice">Migrated source policy. Clinical accuracy, legal references and approval details require content-owner review before teaching use.</p>';
-  main.innerHTML+='<div class="page-tools">'+saveButton('page:'+path,record.title)+'</div>';
+  main.innerHTML+='<div class="page-tools">'+(record.category==='Policy'?policyActions(record):'')+
+    (path===policyIndexPath?'<a class="small-link" href="#policies">Browse all policies</a>':'')+saveButton('page:'+path,record.title)+'</div>';
   if(record.mode==='embed'){
     const frame=document.createElement('iframe');frame.className='embedded-page';frame.title=record.title;frame.allowFullscreen=true;setupEmbeddedFrame(frame,record);frame.src=absolute(path);main.append(frame);
   }else{
-    const article=document.createElement('article');article.className='content-document';article.innerHTML=record.html;main.append(article);adaptContent(article);
+    const article=document.createElement('article');article.className='content-document';article.innerHTML=record.html;main.append(article);adaptContent(article,path);
     if(record.category==='Policy'){
+      const original=documentMap.get(record.policy_document);
+      const sourceLink=article.querySelector(':scope > p:first-child > a[download]');
+      if(original && sourceLink?.href===absolute(original.local_href))sourceLink.parentElement.remove();
       const headings=[...article.querySelectorAll('h2,h3')].filter(h=>h.textContent.trim());
       if(headings.length>=3){const contents=document.createElement('details');contents.className='contents-nav';contents.innerHTML='<summary>On this page</summary><ul>'+headings.map((h,i)=>{h.id=h.id||'policy-section-'+i;return '<li><a href="#'+esc(h.id)+'">'+esc(h.textContent.trim())+'</a></li>';}).join('')+'</ul>';article.prepend(contents);}
     }
   }
   if(draft?.sources.length)main.insertAdjacentHTML('beforeend','<section class="context-panel"><h2>Reference sources for review</h2><ul>'+draft.sources.map(url=>'<li><a href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(new URL(url,document.baseURI).hostname+new URL(url,document.baseURI).pathname.replaceAll('-',' ').replaceAll('/',' / '))+'</a></li>').join('')+'</ul></section>');
 }
-function adaptContent(container) {
+function adaptContent(container,sourcePath) {
   for(const a of container.querySelectorAll('a[href]')){
     const raw=a.getAttribute('href');if(raw.startsWith('#'))continue;
     const url=new URL(raw,ROOT);
     if(url.origin===ROOT.origin&&url.pathname.startsWith(ROOT.pathname)){
       const path=decodeURIComponent(url.pathname.slice(ROOT.pathname.length));const target=path.endsWith('/')?path+'index.html':path;
       a.href=pageMap.has(target)?pageLink(target):url.href;
+      if(sourcePath===policyIndexPath && pageMap.get(target)?.category==='Policy'){
+        a.parentElement.classList.add('policy-index-entry');
+        a.insertAdjacentHTML('afterend',policyActions(pageMap.get(target)));
+      }
       const file=documentMap.get(target);
       if(file){
         a.download='';
@@ -209,6 +219,8 @@ document.addEventListener('pointerdown',event=>{const target=event.target.closes
 document.querySelector('.skip-link').addEventListener('click',event=>{event.preventDefault();main.dataset.skipFocus='';main.focus();main.scrollIntoView({block:'start'});});
 document.querySelector('#global-search').addEventListener('submit',event=>{event.preventDefault();location.hash='search?query='+encodeURIComponent(document.querySelector('#search').value.trim());});
 main.addEventListener('click',event=>{
+  const policyPreview=event.target.closest('[data-policy-preview]');
+  if(policyPreview){openPolicyPreview(pageMap.get(policyPreview.dataset.policyPreview));return;}
   const preview=event.target.closest('[data-preview]');
   if(preview){openDocumentPreview(documentMap.get(preview.dataset.preview));return;}
   const button=event.target.closest('[data-save]');

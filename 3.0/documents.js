@@ -105,27 +105,77 @@ function documents() {
   update(false);
 }
 
-function openDocumentPreview(doc) {
-  if(!doc)return;
+function showFilePreview(title, metadata, content, actions) {
   const dialog=document.querySelector('#document-preview');
-  const body=dialog.querySelector('#preview-body'), footer=dialog.querySelector('.preview-footer');
+  const body=dialog.querySelector('#preview-body');
   const close=dialog.querySelector('[aria-label="Close preview"]');
-  dialog.querySelector('#preview-title').textContent=doc.name;
-  dialog.querySelector('#preview-meta').textContent=[documentCategory(doc),doc.file_type+' · '+documentSize(doc),'Last updated '+documentDate(doc)].join('  ·  ');
+  dialog.querySelector('#preview-title').textContent=title;
+  dialog.querySelector('#preview-meta').textContent=metadata;
+  body.innerHTML=content;
+  dialog.querySelector('.preview-footer').innerHTML=actions;
   close.innerHTML=icon('close');
-  const pdf=doc.preview_href?.toLowerCase().endsWith('.pdf');
-  const showImage=doc.preview_image_href && (!pdf || matchMedia('(max-width:700px)').matches || navigator.pdfViewerEnabled===false);
-  if(showImage){
-    body.innerHTML='<figure><img src="'+esc(absolute(doc.preview_image_href))+'" alt="'+esc(doc.name+(pdf?', first page':''))+'">'+(pdf?'<figcaption>Page 1 of '+doc.preview_pages+'</figcaption>':'')+'</figure>';
-  }else if(pdf){
-    body.innerHTML='<iframe title="'+esc('Preview of '+doc.name)+'" src="'+esc(absolute(doc.preview_href))+'#view=FitH"></iframe>';
-  }else{
-    body.innerHTML='<p>This file is available to download.</p>';
-  }
-  footer.innerHTML=(pdf?'<a href="'+esc(absolute(doc.preview_href))+'" target="_blank" rel="noopener">Open full PDF '+icon('external')+'</a>':'')+
-    '<a class="button" download href="'+esc(absolute(doc.local_href))+'">'+icon('download')+' Download original</a>';
   close.onclick=()=>dialog.close();
   dialog.onclose=()=>{body.replaceChildren();};
-  dialog.onclick=event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}};
+  dialog.onclick=event=>{
+    if(event.target!==dialog)return;
+    const bounds=dialog.getBoundingClientRect();
+    if(event.clientX<bounds.left||event.clientX>bounds.right||event.clientY<bounds.top||event.clientY>bounds.bottom)dialog.close();
+  };
   dialog.showModal();
+}
+
+function openDocumentPreview(doc, policy) {
+  if(!doc)return;
+  const title=policy?.title||doc.name;
+  const context=policy?'Original policy document':documentCategory(doc);
+  const metadata=[context,doc.file_type,documentSize(doc),'File updated '+documentDate(doc)].join(' · ');
+  const pdf=doc.preview_href?.toLowerCase().endsWith('.pdf');
+  const showImage=doc.preview_image_href && (!pdf || matchMedia('(max-width:700px)').matches || navigator.pdfViewerEnabled===false);
+  let content;
+  if(showImage){
+    content='<figure><img src="'+esc(absolute(doc.preview_image_href))+'" alt="'+esc(title+(pdf?', first page':''))+'">'+(pdf?'<figcaption>Page 1 of '+doc.preview_pages+'</figcaption>':'')+'</figure>';
+  }else if(pdf){
+    content='<iframe title="'+esc('Preview of '+title)+'" src="'+esc(absolute(doc.preview_href))+'#view=FitH"></iframe>';
+  }else{
+    content='<p>This file is available to download.</p>';
+  }
+  const actions=(pdf?'<a href="'+esc(absolute(doc.preview_href))+'" target="_blank" rel="noopener">Open full PDF '+icon('external')+'</a>':'')+
+    '<a class="button" download href="'+esc(absolute(doc.local_href))+'">'+icon('download')+' Download original</a>';
+  showFilePreview(title,metadata,content,actions);
+}
+
+function policyPdfUrl(policy) {
+  const slug=policy.path.split('/').at(-2);
+  return absolute('3.0/policy-copies/'+encodeURIComponent(slug)+'.pdf');
+}
+
+function policyActions(policy) {
+  const original=documentMap.get(policy.policy_document);
+  const format=original?'Word':'PDF';
+  const href=original?absolute(original.local_href):policyPdfUrl(policy);
+  return '<span class="policy-actions">'+
+    '<button type="button" class="policy-action" data-policy-preview="'+esc(policy.path)+'" aria-label="'+esc('Preview '+policy.title)+'">'+icon('preview')+'Preview</button>'+
+    '<a class="policy-action" download href="'+esc(href)+'" aria-label="'+esc('Download '+format+' – '+policy.title)+'">'+icon('download')+'Download '+format+'</a></span>';
+}
+
+function policyResult(policy) {
+  const draft=policy.draft_id;
+  const description=draft?'Pending SME and SLD review.':'Source policy. Content-owner review pending.';
+  const badge=draft?' <span class="badge draft">Draft</span>':'';
+  return '<li class="resource-row policy-row"><div><span class="kind">Policy</span><h2><a href="'+esc(pageLink(policy.path))+'">'+esc(policy.title)+'</a>'+badge+'</h2><p>'+description+'</p></div>'+
+    policyActions(policy)+saveButton('page:'+policy.path,policy.title)+'</li>';
+}
+
+function openPolicyPreview(policy) {
+  if(!policy)return;
+  const original=documentMap.get(policy.policy_document);
+  if(original){openDocumentPreview(original,policy);return;}
+  const draft=data.drafts.find(item=>item.id===policy.draft_id);
+  const status=draft?'Draft '+draft.id+' · Pending SME and Senior Learning Designer review':'Web policy · Content-owner review pending';
+  const references=draft?.sources.map(source=>'<li><a href="'+esc(new URL(source,document.baseURI).href)+'" target="_blank" rel="noopener">'+esc(source)+'</a></li>').join('');
+  const content='<article class="policy-text-preview">'+policy.html+
+    (references?'<h2>Reference sources</h2><ul>'+references+'</ul>':'')+'</article>';
+  const actions='<a class="button" download href="'+esc(policyPdfUrl(policy))+'">'+icon('download')+
+    (draft?' Download draft PDF':' Download PDF')+'</a>';
+  showFilePreview(policy.title,status,content,actions);
 }

@@ -10,6 +10,26 @@ from build_document_previews import preview_href, preview_image_href, preview_pa
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / '3.0'
 
+# Matched to the text of each archived web policy. Some archived files have
+# similar titles but different contents (including a Greendale incident policy).
+POLICY_DOCUMENTS = {
+    'bullying-and-harrassment': 'Bagwan Health - Bullying and Harassment, V1.0.docx',
+    'code-of-conduct': 'Bagwan Health - Code of conduct - V1.0.docx',
+    'complaints-and-feedback-handling': 'Bagwan Health - Complaints Handling V1.0.docx',
+    'emergency-repsonse': 'Bagwan Health -Emergency Response V1.0.docx',
+    'equal-opportunity-and-anti-discrimination': 'Bagwan Health - Equal Opportunity - V1.0.docx',
+    'freedom-of-information': 'Bagwan Health - Freedom of Information V1.0.docx',
+    'incident-management': 'Bagwan Health - Incident Management - V1.0.docx',
+    'infection-control': 'Bagwan Health - Infection Control V1.0.docx',
+    'internet-email-and-social-media': 'Bagwan Health -Internet, Email and Social Media v1.0.docx',
+    'interpretinglanguage-services-rights-and-responsibilities': 'Bagwan Health - Language Services V1.0.docx',
+    'mandatory-reporting': 'Bagwan Health - Mandatory Reporting V1.0.docx',
+    'ohswhs': 'Bagwan Health - OHS V1.0.docx',
+    'privacy': 'Bagwan Health - Privacy - v1.0.docx',
+    'specimen-collection': 'Bagwan Health - Specimen Storage and Collection V1.0.docx',
+    'training-and-development': 'Bagwan Health - Training and Development V1.0.docx',
+}
+
 
 def category(path):
     if 'policy-and-procedures/' in path and not path.endswith('policy-and-procedures/index.html'):
@@ -124,16 +144,25 @@ def build():
                 replacement.append(a)
                 frame.replace_with(replacement)
             content = ''.join(str(n) for n in main.contents)
-        source_policies = {
-            'scorm/quick-link-pages/policy-and-procedures/code-of-conduct/index.html': 'Bagwan Health - Code of conduct - V1.0.docx',
-            'scorm/quick-link-pages/policy-and-procedures/privacy/index.html': 'Bagwan Health - Privacy - v1.0.docx',
-        }
-        if relative in source_policies:
-            document = ROOT / 'documents/policies-and-procedures' / source_policies[relative]
-            content = '<p><a href="/Bagwan2.0/' + quote(document.relative_to(ROOT).as_posix()) + '">Download the source policy (Word document)</a></p>' + docx_html(document)
-        pages.append({'path': relative, 'title': title, 'category': category(relative), 'mode': mode, 'draft_id': draft['id'] if draft else None, 'html': content, 'text': BeautifulSoup(content, 'lxml').get_text(' ', strip=True)})
+        page_category = category(relative)
+        page = {'path': relative, 'title': title, 'category': page_category, 'mode': mode, 'draft_id': draft['id'] if draft else None}
+        if page_category == 'Policy':
+            slug = path.parent.name
+            filename = POLICY_DOCUMENTS.get(slug) if not draft else None
+            page['policy_document'] = 'documents/policies-and-procedures/' + filename if filename else None
+            if filename and slug in ('code-of-conduct', 'privacy'):
+                document = page['policy_document']
+                content = '<p><a href="/Bagwan2.0/' + quote(document) + '">Download the source policy (Word document)</a></p>' + docx_html(ROOT / document)
+        page['html'] = content
+        page['text'] = BeautifulSoup(content, 'lxml').get_text(' ', strip=True)
+        pages.append(page)
     manifest = json.loads((ROOT / 'documents/manifest.json').read_text())
     files = document_records(manifest['files'])
+    library_paths = {entry['local_path'] for entry in files}
+    for page in pages:
+        document = page.get('policy_document')
+        if document and document not in library_paths:
+            raise ValueError(f"Source document missing from the library for {page['path']}: {document}")
     document_folders = {
         f"library/{folder['id']}/index.html": Path(folder['local_path']).relative_to('documents').as_posix()
         for folder in manifest['folders']
