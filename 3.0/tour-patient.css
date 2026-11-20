@@ -1,0 +1,85 @@
+/* 3.0 tour, clinical directory and embedded patient workspace. */
+.tour-viewer {height:100dvh; display:flex; flex-direction:column; margin:0; background:#182b44; color:#172e4b; font:1rem/1.5 Arial,sans-serif}
+.tour-viewer * {box-sizing:border-box}
+.tour-viewer [hidden],.tour-viewer #tour-guide[hidden],.clinical-form-links[hidden] {display:none}
+.tour-viewer :where(a,select,button,[tabindex]):focus-visible {outline:3px solid #f7b731; outline-offset:2px; box-shadow:0 0 0 5px #0c2a52}
+.tour-viewer :where(button,select) {min-height:44px; padding:6px 12px; border:1px solid #7488a2; background:white; color:#123763; border-radius:5px; font:inherit; cursor:pointer}
+.tour-viewer a {color:#174a83; font-weight:600; text-underline-offset:3px}
+.tour-controls {display:flex; align-items:flex-end; gap:12px; flex-wrap:wrap; padding:10px 16px; background:#f7faff; border-bottom:3px solid #3072b4}
+.tour-controls label {display:grid; gap:2px; font-size:.8rem; font-weight:700}
+.tour-controls label select {font:1rem/1.4 Arial,sans-serif; max-width:100%}
+.tour-controls a {margin-left:auto; min-height:44px; display:flex; align-items:center}
+.tour-area {position:relative; flex:1; min-height:110px}
+.tour-sr {position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%)}
+#panorama {width:100%; height:100%}
+#tour-status:not(:empty) {position:absolute; bottom:8px; left:12px; right:12px; margin:0; padding:8px 12px; background:white; color:#172e4b}
+#room-information {width:min(27rem,calc(100% - 2rem)); max-height:calc(100dvh - 2rem); border:0; border-top:5px solid #20588d; border-radius:8px; padding:20px; color:#172e4b; box-shadow:0 12px 48px #081d3b6e}
+#room-information::backdrop {background:#10243db0}
+.tour-dialog-head,.tour-guide-actions {display:flex; align-items:center; justify-content:space-between; gap:12px}
+.tour-dialog-head small,#guide-step {font-weight:700; color:#25516f}
+#room-information h2 {line-height:1.2; margin:12px 0}
+#info-items img {display:block; max-width:100%; max-height:180px; object-fit:contain; margin-block:10px}
+#info-items p {white-space:pre-line; margin-block:12px}
+#info-items :is(a,button) {display:flex; align-items:center; width:100%; text-align:left; margin-top:8px; min-height:44px}
+#tour-guide {display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px 28px; padding:12px 16px; background:#f7faff; border-top:3px solid #3072b4}
+#tour-guide>div:first-child {flex:1 1 280px}
+#guide-title {font-size:1.12rem; margin:0}
+#guide-prompt {margin:4px 0; font-size:.95rem; line-height:1.4}
+.tour-guide-actions {flex-wrap:wrap; gap:8px}
+.tour-guide-actions a {padding:8px 4px}
+#guide-next {background:#164b82; color:white}
+.tour-viewer button:disabled {opacity:.6; cursor:default}
+.tour-viewer .info-hotspot,.tour-viewer .direction-hotspot {display:grid; place-content:center; width:44px; height:44px; border:3px solid white; box-shadow:0 0 0 2px #143556,0 3px 9px #102942a6; border-radius:50%; background:#195388; color:white; cursor:pointer}
+.tour-viewer .info-hotspot span {font:bold 26px/1 Georgia,serif}
+.tour-viewer .direction-hotspot {background:#fff; color:#123e64; border-color:#153e67}
+.tour-viewer .direction-hotspot span {font:bold 24px/1 Arial,sans-serif}
+.tour-viewer .pnlm-about-msg {display:none!important}
+.tour-viewer .pnlm-zoom-controls {width:42px; height:84px}
+.tour-viewer .pnlm-zoom-in,.tour-viewer .pnlm-zoom-out,.tour-viewer .pnlm-fullscreen-toggle-button {width:42px; height:42px; background-position:center}
+.tour-viewer .pnlm-fullscreen-toggle-button {top:96px}
+.clinical-form-links {padding:16px 20px; margin:12px 0 20px; border:1px solid #abc0d8; border-left:4px solid #275d92; border-radius:5px; background:#f6faff}
+.clinical-form-links h2,.clinical-form-links p {margin:0 0 4px}
+.clinical-form-links h2 {font-size:1.1rem}
+.clinical-form-links ul {display:flex; flex-wrap:wrap; gap:4px 22px; padding:0; margin:8px 0 0; list-style:none}
+.clinical-form-links a {display:inline-block; padding:5px 0}
+.v3-patient-nav {display:flex; flex-wrap:wrap; align-items:center; gap:4px 8px; margin:0 0 18px; padding:8px; background:#edf4fb; border:1px solid #bbcada; border-radius:5px}
+.v3-patient-nav a {display:flex; align-items:center; min-height:42px; padding:5px 10px; color:#164875; border-radius:4px; font-weight:650}
+.v3-patient-nav [aria-current] {background:#fff; box-shadow:inset 0 -3px #275b91}
+.v3-patient .entry-content.p-5 {padding:0!important}
+.v3-patient .entry-content>h1,.v3-patient .clinical-shell>h1,.v3-patient #main-content>.row>.col-12>h1 {display:none}
+.v3-patient .card-deck {display:grid; grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr)); gap:12px; margin:0}
+.v3-patient .card-deck .card {margin:0; border:1px solid #a9bace; border-radius:6px}
+.v3-patient .patient-card-link {display:flex; flex-direction:column; align-items:flex-start; gap:6px; color:#16395d}
+.v3-patient .patient-card-action {margin-top:auto; padding-top:8px; color:#174d83; text-decoration:underline}
+.v3-patient .nav-tabs {gap:3px; border-bottom:1px solid #adbed0}
+.v3-patient .nav-tabs .nav-link {color:#174d83; border-radius:4px 4px 0 0; border-bottom:3px solid transparent}
+.v3-patient .nav-tabs .nav-link.active {color:#123656; background:#edf4fb; border-bottom-color:#205a91; font-weight:bold}
+.v3-patient .message-progress {flex-basis:100%; margin:0; padding:10px 12px; background:#edf4fb; color:#173656}
+.v3-patient #tablePreview {min-width:38rem}
+.v3-patient #tablePreview summary {cursor:pointer; color:#173c72; text-decoration:underline}
+.v3-patient .message-open {text-align:left}
+.case-columns {display:grid; grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr)); gap:24px; margin-block:24px}
+.case-columns section {padding:18px; border:1px solid #aec0d5; border-radius:6px; background:#fff}
+.case-columns h2 {margin:0 0 12px}
+.case-summary {margin:0}
+.case-summary dt {font-weight:700}
+.case-summary dd {margin:2px 0 12px}
+.case-columns blockquote {margin:0; padding-left:12px; border-left:3px solid #4677a6}
+@media(max-width:600px) {
+  .tour-controls {gap:4px 8px; padding:8px}
+  .tour-controls label {flex:1 1 100%; min-width:0; grid-template-columns:minmax(0,1fr)}
+  .tour-controls select {width:100%; min-width:0}
+  .tour-controls a {margin-left:0; font-size:.9rem}
+  #tour-guide {padding:8px; gap:4px}
+  .v3-patient main {padding:10px!important}
+}
+@media print {.v3-patient-nav {display:none}}
+@media(prefers-reduced-motion:no-preference) {
+  #room-information[open] {animation:room-information-open .16s ease-out}
+  @keyframes room-information-open {from {opacity:0; translate:0 5px} to {opacity:1; translate:0 0}}
+}
+.tour-viewer :is(.pnlm-zoom-in,.pnlm-zoom-out,.pnlm-fullscreen-toggle-button) {display:grid; place-content:center; background-image:none; background-color:white; color:#153c64; font:700 24px/1 Arial,sans-serif}
+.tour-viewer .pnlm-zoom-in::before {content:'+'}
+.tour-viewer .pnlm-zoom-out::before {content:'−'}
+.tour-viewer .pnlm-fullscreen-toggle-button::before {content:''; display:block; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:17px; height:17px; background:linear-gradient(currentColor,currentColor) left top / 7px 2px,linear-gradient(currentColor,currentColor) left top / 2px 7px,linear-gradient(currentColor,currentColor) right top / 7px 2px,linear-gradient(currentColor,currentColor) right top / 2px 7px,linear-gradient(currentColor,currentColor) left bottom / 7px 2px,linear-gradient(currentColor,currentColor) left bottom / 2px 7px,linear-gradient(currentColor,currentColor) right bottom / 7px 2px,linear-gradient(currentColor,currentColor) right bottom / 2px 7px; background-repeat:no-repeat}
+.v3-patient main>h1 {display:none}

@@ -1,10 +1,11 @@
 """Build the parallel 3.0 preview from the existing source content and draft register."""
 from pathlib import Path
-from urllib.parse import urlsplit, quote
+from urllib.parse import urlsplit, unquote, quote
 from bs4 import BeautifulSoup
 import json
 import re
 from apply_review_fixes import docx_html
+from review_policy_metadata import render_metadata
 from build_document_previews import preview_href, preview_image_href, preview_pages
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,11 +50,11 @@ def category(path):
     return 'Resource'
 
 
-def document_records(entries):
+def document_records(entries, catalogue):
     by_id = {entry['id']: entry for entry in entries}
     files = []
     for entry in entries:
-        if entry.get('archived') or entry['kind'] == 'office-lock-file':
+        if entry.get('archived') or entry['kind'] == 'office-lock-file' or Path(entry['local_path']).name in catalogue['withheld']:
             continue
         folder = entry['original_folder_path'].split('/')
         if folder[0] == 'departmental' and len(folder) > 1:
@@ -73,14 +74,110 @@ def document_records(entries):
             preview_image_href=preview_image_href(entry),
             preview_pages=preview_pages(entry),
         )
+        edition = catalogue['editions'].get(entry['sha256'])
+        if edition:
+            record.update(source_local_href=entry['local_href'], archived_source_modified_at=record['source_modified_at'])
+            record.update(edition)
         files.append(record)
     return files
+
+
+def reviewed_html(path, content, catalogue, edited_files):
+    """Keep the exported articles, library links and native 3.0 files in step."""
+    fragment = BeautifulSoup(content, 'html.parser')
+    changed = False
+    for a in fragment.select('a[href]'):
+        href = a['href']
+        url = urlsplit(href)
+        if not url.netloc:
+            old_path = unquote(url.path).removeprefix('/Bagwan2.0/').lstrip('/')
+            if Path(old_path).name in catalogue['withheld']:
+                parent = a.parent
+                if (parent.name == 'li' and len(parent.find_all('a')) == 1) or (parent.name == 'p' and parent.get_text(strip=True) == a.get_text(strip=True)):
+                    parent.decompose()
+                else:
+                    a.decompose()
+                changed = True
+                continue
+            file = edited_files.get(old_path)
+            if file:
+                a['href'] = '/Bagwan2.0/' + file['local_href']
+                if a.get_text(strip=True) == Path(old_path).name:
+                    a.string = file['name']
+                    if a.parent.name == 'li' and (meta := a.find_next_sibling('span')):
+                        size = file['size_bytes']
+                        units = f'{size / 1024**2:.1f} MB' if size >= 1024**2 else f'{round(size / 1024)} KB'
+                        meta.string = f"{file['file_type']} · {units}"
+                changed = True
+        elif href in catalogue['link_replacements']:
+            a['href'], a.string = catalogue['link_replacements'][href]
+            changed = True
+    # The historical web Privacy article was reconstructed from Word as plain text.
+    slug = Path(path).parent.name
+    edition_slug = 'occupational-health-and-safety' if slug == 'ohswhs' else slug
+    for marker, replacement in catalogue['clause_replacements'].get(edition_slug, {}).items():
+        for p in fragment.select('p, li'):
+            if marker in p.get_text(' ', strip=True):
+                if replacement is None:
+                    p.decompose()
+                else:
+                    p.clear()
+                    p.string = replacement
+                changed = True
+    if slug == 'incident-management':
+        fragment.clear()
+        for heading, text in catalogue['incident_sections']:
+            h = fragment.new_tag('h2')
+            h.string = heading
+            p = fragment.new_tag('p')
+            p.string = text
+            fragment.extend([h, p])
+        changed = True
+    if slug == 'specimen-collection':
+        for p in fragment.find_all('p'):
+            if p.get_text(' ', strip=True) == 'Download the supplied specimen storage and collection policy.':
+                p.decompose()
+                changed = True
+    if path.endswith('/policy-and-procedures/privacy/index.html'):
+        for text in list(fragment.find_all(string=True)):
+            for old, (new, label) in catalogue['link_replacements'].items():
+                if old not in text or text.parent.name == 'a':
+                    continue
+                before, _, after = text.partition(old)
+                a = fragment.new_tag('a', href=new)
+                a.string = label
+                text.replace_with(before, a, after)
+                changed = True
+                break
+    if path.endswith('/policy-and-procedures/bullying-and-harrassment/index.html'):
+        contact = next((p for p in fragment.find_all('p') if p.get_text(' ', strip=True) == 'Where to Seek Advice?'), None)
+        if contact is None:
+            raise ValueError('Cannot locate archived workplace contacts')
+        for p in list(contact.find_next_siblings('p')):
+            if p.get_text(' ', strip=True) == 'Complaints Procedure':
+                break
+            p.decompose()
+        contacts = BeautifulSoup('<section><h3>Workplace contacts</h3><p></p><h3>External contacts</h3><ul></ul></section>', 'html.parser')
+        contacts.p.string = catalogue['workplace_contacts']
+        for label, url in catalogue['external_contacts']:
+            link = contacts.new_tag('a', href=url)
+            link.string = label
+            item = contacts.new_tag('li')
+            item.append(link)
+            contacts.ul.append(item)
+        contact.replace_with(contacts)
+        changed = True
+    return str(fragment) if changed else content
 
 
 def build():
     drafts = json.loads((OUT / 'content-drafts.json').read_text())['items']
     by_path = {d['path']: d for d in drafts}
     repairs = json.loads((OUT / 'link-repairs.json').read_text())
+    catalogue = json.loads((OUT / 'document-editions/catalogue.json').read_text())
+    manifest = json.loads((ROOT / 'documents/manifest.json').read_text())
+    files = document_records(manifest['files'], catalogue)
+    edited_files = {file['local_path']: file for file in files if file.get('edition_label')}
     pages = []
     for path in sorted(ROOT.rglob('*.html')):
         if any(p in path.relative_to(ROOT).parts for p in ('3.0', 'output', '.git', 'node_modules', '.playwright-cli')):
@@ -152,12 +249,12 @@ def build():
             page['policy_document'] = 'documents/policies-and-procedures/' + filename if filename else None
             if filename and slug in ('code-of-conduct', 'privacy'):
                 document = page['policy_document']
-                content = '<p><a href="/Bagwan2.0/' + quote(document) + '">Download the source policy (Word document)</a></p>' + docx_html(ROOT / document)
+                content = '<p><a href="/Bagwan2.0/' + quote(document) + '">Download policy (Word document)</a></p>' + docx_html(ROOT / document)
+        content = render_metadata(relative, content)
+        content = reviewed_html(relative, content, catalogue, edited_files)
         page['html'] = content
         page['text'] = BeautifulSoup(content, 'lxml').get_text(' ', strip=True)
         pages.append(page)
-    manifest = json.loads((ROOT / 'documents/manifest.json').read_text())
-    files = document_records(manifest['files'])
     library_paths = {entry['local_path'] for entry in files}
     for page in pages:
         document = page.get('policy_document')
@@ -168,7 +265,7 @@ def build():
         for folder in manifest['folders']
     }
     hierarchy = json.loads((ROOT / 'data/staff-hierarchy.json').read_text())
-    data = {'version': '3.0', 'built_on': '2026-11-20', 'pages': pages, 'people': json.loads((ROOT / 'data/staff-directory.json').read_text()), 'hierarchy': hierarchy, 'videos': json.loads((ROOT / 'data/videos.json').read_text()), 'documents': files, 'document_folders': document_folders, 'drafts': drafts}
+    data = {'version': '3.0', 'built_on': '2026-11-20', 'pages': pages, 'people': json.loads((ROOT / 'data/staff-directory.json').read_text()), 'hierarchy': hierarchy, 'videos': json.loads((ROOT / 'data/videos.json').read_text()), 'documents': files, 'document_folders': document_folders}
     (OUT / 'content.json').write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n')
     print('Built 3.0:', len(pages), 'source routes,', len(files), 'document records,', len(drafts), 'review drafts.')
 

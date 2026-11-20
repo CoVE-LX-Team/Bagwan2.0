@@ -75,7 +75,7 @@ function renderHRDepartment() {
 
       <section class="hr-archive" aria-labelledby="hr-archive-title">
         <div class="hr-archive-heading">
-          <h2 id="hr-archive-title">Archived staff notices</h2>
+          <h2 id="hr-archive-title">Past staff notices</h2>
           <a href="#news">All staff news</a>
         </div>
         <ul>

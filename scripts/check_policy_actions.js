@@ -28,7 +28,8 @@ async page => {
     check(await preview(results, record.title).count() === 1, record.title + ' has one named preview in the policy list.');
     const href = await download(results, record.title).evaluate(link => link.href);
     const slug = record.path.split('/').at(-2);
-    const expected = record.policy_document ? '../' + record.policy_document : 'policy-copies/' + slug + '.pdf';
+    const edition = catalogue.documents.find(doc => doc.local_path === record.policy_document);
+    const expected = edition ? new URL(edition.local_href, new URL('../', base)).href : 'policy-copies/' + slug + '.pdf';
     const actualPath = decodeURIComponent(new URL(href).pathname);
     const expectedPath = decodeURIComponent(new URL(expected, base).pathname);
     const response = await page.request.get(href);
@@ -40,7 +41,7 @@ async page => {
 
   const privacy = 'Privacy';
   const original = await download(results, privacy).evaluate(link => link.href);
-  check(original.endsWith('.docx'), 'Privacy offers its source Word file.');
+  check(original.endsWith('.docx'), 'Privacy offers its Word file.');
   const privacyButton = preview(results, privacy);
   await privacyButton.focus();
   await page.keyboard.press('Enter');
@@ -48,13 +49,13 @@ async page => {
   const previewURL = await dialog.getByRole('link', {name:/open full PDF/i}).evaluate(link => link.href);
   const pdf = await page.request.get(previewURL);
   check(pdf.ok() && (await pdf.body()).subarray(0, 5).toString() === '%PDF-', 'Privacy previews a valid PDF rendition.');
-  check(await dialog.locator('a[download]').evaluate(link => link.href) === original, 'Privacy preview offers the original file.');
+  check(await dialog.locator('a[download]').evaluate(link => link.href) === original, 'Privacy preview offers the same current file.');
   await page.keyboard.press('Escape');
   await dialog.waitFor({state:'hidden'});
   check(await privacyButton.evaluate(button => button === document.activeElement), 'Escape returns focus to the initiating policy.');
   await results.getByRole('link', {name:privacy, exact:true}).click();
   const toolbar = page.locator('.page-tools');
-  check(await download(toolbar, privacy).evaluate(link => link.href) === original, 'The Privacy article offers the same original as the list.');
+  check(await download(toolbar, privacy).evaluate(link => link.href) === original, 'The Privacy article offers the same file as the list.');
   const started = page.waitForEvent('download');
   await download(toolbar, privacy).click();
   const transfer = await started;
@@ -62,17 +63,17 @@ async page => {
 
   const draft = 'Medication safety';
   await go('policies');
-  await page.locator('#category-filter').selectOption({label:'Draft for review'});
+  await page.locator('#category-filter').selectOption({label:'Departmental'});
   check(await results.getByRole('link', {name:privacy, exact:true}).count() === 0 &&
-    await preview(results, draft).count() === 1, 'The policy status filter retains draft actions.');
+    await preview(results, draft).count() === 1, 'The departmental filter includes medication safety and excludes hospital-wide Privacy.');
   const draftURL = await download(results, draft).evaluate(link => link.href);
   check(draftURL.endsWith('policy-copies/medication-safety.pdf'), 'Medication safety offers its generated policy PDF.');
   await results.getByRole('link', {name:draft, exact:true}).click();
   await preview(toolbar, draft).click();
   await dialog.waitFor();
   const draftText = await dialog.innerText();
-  check(/draft/i.test(draftText) && /review/i.test(draftText) && /purpose and scope/i.test(draftText),
-    'The accessible draft preview includes its review status and policy text.');
+  check(!/SME|pending review|draft for/i.test(draftText) && /purpose and scope/i.test(draftText),
+    'The preview displays the policy text without reviewer instructions.');
   check(await dialog.locator('a[download]').evaluate(link => link.href) === draftURL, 'The draft preview downloads the same PDF.');
   await page.keyboard.press('Escape');
   await dialog.waitFor({state:'hidden'});

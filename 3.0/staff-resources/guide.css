@@ -1,0 +1,12 @@
+@page { size: A4; margin: 20mm; }
+* { box-sizing: border-box; }
+body { color: #132d4b; font: 12pt/1.45 Arial, sans-serif; max-width: 49rem; margin: 0 auto; }
+header { border-bottom: 3px solid #245792; padding-bottom: .8rem; }
+header p { color: #2e5279; font-weight: bold; font-size: 10pt; letter-spacing: .06em; }
+h1 { font-size: 25pt; line-height: 1.15; margin: .5rem 0; }
+h2 { font-size: 15pt; margin: 1.2rem 0 .2rem; }
+p { margin: .35rem 0; }
+ul { margin-top: .4rem; padding-left: 1.4rem; }
+li { margin-bottom: .25rem; }
+a { color: #174e85; }
+@media screen { body { padding: 1.5rem; } }

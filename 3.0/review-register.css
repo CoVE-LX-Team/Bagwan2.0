@@ -1,5 +1,10 @@
 .report-page:has(.register) { max-width: 1050px; }
 .register { color: #191c39; }
+.outcome-group ol { list-style: none; margin: 0; padding: 0; }
+.outcome-group li { max-width: 76ch; margin: .8rem 0; padding: 1rem 1.25rem; background: #fff; border: 1px solid #ccd1e2; border-radius: 8px; scroll-margin-top: 1rem; }
+.outcome-group li:target { border-color: #172965; }
+.outcome-group h3 { margin: 0; font-size: 1rem; }
+.outcome-group li p { margin: .4rem 0 0; }
 .register-intro { max-width: 72ch; }
 .register-intro h1 { margin-bottom: .35em; }
 .register-intro .lead { line-height: 1.5; margin-bottom: .7em; }

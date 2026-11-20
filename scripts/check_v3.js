@@ -18,9 +18,9 @@ async (page) => {
   await page.locator('#list-search').fill('zzzz-no-person');
   verify(await page.getByRole('heading',{name:'No results match your search.'}).count()===1,'Empty search gives a recovery message');
   await go('policies');await page.locator('#list-search').fill('medication safety');
-  verify(await page.locator('#results .badge.draft').count()===1,'Draft policy is identified before opening');
+  verify(await page.locator('#results a').filter({hasText:'Medication safety'}).count()===1,'Medication safety is available by title');
   await page.getByRole('link',{name:'Medication safety',exact:true}).click();
-  verify((await page.locator('.notice').innerText()).includes('SME'),'Draft policy explains pending review');
+  verify(!(await page.locator('main').innerText()).includes('SME'),'Staff policy has no editorial instructions');
   await page.locator('.page-tools [data-save]').click();
   await go('saved');verify((await page.locator('main').innerText()).includes('Medication safety'),'Saved item persists after page reload');
   await page.locator('main [data-save]').click();

@@ -85,3 +85,11 @@ h2{font-weight:530;font-size:26px;letter-spacing:-.6px}
 @media print{h1,h2,h3{color:black}.sidebar,.masthead{display:none}.feature-copy{background:white;color:black}.feature-copy p,.feature-copy .eyebrow,.feature-copy .text-link,.feature-copy h3{color:black}}
 
 #main:focus{outline:none}#main[data-skip-focus]:focus{outline:3px solid #b34b00;outline-offset:-3px}
+
+.policy-metadata { display: grid; grid-template-columns: minmax(9rem, auto) 1fr; gap: .4rem 1.25rem; padding: 1rem; background: #eef2fa; }
+.policy-metadata dt { font-weight: 600; }
+.policy-metadata dd { margin: 0; }
+@media (max-width: 560px) {
+  .policy-metadata { grid-template-columns: 1fr; }
+  .policy-metadata dd + dt { margin-top: .5rem; }
+}

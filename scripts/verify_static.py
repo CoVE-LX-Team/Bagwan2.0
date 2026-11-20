@@ -66,11 +66,13 @@ def inspect():
                     route = unquote(parsed.fragment).split('?', 1)[0]
                     v3_route = False
                     if page_target == (ROOT / '3.0/index.html').resolve():
-                        v3_route = route in ('home', 'departments', 'people', 'policies', 'forms', 'resources', 'videos', 'documents', 'news', 'search', 'saved', 'tour')
+                        v3_route = route in ('home', 'departments', 'people', 'policies', 'forms', 'resources', 'videos', 'documents', 'news', 'search', 'saved', 'tour', 'patient-case')
                         if route.startswith('department/'):
-                            v3_route = route.split('/', 1)[1] in ('hr', 'nursing', 'laboratory', 'interpreting', 'logistics', 'liaison')
+                            v3_route = route.split('/', 1)[1] in ('hr', 'nursing', 'laboratory', 'interpreting', 'logistics', 'liaison', 'allied-health')
                         if route.startswith('page/') and (ROOT / '3.0/content.json').exists():
-                            v3_route = route[5:] in {p['path'] for p in json.loads((ROOT / '3.0/content.json').read_text())['pages']}
+                            source = route[5:].replace('/emergency-response/', '/emergency-repsonse/').replace('/logistics/', '/logisitics/')
+                            native_resources = {'staff-resources/allied-health/index.html', 'scorm/intranet/news-feed/womin-djeka/index.html'}
+                            v3_route = route[5:] in native_resources or source in {p['path'] for p in json.loads((ROOT / '3.0/content.json').read_text())['pages']}
                     if page_target and page_target.is_file() and page_target.suffix == '.html' and not v3_route and not parse(page_target).find(id=unquote(parsed.fragment)):
                         errors.append((str(path.relative_to(ROOT)), 'Missing section: ' + raw))
                 if attr in ('src','poster') and raw.startswith(('http:','https:','//')) and not youtube_frame:

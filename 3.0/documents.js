@@ -31,7 +31,7 @@ function documentActions(doc) {
     '<button type="button" class="doc-action" data-save="'+esc(id)+'" data-title="'+esc(doc.name)+'" aria-label="'+esc(bookmark)+'" title="'+esc(bookmark)+'" aria-pressed="'+active+'">'+icon('bookmark')+'</button></div>';
 }
 function documentResult(doc) {
-  return '<li class="resource-row document-result"><div><span class="kind">Document</span><h2>'+esc(doc.name)+'</h2><p>'+esc(documentCategory(doc))+' · '+esc(doc.file_type)+' · '+documentSize(doc)+'</p></div>'+documentActions(doc)+'</li>';
+  return '<li class="resource-row document-result"><div><span class="kind">Document</span><h2>'+esc(doc.name)+'</h2><p>'+esc(documentCategory(doc))+' · '+esc([doc.file_type,documentSize(doc),doc.edition_source_url?'WorkSafe Victoria':null].filter(Boolean).join(' · '))+'</p></div>'+documentActions(doc)+'</li>';
 }
 function compareDocuments(left, right, sort) {
   const [field, direction]=sort.split('-');
@@ -47,7 +47,7 @@ function compareDocuments(left, right, sort) {
 }
 function documentRow(doc) {
   const date=doc.source_modified_at?'<time datetime="'+esc(doc.source_modified_at)+'">'+documentDate(doc)+'</time>':'Date unavailable';
-  return '<tr role="row"><th scope="row" role="rowheader"><span class="doc-name">'+esc(doc.name)+'</span><span class="doc-file-meta">'+esc(doc.file_type)+' · '+documentSize(doc)+'</span></th>'+
+  return '<tr role="row"><th scope="row" role="rowheader"><span class="doc-name">'+esc(doc.name)+'</span><span class="doc-file-meta">'+esc([doc.file_type,documentSize(doc),doc.edition_source_url?'WorkSafe Victoria':null].filter(Boolean).join(' · '))+'</span></th>'+
     '<td role="cell" class="doc-category">'+esc(doc.category)+(doc.subcategory?'<small>'+esc(doc.subcategory)+'</small>':'')+'</td>'+
     '<td role="cell" class="doc-updated"><span class="doc-mobile-label">Updated </span>'+date+'</td><td role="cell">'+documentActions(doc)+'</td></tr>';
 }
@@ -79,16 +79,18 @@ function documents() {
     const found=data.documents.filter(doc=>(!category.value||doc.category===category.value||documentCategory(doc)===category.value) &&
       (!type.value||doc.file_type===type.value) && matches([doc.name,documentCategory(doc),doc.file_type,doc.original_folder_path].join(' '),query.value));
     found.sort((a,b)=>compareDocuments(a,b,order.value));
-    main.querySelector('#result-count').textContent=found.length+' '+(found.length===1?'document':'documents');
+    const formCount=showClinicalFormLinks(query.value,!category.value&&!type.value);
+    main.querySelector('#result-count').textContent=found.length+' '+(found.length===1?'document':'documents')+
+      (formCount?' · '+formCount+' clinical '+(formCount===1?'form':'forms'):'');
     clear.hidden=!(query.value||category.value||type.value);
     results.innerHTML=found.length?'<table class="doc-table" role="table" aria-label="Documents and templates"><thead role="rowgroup"><tr role="row">'+
       sortedHeader('Name','name',order.value)+sortedHeader('Category','category',order.value)+sortedHeader('Last updated','updated',order.value)+
       '<th scope="col" role="columnheader" class="actions-heading">Actions</th></tr></thead><tbody role="rowgroup">'+found.map(documentRow).join('')+'</tbody></table>':
-      '<div class="empty-state"><h2>No matching documents</h2><p>Try another keyword or clear the filters.</p></div>';
+      formCount?'':'<div class="empty-state"><h2>No matching documents</h2><p>Try another keyword or clear the filters.</p></div>';
     if(writeUrl){
       const next=new URLSearchParams();
       for(const [key,value] of [['query',query.value],['category',category.value],['type',type.value],['sort',order.value==='name-asc'?'':order.value]])if(value)next.set(key,value);
-      history.replaceState(null,'','#documents'+(next.size?'?'+next:''));
+      replaceSectionHash('#documents'+(next.size?'?'+next:''));
     }
   }
   query.addEventListener('input',()=>update());
@@ -127,8 +129,8 @@ function showFilePreview(title, metadata, content, actions) {
 function openDocumentPreview(doc, policy) {
   if(!doc)return;
   const title=policy?.title||doc.name;
-  const context=policy?'Original policy document':documentCategory(doc);
-  const metadata=[context,doc.file_type,documentSize(doc),'File updated '+documentDate(doc)].join(' · ');
+  const context=policy?'Policy document':documentCategory(doc);
+  const metadata=[context,doc.file_type,documentSize(doc),'File updated '+documentDate(doc),doc.edition_source_url?'WorkSafe Victoria':null].filter(Boolean).join(' · ');
   const pdf=doc.preview_href?.toLowerCase().endsWith('.pdf');
   const showImage=doc.preview_image_href && (!pdf || matchMedia('(max-width:700px)').matches || navigator.pdfViewerEnabled===false);
   let content;
@@ -139,8 +141,10 @@ function openDocumentPreview(doc, policy) {
   }else{
     content='<p>This file is available to download.</p>';
   }
-  const actions=(pdf?'<a href="'+esc(absolute(doc.preview_href))+'" target="_blank" rel="noopener">Open full PDF '+icon('external')+'</a>':'')+
-    '<a class="button" download href="'+esc(absolute(doc.local_href))+'">'+icon('download')+' Download original</a>';
+  const publisher=doc.edition_source_url?'<a href="'+esc(doc.edition_source_url)+'" target="_blank" rel="noopener">Publisher page '+icon('external')+'</a>':'';
+  const label='Download '+(doc.file_type==='DOCX'?'Word':doc.file_type);
+  const actions=publisher+(pdf?'<a href="'+esc(absolute(doc.preview_href))+'" target="_blank" rel="noopener">Open full PDF '+icon('external')+'</a>':'')+
+    '<a class="button" download href="'+esc(absolute(doc.local_href))+'">'+icon('download')+' '+esc(label)+'</a>';
   showFilePreview(title,metadata,content,actions);
 }
 
@@ -158,11 +162,25 @@ function policyActions(policy) {
     '<a class="policy-action" download href="'+esc(href)+'" aria-label="'+esc('Download '+format+' – '+policy.title)+'">'+icon('download')+'Download '+format+'</a></span>';
 }
 
+let policyScopes;
+function policyScope(policy) {
+  if (!policyScopes) {
+    policyScopes = new Map();
+    const body = recordBody(pageMap.get(policyIndexPath));
+    for (const control of body.querySelectorAll('[data-toggle="collapse"][aria-controls]')) {
+      const panel = body.getElementById(control.getAttribute('aria-controls'));
+      for (const link of panel?.querySelectorAll('a[href]') || []) {
+        const path = decodeURIComponent(new URL(link.getAttribute('href'),ROOT).pathname.slice(ROOT.pathname.length));
+        policyScopes.set(path,control.textContent.trim());
+      }
+    }
+    policyScopes.set('scorm/quick-link-pages/policy-and-procedures/booking-an-interpreter/index.html','Departmental');
+  }
+  return policyScopes.get(policy.path) || '';
+}
 function policyResult(policy) {
-  const draft=policy.draft_id;
-  const description=draft?'Pending SME and SLD review.':'Source policy. Content-owner review pending.';
-  const badge=draft?' <span class="badge draft">Draft</span>':'';
-  return '<li class="resource-row policy-row"><div><span class="kind">Policy</span><h2><a href="'+esc(pageLink(policy.path))+'">'+esc(policy.title)+'</a>'+badge+'</h2><p>'+description+'</p></div>'+
+  return '<li class="resource-row policy-row"><div><span class="kind">'+esc(policyScope(policy) || 'Policy')+
+    '</span><h2><a href="'+esc(pageLink(policy.path))+'">'+esc(policy.title)+'</a></h2></div>'+
     policyActions(policy)+saveButton('page:'+policy.path,policy.title)+'</li>';
 }
 
@@ -170,12 +188,7 @@ function openPolicyPreview(policy) {
   if(!policy)return;
   const original=documentMap.get(policy.policy_document);
   if(original){openDocumentPreview(original,policy);return;}
-  const draft=data.drafts.find(item=>item.id===policy.draft_id);
-  const status=draft?'Draft '+draft.id+' · Pending SME and Senior Learning Designer review':'Web policy · Content-owner review pending';
-  const references=draft?.sources.map(source=>'<li><a href="'+esc(new URL(source,document.baseURI).href)+'" target="_blank" rel="noopener">'+esc(source)+'</a></li>').join('');
-  const content='<article class="policy-text-preview">'+policy.html+
-    (references?'<h2>Reference sources</h2><ul>'+references+'</ul>':'')+'</article>';
-  const actions='<a class="button" download href="'+esc(policyPdfUrl(policy))+'">'+icon('download')+
-    (draft?' Download draft PDF':' Download PDF')+'</a>';
-  showFilePreview(policy.title,status,content,actions);
+  const content='<article class="policy-text-preview">'+policy.html+'</article>';
+  const actions='<a class="button" download href="'+esc(policyPdfUrl(policy))+'">'+icon('download')+' Download PDF</a>';
+  showFilePreview(policy.title,policyScope(policy) || 'Policy',content,actions);
 }

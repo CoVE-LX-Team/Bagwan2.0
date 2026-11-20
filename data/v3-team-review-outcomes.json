@@ -1,0 +1,528 @@
+[
+  {
+    "row": 3,
+    "status": "Fixed",
+    "finding": "Desktop has a persistent left navigation rail. At 375 px the labelled menu button opens the drawer, and Escape closes it and returns focus to the button."
+  },
+  {
+    "row": 4,
+    "status": "Review needed",
+    "finding": "Every migrated view fits a 375 px viewport. Seven high-use views also fit at 320, 375, 768 and 1440 px. Andrew to try the scenario on a learner’s actual phone and confirm it is usable with their usual access tools.",
+    "reviewer": "Andrew + representative learner"
+  },
+  {
+    "row": 5,
+    "status": "Fixed",
+    "finding": "The Cultural diversity link opens the revised Cultural awareness resources for staff article."
+  },
+  {
+    "row": 6,
+    "status": "Fixed",
+    "finding": "Our Community now links Equal opportunity directly to the Equal opportunity and anti discrimination policy in 3.0."
+  },
+  {
+    "row": 7,
+    "status": "Fixed",
+    "finding": "The Our Community breadcrumb links Staff home to the working 3.0 homepage."
+  },
+  {
+    "row": 8,
+    "status": "Fixed",
+    "finding": "Shared pages link back to the originating department. The department travels in the link so the breadcrumb still works after refresh or sharing."
+  },
+  {
+    "row": 9,
+    "status": "Fixed",
+    "finding": "The HR page lists 11 recovered meeting videos. Selecting a title opened its YouTube player; each has a direct watch link. End-to-end third-party playback was outside this check."
+  },
+  {
+    "row": 10,
+    "status": "Fixed",
+    "finding": "Both News entry points use the new story list. At desktop size its two columns had a 36 px gap and the footer began 48 px below the list."
+  },
+  {
+    "row": 11,
+    "status": "Fixed",
+    "finding": "From HR, All staff news opens News with a People & culture breadcrumb. The return link survives filtering and refreshing."
+  },
+  {
+    "row": 12,
+    "status": "Fixed",
+    "finding": "HR now links to its own team chart. The laboratory URL quoted by the reviewer also renders a team chart with working People directory and Organisation chart breadcrumbs."
+  },
+  {
+    "row": 13,
+    "status": "Fixed",
+    "finding": "The repository opens Documents & templates. Its 78 entries include two new staff guides. Each offers a preview and download of the displayed edition. HR opens its filtered collection."
+  },
+  {
+    "row": 14,
+    "status": "Fixed",
+    "finding": "The incident-reporting route shows five labelled fields and a Save draft control. It supports local drafts; hospital submission was outside the reported display issue."
+  },
+  {
+    "row": 15,
+    "status": "Fixed",
+    "finding": "The incident form has linked Staff home and Forms & records ancestors. Coming through HR also gives a People & culture return link."
+  },
+  {
+    "row": 16,
+    "status": "Fixed",
+    "finding": "The archived Forms URL now explains its purpose and links to patient forms and the staff document library. The main Forms & records route also lists the individual forms."
+  },
+  {
+    "row": 17,
+    "status": "Fixed",
+    "finding": "The Forms & records list and archived Forms page now show breadcrumbs. Entering through HR adds the People & culture return link."
+  },
+  {
+    "row": 18,
+    "status": "Fixed",
+    "finding": "The named Resources page switches between tabs. Its Human resources tab displayed 11 restored video embeds; the ATSI liaison services tab displayed the Closing the Gap embed. Each video also has a watch link."
+  },
+  {
+    "row": 19,
+    "status": "Fixed",
+    "finding": "The Resources index and archived resources page show breadcrumbs with a link to the originating department when entered from its hub."
+  },
+  {
+    "row": 20,
+    "status": "Fixed",
+    "finding": "The lab service page’s Pathology shortcut now downloads the supplied Pathology request form in Word format. The local file returned HTTP 200."
+  },
+  {
+    "row": 21,
+    "status": "Fixed",
+    "finding": "Laboratory Tools links to two named intranet references. The separately labelled PPE and waste practice links open the native HTML activities. Opened Tools, followed the PPE reference and used browser Back to verify the panel was still open."
+  },
+  {
+    "row": 22,
+    "status": "Fixed",
+    "finding": "The broken drag-and-drop has been replaced by a five-example HTML waste classification exercise with feedback and reset. The reference and answer key remain pending SME and SLD review."
+  },
+  {
+    "row": 23,
+    "status": "Fixed",
+    "finding": "The laboratory news card now uses the destination article’s title, Influenza outbreak. Verified the visible title and its link."
+  },
+  {
+    "row": 24,
+    "status": "Fixed",
+    "finding": "The policy list and archived governance page both carry the Laboratory technologies return link when entered from the department."
+  },
+  {
+    "row": 25,
+    "status": "Fixed",
+    "finding": "The Code of conduct page displays its policy text and offers a Word download and matching preview. The policy owner’s review is tracked in the register."
+  },
+  {
+    "row": 26,
+    "status": "Fixed",
+    "finding": "The canonical Emergency response link uses the corrected spelling. The historical address redirects within 3.0 and retains department context. The five emergency tables fit their scroll regions on small screens."
+  },
+  {
+    "row": 27,
+    "status": "Review needed",
+    "finding": "The web policies show document version 001, checked against the supplied Word files. The register proposes keeping the original version and omitting unverified IDs, plus five optional teaching catalogue codes for the owner’s decision.",
+    "reviewer": "Policy owner"
+  },
+  {
+    "row": 28,
+    "status": "Fixed",
+    "finding": "Privacy opens as a readable policy. The updated Word file and matching preview omit the misattributed Greendale clause and unsupported agency directions. Governance questions are recorded in the register."
+  },
+  {
+    "row": 29,
+    "status": "Review needed",
+    "finding": "The web policies show document version 001, checked against the supplied Word files. The register proposes keeping the original version and omitting unverified IDs, plus five optional teaching catalogue codes for the owner’s decision.",
+    "reviewer": "Policy owner + language services"
+  },
+  {
+    "row": 30,
+    "status": "Review needed",
+    "finding": "Medication safety and Nursing and clinical handover have readable draft procedures and downloadable PDFs. The clinical or nursing SME should verify their content. Andrew should confirm their suitability for the intended activity.",
+    "reviewer": "Clinical SME + Andrew"
+  },
+  {
+    "row": 31,
+    "status": "Fixed",
+    "finding": "The named laboratory team chart links back to both People directory and the hospital Organisation chart in 3.0."
+  },
+  {
+    "row": 32,
+    "status": "Fixed",
+    "finding": "The laboratory shortcut opens the same functioning incident-report form with five labelled fields and local draft controls."
+  },
+  {
+    "row": 33,
+    "status": "Fixed",
+    "finding": "The archived Staff Directory URL now opens People directory with 132 named position profiles. The route audit resolved all 142 position/profile routes, including unnamed roles, and verified manager and direct-report navigation."
+  },
+  {
+    "row": 34,
+    "status": "Fixed",
+    "finding": "The laboratory directory shortcut opens People directory with a Laboratory technologies breadcrumb. Department context persists into profiles."
+  },
+  {
+    "row": 35,
+    "status": "Fixed",
+    "finding": "The archived Human resources quick link now opens a page that links to the Human resources forms and templates collection. The native HR services hub provides the department’s broader staff services."
+  },
+  {
+    "row": 36,
+    "status": "Fixed",
+    "finding": "The Human resources shortcut reached through Laboratory technologies now links back to the originating department. Following the shortcut into Documents retains that link."
+  },
+  {
+    "row": 37,
+    "status": "Fixed",
+    "finding": "Both the Nursing hub and the Nursing team structure page now link directly to Internet, email and social media and Complaints and feedback handling. Both policies appear as staff resources."
+  },
+  {
+    "row": 38,
+    "status": "Fixed",
+    "finding": "Both Nursing entry points open the document library filtered to the one Pathology request form, with Preview and Download. The form remains categorised under Laboratory technologies."
+  },
+  {
+    "row": 39,
+    "status": "Fixed",
+    "finding": "The Human resources shortcut now leads to the Human resources forms and templates collection with 20 document records."
+  },
+  {
+    "row": 40,
+    "status": "Fixed",
+    "finding": "The Forms shortcut now offers two working routes, Patient management forms and Staff forms and document library."
+  },
+  {
+    "row": 41,
+    "status": "Fixed",
+    "finding": "The formerly unfinished 9-2 page now links to the populated hospital organisation chart. This is a hospital-wide chart. The nursing team has a separate overview."
+  },
+  {
+    "row": 42,
+    "status": "Fixed",
+    "finding": "The patient list opens both supplied records and the new interpreter-request case. Patient records link back to the list."
+  },
+  {
+    "row": 43,
+    "status": "Review needed",
+    "finding": "All five departmental categories return files with preview and download. Added two dated one-page staff references for Allied health and Aboriginal and Torres Strait Islander liaison. Verified PDF delivery for both and mobile preview. The allied health SME and an Aboriginal and/or Torres Strait Islander liaison or cultural safety reviewer should confirm content and service scope. Andrew to review scenario fit.",
+    "reviewer": "Allied health + liaison SMEs"
+  },
+  {
+    "row": 44,
+    "status": "Review needed",
+    "finding": "The Interpreting services resources tile now opens the filtered liaison documents. Its neighbouring services link opens the existing liaison overview. The new guide cites the Royal Melbourne Hospital and RMIT as external references. Cultural wording and local liaison arrangements await an appropriate reviewer.",
+    "reviewer": "Liaison/cultural reviewer"
+  },
+  {
+    "row": 45,
+    "status": "Fixed",
+    "finding": "The department page now links to a dedicated Interpreting services resources page. In Chromium the expanded accordion stayed in the page flow above the footer."
+  },
+  {
+    "row": 46,
+    "status": "Fixed",
+    "finding": "Both repaired links were followed. The Victorian Government policy opens its dedicated policy page and the procedure link opens the Using interpreting services guidelines. Both returned HTTP 200 on 20 November 2026."
+  },
+  {
+    "row": 47,
+    "status": "Fixed",
+    "finding": "The links now lead to separate Victorian Government topics, Working with interpreters and the Assessing the need for an interpreter section of Arranging an interpreter. The fragment was verified against the government page. The adjacent NSW policy link points to the NSW Health policy PDF."
+  },
+  {
+    "row": 48,
+    "status": "Fixed",
+    "finding": "Incident reporting now opens the working form in 3.0, including draft saving and download."
+  },
+  {
+    "row": 49,
+    "status": "Fixed",
+    "finding": "Human resources now opens a shortcut to the 20-document HR collection."
+  },
+  {
+    "row": 50,
+    "status": "Fixed",
+    "finding": "The staff directory route opens the 3.0 People directory. Staff names link to individual profiles and the available manager and direct-report records."
+  },
+  {
+    "row": 51,
+    "status": "Fixed",
+    "finding": "The Interpreting department links to the Aboriginal and Torres Strait Islander liaison overview. The D05 draft remains listed for cultural review."
+  },
+  {
+    "row": 52,
+    "status": "Fixed",
+    "finding": "Public Logistics links use the corrected spelling. Historical deep links for the department, resources and tour view resolve to their corrected 3.0 addresses."
+  },
+  {
+    "row": 53,
+    "status": "Fixed",
+    "finding": "The CEO story now has previous and next links in a dedicated navigation area above the footer. News navigation wraps at small viewport sizes."
+  },
+  {
+    "row": 54,
+    "status": "Fixed",
+    "finding": "Report an incident now offers “Continue to the incident report”, which opens the working form."
+  },
+  {
+    "row": 55,
+    "status": "Fixed",
+    "finding": "The HR shortcut now leads to the filtered Human resources document collection."
+  },
+  {
+    "row": 56,
+    "status": "Review needed",
+    "finding": "The Logistics warehouse has a clickable supplies hotspot, a room-specific observation prompt and a link to the Logistics department. SME to check the prompt against the intended role.",
+    "reviewer": "Logistics SME + Andrew"
+  },
+  {
+    "row": 57,
+    "status": "Fixed",
+    "finding": "All four doctors have labelled telephone and email links alongside their contact information and a View profile button. A doctor profile opened successfully in Chromium."
+  },
+  {
+    "row": 59,
+    "status": "Review needed",
+    "finding": "The CEO’s Next story opens a Womin Djeka orientation article, with the current RMIT course catalogue and RMIT Library’s description of the learning pathway. Verified the public enrolment page and keyboard navigation. Andrew and a culturally appropriate reviewer should review its use here. Course completion behind sign-in was not tested.",
+    "reviewer": "Andrew + liaison/cultural reviewer"
+  },
+  {
+    "row": 60,
+    "status": "Fixed",
+    "finding": "The CEO’s Previous story opens the Bagwan intranet news story. Navigated to the previous article in the browser."
+  },
+  {
+    "row": 61,
+    "status": "Fixed",
+    "finding": "The People & Culture story’s Previous link opens Cultural awareness resources for staff. Navigated to the previous article in the browser."
+  },
+  {
+    "row": 62,
+    "status": "Review needed",
+    "finding": "Replaced the retired course offers with current, named resources. The revised article links to RMIT’s Womin Djeka and Truth Telling modules and the Australian Commission’s guide to care for people from migrant and refugee backgrounds. Department and News teasers were updated. Andrew to confirm the resources meet the intended learning outcome.",
+    "reviewer": "Andrew + liaison/cultural reviewer"
+  },
+  {
+    "row": 63,
+    "status": "Review needed",
+    "finding": "The Cultural Differences and Similarities credential offer and generic redirect were removed from 3.0. The revised staff article links directly to two RMIT course listings and an Australian Commission guide. Andrew to confirm learning fit and whether a credited activity is required.",
+    "reviewer": "Andrew + liaison/cultural reviewer"
+  },
+  {
+    "row": 64,
+    "status": "Fixed",
+    "finding": "The influenza article’s policy action opens the Infection control policy in 3.0. Followed the action and checked the destination heading."
+  },
+  {
+    "row": 65,
+    "status": "Fixed",
+    "finding": "The influenza article’s practice action opens the native HTML waste classification exercise. Verified that the response form loads."
+  },
+  {
+    "row": 66,
+    "status": "Fixed",
+    "finding": "The influenza article’s Previous story opens Interpreting at Bagwan Health. Navigated to the previous article in the browser."
+  },
+  {
+    "row": 67,
+    "status": "Fixed",
+    "finding": "Rechecked the Nursing department link on the hospital chart. It opens the named Nursing team structure page. Staffing discrepancies are recorded separately in D04."
+  },
+  {
+    "row": 68,
+    "status": "Review needed",
+    "finding": "Allied health now opens a 3.0 service overview from the hospital chart and appears in Departments. The draft includes a downloadable staff guide and Victorian Department of Health profession directory. An allied health SME must confirm the Bagwan team, referral process and reporting lines; Andrew to confirm teaching use.",
+    "reviewer": "Allied health lead"
+  },
+  {
+    "row": 69,
+    "status": "Fixed",
+    "finding": "Rechecked the hospital chart link to the Aboriginal and Torres Strait Islander liaison service overview. That page now also links to the liaison resources. Local referral arrangements remain a separate D05 review item."
+  },
+  {
+    "row": 70,
+    "status": "Fixed",
+    "finding": "Influenza outbreak is linked from the staff home archive section and News & updates. Verified the named link in both locations."
+  },
+  {
+    "row": 71,
+    "status": "Fixed",
+    "finding": "The News route and the archived news index share the same story-list component. Both columns use the same spacing and text styles, and collapse into a single column on a phone."
+  },
+  {
+    "row": 72,
+    "status": "Review needed",
+    "finding": "3.0 serves 12 revised Word resources and WorkSafe's current handbook through 17 catalogue entries. The staff-facing documents have plain titles, with editorial decisions held in the review materials. Document owners still need to confirm the historical policy content, contact roles, dates and suitability for each teaching activity. A hidden author query about microbreak timing was removed from the Workstation Self-Assessment Checklist, and the unverified intervals were replaced with general guidance to vary tasks and posture.",
+    "reviewer": "Document owners + Andrew"
+  },
+  {
+    "row": 73,
+    "status": "Fixed",
+    "finding": "The Logistics shortcut and main Risk Management entry now use the same corrected Word file and 22-page PDF. Page fields render the current page and total. The same defect was also repaired in Equal Opportunity, Incident Management and Personal Leave."
+  },
+  {
+    "row": 74,
+    "status": "Review needed",
+    "finding": "A one-page Recordkeeping reference guide replaces the dated legislative summaries in 3.0. Eight links identify official Victorian and Commonwealth sources. The old funding examples, inaccessible Canvas checklist and dated legislative summaries remain available in the 2.0 archive. Andrew should compare the guide with assessment tasks, then the records SME should confirm scope and whether any historical example or checklist is required.",
+    "reviewer": "Records SME + Andrew"
+  },
+  {
+    "row": 75,
+    "status": "Review needed",
+    "finding": "A one-page Records disposal reference replaces the unfinished template, links to National Archives guidance and separates Victorian and Commonwealth sources. The records SME should confirm which authority and learning examples the activity requires.",
+    "reviewer": "Records SME"
+  },
+  {
+    "row": 76,
+    "status": "Fixed",
+    "finding": "Both Privacy folder entries open the same 17-page staff copy; the footer numbers all 17 pages correctly. Substantive privacy questions are recorded at row 84."
+  },
+  {
+    "row": 77,
+    "status": "Fixed",
+    "finding": "The Record Keeping shortcut now opens the corrected Freedom of Information Word file. Its link names the Freedom of Information Act 1982 (Victoria) and opens the Victorian legislation register’s in-force record. The page and PDF preview link to the same Act."
+  },
+  {
+    "row": 78,
+    "status": "Review needed",
+    "finding": "The Bullying and Harassment download has no editorial comment parts or markers. Workplace contacts and external agencies are grouped in the downloadable policy and the web article. Outdated phone numbers were replaced by the organisations’ own pages. The people-policy SME should confirm team role names and the escalation pathway. Fair Work Commission’s website blocked the automated HTTP check.",
+    "reviewer": "People & culture policy owner"
+  },
+  {
+    "row": 79,
+    "status": "Review needed",
+    "finding": "The file whose body names Greendale 51 times has been withdrawn from the 3.0 staff catalogue and article links. The Bagwan Incident Management page and download now give the internal reporting workflow in one page. The historical external agencies, deadlines and Greendale child-safety role have been withheld from both staff copies. The SME should decide whether any of the withdrawn source should be used and confirm local escalation.",
+    "reviewer": "Governance / incident policy owner"
+  },
+  {
+    "row": 80,
+    "status": "Fixed",
+    "finding": "The main Freedom of Information entry, the Record Keeping shortcut and the policy article now point to one corrected download with a direct link to the named Victorian Act. Same source as row 77."
+  },
+  {
+    "row": 81,
+    "status": "Fixed",
+    "finding": "The active Language Services Word edition and staff policy page link to the current AUSIT Code of Ethics and Code of Conduct. The obsolete reference from the Google export is absent from 3.0 staff navigation."
+  },
+  {
+    "row": 82,
+    "status": "Review needed",
+    "finding": "The native Word policy matching the existing staff article is the single provisional Language Services source in 3.0. The alternate Google export remains in 2.0 for comparison. The interpreting SME should confirm the authoritative version and identify any clauses unique to the export that should be retained.",
+    "reviewer": "Language services policy owner"
+  },
+  {
+    "row": 83,
+    "status": "Review needed",
+    "finding": "The OHS download and article link to WorkSafe Victoria’s Healthcare and hospitals safety basics. All ten WorkSafe links returned HTTP 200. The 3.0 download uses live page numbering. The OHS SME should decide whether an internal manual-handling procedure is also required. An internal editing alternative and yellow highlighting were removed from the manual-handling section. The 15-page preview ends at the final appendix.",
+    "reviewer": "WHS SME"
+  },
+  {
+    "row": 84,
+    "status": "Review needed",
+    "finding": "The Word policy and staff article link to the Victorian Department of Health privacy policy and the OAIC Notifiable Data Breaches scheme. A Greendale offboarding clause and the obsolete DHHS reporting instruction were removed from the staff-facing article and download. The privacy SME should confirm the actual offboarding and breach-reporting paths. OAIC’s indexed page was identifiable but declined the automated HTTP check.",
+    "reviewer": "Privacy officer / policy owner"
+  },
+  {
+    "row": 85,
+    "status": "Fixed",
+    "finding": "The 3.0 library provides category filtering and working downloads for the archived Interpreting, Laboratory and Nursing groups. Departmental coverage is addressed separately in row 43."
+  },
+  {
+    "row": 86,
+    "status": "Review needed",
+    "finding": "HR/OHS now previews and downloads WorkSafe Victoria’s complete December 2024 Office health and safety handbook, 136 pages. The official publisher PDF is preserved byte for byte; the January 2006 Officewise copy is accessible in 2.0. The OHS SME should confirm the newer guide suits the activity.",
+    "reviewer": "WHS SME + Andrew"
+  },
+  {
+    "row": 87,
+    "status": "Review needed",
+    "finding": "The Human Resources entry uses exactly the same updated WorkSafe handbook as the HR/OHS entry. One OHS suitability decision covers both rows.",
+    "reviewer": "WHS SME + Andrew"
+  },
+  {
+    "row": 88,
+    "status": "Fixed",
+    "finding": "The office lock file remains excluded. The real Video Transcript Template still opens as a one-page preview and a Word download."
+  },
+  {
+    "row": 89,
+    "status": "Review needed",
+    "finding": "All 19 available panoramas now offer clickable information. Opened all 37 information cards in the browser. Six new room prompts await SME review. The archive supplies the same image for Nursing room and X-ray room.",
+    "reviewer": "Department and clinical SMEs"
+  },
+  {
+    "row": 90,
+    "status": "Fixed",
+    "finding": "Blue 44-pixel information and direction buttons, labelled keyboard controls and a responsive dialog replace the small tour markers. Escape closed the dialog and restored focus to the originating hotspot. Tested at 320 pixels without horizontal overflow. The automated accessibility scan found no WCAG A or AA issues in the guided tour and room dialog."
+  },
+  {
+    "row": 91,
+    "status": "Review needed",
+    "finding": "The optional three-stop orientation includes a staff role, a two-sentence handover, one clarifying question, three observable evidence criteria and a structured peer/facilitator debrief. Andrew can review the prepared task and its alignment to the target unit. Reviewer messaging is confined to the register.",
+    "reviewer": "Andrew + interpreting SME"
+  },
+  {
+    "row": 92,
+    "status": "Fixed",
+    "finding": "Replaced the dead WHO poster and PDF URLs with the official handwash and handrub poster pages and the matching WHO guidelines by ISBN. Verified all three destination titles and the WorkSafe AED page. Internal tour cards point to 3.0, including the specimen reception PPE reference."
+  },
+  {
+    "row": 93,
+    "status": "Fixed",
+    "finding": "Opened the Myotherapy clinic through its department tour page. The room selector selected Myotherapy, and its clickable information links to the 3.0 intranet."
+  },
+  {
+    "row": 94,
+    "status": "Review needed",
+    "finding": "Opened the Logistics panoramic image, activated its information hotspot and confirmed visible room-picker and staff-intranet exit controls at a 320-pixel width. The archive contains no links to adjacent rooms. SME to confirm the new observation prompt.",
+    "reviewer": "Logistics SME"
+  },
+  {
+    "row": 95,
+    "status": "Fixed",
+    "finding": "The patient workspace now has persistent local links to the patient list, staff messageboard and forms underneath the 3.0 hospital masthead. Patient cards, record tabs and message controls share the blue staff interface."
+  },
+  {
+    "row": 96,
+    "status": "Fixed",
+    "finding": "A blank continence form downloaded bagwan-form-draft.json without entering observations. The download completed without error."
+  },
+  {
+    "row": 97,
+    "status": "Fixed",
+    "finding": "Followed the incident reporting link on the patient-system landing page to the 3.0 incident form and located its Save draft action."
+  },
+  {
+    "row": 98,
+    "status": "Review needed",
+    "finding": "Three messages have descriptive subjects and read progress, all receipts survive reload, and Proceed opens the patient list with the correct URL and heading. Reviewed the receiver-facing correspondence without editorial labels. The interpreter request and the revised missing-belongings wording are ready for SME and Andrew.",
+    "reviewer": "Andrew + clinical / interpreting SMEs"
+  },
+  {
+    "row": 99,
+    "status": "Review needed",
+    "finding": "The directory offers Jane Doe, Yusef Duke and Alex Morgan with direct return navigation. Alex’s case records the request and unknown booking status. The staff view and message omit editorial labels. Source pathology gaps display “Not supplied”. The communication case is prepared for SME and Andrew.",
+    "reviewer": "Clinical / interpreting SMEs + Andrew"
+  },
+  {
+    "row": 100,
+    "status": "Fixed",
+    "finding": "Documents & templates exposes the four online clinical forms directly. A search for continence returns its form link and opens the working record. File-type or category filters hide the separate online-form results."
+  },
+  {
+    "row": 101,
+    "status": "Fixed",
+    "finding": "The 3.0 Bagwan Health masthead remains visible above the patient directory, two original patient records, new case, clinical forms and messageboard. The old facility branding stays hidden in embedded patient screens."
+  },
+  {
+    "row": 102,
+    "status": "Fixed",
+    "finding": "The current 3.0 staff footer contains the learning guide and Acknowledgement of Country. It no longer displays the 2020 copyright notice."
+  },
+  {
+    "row": 103,
+    "status": "Fixed",
+    "finding": "Logistics is spelt correctly in department navigation, tour controls, and new 3.0 links. Existing bookmarks using the historical spelling continue to work."
+  }
+]

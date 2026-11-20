@@ -11,7 +11,7 @@ import re
 import shutil
 import subprocess
 from tempfile import TemporaryDirectory
-from urllib.parse import quote, unquote, urljoin, urlsplit
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://cove-lx-team.github.io/Bagwan2.0/3.0/'
@@ -33,8 +33,6 @@ p, ul, ol { margin: 0 0 6pt; }
 li { margin-bottom: 3pt; }
 ul, ol { padding-left: 17pt; }
 a { color: #1c287f; text-decoration: underline; overflow-wrap: anywhere; }
-.status { border-left: 3pt solid #5e68a9; padding-left: 9pt; margin-bottom: 11pt; }
-.status a { font-size: 10pt; }
 footer { border-top: .6pt solid #a6adc3; margin-top: 14pt; padding-top: 6pt; font-size: 10pt; }
 table { border-collapse: collapse; width: 100%; }
 th, td { text-align: left; vertical-align: top; padding: 4pt; border: .5pt solid #9199af; }
@@ -55,32 +53,14 @@ def chrome_binary():
     raise SystemExit('Install Chromium or set BAGWAN_CHROMIUM to its executable.')
 
 
-def printable_html(record, draft):
+def printable_html(record):
     title = escape(record['title'])
     route = SITE + '#page/' + quote(record['path'], safe='')
-    status = '<p class="status">Migrated source policy. Content-owner review is pending.</p>'
-    references = ''
-    if draft:
-        draft_id = escape(draft['id'])
-        status = (
-            f'<p class="status"><strong>Draft for review · {draft_id}</strong><br>'
-            f'{escape(draft["review_status"])} review by {escape(" and ".join(draft["reviewers"]))}. '
-            f'<a href="{SITE}review-register.html#{draft_id}">Review register</a></p>'
-        )
-        links = []
-        for source in draft['sources']:
-            url = urljoin(SITE, source)
-            parts = urlsplit(url)
-            label = unquote(parts.path.rstrip('/').rsplit('/', 1)[-1]).replace('-', ' ').capitalize()
-            links.append(f'<li><a href="{escape(url)}">{escape(label)} ({escape(parts.hostname)})</a></li>')
-        if links:
-            references = '<section><h2>Reference sources for review</h2><ul>' + ''.join(links) + '</ul></section>'
-
     return (
         '<!doctype html><html lang="en-AU"><head><meta charset="utf-8">'
         f'<title>{title} · Bagwan Health</title><base href="{SITE}index.html"><style>{PRINT_CSS}</style></head>'
         f'<body><header><p>Bagwan Health · Policies &amp; procedures</p><h1>{title}</h1></header>'
-        f'{status}<main>{record["html"]}{references}</main>'
+        f'<main>{record["html"]}</main>'
         f'<footer><a href="{route}">Read {title} on the staff intranet</a></footer></body></html>'
     )
 
@@ -88,7 +68,6 @@ def printable_html(record, draft):
 def build():
     snapshot = json.loads((ROOT / '3.0/content.json').read_text())
     records = [r for r in snapshot['pages'] if r['category'] == 'Policy' and r['policy_document'] is None]
-    drafts = {d['id']: d for d in snapshot['drafts']}
     output = ROOT / '3.0/policy-copies'
     output.mkdir(exist_ok=True)
     chrome = chrome_binary()
@@ -98,8 +77,7 @@ def build():
             slug = Path(record['path']).parent.name
             page = work / f'{slug}.html'
             pdf = work / f'{slug}.pdf'
-            draft = drafts[record['draft_id']] if record['draft_id'] else None
-            page.write_text(printable_html(record, draft), encoding='utf-8')
+            page.write_text(printable_html(record), encoding='utf-8')
             subprocess.run([
                 chrome, '--headless', '--disable-gpu', '--disable-background-networking',
                 '--no-first-run', '--no-pdf-header-footer', '--export-tagged-pdf',

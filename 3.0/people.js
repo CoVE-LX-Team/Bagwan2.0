@@ -83,7 +83,7 @@ function renderPeopleDirectory() {
     if (search.value) next.set('query', search.value);
     if (filter.value) next.set('department', filter.value);
     const hash = '#people' + (next.size ? '?' + next : '');
-    if (hash !== location.hash) history.replaceState(null, '', hash);
+    if (hash !== location.hash) replaceSectionHash(hash);
   };
   search.addEventListener('input', update);
   filter.addEventListener('change', update);
@@ -107,14 +107,13 @@ function renderPerson(id) {
     esc(p.name || p.role) + '</h1><p>' + esc(p.name ? p.role : 'Staff name unlisted') + '</p><a href="' + groupHref + '">' +
     esc(p.department) + '</a>' + (p.unit ? ' · ' + esc(p.unit) : '') + '</div>' + saveButton('person:' + p.id, p.name || p.role) + '</header>' +
     '<div class="staff-relations"><section><h2>Reports to</h2>' + (manager ? positionLine(manager) :
-    '<p class="staff-muted">A manager is not listed in the source chart.</p>') + '</section><section><h2>Direct reports' +
+    '<p class="staff-muted">No manager listed.</p>') + '</section><section><h2>Direct reports' +
     (team.length ? ' <span>(' + team.length + ')</span>' : '') + '</h2>' + (team.length
       ? '<ul class="staff-branches">' + team.map(child => '<li>' + positionLine(child) + '</li>').join('') + '</ul>'
-      : '<p class="staff-muted">No direct reports are listed in the source chart.</p>') + '</section></div>' +
-    (p.note ? '<p class="staff-source-note">' + esc(p.note) + '</p>' : '') +
+      : '<p class="staff-muted">No direct reports listed.</p>') + '</section></div>' +
     (p.source_page && pageMap.has(p.source_page) ? '<p class="staff-chart-link"><a href="' +
       pageLink(p.source_page) + '">View ' + esc(p.department) + ' organisation chart</a></p>' :
-      p.source_label ? '<dl class="staff-source"><dt>Reporting source</dt><dd>' + esc(p.source_label) + '</dd></dl>' : '');
+      '');
 }
 
 function chartPath(path) {

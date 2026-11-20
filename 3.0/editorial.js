@@ -23,7 +23,7 @@ function renderNews() {
   }
   const params=new URLSearchParams(location.hash.split('?')[1]);
   const leadStory=()=>'<section class="news-lead" aria-label="Featured staff update"><img src="'+absolute(newsCover)+'" alt=""><div><h2><a href="'+pageLink(lead.path)+'">'+esc(lead.title)+'</a></h2><p>'+esc(lead.summary)+'</p><div class="news-lead-actions"><a class="story-more" href="'+pageLink(lead.path)+'">Read the CEO update <span aria-hidden="true">→</span></a>'+saveButton('page:'+lead.path,lead.title)+'</div></div></section>';
-  main.innerHTML=intro('News & updates','From the Bagwan staff news archive.')+
+  main.innerHTML=intro('News & updates','Updates and past notices from across Bagwan Health.')+
     '<div id="lead-news"></div><section class="news-stories"><div class="news-heading"><h2 id="news-list-title">More staff news</h2><label class="sr-only" for="list-search">Search staff news</label><input type="search" class="field-search" id="list-search" placeholder="Search staff news"></div><p class="sr-only" id="news-status" role="status"></p><div id="news-results"></div></section>';
   const search=main.querySelector('#list-search');
   search.value=params.get('query')||'';
@@ -38,7 +38,7 @@ function renderNews() {
   search.addEventListener('input',()=>{
     const next=new URLSearchParams();
     if(search.value)next.set('query',search.value);
-    history.replaceState(null,'','#news'+(next.size?'?'+next:''));
+    replaceSectionHash('#news'+(next.size?'?'+next:''));
     update();
   });
   update();

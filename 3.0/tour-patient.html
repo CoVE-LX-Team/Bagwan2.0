@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hospital tour · Bagwan Health</title>
+<link rel="icon" href="../assets/favicon.svg">
+<link rel="stylesheet" href="../assets/vendor/cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+<link rel="stylesheet" href="tour-patient.css">
+<script defer src="../assets/vendor/cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+<script defer src="tour-viewer.js"></script>
+</head>
+<body class="tour-viewer">
+<header class="tour-controls" id="tour-toolbar">
+<label for="room-select">Choose a room<select id="room-select" disabled></select></label>
+<button id="information-button" disabled>Room information</button>
+<a href="./#home" target="_top">Staff intranet</a>
+</header>
+<main class="tour-area">
+<h1 class="tour-sr">Hospital tour</h1>
+<p class="tour-sr" id="tour-help">Use the room selector and Room information to explore without moving the panorama. In the panorama, use the arrow keys to look around and the plus and minus keys to zoom.</p>
+<div id="panorama" aria-label="Hospital panorama" aria-describedby="tour-help"></div>
+<p id="tour-status" role="status"></p>
+</main>
+<section id="tour-guide" hidden aria-label="Guided orientation">
+<div><small id="guide-step"></small><h2 id="guide-title"></h2><p id="guide-prompt"></p></div>
+<div class="tour-guide-actions"><button id="guide-return" hidden>Return to current stop</button><button id="guide-back">Previous stop</button><button id="guide-next">Next stop</button><a href="learning-guide.html#visit" target="_top">Learning guide</a></div>
+</section>
+<dialog id="room-information" aria-labelledby="info-title"><div class="tour-dialog-head"><small id="room-label"></small><button id="close-information" aria-label="Close room information">Close</button></div><h2 id="info-title"></h2><div id="info-items"></div></dialog>
+</body></html>

@@ -70,14 +70,18 @@ async (page) => {
 
   await go('documents');
   await rows.first().waitFor();
+  const listed = await page.locator('#result-count').innerText();
+  check(await rows.count() === parseInt(listed, 10), 'The full library count matches its table rows.');
+  check(!/Greendale|Emergency Incident Response, Management/i.test(await rows.allTextContents().then(names => names.join(' '))),
+    'The withheld incident policy is absent from the staff library.');
   const rowNames = () => rows.locator('a[download]').evaluateAll(links =>
     links.map(a => decodeURIComponent(new URL(a.href).pathname.split('/').pop()).toLocaleLowerCase()));
   await choose(order, /name.*a.*z/i);
   const ascending = await rowNames();
   await choose(order, /name.*z.*a/i);
   const descending = await rowNames();
-  check(ascending.length === 78 && ascending[0] === descending.at(-1) && ascending.at(-1) === descending[0],
-    'Changing the name order reverses the library endpoints across all 78 records.');
+  check(ascending.length === descending.length && ascending[0] === descending.at(-1) && ascending.at(-1) === descending[0],
+    'Changing the name order reverses the library endpoints across all records.');
   const dateColumn = page.getByRole('columnheader', {name:/last updated/i});
   await dateColumn.getByRole('button').click();
   const firstDirection = await dateColumn.getAttribute('aria-sort');

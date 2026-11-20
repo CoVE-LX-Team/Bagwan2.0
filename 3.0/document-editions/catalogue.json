@@ -1,0 +1,228 @@
+{
+  "clause_replacements": {
+    "occupational-health-and-safety": {
+      "Bagwan Health follows legislated best practice standards": "Use these WorkSafe Victoria resources to look up guidance on healthcare and manual handling."
+    },
+    "privacy": {
+      "DHHS and NDIS privacy breaches/incidents": null,
+      "Employees leaving Greendale Community": null,
+      "Privacy breaches are reported to the relevant funding body": null
+    },
+    "workstation-self-assessment": {
+      "Frequent short pauses (microbreaks)": "Vary tasks and postures throughout the working day. Take regular movement breaks from sustained computer work."
+    }
+  },
+  "editions": {
+    "084605f55dd0bf48b7716abef0cd8ec011f3fc0ce85cdb6139a572fc9c8a9a4e": {
+      "edition_label": "Bagwan Health",
+      "edition_sha256": "e8bfc49b2729a7c0f94f7797d9fedb1976b9ff529b1de21783d114aca937beeb",
+      "local_href": "3.0/document-editions/freedom-of-information.docx",
+      "name": "Bagwan Health - Freedom of Information V1.0.docx",
+      "preview_href": "3.0/document-editions/freedom-of-information.pdf",
+      "preview_image_href": "3.0/document-editions/freedom-of-information.jpg",
+      "preview_pages": 5,
+      "size_bytes": 27959,
+      "source_modified_at": "2026-11-20T00:00:00.000Z"
+    },
+    "0daa4cb15961168e688c269f43c9db9faaec1b8136bc75fdded6906e63c42fd8": {
+      "edition_label": "Bagwan Health",
+      "edition_sha256": "fa888dc9603ecf9a93f180c50d10a7157f628848a2b5982b80c6645c87475a2d",
+      "local_href": "3.0/document-editions/disposal-of-records.docx",
+      "name": "Records disposal reference.docx",
+      "preview_href": "3.0/document-editions/disposal-of-records.pdf",
+      "preview_image_href": "3.0/document-editions/disposal-of-records.jpg",
+      "preview_pages": 1,
+      "size_bytes": 37717,
+      "source_modified_at": "2026-11-20T00:00:00.000Z"
+    },
+    "1e05f639475184086232e6c84d05d7340c371aa3f9441582454eb56d12c910c7": {
+      "edition_label": "Bagwan Health",
+      "edition_sha256": "b5806fe2cb5d07df8921ed979b3b9879872acd5a658602a5d6e0e394c24b3bf0",
+      "local_href": "3.0/document-editions/risk-management.docx",
+      "name": "Bagwan Health - Risk Management V1.0.docx",
+      "preview_href": "3.0/document-editions/risk-management.pdf",
+      "preview_image_href": "3.0/document-editions/risk-management.jpg",
+      "preview_pages": 22,
+      "size_bytes": 120059,
+      "source_modified_at": "2026-11-20T00:00:00.000Z"
+    },
+    "4cd06447a4013e3ec2d4052550020b9238b49c3ad3e417ccf3a65b85083a1f76": {
+      "edition_label": "Bagwan Health",
+      "edition_sha256": "4d2f0cb67e19dbe36cbd251014fd565f5b00e1fddd1fd9faa05f367fa518abc3",
+      "local_href": "3.0/document-editions/incident-management.docx",
+      "name": "Bagwan Health - Incident Management - V1.0.docx",
+      "preview_href": "3.0/document-editions/incident-management.pdf",
+      "preview_image_href": "3.0/document-editions/incident-management.jpg",
+      "preview_pages": 1,
+      "size_bytes": 25746,
+      "source_modified_at": "2026-11-20T00:00:00.000Z"
+    },
+    "68a50a236ff655d268a3feb4514a8f82e8b76b5bbbdfc905ba88279681a0e461": {
+      "edition_label": "Bagwan Health",
+      "edition_sha256": "55e8ed5d86e781cd57962705fa4e1f211707dbdce60695bbfa0c3e9213ed7dc5",
+      "local_href": "3.0/document-editions/occupational-health-and-safety.docx",
+      "name": "Bagwan Health - OHS V1.0.docx",
+      "preview_href": "3.0/document-editions/occupational-health-and-safety.pdf",
+      "preview_image_href": "3.0/document-editions/occupational-health-and-safety.jpg",
+      "preview_pages": 15,
+      "size_bytes": 43510,
+      "source_modified_at": "2026-11-20T00:00:00.000Z"
+    },
+    "7e4849f0a6d2eeb1992b779a811af0d8c360249e84a725e4029d82e351d477e1": {
+      "edition_label": "Bagwan Health",
+      "edition_sha256": "ec102d037329adf7d7c7333ce52fd8e6088496c31d2bd4b81f3f2285e9d1383c",
+      "local_href": "3.0/document-editions/privacy.docx",
+      "name": "Bagwan Health - Privacy - v1.0.docx",
+      "preview_href": "3.0/document-editions/privacy.pdf",
+      "preview_image_href": "3.0/document-editions/privacy.jpg",
+      "preview_pages": 17,
+      "size_bytes": 37458,
+      "source_modified_at": "2026-11-20T00:00:00.000Z"
+    },
+    "baa860bee02a67211111e1cc0c8d187b2f0477bf24f39c6c06b3083f78524bb0": {
+      "edition_label": "Bagwan Health",
+      "edition_sha256": "127ea01ac92ce96a9feab7b11fee8cc4ab26868ebe938634b4d8c41b2b1e5c86",
+      "local_href": "3.0/document-editions/workstation-self-assessment.docx",
+      "name": "Bagwan Health - OHS Workstation Self-Assessment Checklist - 20191217.docx",
+      "preview_href": "3.0/document-editions/workstation-self-assessment.pdf",
+      "preview_image_href": "3.0/document-editions/workstation-self-assessment.jpg",
+      "preview_pages": 13,
+      "size_bytes": 981878,
+      "source_modified_at": "2026-11-20T00:00:00.000Z"
+    },
+    "bc12b6eb1418a177a76bdc9bab5146a5e86b722da4e1963a70af7d35607de35d": {
+      "edition_label": "Bagwan Health",
+      "edition_sha256": "292c45349bcce0af88d3921ee05a88d57bacc4651c506ef833700ac5c560a0c6",
+      "local_href": "3.0/document-editions/bullying-and-harassment.docx",
+      "name": "Bagwan Health - Bullying and Harassment, V1.0.docx",
+      "preview_href": "3.0/document-editions/bullying-and-harassment.pdf",
+      "preview_image_href": "3.0/document-editions/bullying-and-harassment.jpg",
+      "preview_pages": 6,
+      "size_bytes": 31284,
+      "source_modified_at": "2026-11-20T00:00:00.000Z"
+    },
+    "c645998126c4ab36b00f5335328478277ab35e566edeeeeb85aebf704fac1f1a": {
+      "edition_label": "Bagwan Health",
+      "edition_sha256": "bcb998f8deb676d101852308f9b10d0324904f90a8d8a49100fa88f1e0406464",
+      "local_href": "3.0/document-editions/equal-opportunity.docx",
+      "name": "Bagwan Health - Equal Opportunity - V1.0.docx",
+      "preview_href": "3.0/document-editions/equal-opportunity.pdf",
+      "preview_image_href": "3.0/document-editions/equal-opportunity.jpg",
+      "preview_pages": 14,
+      "size_bytes": 39636,
+      "source_modified_at": "2026-11-20T00:00:00.000Z"
+    },
+    "d02b5cd05705f565830b44e9c69c5843f82ab39a069ad8c043e72229fe7a756e": {
+      "edition_label": "Bagwan Health",
+      "edition_sha256": "4d26ffb02839a5a47cc2b7f5cb4ef9aa8dc782ac1315e20709ea1a9b98e54b4b",
+      "local_href": "3.0/document-editions/personal-leave.docx",
+      "name": "Bagwan Health - Personal Leave - V1.0.docx",
+      "preview_href": "3.0/document-editions/personal-leave.pdf",
+      "preview_image_href": "3.0/document-editions/personal-leave.jpg",
+      "preview_pages": 9,
+      "size_bytes": 31720,
+      "source_modified_at": "2026-11-20T00:00:00.000Z"
+    },
+    "d9f3a24c2e7573d3bcb09b499b940fad5c8dd61a6fffb023ec1bae2ebf2b64f8": {
+      "edition_label": "WorkSafe Victoria publication",
+      "edition_sha256": "161cd6aca7ae55bd2f04dc467e2fb0a7686ae0934b5088f246f395dd8f27f0e7",
+      "edition_source_url": "https://www.worksafe.vic.gov.au/resources/office-health-and-safety-pdf-version",
+      "local_href": "3.0/document-editions/office-health-and-safety.pdf",
+      "name": "Office health and safety — WorkSafe Victoria.pdf",
+      "preview_href": "3.0/document-editions/office-health-and-safety.pdf",
+      "preview_image_href": "3.0/document-editions/office-health-and-safety.jpg",
+      "preview_pages": 136,
+      "size_bytes": 3347268,
+      "source_modified_at": "2024-12-17T00:00:00.000Z"
+    },
+    "de6c96ff82d8936d59047876cb37ad74f92e3412a138083447055dfd5fad15ab": {
+      "edition_label": "Bagwan Health",
+      "edition_sha256": "ac5e651934119bad5e46d76dcc6033e1fadca81c8e6b84dea3b12bb38e8acd8a",
+      "local_href": "3.0/document-editions/recordkeeping-reference-guide.docx",
+      "name": "Recordkeeping reference guide.docx",
+      "preview_href": "3.0/document-editions/recordkeeping-reference-guide.pdf",
+      "preview_image_href": "3.0/document-editions/recordkeeping-reference-guide.jpg",
+      "preview_pages": 1,
+      "size_bytes": 38048,
+      "source_modified_at": "2026-11-20T00:00:00.000Z"
+    },
+    "e58ad9f3127f54e792b26d47bf97f9a43d26f4ad1f3d348343222ffc9f6606c9": {
+      "edition_label": "Bagwan Health",
+      "edition_sha256": "e4756bba4fb77e38f7cb9bf8805106e26bd38f8528e3ceb2db610599a819d710",
+      "local_href": "3.0/document-editions/language-services.docx",
+      "name": "Bagwan Health - Language Services V1.0.docx",
+      "preview_href": "3.0/document-editions/language-services.pdf",
+      "preview_image_href": "3.0/document-editions/language-services.jpg",
+      "preview_pages": 15,
+      "size_bytes": 59560,
+      "source_modified_at": "2026-11-20T00:00:00.000Z"
+    }
+  },
+  "external_contacts": [
+    [
+      "Victorian Equal Opportunity and Human Rights Commission",
+      "https://www.humanrights.vic.gov.au/get-help/contact-us/"
+    ],
+    [
+      "WorkSafe Victoria",
+      "https://www.worksafe.vic.gov.au/contact-worksafe"
+    ],
+    [
+      "Fair Work Commission",
+      "https://www.fwc.gov.au/about-us/contact-us/if-you-still-need-help"
+    ]
+  ],
+  "incident_sections": [
+    [
+      "Respond to the incident",
+      "Address immediate risks to the people involved. Let the team leader or manager know what happened and what support is needed."
+    ],
+    [
+      "Make an internal report",
+      "The staff member who witnessed the incident completes the report. If nobody witnessed it, the staff member who received the account completes it. Describe what happened in sequence. Distinguish what you observed from what someone told you. Record the action already taken."
+    ],
+    [
+      "Manager follow-up",
+      "Check the report for accuracy and arrange support for the people involved. Assess the incident, coordinate any investigation, record the findings and assign follow-up actions."
+    ],
+    [
+      "Use the findings",
+      "Review how the incident was managed and what contributed to it. Monitor recurring incidents and use the findings to reduce the risk of future harm."
+    ]
+  ],
+  "link_replacements": {
+    "http://ausit.org/AUSIT/About/Ethics___Conduct/Code_of_Ethics/AUSIT/About/Code_of_Ethics.aspx": [
+      "https://ausit.org/code-of-ethics-and-code-of-conduct/",
+      "AUSIT Code of Ethics and Code of Conduct"
+    ],
+    "http://www.austlii.edu.au/au/legis/vic/consol_act/": [
+      "https://www.legislation.vic.gov.au/in-force/acts/freedom-information-act-1982",
+      "Freedom of Information Act 1982 (Victoria)"
+    ],
+    "http://www.humanrightscommission.vic.gov.au/index.php/about-us/": [
+      "https://www.humanrights.vic.gov.au/get-help/contact-us/",
+      "Victorian Equal Opportunity and Human Rights Commission"
+    ],
+    "http://www.naa.gov.au/information-management/managing-information-and-records/disposal/compliant/NAP/guidelines-developing-NAP.aspx": [
+      "https://www.naa.gov.au/information-management/disposing-information/normal-administrative-practice-nap",
+      "National Archives guidance on normal administrative practice (NAP)."
+    ],
+    "https://dhhs.vic.gov.au/publications/privacy-policy": [
+      "https://www.health.vic.gov.au/department-of-health-privacy-policy",
+      "Victorian Department of Health privacy policy"
+    ],
+    "https://www.oaic.gov.au/privacy-law/privacy-act/notifiable-data-breaches-scheme": [
+      "https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme",
+      "About the Notifiable Data Breaches scheme (OAIC)"
+    ],
+    "https://www.worksafe.vic.gov.au/healthcare-and-hospitals": [
+      "https://www.worksafe.vic.gov.au/healthcare-and-hospitals-safety-basics",
+      "Healthcare and hospitals safety basics (WorkSafe Victoria)"
+    ]
+  },
+  "withheld": [
+    "Bagwan Health - Emergency Incident Response, Management & Reporting, V1.0.docx",
+    "Bagwan Health - Language Services V1.0 (Google Doc export).docx"
+  ],
+  "workplace_contacts": "For advice or assistance, speak with a team leader, coordinator, program manager or senior manager. An occupational health and safety committee member or union representative can also assist."
+}
